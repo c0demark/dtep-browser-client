@@ -1,0 +1,37 @@
+{
+    "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+    "projectName": "MIST Lab",
+    "canvases": [{
+        "id": "59df0f3df45ac0e1d7f1b5e2",
+        "orgCode": "ORG000004",
+        "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+        "projectName": "MIST Lab",
+        "canvasCode": "CNVS1b88670eaf244814953bcdfbc63e21b0",
+        "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_DEMOCANVAS1507790653",
+        "canvasName": "demoCanvas",
+        "createdBy": "M1030469@mindtree.com",
+        "createdOn": 1507790653814,
+        "lastUpadateBy": "M1030469@mindtree.com",
+        "lastUpdatedOn": 1509121243514,
+        "status": "Composing",
+        "version": 50,
+        "description": "to navigate the options available in canvasing",
+        "tags": [{
+                "type": "softwareNode",
+                "name": "EAI",
+                "status": "Installed"
+            },
+            {
+                "type": "softwareNode",
+                "name": "Code Quality",
+                "status": "Installed"
+            },
+            {
+                "type": "softwareNode",
+                "name": "Version Control",
+                "status": "Installed"
+            }
+        ]
+    }],
+    "count": 1
+}

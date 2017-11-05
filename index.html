@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!--<html class="no-js">-->
+<!--<![endif]-->
+<html lang="en-US" data-ng-app="dtepApp" data-ng-jq="" data-ng-srict-di="true">
+
+<head>
+    <base href="/" />
+    <title data-ng-bind="pageInfo.title">DTEP</title>
+    <!-- written a directive working fine under normal circumstances for rendering dynamic page title. -->
+    <!-- Need to optimize the directive. For now using state custom data and run block of app to do the job. -->
+    <!-- <title data-dtep-page-title="">DTEP</title> -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="./assets/images/mindtree.ico" />
+
+    <!-- Vendor Specific CSS files -->
+
+    <!-- <link rel="stylesheet" href="./vendor/bower_components/highcharts/css/highcharts.css" /> -->
+    <!-- <link rel="stylesheet" href="./vendor/bower_components/amcharts3/images/style.css" /> -->
+
+    <!-- Amcharts export css -->
+    <link rel="stylesheet" href="./vendor/bower_components/amcharts3/amcharts/plugins/export/export.css" />
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="./vendor/bower_components/font-awesome/css/font-awesome.css" />
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./vendor/bower_components/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- ui-bootstrap error handling css -->
+    <link rel="stylesheet" href="./vendor/bower_components/angular-bootstrap/ui-bootstrap-csp.css" />
+
+    <!-- angular error handling and ng-cloak css -->
+    <link rel="stylesheet" href="./vendor/bower_components/angular/angular-csp.css" />
+    <!-- <link rel="stylesheet" href="./vendor/bower_components/bootstrap-select/dist/css/bootstrap-select.css" /> -->
+
+    <!-- Application Specific css -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div data-ui-view=""></div>
+
+    <!-- Vendor Specific JS files -->
+
+    <!-- AmCharts Specific JS files -->
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/amcharts.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/funnel.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/gantt.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/gauge.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/pie.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/radar.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/serial.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/xy.js"></script>
+
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/plugins/export/export.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/plugins/animate/animate.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/plugins/dataloader/dataloader.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/plugins/responsive/responsive.js"></script>
+
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/themes/black.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/themes/chalk.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/themes/dark.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/themes/light.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/amcharts3/amcharts/themes/patterns.js"></script>
+    <!--End of AmCharts Specific JS files -->
+
+    <!-- <script type="text/javascript" src="./vendor/bower_components/highcharts/js/highcharts.js"></script> -->
+    <!-- <script type="text/javascript" src="./vendor/bower_components/jquery/dist/jquery.js"></script> -->
+    <!-- <script type="text/javascript" src="./vendor/bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
+    <script type="text/javascript" src="./vendor/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-parse-ext/angular-parse-ext.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-touch/angular-touch.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-loader/angular-loader.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-message-format/angular-message-format.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-messages/angular-messages.js"></script>
+    <!-- observed that angular-scenario.js has some connection with jQuery by looking at its source code. So commenting before further intropection. -->
+    <!-- <script type="text/javascript" src="./vendor/bower_components/angular-scenario/angular-scenario.js"></script> -->
+    <script type="text/javascript" src="./vendor/bower_components/angular-mocks/angular-mocks.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <!-- Yet to try this module for bootstrap tabs with native angularjs  -->
+    <!-- <script type="text/javascript" src="./vendor/bower_components/angular-ui-router-tabs/src/ui-router-tabs.js"></script> -->
+
+    <!-- Loading modules for browser storage support using angular -->
+    <!-- modules store in asynchronous way using angular. So not suitable for synchronous storage operations. Still including -->
+    <script type="text/javascript" src="./vendor/bower_components/a0-angular-storage/dist/angular-storage.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/ngstorage/ngStorage.js"></script>
+
+    <!-- This module gave error at application module load time only for sticky state when tried to use with angular-ui tabs for dashboards state  -->
+    <!-- So commented this module inclusion and commented the module dependency in dtep-app.modules.js file also and state configurations in dtep-app.state.config.js -->
+    <!-- <script type="text/javascript" src="./vendor/bower_components/ui-router-extras/release/ct-ui-router-extras.js"></script> -->
+
+    <!-- Loading Lodash library -->
+    <script type="text/javascript" src="./vendor/bower_components/lodash/dist/lodash.js"></script>
+    <!-- Loading d3 library -->
+    <script type="text/javascript" src="./vendor/bower_components/d3/d3.js"></script>
+    <script type="text/javascript" src="./vendor/bower_components/d3-selection-multi/build/d3-selection-multi.js"></script>
+
+    <!-- Application Specific JS files -->
+    <!-- Loading Application Specific angular modules -->
+    <script type="text/javascript" src="./app/main/dtep-app.module.js"></script>
+
+    <!-- Loading Application Specific UrlPaths Constants -->
+    <script type="text/javascript" src="./app/main/dtep-app.templateurls.constants.js"></script>
+    <script type="text/javascript" src="./app/main/dtep-app.apiurls.constants.js"></script>
+
+    <!-- Loading Application Specific Services -->
+    <script type="text/javascript" src="./app/main/services/server-data-exchange.service.js"></script>
+    <script type="text/javascript" src="./app/main/services/data-visualization.service.js"></script>
+    <script type="text/javascript" src="./app/main/services/auth.service.js"></script>
+    <script type="text/javascript" src="./app/main/services/navigation.service.js"></script>
+    <script type="text/javascript" src="./app/main/services/project-components.service.js"></script>
+
+    <!-- Loading Application Specific Controllers -->
+    <script type="text/javascript" src="./app/main/authentication/login.controller.js"></script>
+    <script type="text/javascript" src="./app/main/authentication/forgot-password-dialog.controller.js"></script>
+    <script type="text/javascript" src="./app/main/authentication/register-new-user-dialog.controller.js"></script>
+    <script type="text/javascript" src="./app/main/layout/header/authenticated-header.controller.js"></script>
+    <script type="text/javascript" src="./app/main/layout/header/notifications-dialog.controller.js"></script>
+    <script type="text/javascript" src="./app/main/home/home-page.controller.js"></script>
+    <script type="text/javascript" src="./app/main/manage/manage-sidebar.controller.js"></script>
+    <script type="text/javascript" src="./app/main/manage/manage-config-components.controller.js"></script>
+    <script type="text/javascript" src="./app/main/cda/cda.controller.js"></script>
+    <script type="text/javascript" src="./app/main/cda/run-later-dialog.controller.js"></script>
+    <script type="text/javascript" src="./app/main/infrastructure/infrastructure-provisioning-tabs.controller.js"></script>
+    <script type="text/javascript" src="./app/main/infrastructure/vm-details.controller.js"></script>
+    <script type="text/javascript" src="./app/main/infrastructure/vm-config-setup.controller.js"></script>
+    <script type="text/javascript" src="./app/main/curate/curate-project.controller.js"></script>
+    <script type="text/javascript" src="./app/main/dashboards/dashboard-nav.controller.js"></script>
+    <script type="text/javascript" src="./app/main/dashboards/pmo-dashboard.controller.js"></script>
+    <script type="text/javascript" src="./app/main/dashboards/it-dashboard.controller.js"></script>
+
+    <!-- Loading Application Specific Directives -->
+    <script type="text/javascript" src="./app/main/directives/page-title.directive.js"></script>
+    <script type="text/javascript" src="./app/main/directives/amcharts.directive.js"></script>
+    <script type="text/javascript" src="./app/main/directives/curate-project-pipeline-template-painting-screen.directive.js"></script>
+
+    <!-- Loading Application Specific configurations -->
+    <script type="text/javascript" src="./app/main/dtep-app.http.config.js"></script>
+    <script type="text/javascript" src="./app/main/dtep-app.location.config.js"></script>
+    <script type="text/javascript" src="./app/main/dtep-app.route.config.js"></script>
+    <script type="text/javascript" src="./app/main/dtep-app.state.config.js"></script>
+    <script type="text/javascript" src="./app/main/dtep-app.run.js"></script>
+
+</body>
+
+</html>

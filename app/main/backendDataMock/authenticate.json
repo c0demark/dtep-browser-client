@@ -1,0 +1,14 @@
+{
+    "token": "admin:1499488782770:6d706a5519239faa4314951d916b9c7a",
+    "userName": "admin",
+    "userRoles": [
+        {
+            "id": 3,
+            "type": "OWNER"
+        }
+    ],
+    "userId": "1",
+    "tenantId": "1",
+    "errorMessage": "{\"Integrated Testing\":\"http:\\/\\/mindtree-dtep.southeastasia.cloudapp.azure.com:8080\\/MIST\\/\",\"Embedded Testing\":\"http:\\/\\/mindtree-dtep.southeastasia.cloudapp.azure.com:8080\\/jenkins\\/\",\"Functional Testing\":\"http:\\/\\/mindtree-dtep.southeastasia.cloudapp.azure.com:8080\\/SAF\\/\",\"Build And Deploy\":\"http:\\/\\/mindtree-dtep.southeastasia.cloudapp.azure.com:8080\\/jenkins\\/\",\"UI Testing\":\"http:\\/\\/mindtree-dtep.southeastasia.cloudapp.azure.com:8080\\/UILite\\/\",\"Mobile Testing\":\"http:\\/\\/mindtree-dtep.southeastasia.cloudapp.azure.com:8080\\/UILite\\/\",\"Service Testing\":\"http:\\/\\/mindtree-dtep.southeastasia.cloudapp.azure.com:8080\\/WSTAF-Dtep\\/\",\"Performance Testing\":\"http:\\/\\/mindtree-dtep.southeastasia.cloudapp.azure.com:8080\\/UILite\\/\"}",
+    "redirectPage": "home"
+}

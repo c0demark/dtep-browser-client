@@ -1,0 +1,396 @@
+<html>
+
+<head>
+    <title>Continuous Delivery Platform</title>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#id_buildProgressBar").hide();
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+        });
+    </script>
+
+</head>
+
+<body style="margin-bottom: 1%">
+    <div class="container-fluid" style="margin-top: 2%;margin-bottom:5%">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 cdiPage">
+
+            <div class="row text-center" style="color:white;font-size:24px;padding-bottom:10px;">Continuous Delivery Platform</div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding:0px;">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5" style="padding:0px;">
+                    <h5>Project*</h5>
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7" style="padding:0px;">
+                    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1"></div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="padding:0px">
+                        <h5 ng-show="project">Release*</h5>
+                    </div>
+                    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1"></div>
+                    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1"></div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="padding-left:5px;">
+                        <h5 ng-show="(!project|| !release) ?  false : true">Build*</h5>
+                    </div>
+                    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1"></div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-bottom:15px;">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <select class="form-control select_dropdown" id="project" ng-model="project" ng-change="getmodules(project)" ng-options="project.projectName for project in projectInfo">
+                        <option value="">--Select Project--</option>
+                    </select>
+
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7" style="padding:0px;">
+                    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1"></div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="padding:0px;">
+                        <select class="form-control select_dropdown" id="release" ng-disabled="(!project || !loadingRelease(projectModules.projectReleasesVO))?  true : false" ng-model="release" ng-options="release.projectReleaseName for release in projectModules.projectReleasesVO track by release.projectReleaseId">
+                        <option value="">--select Release--</option>
+                    </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1" data-toggle="modal" data-target="#selectRelease" title="Add New Release">
+                        <button class="btn btn-info" ng-click="clearReleaseData()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+                        <div ng-hide="!project">
+                            <img src="static/images/pageloader.gif" height="20" width="20" ng-hide="loadingRelease(projectModules.projectReleasesVO)" style="width: 20; height: 20;"></img>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="padding:0px;">
+                        <select class="form-control select_dropdown" id="build" ng-disabled="!release" ng-model="build" ng-options="build.buildId as build.buildName for build in release.projectBuilds track by build.buildId">
+                        <option value="">--Select Build--</option>
+                    </select>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1" data-toggle="modal" data-target="#selectBuild" title="Add New Build">
+                        <button class="btn btn-info" ng-click="clearBuildData()"><i class="fa fa-plus" aria-hidden="true" ></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="height: 4px; width: auto; background-color:#7abbd0"></div>
+            <div ng-repeat="mindtreeIp in projectModules.mindtreeips | filter:query | orderBy: 'mindtreeIpId' " ng-show="build">
+                <div class="form-group"></div>
+                <div class="row" style="margin-top:2%">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-6">
+                        <label>
+                                <input type="checkbox" ng-model="mindtreeIpId" ng-click="toggleSelection(mindtreeIp.mindtreeIpId)" ng-checked="mindtreeIps.indexOf(mindtreeIp.mindtreeIpId) > -1"  ng-disabled = "!build">&nbsp;&nbsp;</input>
+                                <a style="color:white" ng-if="mindtreeIp.applicationName == 'Build And Deploy'" href="{{projectModules.buildURL}}">{{mindtreeIp.applicationName}}</a>
+                                <a style="color:white" ng-if="mindtreeIp.applicationName != 'Build And Deploy'" href="{{mindtreeIp.applicationUrl}}">{{mindtreeIp.applicationName}}</a>
+                            </label>
+                    </div>
+                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-3">
+                        <div class="btn-group selectmod" data-ng-class="{open: open}">
+                            <button ng-disabled="!mindtreeIpId" class="btn dropdown-toggle" data-ng-click="open=!open">
+                                        <span data-ng-repeat="selectedModule  in selectedModuleObjects | filter:{mindtreeIpId:mindtreeIp.mindtreeIpId}">{{selectedModule.moduleName}},</span>
+                                        <span ng-if="(selectedModuleObjects | filter:{mindtreeIpId:mindtreeIp.mindtreeIpId}).length=='0'">Select Module</span>
+                                        &nbsp;&nbsp;<span class="caret"></span>
+                                </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                                <li data-ng-repeat="module  in projectModules.modules | filter:{mindtreeIpId:mindtreeIp.mindtreeIpId}">
+                                    <a data-ng-click="setSelectedModule()">{{module.moduleName}}<span data-ng-class="isChecked(module.moduleId)"></span>
+                                        </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-if="mindtreeIp.applicationName == 'Build And Deploy'">
+                               <button class="btn" style="background-color:inherit;border-color:#88d0e8;color:white;width:100%;" id="id_config" ng-click="getCodeCoveragePdf()" >&nbsp;&nbsp;SonarReport</button>
+                               <button class="btn btn-lg btn-warning" id="id_buildProgressBar" ng-disabled = "true"><span class="fa fa-circle-o-notch fa-spin"></span> Build Progressing...</button>
+                           </div> -->
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-if="mindtreeIp.applicationName == 'Build And Deploy'">
+                        <button class="btn" style="background-color: inherit; border-color: #88d0e8; color: white; width: 100%; display: none;" id="id_config" ng-click="getCodeCoveragePdf()" ng-disabled="false">&nbsp;&nbsp;Sonar Report</button>
+                        <button ng-click="getJenkinsLog(projectModules.buildURL)" data-target="#jenkinsLog_modal" data-toggle="modal" class="btn btn-lg btn-warning" id="id_buildProgressBar"> 
+                                    <span class="fa fa-circle-o-notch fa-spin"></span> Build
+                                    Progressing...
+                                </button>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-if="mindtreeIp.applicationName != 'Build And Deploy'">
+                        <div ng-if="mindtreeIp.applicationName != 'Embedded Testing'">
+                            <button class="btn" style="background-color:inherit;border-color:#88d0e8;color:white;width:100%;" ng-click="downloadReport(mindtreeIp.applicationName)" id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
+                                <span class="fa fa-download"></span> Download
+                            </button>
+                        </div>
+                        <div ng-if="mindtreeIp.applicationName == 'Embedded Testing'">
+                            <a href="getEmbeddedReport">
+                                <button class="btn" style="background-color:inherit;border-color:#88d0e8;color:white;width:100%;" id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
+                                <span class="fa fa-download"></span> Download
+                            </button></a>
+                        </div>
+                        <button class="btn btn-lg btn-warning" id="{{mindtreeIp.applicationName}}_execution" ng-hide="execution" ng-disabled="true"><span class="fa fa-circle-o-notch fa-spin"></span> executing...</button>
+                    </div>
+                </div>
+                <div class="form-group"></div>
+                <div class="row" style="height: 1px; width: auto; background-color: #88d0e8;"></div>
+            </div>
+
+
+            <div class="row" style="height: 4px; width: auto; background-color: #1b5c83;margin-top:3%"></div>
+            <div class="form-group"></div>
+            <div class="row text-center" ng-show="build">
+                <!-- <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"></div> -->
+
+                <button ng-click="runCdiExecution(project)" class="btn btn-info " style="background-color: #E37321; border-color: #E37321; font-weight: bold;">RUN NOW</button>
+
+
+                <button class="btn btn-info " data-target="#runlater_modal" data-toggle="modal" style="background-color: #E37321; font-weight: bold; border-color: #E37321;color:#ffffff;" data-ng-click="clearCronFormat()">RUN LATER</button>
+
+
+            </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+    </div>
+    <!-- Release Modal box -->
+    <div class="modal fade" id="selectRelease" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" style="width:auto" data-dismiss="modal">&times;</button>
+                    <h4 class="text-center">Release</h4>
+                    <div align="center" style="color: red; font-size: 18px">{{addNewReleaseError}}</div>
+                    <div align="center" style="color: red; font-size: 18px">{{addNewReleaseSuccess}}</div>
+                    <label>New Release</label>
+                    <input type="text" class="form-control" ng-model="newReleaseName" placeholder="Enter Release Number"></input>
+                    <div class="form-group"></div>
+                    <label>Release Description</label>
+                    <textarea type="text" class="form-control" ng-model="newReleaseDesc" placeholder="Enter Release Description"></textarea>
+                    <div class="form-group"></div>
+                    <div class="row" style="height:4px;width:auto;background-color:grey;margin-left:1%;margin-right:1%"></div>
+                    <div class="form-group"></div>
+                    <div class="row text-center">
+                        <div class="row text-center">
+                            <button type="submit" class="btn btn-primary btn-md selectRelease" style="width:100px;background-color:#E37321;border-color:#E37321;font-weight:bold" ng-click="addNewRelease(project)">OK</button>
+                            <button type="submit" class="btn btn-primary btn-md" style="width:100px;background-color:#333333;border-color:#333333;font-weight:bold" ng-click="clearReleaseInfo()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal closes here -->
+    <!-- Build Modal box -->
+    <div class="modal fade" id="selectBuild" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" style="width:auto" data-dismiss="modal">&times;</button>
+                    <h4 class="text-center">Build</h4>
+                    <div align="center" style="color: red; font-size: 18px">{{addNewBuildError}}</div>
+                    <div align="center" style="color: red; font-size: 18px">{{addNewBuildSuccess}}</div>
+                    <label>New Build</label>
+                    <input type="text" class="form-control" ng-model="newBuildName" placeholder="Enter Build Number"></input>
+                    <div class="form-group"></div>
+                    <label>Build Description</label>
+                    <textarea type="text" class="form-control" ng-model="newBuildDesc" placeholder="Enter Build Description"></textarea>
+                    <div class="form-group"></div>
+                    <div class="row" style="height:4px;width:auto;background-color:grey;margin-left:1%;margin-right:1%"></div>
+                    <div class="form-group"></div>
+                    <div class="row text-center">
+                        <div class="row text-center">
+                            <button type="submit" class="btn btn-primary btn-md selectBuild" style="width:100px;background-color:#E37321;border-color:#E37321;font-weight:bold" ng-click="addNewBuild(project)">OK</button>
+                            <button type="submit" class="btn btn-primary btn-md" style="width:100px;background-color:#333333;border-color:#333333;font-weight:bold" ng-click="clearBuildInfo()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Release Modal closes here -->
+    <div class="modal fade" style="margin-top:3%" id="Release" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" style="width:auto" data-dismiss="modal">&times;</button>
+                    <h4 class="text-center">Please fill the release details</h4>
+                    <div class="form-group"></div>
+                    <div class="row text-center">
+                        <button type="submit" style="width:auto" class="btn btn-primary btn-xs" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal closed here -->
+    <!-- Release Modal closes here -->
+    <!-- <div class="modal fade" style="margin-top:3%" id="FillRelease" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" >
+             <div class="modal-dialog modal-sm">
+            
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" style="width:auto" data-dismiss="modal">&times;</button>
+                  <h4 class="text-center">Release updated successfully</h4>
+                  <div class="form-group"></div>
+                <div class="row text-center">
+            <button type="submit" style="width:auto" class="btn btn-primary btn-xs" data-dismiss="modal">OK</button>
+            </div>
+            </div>
+              </div>
+              </div>
+        </div> -->
+    <!-- Modal closed here -->
+    <!-- Release Modal closes here -->
+    <div class="modal fade" style="margin-top:3%" id="Build" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" style="width:auto" data-dismiss="modal">&times;</button>
+                    <h4 class="text-center">Please fill the Build details</h4>
+                    <div class="form-group"></div>
+                    <div class="row text-center">
+                        <button type="submit" style="width:auto" class="btn btn-primary btn-xs" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal closed here -->
+    <!-- Release Modal closes here -->
+    <!-- <div class="modal fade" style="margin-top:3%" id="FillBuild" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" >
+             <div class="modal-dialog modal-sm">
+            
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" style="width:auto" data-dismiss="modal">&times;</button>
+                  <h4 class="text-center">Build updated successfully</h4>
+                  <div class="form-group"></div>
+                <div class="row text-center">
+            <button type="submit" style="width:auto" class="btn btn-primary btn-xs" data-dismiss="modal">OK</button>
+            </div>
+            </div>
+              </div>
+              </div>
+        </div> -->
+    <!-- Modal closed here -->
+
+
+
+
+    <!-- Run Later Modal -->
+    <div class="modal fade" id="runlater_modal" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center">Schedule Build</h4>
+                </div>
+
+                <div class="modal-body" style="height:350px;overflow:auto;text-align:center;">
+                    <div align="center" style="color: red; font-size: 18px">{{jobScheduledSuccess}}</div>
+                    <div align="center" style="color: red; font-size: 18px">{{jobScheduledError}}</div>
+                    <form role="form">
+
+
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12 col-xs-12">
+                                <label style="font-weight:bold !important;float:left;"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp;&nbsp;Enter the data in CRON format</label>
+                            </div>
+                            <div class="form-group col-lg-1 col-lg-offset-2 col-md-1 col-md-offset-2 col-sm-4 col-xs-6">
+                                <input class="form-control" type="text" maxlength="2" style="padding:6px 10px;" placeholder="00" ng-model="cronSecond" ng-keyup="validateSecond()" id="cron_second" />
+                                <label style="text-align: center;" id="cronsecond">SEC</label>
+                            </div>
+                            <div class="form-group col-lg-1 col-md-1 col-sm-4 col-xs-6">
+                                <input class="form-control" type="text" maxlength="2" style="padding:6px 10px;" placeholder="00" ng-model="cronMinute" ng-keyup="validateMinute()" id="cron_minute" />
+                                <label style="text-align: center;" id="cronminute">MIN</label>
+                            </div>
+                            <div class="form-group col-lg-1 col-md-1 col-sm-4 col-xs-6">
+                                <input class="form-control" type="text" maxlength="2" style="padding:6px 10px;" placeholder="00" ng-model="cronHour" ng-keyup="validateHour()" id="cron_hour" />
+                                <label style="text-align: center;" id="cronhour">HOUR</label>
+                            </div>
+                            <div class="form-group col-lg-1 col-md-1 col-sm-4 col-xs-6">
+                                <input class="form-control" type="text" maxlength="2" style="padding:6px 10px;" placeholder="00" ng-model="cronDOM" ng-keyup="validateDayOfMonth()" id="cron_day_of_month" />
+                                <label style="text-align: center;" id="crondom">DOM</label>
+                            </div>
+                            <div class="form-group col-lg-1 col-md-1 col-sm-4 col-xs-6">
+                                <input class="form-control" type="text" maxlength="2" style="padding:6px 10px;" placeholder="00" ng-model="cronMonth" ng-keyup="validateMonth()" id="cron_month" />
+                                <label style="text-align: center;" id="cronmonth">MONTH</label>
+                            </div>
+                            <div class="form-group col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                                <input class="form-control" type="text" maxlength="9" style="padding:6px 10px;" placeholder="MON-FRI" ng-model="cronDOW" ng-keyup="validateDayOfWeek()" id="cron_day_of_week" />
+                                <label style="text-align: center;" id="crondow">DOW</label>
+                            </div>
+
+                            <div class="form-group col-lg-1 col-md-1 col-sm-12 col-xs-12 text-center">
+
+                                <span data-toggle="tooltip" data-placement="right" title="CRON format info">
+                                                <button class="btn btn-info" data-toggle="collapse" data-target="#cron_info" ><i class="fa fa-question-circle" aria-hidden="true"></i></button>
+                                            </span>
+                            </div>
+
+
+                            <div id="cron_info" class="well well-lg collapse col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:left;">
+                                <h3 style="text-align:center;margin:0px !important;"><label class="label label-primary" style="float:none;">CRON Format</label></h3>
+
+                                <blockquote>
+
+                                    <p style="font-size:14px">This field follows the syntax of cron (with minor differences). <br/>Specifically, each line consists of 6 fields separated by TAB or whitespace:
+                                        <br/>SECOND MINUTE HOUR DOM MONTH DOW
+                                        <br/>SECOND Second within the minute (0 - 59)
+                                        <br/>MINUTE Minutes within the hour (0 - 59)
+                                        <br/>HOUR The hour of the day (0 - 23)
+                                        <br/>DOM The day of the month (1 - 31)
+                                        <br/>MONTH The month (1 - 12)
+                                        <br/>DOW The day of the week (0 - 7) where 0 and 7 are Sunday.<br/>
+
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+
+
+                            <!--  <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                   
+                                           <h4><span class="label label-primary">Note :</span>&nbsp;<span class="label label-success">CRON Format = > 24 15 18 * * MON-FRI</span></h4>
+                                   
+                                   </div> -->
+
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+
+                                <button type="submit" class="btn btn-success" ng-click="scheduleJenkinsJob()" data-dismiss="modal">Schedule</button>
+                                <button type="reset" class="btn btn-danger">Cancel</button>
+
+                            </div>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Jenkins log starts here -->
+    <div class="modal fade" style="margin-top:3%" id="jenkinsLog_modal" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+
+            <div class="modal-content" id="jenkinsContent_modal">
+                <div class="modal-header">
+                    <button type="button" ng-click="stopGetJenkinsLog()" class="close" style="width:auto" data-dismiss="modal">&times;</button>
+                    <h4 class="text-center">Jenkins Log</h4>
+                    <pre>{{jenkinsLog}}</pre>
+                    <div class="row text-center">
+                        <button type="submit" ng-click="stopGetJenkinsLog()" style="width:auto" class="btn btn-primary btn-xs" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

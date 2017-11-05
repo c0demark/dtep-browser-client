@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<div class="main-content-with-authenticated-header">
+    <nav class="navbar navbar-inverse dtep-page-header">
+        <section class="container-fluid">
+            <ul class="nav navbar-nav dtep-page-header-menu">
+                <li data-ui-sref-active="dtep-active-header-nav-item" data-tooltip-placement="bottom" data-uib-tooltip="Cloud">
+                    <a data-ui-sref=".cloud">Cloud</a>
+                </li>
+                <li data-ui-sref-active="dtep-active-header-nav-item" data-tooltip-placement="bottom" data-uib-tooltip="On Premise">
+                    <a data-ui-sref=".onPremise">On Premise</a>
+                </li>
+            </ul>
+        </section>
+    </nav>
+    <main data-ui-view="infrastructure-content"></main>
+</div>
+<!-- <div class="container-fluid authenticated-content-div">
+    <nav>
+        <ul data-uib-tabset="data-uib-tabset" data-type="pills" data-justified="true">
+            <li data-uib-tab="data-uib-tab" data-index="0" data-select="callOnTabSelect($event)" data-heading="PMO Dashboard" data-ui-sref=".pmoDashboard">
+            </li>
+            <li data-uib-tab="data-uib-tab" data-index="1" data-heading="IT Dashboard" data-ui-sref=".itDashboard">
+            </li>
+        </ul>
+    </nav>
+    <div data-ui-view="tab-dashboard-content"></div>
+</div> -->

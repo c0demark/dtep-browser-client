@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<nav class="navbar navbar-inverse dtep-page-header" role="navigation">
+    <section class="container-fluid">
+        <header class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" aria-expanded="false" data-ng-click="toggleNavCollapse()">
+                        <span class="sr-only">Toggle Page Header Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand dtep-header-menu-logo" data-ui-sref=".home">
+                <figure><img class="img-responsive" src="/assets/images/dtep_header_logo.png" /></figure>
+            </a>
+        </header>
+        <section class="collapse navbar-collapse" data-uib-collapse="isNavCollapsed">
+            <section>
+                <ul class="nav navbar-nav dtep-page-header-menu">
+                    <li data-ui-sref-active="dtep-active-header-nav-item" data-tooltip-placement="bottom" data-uib-tooltip="Home">
+                        <a data-ui-sref=".home"><i class="fa fa-home fa-lg" aria-hidden="true"></i>&nbsp;Home</a>
+                    </li>
+                    <li data-ui-sref-active="dtep-active-header-nav-item" data-tooltip-placement="bottom" data-uib-tooltip="Continuous Delivery Automation Platform">
+                        <a data-ui-sref=".cda"><i class="fa fa-cogs fa-lg" aria-hidden="true"></i>&nbsp;CDA</a>
+                    </li>
+                    <li data-ui-sref-active="dtep-active-header-nav-item" data-tooltip-placement="bottom" data-uib-tooltip="Provision Infrasturcture for Cloud/on-Premise">
+                        <a data-ui-sref=".infrastructure"><i class="fa fa-cloud fa-lg"></i>&nbsp;Infrastructure</a>
+                    </li>
+                    <li data-ui-sref-active="dtep-active-header-nav-item" data-tooltip-placement="bottom" data-uib-tooltip="Manage Zone">
+                        <a data-ui-sref=".manage"><i class="fa fa-briefcase fa-lg" aria-hidden="true"></i>&nbsp;Manage</a>
+                    </li>
+                    <li data-ui-sref-active="dtep-active-header-nav-item" data-tooltip-placement="bottom" data-uib-tooltip="Curate Project Configurations">
+                        <a data-ui-sref=".curate"><i class="fa fa-object-ungroup fa-lg" aria-hidden="true"></i>&nbsp;Curate</a>
+                    </li>
+                    <li data-ui-sref-active="dtep-active-header-nav-item" data-tooltip-placement="bottom" data-uib-tooltip="Consolidated Dashboard">
+                        <a data-ui-sref=".dashboards"><i class="fa fa-tachometer fa-lg" aria-hidden="true"></i>&nbsp;Dashboard</a>
+                    </li>
+                    <!-- <li data-ui-sref-active="dtep-active-header-nav-item" data-tooltip-placement="bottom" data-uib-tooltip="Defect Management Portal">
+                    <a><i class="fa fa-bug fa-lg" aria-hidden="true"></i>&nbsp;Defects Management</a>
+                </li> -->
+                </ul>
+            </section>
+            <section>
+                <ul class="nav navbar-nav navbar-right dtep-page-header-menu">
+                    <li data-tooltip-placement="bottom" data-uib-tooltip="Notifications">
+                        <a href="javascript:void(0)" data-ng-click="openNotificationsModal()"><i class="fa fa-bell fa-lg" aria-hidden="true"></i><span class="badge dtep-notification-count-span">4</span></a>
+                    </li>
+                    <li class="dropdown dtep-user-profile-dropdown-menu-item" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
+                        <a class="dropdown-toggle dtep-user-profile-dropdown-anchor" id="dtep-user-profile-dropdown-anchor" href="javascript:void(0)" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle">
+                            <!-- <span>
+                            <img width="30" height="30" class="img-circle" src="/assets/images/blankphoto.png"/>
+                        </span>&nbsp;&nbsp;{{username}} -->
+                            <i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i> &nbsp;&nbsp;username
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu dtep-user-profile-dropdown" aria-labelledby="dtep-user-profile-dropdown-anchor" data-uib-dropdown-menu="data-uib-dropdown-menu">
+                            <li><a><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Not {{username}} ? Signout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </section>
+</nav>

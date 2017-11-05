@@ -1,0 +1,616 @@
+body {
+    height: 100%;
+    background: #0068b4;
+    background-image: radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -o-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -ms-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -moz-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -webkit-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    color: #88d0e8;
+    color: white;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* body {
+	height: 100%;
+	background: #0068b4;
+	background-image: radial-gradient(center top, circle cover, #0090d2, #005c86);
+	background-image: -o-radial-gradient(center top, circle cover, #0090d2, #005c86);
+	background-image: -ms-radial-gradient(center top, circle cover, #0090d2, #005c86);
+	background-image: -moz-radial-gradient(center top, circle cover, #0090d2,#005c86);
+	background-image: -webkit-radial-gradient(center top, circle cover, #0090d2, #005c86);
+	color: #88d0e8;
+	color:white;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+} */
+
+input[type='text'] {
+    background-color: inherit;
+    color: white;
+}
+
+input[type='password'] {
+    background-color: inherit;
+    color: white;
+}
+
+input[type='date'] {
+    background-color: inherit;
+    color: white;
+}
+
+#logname li {
+    list-style-type: none;
+}
+
+.selected {
+    border-bottom: 4px solid #E37321;
+}
+
+.selected1 {
+    border-bottom: 4px solid #E37321;
+}
+
+.selected2 {
+    border-bottom: 4px solid #E37321;
+}
+
+.selected3 {
+    border-bottom: 4px solid #E37321;
+}
+
+.selected4 {
+    border-bottom: 4px solid #E37321;
+}
+
+.image_selected {
+    border-bottom: 4px solid #61AFC2;
+}
+
+.dottedline {
+    border-bottom: 2px dotted #61AFC2;
+}
+
+.dottedline .img_name {
+    padding-bottom: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+.dottedline .img_name1 {
+    padding-bottom: 40px;
+    color: white;
+    font-size: 12px;
+}
+
+.dottedline .img_name2 {
+    padding-bottom: 57px;
+    color: white;
+    font-size: 12px;
+}
+
+.dottedline .img_name3 {
+    padding-bottom: 18px;
+    color: white;
+    font-size: 12px;
+}
+
+footer {
+    font-size: 12px;
+    font-weight: bold;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    z-index: 150;
+    _position: absolute;
+    _top: expression(eval(document.documentElement.scrollTop + ( document.documentElement.clientHeight-this.offsetHeight)));
+}
+
+.modal {
+    color: #696969 !important;
+}
+
+.modal input[type='text'] {
+    background-color: inherit 1important;
+    color: black !important;
+}
+
+.modal input[type='password'] {
+    background-color: inherit !important;
+    color: black !important;
+}
+
+.modal input[type='date'] {
+    background-color: inherit !important;
+    color: black !important;
+}
+
+.modal textarea {
+    background-color: inherit !important;
+    color: black !important;
+}
+
+.navbar-inverse {
+    background: rgba(34, 34, 34, 0.3);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    /* Standard syntax */
+    border-color: transparent !important;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white !important;
+}
+
+.navbar-inverse>.container-fluid {
+    border-bottom: 1px solid rgba(34, 34, 34, 0.3)
+}
+
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>.open>a:hover {
+    background-color: transparent;
+    border-bottom: 4px solid #e37220 !important;
+}
+
+.dropdown-menu>li>a:hover {
+    color: #000000 !important;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>.open>a:hover {
+    background-color: transparent;
+    border-bottom: 4px solid #e37220 !important;
+}
+
+.menu_icon {
+    margin-top: -8px;
+}
+
+.pagination {
+    margin: 3px !important;
+}
+
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+    padding: 12px;
+}
+
+#myTable tr td {
+    border-color: #61AFC2;
+}
+
+.table>thead>tr>th {
+    border-color: #61AFC2;
+}
+
+.tenant_selected {
+    border-bottom: 4px solid #61AFC2;
+}
+
+.table th {
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+}
+
+#user_table {
+    color: #696969;
+}
+
+.panel-primary>.panel-heading {
+    background-color: #232D3D !important;
+    border-color: #232D3D !important;
+}
+
+.panel-primary {
+    border-color: #232D3D !important;
+}
+
+#user_table th {
+    background-color: #2C4259;
+    color: white;
+    font-size: 14px;
+}
+
+#user_table td {
+    font-size: 14px;
+}
+
+.table>thead>tr>th {
+    border-color: white !important;
+}
+
+.table {
+    margin-bottom: 0px !important;
+}
+
+.table-fixed thead {
+    width: 100% !important;
+}
+
+.table-fixed tbody {
+    height: 100px !important;
+    overflow-y: auto !important;
+    width: 100% !important;
+}
+
+.table-fixed th {
+    text-align: center;
+}
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+    display: block !important;
+}
+
+.table-fixed tbody td,
+.table-fixed thead>tr>th {
+    float: left !important;
+    border-bottom-width: 0 !important;
+}
+
+#mainpanel {
+    height: 550px;
+    overflow-y: auto;
+}
+
+.tenant_table .btn {
+    background-color: inherit !important;
+}
+
+.tenant_table th {
+    text-align: left !important;
+}
+
+.tenant_table td {
+    text-align: left !important;
+}
+
+#project_table1 th,
+#project_table2 th {
+    background-color: #2C4259 !important;
+    color: white !important;
+    font-size: 14px;
+}
+
+#project_table1 td,
+#project_table2 td {
+    font-size: 14px;
+    color: #696969 !important;
+}
+
+textarea {
+    background-color: inherit !important;
+    color: white !important;
+}
+
+.project_table .btn {
+    background-color: inherit !important;
+}
+
+.user_table .btn {
+    background-color: inherit !important;
+}
+
+.cdiPage .select_dropdown {
+    background-color: inherit;
+    color: white;
+    border-color: #88d0e8;
+}
+
+.select_dropdown {
+    background-color: inherit;
+    color: white;
+    border-color: #88d0e8;
+}
+
+.select_dropdown option {
+    color: black;
+}
+
+.cdiPage option {
+    color: black;
+}
+
+.cdiPage label {
+    color: white !important;
+    display: block;
+    cursor: pointer;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+#msform {
+    width: 100%;
+    /* margin: 50px auto; */
+    text-align: center;
+    position: relative;
+    height: 74%;
+    overflow: hidden;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    background-color: inherit;
+    position: inherit;
+}
+
+
+/*Hide all except first fieldset*/
+
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+
+/*headings*/
+
+.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+
+/*progressbar*/
+
+#progressbar {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+}
+
+
+/*progressbar connectors*/
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+    /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+
+/*marking active/completed steps green*/
+
+
+/*The number of the step and the connector before it = green*/
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #E37321;
+    color: white;
+}
+
+#image_div {
+    border-bottom: 1px solid rgba(136, 208, 232, 0.4);
+    margin-bottom: 5%;
+}
+
+#image_div img {
+    padding: 3%;
+}
+
+#msform fieldset select {
+    background: inherit;
+    color: white;
+}
+
+#msform fieldset option {
+    color: black;
+}
+
+.tenantVM th {
+    text-align: left;
+}
+
+.tenantVM td {
+    text-align: left;
+}
+
+.cdiPage .selectmod button {
+    min-width: 250px;
+    max-width: 250px;
+    overflow: auto;
+    color: black;
+}
+
+input#rgLocation {
+    background: inherit;
+}
+
+input#size {
+    background: inherit;
+}
+
+input#vmCoreCPU {
+    background: inherit;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    background-color: inherit;
+    border: none;
+    color: white
+}
+
+
+/*.pagination {
+    padding-left: 391px !important;
+}*/
+
+.pagination>.disabled>a,
+.pagination>.disabled>a:focus,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>span,
+.pagination>.disabled>span:focus,
+.pagination>.disabled>span:hover {
+    background-color: inherit;
+}
+
+.modal-content {
+    border: 15px solid rgba(0, 0, 0, .2);
+}
+
+#jenkinsContent_modal {
+    width: 258%;
+}
+
+a {
+    cursor: pointer;
+}
+
+text[x='490'] {
+    display: none
+}
+
+
+/* Azure Management */
+
+tbody#azureSubConfigTable tr td input {
+    background: inherit;
+    border-style: none;
+}
+
+.azure_mod {
+    cursor: pointer;
+}
+
+input#defid {
+    margin-top: 10px;
+    margin-left: 30px;
+    /* padding-left: 100px; */
+}
+
+
+/* @media screen and (max-height: 516px) 
+{
+	.content
+	{
+	margin-bottom:10%;
+	}
+} */
+
+@media screen and (max-height: 675px) and (max-width:1000px) {
+    #msform fieldset {
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (max-height: 675px) and (max-width:800px) {
+    .content {
+        margin-bottom: 15%
+    }
+    #msform fieldset {
+        margin-bottom: 10%;
+    }
+}
+
+@media screen and (max-height: 675px) and (max-width:500px) {
+    .content {
+        margin-bottom: 25%
+    }
+    #msform fieldset {
+        margin-bottom: 20%;
+    }
+}
+
+
+/* Notification Text*/
+
+.notificationText {
+    color: black !important;
+}
+
+
+/*addded from login view */
+
+.form-group input {
+    border-color: rgba(136, 208, 232, 0.4) !important;
+    color: #ffffff !important;
+}
+
+footer a,
+footer a:hover,
+.form-group a,
+.btn:hover {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+footer {
+    color: #88d0e8;
+}
+
+
+/* end of added from login.view */

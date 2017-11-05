@@ -1,0 +1,881 @@
+body {
+    height: 100%;
+    background: #0068b4;
+    background-image: radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -o-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -ms-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -moz-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -webkit-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    /* color: #88d0e8; */
+    color: rgba(255, 255, 255, 1);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main-content-with-authenticated-header {
+    min-height: calc(569px - 56px);
+}
+
+.main-content-without-authenticated-header {
+    min-height: calc(569px);
+}
+
+.element-having-position-relative {
+    position: relative;
+}
+
+
+/*****************************************
+/**      Start of login page css       **/
+
+
+/* .center-margined-image {
+    margin: auto;
+} */
+
+.dtep-login-button {
+    background-color: #E37321;
+    border-color: #E37321;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+/* .form-group input {
+    border-color: rgba(136, 208, 232, 0.4) !important;
+    color: #ffffff !important;
+    border-color: rgba(136, 208, 232, 0.4);
+} */
+
+.dtep-login-form-input-field {
+    _border-color: rgba(15, 121, 171, 1);
+}
+
+.dtep-login-form-icon {
+    background-color: rgba(168, 207, 215, 0.80);
+    border-color: rgba(15, 121, 171, 1);
+    text-shadow: 2px 2px 2px rgba(15, 121, 171, 0.8);
+}
+
+.dtep-login-form .dtep-login-form-input-group {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dtep-forgot-password-modal-anchor,
+.dtep-register-new-user-modal-anchor {
+    color: #2486C1;
+    text-decoration: none;
+    /* color:#ffffff; */
+    cursor: pointer;
+    /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-register-new-user-modal-span {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/*****************************************
+/**       End of login page css        **/
+
+
+/*****************************************
+/**    Start of login page modal css   **/
+
+.modal {
+    color: #696969;
+}
+
+.modal-content {
+    border: 15px solid rgba(0, 0, 0, 0.2);
+}
+
+
+/*****************************************
+/**    End of login page modal css     **/
+
+
+/*****************************************
+/**      Start of page footer css      **/
+
+.dtep-page-footer {
+    color: #88d0e8;
+    _font-size: 12px;
+    /* font-weight: normal; */
+    /* bottom: calc(100%); */
+    _width: 100%;
+    /* text-align: center; */
+    _position: fixed;
+    _z-index: 150;
+    /* position: relative; */
+    _position: absolute;
+    _top: calc(100% - (26.8px));
+    _bottom: calc(100% - (26.8px));
+    _bottom: 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    /* margin-top: calc(100% - (26.8px)); */
+    /* margin-bottom: 0% */
+    /* _top: expression(eval(document.documentElement.scrollTop + ( document.documentElement.clientHeight-this.offsetHeight))); */
+}
+
+.dtep-page-footer a,
+.dtep-page-footer a:hover {
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+
+/*****************************************
+/**       End of page footer css       **/
+
+
+/*****************************************
+/**      Start of page header css      **/
+
+.dtep-page-header {
+    background: rgba(34, 34, 34, 0.3);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(top right, rgba(142, 13, 13, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    /* Standard syntax */
+    border-color: transparent;
+    border-bottom: 1px solid rgba(34, 34, 34, 0.3);
+    /* color: rgba(255, 255, 255, 1) !important; */
+    margin-bottom: 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-header-search-box-form-input-field {
+    border-color: rgba(15, 121, 171, 1);
+}
+
+.dtep-header-search-box-form-icon {
+    background-color: rgba(168, 207, 215, 0.80);
+    border-color: rgba(15, 121, 171, 1);
+    text-shadow: 2px 2px 2px rgba(15, 121, 171, 0.8);
+}
+
+.dtep-header-search-box-form .dtep-header-search-box-form-input-group {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dtep-page-header .dtep-header-menu-logo {
+    padding-top: 0;
+}
+
+.dtep-page-header .dtep-page-header-menu>li>a {
+    color: rgba(255, 255, 255, 1);
+    /* margin-top: -5px; */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-page-header a:hover,
+.dtep-page-header a:active,
+.dtep-page-header a:focus {
+    cursor: pointer;
+}
+
+.dtep-active-header-nav-item,
+.dtep-user-profile-dropdown-menu-item.open {
+    border-bottom: 4px solid #E37320;
+    /* min-height: calc(100% - 4px); */
+}
+
+.dtep-page-header-menu>.dtep-user-profile-dropdown-menu-item>.dtep-user-profile-dropdown-anchor {
+    background-color: inherit !important;
+    color: inherit !important;
+}
+
+.dtep-notification-count-span {
+    background-color: #fa3e3e;
+    _border-radius: 1px;
+    _color: rgba(255, 255, 255, 1);
+    _padding: 2px;
+    _font-size: 10px;
+    _position: relative;
+    /* Position the badge within the relatively positioned button */
+    _top: -1;
+    _right: -1;
+}
+
+.dtep-user-profile-dropdown {
+    background: rgba(34, 34, 34, 0.5);
+}
+
+.dtep-user-profile-dropdown>li>a,
+.dtep-user-profile-dropdown>li>a:hover,
+.dtep-user-profile-dropdown>li>a:focus {
+    /* padding: 10px 5px 8px 5px; */
+    color: rgba(255, 255, 255, 1);
+    background: initial;
+}
+
+
+/*****************************************
+/**       End of page header css       **/
+
+
+/*****************************************
+/**     Start of Home page view css    **/
+
+.dtep-home-page-top-section,
+.dtep-home-page-image-panel>.dtep-home-page-image-panel-heading {
+    _border-bottom: 1px solid rgba(136, 208, 232, 0.3);
+    border-bottom: none;
+}
+
+.dtep-home-page-projects-dropdown-label {
+    font-size: 25px;
+    color: #88d0e8;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-home-page-projects-dropdown {
+    background-color: inherit;
+    color: inherit;
+    border-color: #88d0e8;
+}
+
+.dtep-home-page-projects-dropdown:hover,
+.dtep-home-page-projects-dropdown:focus,
+.dtep-home-page-projects-dropdown:active {
+    background: rgba(16, 84, 121, 0.8);
+    color: inherit;
+    border-color: #88d0e8;
+}
+
+.dtep-home-page-image-panel {
+    background: rgba(34, 34, 34, 0.3);
+    border-color: transparent;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.dtep-home-page-image-panel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: height .5s ease-in-out;
+}
+
+.dtep-home-page-image-panel:hover .dtep-home-page-image-panel-overlay,
+.dtep-home-page-image-panel:active .dtep-home-page-image-panel-overlay {
+    height: 100%;
+}
+
+.dtep-home-page-image-panel>.dtep-home-page-image-panel-heading {
+    background: inherit;
+    color: #dfe3ec;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-home-page-image-panel>.dtep-home-page-image-panel-heading>span.panel-title {
+    /* background: inherit; */
+    /* color: inherit; */
+    line-height: 2em;
+    font-size: 2.5rem;
+    /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
+}
+
+.dtep-home-page-image-panel-body-content {
+    width: 100%;
+    height: 350px;
+}
+
+.dtep-home-page-image-panel>.panel-body {
+    padding: 0;
+}
+
+.dtep-home-page-image-panel .dtep-home-page-image-panel-body-content th,
+.dtep-home-page-image-panel .dtep-home-page-image-panel-body-content td {
+    height: calc((325px - 6px) / 5);
+    border-color: rgba(136, 208, 232, 0.2);
+    padding: 12px;
+    line-height: 40px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.dtep-home-page-image-panel .dtep-home-page-image-panel-body-content th {
+    /* border-color: rgba(136, 208, 232, 0.2); */
+    /* border-top: 0 none transparent !important; */
+    background-color: rgba(33, 33, 33, 0.31);
+}
+
+.dtep-home-page-panel-body-image {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*****************************************
+/**      End of Home page view css     **/
+
+
+/*****************************************
+/**     Start of cda view view css     **/
+
+.dtep-cda-page-title {
+    font-size: 24px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-cda-page-dropdown {
+    background-color: inherit;
+    color: inherit;
+    border-color: #88d0e8;
+}
+
+.dtep-cda-page-dropdown:hover {
+    background: rgba(16, 84, 121, 0.8);
+    color: inherit;
+    border-color: #88d0e8;
+}
+
+.dtep-cda-page-main-content {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-cda-page-main-content .dtep-cda-page-project-components a {
+    color: inherit;
+}
+
+.dtep-cda-page-project-releases-loader-gif {
+    /* height: 34.4px; */
+    /* width: 34.4px; */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* height: 2em; */
+    /* width: 2em; */
+    height: 29.250px;
+    width: 29.250px;
+}
+
+.dtep-cda-page-top-section-line {
+    height: 4px;
+    background-color: #7abbd0
+}
+
+.dtep-cda-page-main-content .dtep-cda-page-module-selection-dropdown {
+    /* min-width: 250px; */
+    /* max-width: 250px; */
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.dtep-cda-page-module-selection-dropdown button {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-cda-page-main-content .dtep-cda-page-module-selection-dropdown button {
+    overflow: auto;
+    color: rgba(0, 0, 0, 1);
+}
+
+.dtep-cda-page-main-content .dtep-cda-page-module-selection-dropdown .dtep-cda-page-module-selection-dropdown-menu {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.dtep-cda-page-main-content .dtep-cda-page-module-selection-dropdown .dtep-cda-page-module-selection-dropdown-menu a {
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 0 0 0 transparent;
+}
+
+.dtep-cda-page-reports-download-button {
+    background-color: inherit;
+    border-color: #88d0e8;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    /* width: 100%; */
+}
+
+.dtep-cda-page-tasks-separator {
+    height: 1px;
+    /* width: auto; */
+    background-color: #88d0e8;
+}
+
+.dtep-cda-page-tasks-end-separator {
+    height: 4px;
+    /* width: auto; */
+    background-color: #1b5c83;
+}
+
+.dtep-cda-page-task-execution-buttons.btn.btn-info,
+.dtep-cda-page-task-execution-button.btn.btn-info:active {
+    background-color: #E37321;
+    border-color: #E37321;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/*****************************************
+/**      End of cda view view css      **/
+
+
+/********************************************
+/**  Start of project dashboard view css  **/
+
+.dtep-project-dashboard-top-section,
+.dtep-project-dashboard-chart-panel>.dtep-project-dashboard-chart-panel-heading {
+    border-bottom: 1px solid rgba(136, 208, 232, 0.3);
+}
+
+.dtep-project-dashboard-projects-dropdown-label {
+    font-size: 25px;
+    color: #88d0e8;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-project-dashboard-projects-dropdown {
+    background-color: inherit;
+    color: inherit;
+    border-color: #88d0e8;
+}
+
+.dtep-project-dashboard-projects-dropdown:hover,
+.dtep-project-dashboard-projects-dropdown:focus,
+.dtep-project-dashboard-projects-dropdown:active {
+    background: rgba(16, 84, 121, 0.8);
+    color: inherit;
+    border-color: #88d0e8;
+}
+
+.dtep-project-dashboard-chart-panel {
+    background: rgba(34, 34, 34, 0.3);
+    border-color: transparent;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-project-dashboard-chart-panel>.dtep-project-dashboard-chart-panel-heading {
+    background: inherit;
+    color: inherit;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-project-dashboard-chart-panel-body-content {
+    width: 100%;
+    height: 325px;
+}
+
+.dtep-project-dashboard-chart-panel>.panel-body {
+    padding: 0;
+}
+
+.dtep-project-dashboard-chart-panel .dtep-project-dashboard-chart-panel-body-content th,
+.dtep-project-dashboard-chart-panel .dtep-project-dashboard-chart-panel-body-content td {
+    height: calc((325px - 6px) / 5);
+    border-color: rgba(136, 208, 232, 0.2);
+    padding: 12px;
+    line-height: 40px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.dtep-project-dashboard-chart-panel .dtep-project-dashboard-chart-panel-body-content th {
+    /* border-color: rgba(136, 208, 232, 0.2); */
+    /* border-top: 0 none transparent !important; */
+    background-color: rgba(33, 33, 33, 0.31);
+}
+
+
+/********************************************
+/**   End of project dashboard view css   **/
+
+
+/************************************************
+/**      Start of pmo dashboards view css     **/
+
+.dtep-pmo-dashbaord-chart-panel>.dtep-pmo-dashbaord-chart-panel-heading {
+    border-bottom: 1px solid rgba(136, 208, 232, 0.3);
+}
+
+.dtep-pmo-dashbaord-projects-dropdown-label {
+    font-size: 25px;
+    color: #88d0e8;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-pmo-dashbaord-projects-dropdown {
+    background-color: inherit;
+    color: inherit;
+    border-color: #88d0e8;
+}
+
+.dtep-pmo-dashbaord-projects-dropdown:hover,
+.dtep-pmo-dashbaord-projects-dropdown:focus,
+.dtep-pmo-dashbaord-projects-dropdown:active {
+    background: rgba(16, 84, 121, 0.8);
+    color: inherit;
+    border-color: #88d0e8;
+}
+
+.dtep-pmo-dashbaord-chart-panel {
+    background: rgba(34, 34, 34, 0.3);
+    border-color: transparent;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-pmo-dashbaord-chart-panel>.dtep-pmo-dashbaord-chart-panel-heading {
+    background: inherit;
+    color: inherit;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-pmo-dashbaord-chart-panel-body-content {
+    width: 100%;
+    height: 325px;
+}
+
+.dtep-pmo-dashbaord-chart-panel>.panel-body {
+    padding: 0;
+}
+
+.dtep-pmo-dashboard-labels {
+    _text-align: center;
+    border: 1px solid #88d0e8;
+    /* padding:1%; */
+    _background-color: rgba(34, 34, 34, 0.3);
+    _color: #f1f1f1;
+    _border-radius: 4px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-pmo-dashboard-labels h3 {
+    margin-top: 10px;
+}
+
+.dtep-pmo-dashboard-code-coverage-staticstics-panel p {
+    border-bottom: 1px solid #88d0e8;
+}
+
+.dtep-pmo-dashboard-reports-button {
+    background-color: inherit;
+    border-color: #88d0e8;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    /* width: 100%; */
+}
+
+
+/*************************************************
+/**       End of pmo dashboards view css       **/
+
+
+/***************************************************
+/** Start of cloud provision vm details view css **/
+
+.dtep-vm-details-pagination-section {
+    background-color: #09517F;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-vm-details-vm-addition-button a {
+    height: 32px;
+    line-height: 32px;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dtep-vm-details-pagination-section ul[data-uib-pagination] {
+    margin: 0;
+}
+
+.dtep-vm-details-pagination-section .pagination>li>a,
+.dtep-vm-details-pagination-section .pagination>li>span {
+    background-color: inherit;
+    border: none;
+    _color: white
+}
+
+.dtep-vm-details-pagination-section .pagination>.disabled>a,
+.dtep-vm-details-pagination-section .pagination>.disabled>a:focus,
+.dtep-vm-details-pagination-section .pagination>.disabled>a:hover,
+.dtep-vm-details-pagination-section .pagination>.disabled>span,
+.dtep-vm-details-pagination-section .pagination>.disabled>span:focus,
+.dtep-vm-details-pagination-section .pagination>.disabled>span:hover {
+    background-color: inherit;
+    border: none;
+}
+
+.dtep-vm-details-table>tbody>tr>td {
+    border-color: #61AFC2;
+    padding: 12px;
+}
+
+.dtep-vm-details-table>tbody>tr:last-child>td {
+    border-bottom: 1px solid #61AFC2;
+}
+
+.dtep-vm-details-select-vm-button,
+.dtep-vm-details-select-vm-button:hover {
+    background-color: #333333;
+    border-color: #333333;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-vm-details-start-vm-button,
+.dtep-vm-details-start-vm-button:hover {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dtep-vm-details-stop-vm-button,
+.dtep-vm-details-stop-vm-button:hover {
+    background-color: #f44336;
+    border-color: #f44336;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/***************************************************
+/**  End of cloud provision vm details view css  **/
+
+
+/***************************************************
+/** Start of cloud provision vm config view css  **/
+
+.dtep-vm-config-setup-progressbar {
+    overflow: hidden;
+    counter-reset: step;
+    padding: 0;
+}
+
+.dtep-vm-config-setup-progressbar li {
+    list-style-type: none;
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 9px;
+    _width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+.dtep-vm-config-setup-progressbar li.dtep-vm-config-setup-active-step::before,
+.dtep-vm-config-setup-progressbar li.dtep-vm-config-setup-active-step::after {
+    background: #E37321;
+    color: inherit;
+}
+
+.dtep-vm-config-setup-progressbar li::before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+}
+
+.dtep-vm-config-setup-progressbar li::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+}
+
+.dtep-vm-config-setup-progressbar li:first-child::after {
+    content: none;
+}
+
+
+/***************************************************
+/**  End of cloud provision vm config view css   **/
+
+
+/***************************************************
+/**    Start of manage tabs view sidebar css     **/
+
+@media (min-width: 768px) {
+    /*gives dtep-manage-sidebar width/height*/
+    nav.dtep-manage-sidebar {
+        width: 200px;
+        height: 100%;
+        margin-left: -160px;
+        float: left;
+        position: absolute;
+        z-index: 8000;
+        margin-bottom: 0px;
+        _border-color: #c8d0d31c;
+        border-color: transparent;
+        background: #1e4558;
+        -webkit-transition: margin 200ms ease-out;
+        -moz-transition: margin 200ms ease-out;
+        -o-transition: margin 200ms ease-out;
+        transition: margin 200ms ease-out;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+        opacity: 1;
+    }
+    /*give dtep-manage-sidebar 100% width;*/
+    nav.dtep-manage-sidebar li {
+        width: 100%;
+    }
+    /* Move nav to full on mouse over*/
+    nav.dtep-manage-sidebar:hover {
+        margin-left: 0px;
+    }
+    /*for hiden things when navbar hidden*/
+    .forAnimate {
+        _opacity: 0;
+    }
+    /*Center Brand*/
+    nav.dtep-manage-sidebar.navbar>.container .navbar-brand,
+    nav.dtep-manage-sidebar.navbar>.container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+    /*Center Brand*/
+    nav.dtep-manage-sidebar .navbar-brand,
+    nav.dtep-manage-sidebar .navbar-header {
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+    /*Center Icons*/
+    nav.dtep-manage-sidebar a {
+        padding-right: 13px;
+    }
+    /*adds border top to first nav box */
+    nav.dtep-manage-sidebar .navbar-nav>li:first-child {
+        _border-top: 1px #e5e5e5 solid;
+    }
+    /*adds border to bottom nav boxes*/
+    nav.dtep-manage-sidebar .navbar-nav>li {
+        _border-bottom: 1px #e5e5e5 solid;
+    }
+    /* Colors/style dropdown box*/
+    nav.dtep-manage-sidebar .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    /*allows nav box to use 100% width*/
+    nav.dtep-manage-sidebar .navbar-collapse,
+    nav.dtep-manage-sidebar .container,
+    nav.dtep-manage-sidebar .container-fluid {
+        padding: 0;
+    }
+    /*colors dropdown box text */
+    nav.dtep-manage-sidebar.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: #777;
+    }
+    nav.dtep-manage-sidebar .navbar-nav .open .dropdown-menu>li>a:hover,
+    nav.dtep-manage-sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+        color: #CCC;
+        background-color: transparent;
+    }
+}
+
+
+/***************************************************
+/**     End of manage tabs view sidebar css      **/
+
+
+/***************************************************
+/**  Start of manage tabs view main content css  **/
+
+.dtep-manage-main-content {
+    _background-color: #0000007d;
+    _box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+@media (min-width: 768px) {
+    .dtep-manage-main-content {
+        /* max-width: calc(100% - (-160px + 200px)); */
+        /* float: right; */
+        position: absolute;
+        left: calc(-160px + 200px);
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+
+/***************************************************
+/**   End of manage tabs view main content css   **/
+
+
+/***************************************************
+/**   Start of curate project view content css   **/
+
+.dtep-curate-project-main-content {
+    background-color: #0000007d;
+    _box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5) inset;
+    _word-wrap: break-word;
+}
+
+.dtep-curate-project-pipeline-template-painting {
+    _background-color: #39248A;
+    height: 500px;
+}
+
+.dtep-curate-project-pipeline-template-painting {
+    _padding-right: 5px;
+    _overflow: hidden;
+}
+
+.dtep-curate-project-pipeline-template-painting svg {
+    cursor: crosshair;
+}
+
+.dtep-curate-project-pipeline-template-painting svg,
+.dtep-curate-project-pipeline-template-painting svg rect {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.dtep-curate-project-pipeline-template-painting svg rect {
+    fill: #345e80;
+}
+
+.dtep-curate-project-area-vertical-lines>line,
+.dtep-curate-project-area-horizontal-lines>line,
+.dtep-curate-project-area-left-diagonal-lines>line,
+.dtep-curate-project-area-right-diagonal-lines>line {
+    stroke: #92b1cab3;
+    fill: none;
+}
+
+.dtep-curate-project-area-right-diagonal-lines>line {
+    _transform: rotate(90deg);
+    _transform-origin: 90% 90%;
+}
+
+
+/***************************************************
+/**    End of curate project view content css    **/

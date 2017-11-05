@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<div>
+    <header class="modal-header">
+        <button type="button" data-ng-click="closeRegisterNewUserModal()" class="badge close"><span class="sr-only">Close Dialog</span><i aria-hidden="true" class="fa fa-close"></i></button>
+        <h4 class="modal-title text-center" id="dtep-register-new-user-modal-title">New User Registration</h4>
+    </header>
+    <main class="modal-body" id="dtep-register-new-user-modal-body">
+        <form name="registerNewUserForm">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <fieldset class="form-group">
+                        <!-- <label for="recoveryEmail"><i aria-hidden="true" class="fa fa-envelope"></i><span>&nbsp;&nbsp;Email<sup aria-hidden="true">*</sup></span></label> -->
+                        <!-- <input type="text" id="recoveryEmail" data-ng-model="resetEmail" placeholder="Enter Recovery Email" data-ng-keyup="validateResetMailid()" class="form-control" /> -->
+                        <label for="tenantName" class="sr-only">Tenant Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                            <input class="form-control" type="text" id="tenantName" name="tenantName" placeholder="Enter Tenant Name *" data-ng-required="!userCredential.recoveryEmail" data-ng-model="userCredential.recoveryEmail" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <fieldset class="form-group">
+                        <!-- <label for="recoveryEmail"><i aria-hidden="true" class="fa fa-envelope"></i><span>&nbsp;&nbsp;Email<sup aria-hidden="true">*</sup></span></label> -->
+                        <!-- <input type="text" id="recoveryEmail" data-ng-model="resetEmail" placeholder="Enter Recovery Email" data-ng-keyup="validateResetMailid()" class="form-control" /> -->
+                        <label for="username" class="sr-only">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user-secret" aria-hidden="true"></i></span>
+                            <input class="form-control" type="text" id="username" name="username" placeholder="Enter Username *" data-ng-required="!userCredential.recoveryEmail" data-ng-model="userCredential.recoveryEmail" />
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <fieldset class="form-group">
+                        <!-- <label for="recoveryEmail"><i aria-hidden="true" class="fa fa-envelope"></i><span>&nbsp;&nbsp;Email<sup aria-hidden="true">*</sup></span></label> -->
+                        <!-- <input type="text" id="recoveryEmail" data-ng-model="resetEmail" placeholder="Enter Recovery Email" data-ng-keyup="validateResetMailid()" class="form-control" /> -->
+                        <label for="tenantName" class="sr-only">First Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input class="form-control" type="text" id="firstName" name="firstName" placeholder="Enter First Name *" data-ng-required="!userCredential.recoveryEmail" data-ng-model="userCredential.recoveryEmail" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <fieldset class="form-group">
+                        <!-- <label for="recoveryEmail"><i aria-hidden="true" class="fa fa-envelope"></i><span>&nbsp;&nbsp;Email<sup aria-hidden="true">*</sup></span></label> -->
+                        <!-- <input type="text" id="recoveryEmail" data-ng-model="resetEmail" placeholder="Enter Recovery Email" data-ng-keyup="validateResetMailid()" class="form-control" /> -->
+                        <label for="username" class="sr-only">Last Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Enter Last Name *" data-ng-required="!userCredential.recoveryEmail" data-ng-model="userCredential.recoveryEmail" />
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <fieldset class="form-group">
+                        <!-- <label for="recoveryEmail"><i aria-hidden="true" class="fa fa-envelope"></i><span>&nbsp;&nbsp;Email<sup aria-hidden="true">*</sup></span></label> -->
+                        <!-- <input type="text" id="recoveryEmail" data-ng-model="resetEmail" placeholder="Enter Recovery Email" data-ng-keyup="validateResetMailid()" class="form-control" /> -->
+                        <label for="tenantName" class="sr-only">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <input class="form-control" type="email" id="emailId" name="tenantName" placeholder="Enter Email *" data-ng-required="!userCredential.recoveryEmail" data-ng-model="userCredential.recoveryEmail" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <fieldset class="form-group">
+                        <!-- <label for="recoveryEmail"><i aria-hidden="true" class="fa fa-envelope"></i><span>&nbsp;&nbsp;Email<sup aria-hidden="true">*</sup></span></label> -->
+                        <!-- <input type="text" id="recoveryEmail" data-ng-model="resetEmail" placeholder="Enter Recovery Email" data-ng-keyup="validateResetMailid()" class="form-control" /> -->
+                        <label for="username" class="sr-only">Mobile Number</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                            <input class="form-control" type="tel" id="mobileNumber" name="username" placeholder="Enter Mobile Number *" data-ng-required="!userCredential.recoveryEmail" data-ng-model="userCredential.recoveryEmail" />
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <fieldset class="form-group text-center">
+                        <button class="btn btn-success text-uppercase" type="submit" data-ng-click="forgotPassword()"><i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;&nbsp;Register</button>
+                        <button class="btn btn-warning text-uppercase" type="reset" data-ng-click="clearUserRecord()"><i class="fa fa-eraser" aria-hidden="true"></i>&nbsp;&nbsp;Clear</button>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+    </main>
+</div>
+
+<!-- 
+<div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <label><i class="fa fa-university" aria-hidden="true" ></i>&nbsp;&nbsp;Tenant Name*<span id="tenantname"></span></label>
+    <input type="text" class="form-control" id="tenant_name" ng-model="tenantName" placeholder="Enter Tenant Name" ng-keyup="validateTenantname()" />
+</div>
+<div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <label><i class="fa fa-user-secret" aria-hidden="true" ></i>&nbsp;&nbsp;User Name*<span id="username"></span></label>
+    <input type="text" class="form-control" id="user_name" ng-model="userName" placeholder="Enter User Name" ng-keyup="validateUsername()" />
+</div>
+<div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <label><i class="fa fa-user" aria-hidden="true" ></i>&nbsp;&nbsp;First Name*<span id="firstname"></span></label>
+    <input type="text" class="form-control" id="first_name" ng-model="firstName" placeholder="First Name" ng-keyup="validateFirstname()" />
+</div>
+<div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <label><i class="fa fa-user" aria-hidden="true" ></i>&nbsp;&nbsp;Last Name*<span id="lastname"></span></label>
+    <input type="text" class="form-control" id="last_name" ng-model="lastName" placeholder="Enter Last Name" ng-keyup="validateLastname()" />
+</div>
+<div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <label><i class="fa fa-envelope" aria-hidden="true" ></i>&nbsp;&nbsp;Email*<span id="emailid"></span></label>
+    <input type="text" class="form-control" id="email_id" ng-model="emailId" placeholder="Enter Email" ng-keyup="validateMailid()" />
+</div>
+<div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <label><i class="fa fa-mobile" aria-hidden="true" ></i>&nbsp;&nbsp;Mobile Number*<span id="mobileno"></span></label>
+    <input type="text" class="form-control" id="mobile_no" ng-model="mobileNumber" placeholder="Enter Mobile Number" ng-keyup="validateMobilenumber()" />
+</div>
+<div style="text-align:center;">
+    <button class="btn btn-primary" ng-click="registerUser()">Submit&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+</div>
+<div id="register_notification" style="text-align:center;margin-top:1%;display:none;"><code style="background-color:#f1f1f1;color:#003300;font-size:15px;">{{userRegisteredSuccessfully}}&nbsp;<i class="fa fa-check-circle" aria-hidden="true"></i></code></div> -->

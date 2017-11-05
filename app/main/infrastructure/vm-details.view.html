@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<div class="container-fluid main-content-with-authenticated-header">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <!-- <br/> -->
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <section class="row">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <section class="col-lg-10 col-md-10 col-sm-10 col-xs-10 dtep-cda-page-main-content">
+            <header class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center dtep-cda-page-title">
+                    VM List
+                </div>
+            </header>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <!-- <br/> -->
+                    <div class="form-group"></div>
+                </div>
+            </div>
+            <div class="row dtep-vm-details-pagination-section">
+                <div class="visible-lg-block visible-md-block visible-sm-block">
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 dtep-vm-details-vm-addition-button">
+                        <a data-ui-sref="^.vmConfigSetup" data-uib-tooltip="Create New VM configuration"><span><i class="fa fa-plus fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;NEW VM</span></a>
+                    </div>
+                </div>
+                <div class="visible-xs-block">
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 text-center dtep-vm-details-vm-addition-button">
+                        <a data-ui-sref="^.vmConfigSetup" data-uib-tooltip="Create New VM configuration"><span><i class="fa fa-plus fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;NEW VM</span></a>
+                    </div>
+                </div>
+                <div class="visible-lg-block visible-md-block visible-sm-block">
+                    <div class="col-lg-3 col-lg-offset-7 col-md-6 col-sm-6 col-xs-12">
+                        <ul class="pull-right" data-uib-pagination="data-uib-pagination" data-total-items="tenantAllocatedVMs.length" data-ng-model="currentPage" data-max-size="maxSize" data-rotate="false" data-num-pages="numPages" data-items-per-page="itemsPerPage">
+                        </ul>
+                    </div>
+                </div>
+                <div class="visible-xs-block">
+                    <div class="col-lg-3 col-lg-offset-7 col-md-6 col-sm-6 col-xs-12 text-center">
+                        <ul data-uib-pagination="data-uib-pagination" data-total-items="tenantAllocatedVMs.length" data-ng-model="currentPage" data-max-size="maxSize" data-rotate="false" data-num-pages="numPages" data-items-per-page="itemsPerPage">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </section>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <!-- <br/> -->
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <main class="row">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <section class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+            <div class="table-responsive">
+                <table class="table dtep-vm-details-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Resource Group</th>
+                            <th>Series</th>
+                            <th>From Date</th>
+                            <th>To Date</th>
+                            <th>Status</th>
+                            <th>DNS</th>
+                            <!-- <th>Edit</th> -->
+                            <th>Delete</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-ng-repeat="tenantVM in tenantAllocatedVMs.slice(((currentPage-1)*itemsPerPage), (currentPage*itemsPerPage)) | filter:{status:'!Deleted'}">
+                            <td>
+                                <label class="radio-inline" for="">
+                                    <input type="radio" name="vmName" id="" />
+                                    SouthEastAsiaVM
+                                </label>
+                            </td>
+                            <td>
+                            </td>
+                            <td>A-series</td>
+                            <td>05-25-2016</td>
+                            <td>13-30-2017</td>
+                            <td>Running</td>
+                            <td>localhost</td>
+                            <td>
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+    </main>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <!-- <br/> -->
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <!-- <br/> -->
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <section class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group text-center">
+                <button class="btn btn-info text-uppercase dtep-vm-details-select-vm-button" data-uib-tooltip="Checked VM will be used for CDA processes"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;&nbsp;Select VM</button>
+                <button class="btn btn-info text-uppercase dtep-vm-details-start-vm-button" data-uib-tooltip="Checked VM will be started if it is stopped"><i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;Start</button>
+                <button class="btn btn-info text-uppercase dtep-vm-details-stop-vm-button" data-uib-tooltip="Checked VM will be stopped if it is running"><i class="fa fa-stop" aria-hidden="true"></i>&nbsp;&nbsp;Stop</button>
+            </div>
+        </div>
+    </section>
+</div>
