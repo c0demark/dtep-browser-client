@@ -30,7 +30,7 @@
             replace: true,
             scope: {
                 chartdivId: "@",
-                chartConfig: "=dtepAmcharts"
+                chartConfig: "=dtepAmchartsChartConfig"
             },
             // transclude: true,
             template: "<div id='{{chartdivId}}'></div>",
@@ -39,8 +39,6 @@
         };
 
         function link(scope, element, attrs) {
-            // scope.name = "dtepAmchartsDirective link function";
-            // console.log(attrs);
             console.log("dtepAmchartsDirective link function", scope);
             var chart = false;
             // angular.element($document).ready(function() {
@@ -55,27 +53,30 @@
             scope.$watch("chartConfig", function(chartConfigNext, chartConfigPrev) {
                 // angular.element(function() {
                 // if (chartConfigNext != chartConfigPrev) {
-                console.log(chartConfigNext);
-                console.log(chartConfigPrev);
-                plotChart();
+                if (scope.chartConfig && scope.chartdivId) {
+                    if (scope.chartConfig.constructor !== {}.constructor) {
+                        $log.error("!!!!!!! Not able to plot AmCharts graph.");
+                        $log.error("the value of the attribute 'data-dtep-amcharts-chart-config' is " + (scope.chartConfig.constructor === [].constructor ? "array" : typeof scope.chartConfig));
+                        $log.error("dtepAmcharts directive needs 'data-dtep-amcharts-chart-config' attribute with chartConfig JSON object from the controller scope in order to plot AmCharts");
+                    }
+                    plotChart();
+                } else {
+                    $log.error("!!!!!!! Not able to plot AmCharts graph.");
+                    if (!scope.chartConfig) {
+                        $log.error("the value of the attribute 'data-dtep-amcharts-chart-config' is " + typeof scope.chartConfig);
+                        $log.error("dtepAmcharts directive needs 'data-dtep-amcharts-chart-config' attribute with chartConfig JSON object from the controller scope in order to plot AmCharts");
+                    }
+                    if (!scope.chartdivId) {
+                        $log.error("the value of the attribute 'data-chartdiv-id' is " + typeof scope.chartConfig);
+                        $log.error("dtepAmcharts directive needs 'data-chartdiv-id' attribute with string value in order to plot AmCharts");
+                    }
+                }
                 // }
                 // });
             });
 
             scope.$on("$destroy", function(event) {
-                console.log("scope is destroyed");
-                console.log("event is", event);
                 if (chart) {
-                    // console.log(chart.destroy);
-                    chart.destroy();
-                }
-            });
-
-            element.on("$destroy", function(event) {
-                console.log("element is destroyed");
-                console.log("event is", event);
-                if (chart) {
-                    // console.log(chart.destroy);
                     chart.destroy();
                 }
             });
@@ -84,7 +85,6 @@
                 if (chart) {
                     chart.destroy();
                 }
-                // console.log(scope.chartConfig);
                 var config = scope.chartConfig || {};
                 // chart = AmCharts.makeChart("chartdiv", config);
                 chart = AmCharts.makeChart(scope.chartdivId, config);

@@ -18,7 +18,7 @@
                     "sdfs",
                     "Apache Server2"
                 ],
-                "iconURL": "/icons/web-server.svg",
+                "iconURL": "/assets/icons/web-server.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1036017@mindtree.com",
@@ -40,7 +40,7 @@
                     "GitLab",
                     "TFSVC"
                 ],
-                "iconURL": "/icons/version-control.svg",
+                "iconURL": "/assets/icons/version-control.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1040465@mindtree.com",
@@ -64,7 +64,7 @@
                     "Jenkins Connect",
                     "VSTS"
                 ],
-                "iconURL": "/icons/continuous-integration.svg",
+                "iconURL": "/assets/icons/continuous-integration.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1037547@mindtree.com",
@@ -96,7 +96,7 @@
                     "Sign Apk",
                     "Windows Batch Commands"
                 ],
-                "iconURL": "/icons/build-tool.svg",
+                "iconURL": "/assets/icons/build-tool.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "m1030385@mindtree.com",
@@ -116,7 +116,7 @@
                     "Fisheye",
                     "JUnit"
                 ],
-                "iconURL": "/icons/code-quality.svg",
+                "iconURL": "/assets/icons/code-quality.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "root@cape.com",
@@ -136,7 +136,7 @@
                     "Artifactory",
                     "Nexus"
                 ],
-                "iconURL": "/icons/artifact-repository.svg",
+                "iconURL": "/assets/icons/artifact-repository.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -155,7 +155,7 @@
                     "Jenkins Email Sender",
                     "Email Notification"
                 ],
-                "iconURL": "/icons/notification-manger.svg",
+                "iconURL": "/assets/icons/notification-manger.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1026343@mindtree.com",
@@ -175,7 +175,7 @@
                     "Kubernetes",
                     "Docker Swarm"
                 ],
-                "iconURL": "/icons/14993280803871499166453487Container-Orchestrator.png",
+                "iconURL": "/assets/icons/14993280803871499166453487Container-Orchestrator.svg",
                 "createdBy": "dev",
                 "createdOn": 1499328100332,
                 "lastUpadateBy": "M1035936@mindtree.com",
@@ -202,7 +202,7 @@
                     "XL Release",
                     "XL Deploy"
                 ],
-                "iconURL": "/icons/release-manager.svg",
+                "iconURL": "/assets/icons/release-manager.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1041259@mindtree.com",
@@ -235,7 +235,7 @@
                     "Informatica Serv",
                     "MongoDB"
                 ],
-                "iconURL": "/icons/database-server.svg",
+                "iconURL": "/assets/icons/database-server.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "dev",
@@ -257,7 +257,7 @@
                     "Puppet Server",
                     "Puppet Agent"
                 ],
-                "iconURL": "/icons/config-management.svg",
+                "iconURL": "/assets/icons/config-management.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "dev",
@@ -275,7 +275,7 @@
                 "softwares": [
                     "SSH Key"
                 ],
-                "iconURL": "/icons/infra-utility.svg",
+                "iconURL": "/assets/icons/infra-utility.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -296,7 +296,7 @@
                     "PWatch",
                     "PRTG"
                 ],
-                "iconURL": "/icons/app-performance.svg",
+                "iconURL": "/assets/icons/app-performance.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "dev",
@@ -315,7 +315,7 @@
                     "Rapid Data Generator",
                     "Rapid Data Comparator"
                 ],
-                "iconURL": "/icons/data-tool.svg",
+                "iconURL": "/assets/icons/data-tool.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -333,7 +333,7 @@
                 "softwares": [
                     "Docker"
                 ],
-                "iconURL": "/icons/14993284453651499166453487Container-Orchestrator.png",
+                "iconURL": "/assets/icons/14993284453651499166453487Container-Orchestrator.svg",
                 "createdBy": "dev",
                 "createdOn": 1499328482106,
                 "lastUpadateBy": "M1037707@mindtree.com",
@@ -363,7 +363,7 @@
                     "Tomcat 8.5",
                     "IBM Websphere"
                 ],
-                "iconURL": "/icons/application-server.svg",
+                "iconURL": "/assets/icons/application-server.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1041259@mindtree.com",
@@ -388,7 +388,7 @@
                     "SolarWinds",
                     "Mwatch"
                 ],
-                "iconURL": "/icons/application-monitoring.svg",
+                "iconURL": "/assets/icons/application-monitoring.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1040465@mindtree.com",
@@ -410,7 +410,7 @@
                 "softwares": [
                     "UILite"
                 ],
-                "iconURL": "/icons/ui-testing.svg",
+                "iconURL": "/assets/icons/ui-testing.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -431,7 +431,7 @@
                     "SoapUI",
                     "Parasoft"
                 ],
-                "iconURL": "/icons/web-service-testing.svg",
+                "iconURL": "/assets/icons/web-service-testing.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -455,7 +455,7 @@
                     "Selenium Hybrid Framework",
                     "Karma"
                 ],
-                "iconURL": "/icons/web-app-testing.svg",
+                "iconURL": "/assets/icons/web-app-testing.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1041259@mindtree.com",
@@ -476,7 +476,7 @@
                     "Xamarin test cloud",
                     "UI Automator"
                 ],
-                "iconURL": "/icons/mobile-app-testing.svg",
+                "iconURL": "/assets/icons/mobile-app-testing.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1026343@mindtree.com",
@@ -495,7 +495,7 @@
                     "Load Runner Framework",
                     "Neoload"
                 ],
-                "iconURL": "/icons/performance-test.svg",
+                "iconURL": "/assets/icons/performance-test.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -516,7 +516,7 @@
                     "OWASP ZAP",
                     "WhiteSource Bolt"
                 ],
-                "iconURL": "/icons/security-scan.svg",
+                "iconURL": "/assets/icons/security-scan.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1035940@mindtree.com",
@@ -534,7 +534,7 @@
                 "softwares": [
                     "Test Report Analyzer"
                 ],
-                "iconURL": "/icons/1500630379668vector_424_21-256.png",
+                "iconURL": "/assets/icons/1500630379668vector_424_21-256.svg",
                 "createdBy": "M1037707@mindtree.com",
                 "createdOn": 1500551469280,
                 "lastUpadateBy": "M1037707@mindtree.com",
@@ -557,7 +557,7 @@
                     "Issue Analyser",
                     "Rundeck"
                 ],
-                "iconURL": "/icons/orchestrator.svg",
+                "iconURL": "/assets/icons/orchestrator.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -575,7 +575,7 @@
                 "softwares": [
                     "ML Hub"
                 ],
-                "iconURL": "/icons/machine-learning.svg",
+                "iconURL": "/assets/icons/machine-learning.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -593,7 +593,7 @@
                 "softwares": [
                     "Automation Anywhere"
                 ],
-                "iconURL": "/icons/robotic-process.svg",
+                "iconURL": "/assets/icons/robotic-process.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -614,7 +614,7 @@
                     "Duck Creek Server",
                     "HP service Anywhere"
                 ],
-                "iconURL": "/icons/service-management.svg",
+                "iconURL": "/assets/icons/service-management.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1040465@mindtree.com",
@@ -635,7 +635,7 @@
                     "Rally",
                     "Version One"
                 ],
-                "iconURL": "/icons/application-lifecycle.svg",
+                "iconURL": "/assets/icons/application-lifecycle.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": "M1041259@mindtree.com",
@@ -653,7 +653,7 @@
                 "softwares": [
                     "Confluence"
                 ],
-                "iconURL": "/icons/collaboration.svg",
+                "iconURL": "/assets/icons/collaboration.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -672,7 +672,7 @@
                     "Elastic Stack",
                     "Grafana"
                 ],
-                "iconURL": "/icons/performance-test.svg",
+                "iconURL": "/assets/icons/performance-test.svg",
                 "createdBy": null,
                 "createdOn": null,
                 "lastUpadateBy": null,
@@ -690,7 +690,7 @@
                 "softwares": [
                     "HockeyApp"
                 ],
-                "iconURL": "/icons/release-manager.svg",
+                "iconURL": "/assets/icons/release-manager.svg",
                 "createdBy": "M1035940@mindtree.com",
                 "createdOn": 1499855784971,
                 "lastUpadateBy": "M1035940@mindtree.com",
@@ -715,7 +715,7 @@
                 "def",
                 "sdsssssssssssssddddddddddddddddddssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
             ],
-            "iconURL": "/icons/1496238610430EAI.png",
+            "iconURL": "/assets/icons/1496238610430EAI.svg",
             "createdBy": null,
             "createdOn": null,
             "lastUpadateBy": "root@cape.com",

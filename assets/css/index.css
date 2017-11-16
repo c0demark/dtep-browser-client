@@ -12,6 +12,10 @@ body {
     background-attachment: fixed;
 }
 
+a:focus {
+    outline: none;
+}
+
 .main-content-with-authenticated-header {
     min-height: calc(569px - 56px);
 }
@@ -852,15 +856,16 @@ body {
 }
 
 .dtep-curate-project-pipeline-template-painting svg,
-.dtep-curate-project-pipeline-template-painting svg rect {
+.dtep-curate-project-pipeline-template-painting svg rect.dtep-curate-project-mesh {
     width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
 }
 
-.dtep-curate-project-pipeline-template-painting svg rect {
+.dtep-curate-project-pipeline-template-painting svg rect.dtep-curate-project-mesh {
     fill: #345e80;
+    pointer-events: all;
 }
 
 .dtep-curate-project-area-vertical-lines>line,
@@ -874,6 +879,79 @@ body {
 .dtep-curate-project-area-right-diagonal-lines>line {
     _transform: rotate(90deg);
     _transform-origin: 90% 90%;
+}
+
+.dtep-curate-componet-choices-side-palette {
+    color: black;
+    max-height: 480px;
+}
+
+.dtep-curate-componet-choices-side-palette a {
+    text-decoration: none;
+}
+
+.dtep-curate-componet-choices-side-palette a:hover,
+.dtep-curate-componet-choices-side-palette a:visited {
+    color: rgba(255, 255, 255, 1);
+}
+
+.dtep-curate-componet-choices-side-palette .panel-group .panel {
+    border: none;
+}
+
+.dtep-curate-componet-choices-side-palette .panel-group .panel-body {
+    max-height: 270px;
+    overflow-y: auto;
+    overflow-x: auto;
+    background-color: #92b1cab3;
+}
+
+.dtep-curate-componet-choices-side-palette .panel-group .panel-heading {
+    background-color: #345e80;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.dtep-curate-componet-choices-side-palette .panel-title {
+    font-size: inherit;
+}
+
+.dtep-curate-project-component {
+    width: calc((100% - 10px) /3);
+    float: left;
+    height: 120px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border: 1px solid black;
+    padding: 2px;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
+    _word-wrap: break-word;
+    _word-break: normal;
+    _-webkit-hyphens: manual;
+    _-moz-hyphens: manual;
+    _-ms-hyphens: manual;
+    _hyphens: manual;
+    _overflow-wrap: break-word;
+}
+
+@media (max-width: 767px) {
+    .dtep-curate-project-component {
+        _height: 100px;
+    }
+    .dtep-curate-project-component-icon {
+        _width: 70%;
+    }
+}
+
+.dtep-curate-project-component:nth-child(3n + 1) {
+    margin-right: 0;
+}
+
+.dtep-curate-project-component-icon {
+    width: 55%;
+    height: 65px;
+    _height: 54.167;
+    _margin-bottom: 3px;
 }
 
 

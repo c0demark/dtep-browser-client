@@ -27,13 +27,43 @@
     ) {
         $scope.categorizations = [];
         $scope.categoryAccordionGroup = {};
+        $scope.draggedProjectComponent = {};
+        $scope.getCategorizations = getCategorizations;
+        $scope.setCategorizations = setCategorizations;
+        $scope.getCategoryAccordionGroup = getCategoryAccordionGroup;
+        $scope.setCategoryAccordionGroup = setCategoryAccordionGroup;
+        $scope.getDraggedProjectComponent = getDraggedProjectComponent;
+        $scope.setDraggedProjectComponent = setDraggedProjectComponent;
+        $scope.holdDraggedProjectComponent = holdDraggedProjectComponent;
+        $scope.unholdDraggedProjectComponent = unholdDraggedProjectComponent;
         $scope.getProjectComponentCategorizations = getProjectComponentCategorizations;
-        $scope.onProjectComponentHTMLElementDragStart = onProjectComponentHTMLElementDragStart;
-        $scope.allowDrop = allowDrop;
-        $scope.onProjectComponentHTMLElementDrop = onProjectComponentHTMLElementDrop;
         $scope.init = init;
 
         $scope.init();
+
+        function getCategorizations() {
+            return $scope.categorizations;
+        }
+
+        function setCategorizations(categorizations) {
+            $scope.categorizations = categorizations;
+        }
+
+        function getCategoryAccordionGroup() {
+            return $scope.categoryAccordionGroup;
+        }
+
+        function setCategoryAccordionGroup(categoryAccordionGroup) {
+            $scope.categoryAccordionGroup = categoryAccordionGroup;
+        }
+
+        function getDraggedProjectComponent() {
+            return $scope.draggedProjectComponent;
+        }
+
+        function setDraggedProjectComponent(draggedProjectComponent) {
+            $scope.draggedProjectComponent = draggedProjectComponent;
+        }
 
         function init() {
             $scope.getProjectComponentCategorizations();
@@ -44,8 +74,8 @@
             ProjectComponentsService
                 .getProjectComponentCategorizations()
                 .then(function(response) {
-                    console.log(response);
-                    $scope.categorizations = response.data;
+                    console.log(response.data);
+                    $scope.setCategorizations(response.data);
                 })
                 .catch(function(errorResponse) {
                     console.log(errorResponse);
@@ -55,17 +85,14 @@
                 });
         }
 
-        function onProjectComponentHTMLElementDragStart(event) {
-            console.log(event);
+        function holdDraggedProjectComponent(component) {
+            // console.log(component);
+            $scope.setDraggedProjectComponent(component);
         }
 
-        function allowDrop(event) {
-            console.log(event);
-            event.preventDefault();
+        function unholdDraggedProjectComponent() {
+            $scope.setDraggedProjectComponent({});
         }
 
-        function onProjectComponentHTMLElementDrop(event) {
-            console.log(event);
-        }
     }
 })(window.angular);

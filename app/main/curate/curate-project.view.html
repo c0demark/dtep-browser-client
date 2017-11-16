@@ -17,24 +17,26 @@
     </div>
     <section class="row">
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <div style="color: black;">
+            <div class="center-block dtep-curate-componet-choices-side-palette">
                 <div data-uib-accordion="data-uib-accordion">
                     <div class="panel-default" data-uib-accordion-group="data-uib-accordion-group" data-ng-init="categoryAccordionGroup[categorization.category].isOpen=false" data-is-open="categoryAccordionGroup[categorization.category].isOpen" data-ng-repeat="categorization in categorizations">
                         <div data-uib-accordion-heading="data-uib-accordion-heading">
                             <span data-ng-bind="categorization.category"></span>
                             <i class="fa fa-angle-right fa-pull-right" aria-hidden="true" data-ng-class="{'fa-rotate-90': categoryAccordionGroup[categorization.category].isOpen}"></i>
                         </div>
-                        <div draggable="true" ondragstart="angular.element(this).scope().onProjectComponentHTMLElementDragStart(event)" data-ng-repeat="component in categorization.components">
-                            <div data-ng-bind="component.componentName"></div>
+                        <div class="text-center dtep-curate-project-component" data-ng-repeat="component in categorization.components" data-dtep-draggable-project-component="data-dtep-draggable-project-component" data-on-dragging-component="holdDraggedProjectComponent(component)">
+                            <div>
+                                <img class="img-responsive center-block dtep-curate-project-component-icon" data-ng-src="{{component.iconURL}}" alt="{{component.componentName}}" />
+                                <div data-ng-bind="component.componentName">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <div class="dtep-curate-project-pipeline-template-painting" id="dtep-curate-project-pipeline-template-painting" data-dtep-curate-project-pipeline-template-painting-screen="data-dtep-curate-project-pipeline-template-painting-screen" ondragover="angular.element(this).scope().allowDrop(event)"
-                ondrop="angular.element(this).scope().onProjectComponentHTMLElementDrop(event)">
-
+            <div class="dtep-curate-project-pipeline-template-painting" id="dtep-curate-project-pipeline-template-painting" data-dtep-curate-project-pipeline-template-painting-screen="data-dtep-curate-project-pipeline-template-painting-screen">
             </div>
         </div>
     </section>

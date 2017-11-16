@@ -132,7 +132,6 @@
                     "enabled": true
                 }
             };
-
             // plotChart();
         }
 
