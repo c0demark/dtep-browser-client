@@ -16,7 +16,8 @@
         </div>
     </div>
     <section class="row">
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"> -->
+        <!-- <div class="col-lg-0 col-md-0 col-sm-12 col-xs-12">
             <div class="center-block dtep-curate-componet-choices-side-palette">
                 <div data-uib-accordion="data-uib-accordion">
                     <div class="panel-default" data-uib-accordion-group="data-uib-accordion-group" data-ng-init="categoryAccordionGroup[categorization.category].isOpen=false" data-is-open="categoryAccordionGroup[categorization.category].isOpen" data-ng-repeat="categorization in categorizations">
@@ -34,9 +35,43 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+        </div> -->
+        <!-- <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"> -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="center-block dtep-curate-component-choices-side-palette">
+                <div data-uib-accordion="data-uib-accordion">
+                    <div class="panel-default" data-uib-accordion-group="data-uib-accordion-group" data-ng-init="categoryAccordionGroup[categorization.category].isOpen=false" data-is-open="categoryAccordionGroup[categorization.category].isOpen" data-ng-repeat="categorization in categorizations">
+                        <div data-uib-accordion-heading="data-uib-accordion-heading">
+                            <span data-ng-bind="categorization.category"></span>
+                            <i class="fa fa-angle-right fa-pull-right" aria-hidden="true" data-ng-class="{'fa-rotate-90': categoryAccordionGroup[categorization.category].isOpen}"></i>
+                        </div>
+                        <div class="text-center dtep-curate-project-component" data-ng-repeat="component in categorization.components" data-dtep-draggable-project-component="data-dtep-draggable-project-component" data-on-dragging-component="holdDraggedProjectComponent(component)">
+                            <div>
+                                <img class="img-responsive center-block dtep-curate-project-component-icon" data-ng-src="{{component.iconURL}}" alt="{{component.componentName}}" />
+                                <div data-ng-bind="component.componentName">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-block dtep-curate-component-software-list-popup-container" data-ng-show="showSoftwareListFlag">
+            </div>
             <div class="dtep-curate-project-pipeline-template-painting" id="dtep-curate-project-pipeline-template-painting" data-dtep-curate-project-pipeline-template-painting-screen="data-dtep-curate-project-pipeline-template-painting-screen">
+            </div>
+            <div class="dtep-curate-project-zoom-controls-container">
+                <button class="dtep-curate-project-zoom-control-button">
+                    <!-- <img src="/assets/images/zoom-in.svg" alt="zoom in"> -->
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+                <button class="dtep-curate-project-zoom-control-button">
+                    <!-- <img src="/assets/images/zoom-reset.svg" alt="zoom reset"> -->
+                    <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                </button>
+                <button class="dtep-curate-project-zoom-control-button">
+                    <!-- <img src="/assets/images/zoom-out.svg" alt="zoom in"> -->
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </section>

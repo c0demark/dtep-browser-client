@@ -1,6 +1,7 @@
 (function(angular, d3, AmCharts) {
     "use strict";
-    angular.module("dtepApp")
+    angular
+        .module("dtepApp")
         .directive("dtepDraggableProjectComponent", [
             "$log",
             "$rootScope",
@@ -35,16 +36,18 @@
 
         function link(scope, element, attrs) {
             element.attr({
-                "draggable": true
+                draggable: true
             });
-            element.on("dragstart", dragstart);
+            element.on("dragstart", dragstartEventHandler);
 
             scope.$on("$destroy", function(event) {
-                console.log("$destroy event handler called for isolated directive scope");
-                element.off("dragstart", dragstart);
+                console.log(
+                    "$destroy event handler called for isolated directive scope"
+                );
+                element.off("dragstart", dragstartEventHandler);
             });
 
-            function dragstart(event) {
+            function dragstartEventHandler(event) {
                 console.log("dragstart event handler called");
                 scope.onDraggingComponent();
             }

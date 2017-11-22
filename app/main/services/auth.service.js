@@ -26,11 +26,11 @@
             authenticate: authenticate
         };
 
-        console.log($http.defaults);
+        // console.log($http.defaults);
         return authServices;
 
         function authenticate(userCredential) {
-            console.log($http.defaults);
+            // console.log($http.defaults);
             return $http({
                 method: "POST",
                 url: "auth/authenticate",

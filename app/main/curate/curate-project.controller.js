@@ -1,6 +1,7 @@
 (function(angular) {
     "use strict";
-    angular.module("dtepApp")
+    angular
+        .module("dtepApp")
         .controller("CurateProjectController", [
             "$log",
             "$scope",
@@ -11,6 +12,7 @@
             "$uibModal",
             "$state",
             "ProjectComponentsService",
+            "SoftwaresService",
             CurateProjectController
         ]);
 
@@ -23,20 +25,35 @@
         $location,
         $uibModal,
         $state,
-        ProjectComponentsService
+        ProjectComponentsService,
+        SoftwaresService
     ) {
+        // declaring and initializing scope properties
         $scope.categorizations = [];
         $scope.categoryAccordionGroup = {};
-        $scope.draggedProjectComponent = {};
+        $scope.draggedProjectComponent = null;
+        $scope.showSoftwareListFlag = false;
+
+        // scope properties getters and setters
         $scope.getCategorizations = getCategorizations;
         $scope.setCategorizations = setCategorizations;
         $scope.getCategoryAccordionGroup = getCategoryAccordionGroup;
         $scope.setCategoryAccordionGroup = setCategoryAccordionGroup;
         $scope.getDraggedProjectComponent = getDraggedProjectComponent;
         $scope.setDraggedProjectComponent = setDraggedProjectComponent;
+        $scope.getShowSoftwareListFlag = getShowSoftwareListFlag;
+        $scope.setShowSoftwareListFlag = setShowSoftwareListFlag;
+
+        // scope properties helper methods
         $scope.holdDraggedProjectComponent = holdDraggedProjectComponent;
         $scope.unholdDraggedProjectComponent = unholdDraggedProjectComponent;
-        $scope.getProjectComponentCategorizations = getProjectComponentCategorizations;
+        $scope.toggleShowSoftwareListFlag = toggleShowSoftwareListFlag;
+
+        // api call methods
+        $scope.fetchProjectComponentCategorizations = fetchProjectComponentCategorizations;
+        $scope.fetchCICDSoftwares = fetchCICDSoftwares;
+
+        // init method - executes after view renders adn controller is loaded. Similar to $(document).ready(function() {})
         $scope.init = init;
 
         $scope.init();
@@ -65,23 +82,38 @@
             $scope.draggedProjectComponent = draggedProjectComponent;
         }
 
-        function init() {
-            $scope.getProjectComponentCategorizations();
-            console.log(d3);
+        function getShowSoftwareListFlag() {
+            return $scope.showSoftwareListFlag;
         }
 
-        function getProjectComponentCategorizations() {
-            ProjectComponentsService
-                .getProjectComponentCategorizations()
+        function setShowSoftwareListFlag(showSoftwareListFlag) {
+            $scope.showSoftwareListFlag = showSoftwareListFlag;
+        }
+
+        function init() {
+            $scope.fetchProjectComponentCategorizations();
+        }
+
+        function fetchProjectComponentCategorizations() {
+            ProjectComponentsService.fetchProjectComponentCategorizations()
                 .then(function(response) {
-                    console.log(response.data);
+                    $scope.setCategorizations(response.data);
+                })
+                .catch(function(errorResponse) {})
+                .finally(function(notify) {});
+        }
+
+        function fetchCICDSoftwares() {
+            SoftwaresService.fetchCICDSoftwares()
+                .then(function(response) {
+                    // console.log(response.data);
                     $scope.setCategorizations(response.data);
                 })
                 .catch(function(errorResponse) {
-                    console.log(errorResponse);
+                    // console.log(errorResponse);
                 })
                 .finally(function(notify) {
-                    console.log(notify);
+                    // console.log(notify);
                 });
         }
 
@@ -91,7 +123,12 @@
         }
 
         function unholdDraggedProjectComponent() {
-            $scope.setDraggedProjectComponent({});
+            $scope.setDraggedProjectComponent(null);
+        }
+
+        function toggleShowSoftwareListFlag() {
+            console.log("toggleShowSoftwareListFlag is called");
+            $scope.setShowSoftwareListFlag(!($scope.getShowSoftwareListFlag()));
         }
 
     }

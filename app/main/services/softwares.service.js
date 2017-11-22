@@ -2,16 +2,16 @@
     "use strict";
     angular.module('dtepApp')
         // angular.module('dtepApp')
-        .factory('ProjectComponentsService', [
+        .factory('SoftwaresService', [
             "$log",
             "$http",
             "$resource",
             "$httpParamSerializer",
             "$httpParamSerializerJQLike",
-            ProjectComponentsService
+            SoftwaresService
         ]);
 
-    function ProjectComponentsService(
+    function SoftwaresService(
         $log,
         $http,
         $resource,
@@ -19,14 +19,14 @@
         $httpParamSerializerJQLike
     ) {
         var services = {
-            fetchProjectComponentCategorizations: fetchProjectComponentCategorizations
+            fetchCICDSoftwares: fetchCICDSoftwares
         };
 
         return services;
 
-        function fetchProjectComponentCategorizations() {
+        function fetchCICDSoftwares() {
             return $http({
-                url: "/app/main/backendDataMock/categorizations.json",
+                url: "/app/main/backendDataMock/cicd-softwares.json",
                 method: "GET"
             });
         }
