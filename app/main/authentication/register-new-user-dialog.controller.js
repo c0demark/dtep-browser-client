@@ -1,7 +1,6 @@
 (function(angular) {
     "use strict";
     angular.module("dtepApp")
-        // angular.module("dtepApp")
         .controller("RegisterNewUserModalController", [
             "$log",
             "$scope",
@@ -11,8 +10,6 @@
             "$location",
             "$uibModalInstance",
             "$state",
-            "AuthService",
-            "NavigationService",
             RegisterNewUserModalController
         ]);
 
@@ -24,17 +21,17 @@
         $document,
         $location,
         $uibModalInstance,
-        $state,
-        AuthService,
-        NavigationService
+        $state
     ) {
-        console.log($scope);
-        $scope.closeRegisterNewUserModal = function() {
-            $uibModalInstance.close("closed modal");
-        };
+        $scope.closeRegisterNewUserModal = closeRegisterNewUserModal;
+        $scope.dismissRegisterNewUserModal = dismissRegisterNewUserModal;
 
-        $scope.dismissRegisterNewUserModal = function() {
+        function closeRegisterNewUserModal() {
+            $uibModalInstance.close("closed modal");
+        }
+
+        function dismissRegisterNewUserModal() {
             $uibModalInstance.dismiss("dismissed modal");
-        };
+        }
     }
 })(window.angular);

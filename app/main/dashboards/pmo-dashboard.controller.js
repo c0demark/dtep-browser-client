@@ -1,7 +1,6 @@
 (function(angular, AmCharts) {
     "use strict";
     angular.module("dtepApp")
-        // angular.module("dtepApp")
         .controller("PmoDashboardController", [
             "$log",
             "$scope",
@@ -11,8 +10,6 @@
             "$location",
             "$uibModal",
             "$state",
-            "AuthService",
-            "NavigationService",
             PmoDashboardController
         ]);
 
@@ -24,35 +21,33 @@
         $document,
         $location,
         $uibModal,
-        $state,
-        AuthService,
-        NavigationService
+        $state
     ) {
         // $scope.name = { firstName: "PmoDashboardController" };
         console.log("PmoDashboardController", $scope);
         $scope.projects = [];
-        $scope.getProjects = getProjects;
-        $scope.selecteProject = null;
+        $scope.selectedProject = null;
         $scope.chartConfig = null;
+        $scope.fetchProjects = fetchProjects;
         $scope.setTestPlanTraceabilityChartConfig = setTestPlanTraceabilityChartConfig;
         $scope.setTotalDefectsChartConfig = setTotalDefectsChartConfig;
-        var chart = false;
+        $scope.init = init;
 
-        activate();
+        $scope.init();
 
-        function activate() {
-            $scope.getProjects();
+        function init() {
+            $scope.fetchProjects();
             $scope.setTestPlanTraceabilityChartConfig();
         }
 
-        function getProjects() {
+        function fetchProjects() {
             $scope.projects = [
                 { projectId: 1, projectName: "MindtreeTest" },
                 { projectId: 2, projectName: "MindtreeTest2" },
             ];
 
             if ($scope.projects.length > 0) {
-                $scope.selecteProject = $scope.projects[0];
+                $scope.selectedProject = $scope.projects[0];
             }
         }
 
@@ -132,7 +127,6 @@
                     "enabled": true
                 }
             };
-            // plotChart();
         }
 
         function setTotalDefectsChartConfig() {
@@ -210,19 +204,6 @@
                     "enabled": true
                 }
             };
-
-            // plotChart();
         }
-
-        function plotChart() {
-            if (chart) {
-                chart.destroy();
-            }
-            // console.log($scope.chartConfig);
-            var config = $scope.chartConfig || {};
-            chart = AmCharts.makeChart("chartdiv", config);
-            // chart = $window.AmCharts.makeChart("chartdiv", config);
-        }
-
     }
 })(window.angular, window.AmCharts);

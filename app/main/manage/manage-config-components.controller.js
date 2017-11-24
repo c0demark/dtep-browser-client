@@ -1,7 +1,6 @@
 (function(angular) {
     "use strict";
     angular.module("dtepApp")
-        // angular.module("dtepApp")
         .controller("ManageConfigComponentsController", [
             "$log",
             "$scope",
@@ -11,8 +10,6 @@
             "$location",
             "$uibModal",
             "$state",
-            "AuthService",
-            "NavigationService",
             ManageConfigComponentsController
         ]);
 
@@ -24,9 +21,7 @@
         $document,
         $location,
         $uibModal,
-        $state,
-        AuthService,
-        NavigationService
+        $state
     ) {
         // console.log("ConsolidatedDashboardsController");
         // console.log($scope);

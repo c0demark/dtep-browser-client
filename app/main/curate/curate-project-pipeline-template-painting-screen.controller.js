@@ -539,6 +539,7 @@
             // scope.toggleShowSoftwareListFlag();
             var draggedProjectComponent = $scope.$parent.getDraggedProjectComponent();
             if (draggedProjectComponent) {
+                $scope.$parent.openSoftwareListModal();
                 var nodeGroup = $scope.getNodeGroup();
                 var node = nodeGroup
                     .append("g")
@@ -690,6 +691,10 @@
                     .styles({
                         cursor: "pointer",
                         "text-align": "center"
+                    })
+                    .append("title")
+                    .text(function(data) {
+                        return draggedProjectComponent.componentName;
                     });
 
                 var softwareStatusGtag = node
@@ -726,6 +731,10 @@
                     .styles({
                         cursor: "pointer",
                         "text-align": "center"
+                    })
+                    .append("title")
+                    .text(function(data) {
+                        return draggedProjectComponent.componentName;
                     });
 
                 softwareStatusGtag
@@ -868,9 +877,16 @@
                         // console.log(d3.event);
                     })
                     .on("drag", function() {
-                        d3.select(this).attrs({
-                            transform: "translate(" + [d3.event.x, d3.event.y] + ")"
-                        });
+                        d3
+                            .select(this)
+                            .styles({
+                                cursor: "move"
+                            })
+                            // .transition()
+                            // .duration(100)
+                            .attrs({
+                                transform: "translate(" + [d3.event.x, d3.event.y] + ")"
+                            });
                     })
                 );
                 $scope.$parent.unholdDraggedProjectComponent();

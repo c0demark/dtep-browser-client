@@ -1,7 +1,6 @@
 (function(angular) {
     "use strict";
     angular.module("dtepApp")
-        // angular.module("dtepApp")
         .controller("NotificationsModalController", [
             "$log",
             "$scope",
@@ -11,8 +10,6 @@
             "$location",
             "$uibModalInstance",
             "$state",
-            "AuthService",
-            "NavigationService",
             NotificationsModalController
         ]);
 
@@ -24,17 +21,18 @@
         $document,
         $location,
         $uibModalInstance,
-        $state,
-        AuthService,
-        NavigationService
+        $state
     ) {
-        console.log($scope);
-        $scope.closeNotificationsModal = function() {
-            $uibModalInstance.close("closed modal");
-        };
 
-        $scope.dismissNotificationsModal = function() {
+        $scope.closeNotificationsModal = closeNotificationsModal;
+        $scope.dismissNotificationsModal = dismissNotificationsModal;
+
+        function closeNotificationsModal() {
+            $uibModalInstance.close("closed modal");
+        }
+
+        function dismissNotificationsModal() {
             $uibModalInstance.dismiss("dismissed modal");
-        };
+        }
     }
 })(window.angular);

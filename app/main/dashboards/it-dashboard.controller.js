@@ -1,7 +1,6 @@
 (function(angular) {
     "use strict";
     angular.module("dtepApp")
-        // angular.module("dtepApp")
         .controller("ItDashboardController", [
             "$log",
             "$scope",
@@ -11,8 +10,6 @@
             "$location",
             "$uibModal",
             "$state",
-            "AuthService",
-            "NavigationService",
             ItDashboardController
         ]);
 
@@ -24,9 +21,7 @@
         $document,
         $location,
         $uibModal,
-        $state,
-        AuthService,
-        NavigationService
+        $state
     ) {
         console.log("IT Dashboard controller");
         $scope.name = "IT Dashboard";

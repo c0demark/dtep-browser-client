@@ -913,9 +913,8 @@ a:focus {
 }
 
 .dtep-curate-component-software-list-popup-container {
-    height: 100px;
-    background-color: grey;
-    margin-bottom: 20px;
+    height: 100%;
+    background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -929,10 +928,15 @@ a:focus {
         background-color: #043b55;
     }
     .dtep-curate-component-software-list-popup-container {
-        width: 100px;
-        position: absolute;
-        top: 10px;
-        right: calc(10px + 15px);
+        width: 100%;
+        _position: absolute;
+        position: fixed;
+        _top: 10px;
+        _right: calc(10px + 15px);
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0.5;
     }
 }
 

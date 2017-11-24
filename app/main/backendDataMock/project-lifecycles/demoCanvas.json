@@ -1,0 +1,617 @@
+{
+    "createdBy": "M1030469@mindtree.com",
+    "createdOn": 1507790653814,
+    "lastUpadateBy": "M1030469@mindtree.com",
+    "lastUpdatedOn": 1511414365499,
+    "score": null,
+    "id": "59df0f3df45ac0e1d7f1b5e2",
+    "canvasName": "demoCanvas",
+    "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_DEMOCANVAS1507790653",
+    "canvasCode": "CNVS1b88670eaf244814953bcdfbc63e21b0",
+    "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+    "projectName": "MIST Lab",
+    "orgCode": "ORG000004",
+    "users": [{
+            "username": "M1030469@mindtree.com",
+            "email": "Vijay.Kumar5@mindtree.com",
+            "name": "Vijay Kumar",
+            "status": "Active",
+            "components": [
+
+            ]
+        },
+        {
+            "username": "M1013482@mindtree.com",
+            "email": "Megha.Prabhu@mindtree.com",
+            "name": "Megha Prabhu",
+            "status": "Active",
+            "components": [
+
+            ]
+        },
+        {
+            "username": "M1030499@mindtree.com",
+            "email": "Sujit.Anand@mindtree.com",
+            "name": "Sujit Anand",
+            "status": "Active",
+            "components": [
+
+            ]
+        },
+        {
+            "username": "M1032465@mindtree.com",
+            "email": "Vineeth.Mutt@mindtree.com",
+            "name": "Vineeth Mutt",
+            "status": "Active",
+            "components": [
+
+            ]
+        }
+    ],
+    "hasAccess": false,
+    "status": "Composing",
+    "version": 334,
+    "idCounter": 3,
+    "description": "to navigate the options available in canvasing",
+    "tags": [{
+        "type": "softwareNode",
+        "name": "Continuous Integration",
+        "status": "Installed"
+    }],
+    "stickyNote": null,
+    "displayDefaultView": false,
+    "requestId": null,
+    "auditInfoAction": null,
+    "screenResolution": {
+        "screenHeight": "723",
+        "screenWidth": "1546"
+    },
+    "nodes": [{
+        "iconURL": "/icons/continuous-integration.svg",
+        "componentName": "Continuous Integration",
+        "type": "softwareNode",
+        "componentCode": "CIG",
+        "software": {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "m1035984@mindtree.com",
+            "lastUpdatedOn": 1511347159465,
+            "score": null,
+            "id": "58eb2da599d357f2ed5eac62",
+            "softwareName": "Jenkins 2.7",
+            "softwareCode": "JKNS2.7",
+            "description": "Jenkins provides hundreds of plugins to support building, deploying and automating any project.",
+            "clazz": "com.mindtree.cape.engine.gateway.service.jenkins.JenkinsServiceImpl",
+            "connect": true,
+            "provision": true,
+            "hasMetric": true,
+            "hasAction": true,
+            "hasClients": false,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": null,
+            "componentName": null,
+            "type": null,
+            "vmId": null,
+            "properties": {
+                "deleteWorkspace": "no",
+                "instanceName": "demo-jenkins27-instance",
+                "isConnect": "no",
+                "isParameterised": "no",
+                "isScheduled": "no",
+                "url": "http://cape-registry.southeastasia.cloudapp.azure.com:8080",
+                "username": "capeuser",
+                "schedule": "@hourly",
+                "apiToken": "ewS+P1BxQqTF+aZHFZwdogq4JUKb1faY8FCrsXXIjOdUt4nB824A8TgOTmxWwHMl.Y2FwZUVuY3J5cHRpb24=",
+                "queryParam": "branchName=*/master",
+                "swProjectName": "SampleCode",
+                "clazzToVerify": "com.mindtree.cape.engine.gateway.service.jenkins.JenkinsServiceImpl"
+            },
+            "installationProperties": {
+                "type": "Docker",
+                "componentName": "Jenkins",
+                "hostPort": "8080",
+                "imageName": "cape-jenkins",
+                "containerPort": "8080",
+                "supportedPlatforms": "[ \"Ubuntu Server\" , \"RHEL Server\"]",
+                "imageSize": "1400",
+                "version": "2.7",
+                "username": "admin",
+                "password": "1KG+QqnQxcfNv9dMK2xdVQ==.Y2FwZUVuY3J5cHRpb24=",
+                "apiToken": "VuwnOZyqCbEYsdnH1RIemt4tuKzStNO8HeObmbpkGDBUt4nB824A8TgOTmxWwHMl.Y2FwZUVuY3J5cHRpb24="
+            },
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",{\"key\":\"url\",\"isConnect\":true},{\"key\":\"username\",\"isConnect\":true},{\"key\":\"apiToken\",\"type\":\"password\",\"isConnect\":true},\"swProjectName\",\"preBuildJobTrigger\",\"postBuildJobTrigger\",{\"key\":\"deleteWorkspace\",\"type\":\"radiobuttons\",\"style\":{\"selected\":\"btn-info\",\"unselected\":\"btn-default\"},\"titleMap\":[{\"value\":\"yes\",\"name\":\"Yes\"},{\"value\":\"no\",\"name\":\"No\"}]},{\"key\":\"isParameterised\",\"validationMessage\":\"You must select this\",\"title\":\"This Project is Parameterised\",\"type\":\"radiobuttons\",\"style\":{\"selected\":\"btn-info\",\"unselected\":\"btn-default\"},\"titleMap\":[{\"value\":\"yes\",\"name\":\"Yes\"},{\"value\":\"no\",\"name\":\"No\"}]},{\"key\":\"queryParam\",\"type\":\"textarea\",\"condition\":\"model.isParameterised=='yes'\"},{\"key\":\"isScheduled\",\"type\":\"radiobuttons\",\"validationMessage\":\"You must select this\",\"title\":\"Build Periodically\",\"style\":{\"selected\":\"btn-info\",\"unselected\":\"btn-default\"},\"titleMap\":[{\"value\":\"yes\",\"name\":\"Yes\"},{\"value\":\"no\",\"name\":\"No\"}]},{\"key\":\"schedule\",\"condition\":\"model.isScheduled=='yes'\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"deleteWorkspace\":{\"title\":\"Delete Workspace\",\"type\":\"string\",\"enum\":[\"yes\",\"no\"],\"default\":\"yes\"},\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"isConnect\":{\"enum\":[\"yes\",\"no\"],\"default\":\"no\"},\"isParameterised\":{\"enum\":[\"yes\",\"no\"],\"default\":\"no\"},\"isScheduled\":{\"enum\":[\"yes\",\"no\"],\"default\":\"no\"},\"url\":{\"title\":\"URL:\",\"type\":\"string\",\"default\":\"http://cape-registry.southeastasia.cloudapp.azure.com:8080\"},\"username\":{\"title\":\"Username:\",\"type\":\"string\",\"default\":\"capeuser\"},\"schedule\":{\"title\":\"Schedule\",\"type\":\"string\",\"default\":\"@hourly\"},\"apiToken\":{\"title\":\"API Token:\",\"type\":\"string\",\"default\":\"b8a76380a0ee3ec7bcdc29e153c2b9cb\"},\"swProjectName\":{\"title\":\"Project Name\",\"type\":\"string\"},\"queryParam\":{\"title\":\"Build Parameters\",\"type\":\"string\",\"default\":\"branchName=*/master\"},\"preBuildJobTrigger\":{\"title\":\"Trigger builds on other projects before building this job\",\"type\":\"string\"},\"postBuildJobTrigger\":{\"title\":\"Trigger builds on other projects after building this job\",\"type\":\"string\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"apiToken\",\"swProjectName\"]}"
+            },
+            "provisionSchemaForm": {
+                "form": "[\"*\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"hostPort\":{\"title\":\"Host Port\",\"type\":\"string\",\"default\":\"8080\"}},\"required\":[\"hostPort\"]}"
+            },
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "BITB",
+                    "softwareName": "Bitbucket",
+                    "description": "Jenkins automatically pulls code from Bitbucket.",
+                    "iconURL": "/icons/27fcd22ef457480585848d03f7e101c5.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"branch\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Bitbucket\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Pulls code from Bitbucket\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"git\"},\"url\":{\"title\":\"Repository URL\",\"type\":\"string\",\"readonly\":true},\"branch\":{\"title\":\"Branch\",\"type\":\"string\",\"default\":\"*/master\"},\"username\":{\"title\":\"User Name\",\"type\":\"string\",\"default\":\"r.ramaraja@yahoo.com\"},\"password\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"ramz@hipchat\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.VersionControl\"}},\"required\":[\"source\",\"destination\",\"branch\",\"username\",\"password\",\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SBVN",
+                    "softwareName": "Subversion",
+                    "description": "Jenkins automatically pulls code from Subversion.",
+                    "iconURL": "/icons/edb3154f4a6f420c916d394a228cdb85.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"branch\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Subversion\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Pulls code from Subversion\"},\"url\":{\"title\":\"Repository URL\",\"type\":\"string\",\"readonly\":true},\"branch\":{\"title\":\"Branch\",\"type\":\"string\",\"default\":\".\"},\"username\":{\"title\":\"User Name\",\"type\":\"string\",\"default\":\"M1030385\"},\"password\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"Mind@123\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.VersionControl\"}},\"required\":[\"source\",\"destination\",\"label\",\"branch\",\"username\",\"password\",\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "GITH",
+                    "softwareName": "GitHub",
+                    "description": "Jenkins automatically pulls code from Git.",
+                    "iconURL": "/icons/513cd93dc71b4794a2f4231568672816.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"branch\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"git\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"GitHub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Pulls code from GitHub\"},\"url\":{\"title\":\"Repository URL\",\"type\":\"string\",\"readonly\":true},\"branch\":{\"title\":\"Branch\",\"type\":\"string\",\"default\":\"*/master\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.VersionControl\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\",\"branch\",\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "AMVN",
+                    "softwareName": "Maven",
+                    "description": "Jenkins automatically building Maven project.",
+                    "iconURL": "/icons/d1a24a1c098d4f02af6bdd6ebe35570c.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"goals\",\"rootPOM\",{\"key\":\"version\",\"titleMap\":[{\"value\":\"3.5.0\",\"name\":\"3.5.0\"},{\"value\":\"3.3.9\",\"name\":\"3.3.9\"}]},\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Maven 2.7\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Build project using Maven\"},\"goals\":{\"title\":\"Goals\",\"type\":\"string\",\"default\":\"clean install -DskipTests\"},\"rootPOM\":{\"title\":\"Root POM\",\"type\":\"string\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.BuildTool\"},\"version\":{\"title\":\"Version\",\"type\":\"string\",\"format\":\"uiselect\",\"enum\":[\"3.5.0\",\"3.3.9\"],\"default\":\"3.3.9\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\",\"goals\",\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "ATAS9.0",
+                    "softwareName": "Tomcat 9.0",
+                    "description": "Jenkins automatically deploys code in Tomcat.",
+                    "iconURL": "/icons/4cba8f78e9004b7e8206e566ecaa822a.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"environmentName\",\"contextPath\",\"packaging\",\"authorizedPerson\",{\"key\":\"options\",\"type\":\"radios\",\"title\":\"Options\",\"validationMessage\":\"You must select this\",\"titleMap\":[{\"value\":\"autoDeploy\",\"name\":\"Auto Deploy\"},{\"value\":\"approvalRequired\",\"name\":\"Approval Required\"},{\"value\":\"none\",\"name\":\"None\"}]},{\"key\":\"approverList\",\"type\":\"string\",\"condition\":\"model.options=='approvalRequired'\"},\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Tomcat 9.0\"},\"approverList\":{\"title\":\"Approvers\",\"type\":\"string\",\"default\":\"m23455@mindtree.com\"},\"authorizedPerson\":{\"title\":\"Authorized Users\",\"type\":\"string\",\"default\":\"m1029@mndtree.com,m1066@mindtree.com\"},\"options\":{\"enum\":[\"autoDeploy\",\"approvalRequired\",\"none\"],\"default\":\"autoDeploy\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Automatic deployment to Tomcat\"},\"environmentName\":{\"title\":\"Environment Name\",\"type\":\"string\",\"default\":\"UAT\"},\"url\":{\"title\":\"URL\",\"type\":\"string\",\"readonly\":true},\"contextPath\":{\"title\":\"Context Path\",\"type\":\"string\",\"default\":\"historyApp\"},\"packaging\":{\"title\":\"Packaging\",\"type\":\"string\",\"default\":\"war\"},\"username\":{\"title\":\"User Name\",\"type\":\"string\",\"default\":\"admin\"},\"password\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"admin\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.domain.AppServer\"}},\"required\":[\"source\",\"destination\",\"label\",\"packaging\",\"username\",\"password\",\"clazz\",\"contextPath\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "STF",
+                    "softwareName": "Selenium",
+                    "description": "Selenium is a portable software testing framework for web applications.",
+                    "iconURL": "/icons/ce6cd974d7d64d19b7493114f8757020.png",
+                    "integrationSchemaForm": {
+                        "form": "[{\"key\":\"executeScript\",\"type\":\"textarea\",\"placeholder\":\"Type a script\"},\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Selenium Hybrid Framework\"},\"executeScript\":{\"title\":\"Command\",\"type\":\"string\",\"default\":\"\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Test Automation\"},\"clazz\":{\"title\":\"Integration Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.SeleniumHybridFramework\"},\"testFramework\":{\"title\":\"Test Framework\",\"type\":\"string\",\"default\":\"Selenium\"}},\"required\":[\"executeScript\",\"label\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SONR6.0",
+                    "softwareName": "SonarQube 6.0",
+                    "description": "Jenkins automatically checks code quality and push report to SonarQube.",
+                    "iconURL": "/icons/c7b9a8d021cb439b87dbc049c87c9d0b.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"analysisPropDescription\",\"analysisPropLanguage\",\"analysisPropSources\",\"analysisPropBinaries\",\"analysisPropVersion\",\"version\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"SonarQube 6.0\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Code quality check using Sonar\"},\"url\":{\"title\":\"URL\",\"type\":\"string\",\"readonly\":true},\"analysisPropDescription\":{\"title\":\"Description\",\"type\":\"string\",\"default\":\"This is CAPE CI Automation Test project for demo.\"},\"analysisPropLanguage\":{\"title\":\"Language\",\"type\":\"string\",\"default\":\"java\"},\"analysisPropSources\":{\"title\":\"Sources\",\"type\":\"string\",\"default\":\"src\"},\"analysisPropBinaries\":{\"title\":\"Binaries\",\"type\":\"string\",\"default\":\"target/classes\"},\"analysisPropVersion\":{\"title\":\"Project Version\",\"type\":\"string\",\"default\":\"0.0.2-SNAPSHOT\"},\"userName\":{\"title\":\"User Name\",\"type\":\"string\",\"default\":\"admin\"},\"password\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"admin\"},\"version\":{\"title\":\"Sonar Server Version\",\"type\":\"string\",\"default\":\"5.3\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.CodeAnalysisTool\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\",\"analysisPropDescription\",\"analysisPropLanguage\",\"analysisPropSources\",\"analysisPropVersion\",\"userName\",\"password\",\"version\",\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "OZAP",
+                    "softwareName": "OWASP ZAP",
+                    "description": "Integration between Jenkins and ZAP",
+                    "iconURL": "/icons/7ff6e7e1c41e47fc9a2eea22de61b134.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"title\":\"Comment\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"OWASP ZAP\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Scan for vulnerabilities\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"zap\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.ScannerTool\"}},\"required\":[\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "JES",
+                    "softwareName": "Jenkins Email Sender",
+                    "description": "Sends email when integrated with jenkins",
+                    "iconURL": "/icons/948f4ec9f28d47fc87888c3c33b627ac.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"jenkinsAdmin\",{\"key\":\"authentication\",\"type\":\"radios\",\"title\":\"Use SMTP Authentication\",\"validationMessage\":\"You must select this\",\"titleMap\":[{\"value\":\"yes\",\"name\":\"Yes, Authuntication is required\"},{\"value\":\"no\",\"name\":\"No Authentication\"}]},{\"key\":\"smtpMail\",\"type\":\"string\",\"condition\":\"model.authentication=='yes'\"},{\"key\":\"smtpPassword\",\"type\":\"password\",\"condition\":\"model.authentication=='yes'\"},\"smtpHost\",\"smtpPort\",\"receipientList\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"receipientList\":{\"title\":\"Receipient List\",\"type\":\"string\",\"default\":\"\"},\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"authentication\":{\"enum\":[\"yes\",\"no\"],\"default\":\"yes\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins Email Sender\"},\"jenkinsAdmin\":{\"title\":\"Jenkins Admin Address\",\"type\":\"string\",\"default\":\"cape.devteam@gmail.com\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Sends email from jenkins\"},\"smtpMail\":{\"title\":\"SMTP Mail\",\"type\":\"string\",\"default\":\"cape.devteam@gmail.com\"},\"smtpPassword\":{\"title\":\"SMTP Password\",\"type\":\"string\",\"default\":\"randomtext\"},\"smtpHost\":{\"title\":\"SMTP Host\",\"type\":\"string\",\"default\":\"smtp.gmail.com\"},\"smtpPort\":{\"title\":\"SMTP Port\",\"type\":\"string\",\"default\":\"465\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins Email Sender\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"readonly\":true,\"default\":\"com.mindtree.cape.component.domain.EmailSender\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\",\"clazz\",\"smtpMail\",\"smtpHost\",\"smtpPort\",\"smtpPassword\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "PRGT",
+                    "softwareName": "ProGet",
+                    "description": "ProGet is a software repository manager, designed by the software company Inedo.",
+                    "iconURL": "/icons/f1e1cd6487364f6cbd12620e818671a7.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"feedName\",\"packageName\",\"version\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"ProGet\"},\"nugetPath\":{\"title\":\"NuGet.exe Path\",\"type\":\"string\",\"default\":\"nuget\"},\"feedName\":{\"title\":\"Feed Name\",\"type\":\"string\",\"default\":\"Applications\"},\"packageName\":{\"title\":\"Package Name\",\"type\":\"string\",\"default\":\"DemoApp\"},\"version\":{\"title\":\"Version\",\"type\":\"string\",\"default\":\"2.0.0.%BUILD_NUMBER%\"},\"clazz\":{\"default\":\"com.mindtree.cape.component.domain.ProGet\",\"type\":\"string\",\"title\":\"Class\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"NuGet package push\"}},\"required\":[\"nugetPath\",\"feedName\",\"packageName\",\"version\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "OCPD",
+                    "softwareName": "Octopus Deploy",
+                    "description": "Octopus Deploy is an automated deployment and release management for .NET applications.",
+                    "iconURL": "/icons/6b733308c72c4e86be58d415c3e92c73.png",
+                    "integrationSchemaForm": {
+                        "form": "[{\"key\":\"isDeploy\",\"type\":\"radiobuttons\",\"style\":{\"selected\":\"btn-info\",\"unselected\":\"btn-default\"},\"titleMap\":[{\"value\":\"yes\",\"name\":\"Yes\"},{\"value\":\"no\",\"name\":\"No\"}]},\"environmentName\",\"releaseVersion\",\"packageVersion\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Octopus Deploy\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Create release and deploy to environment\"},\"isDeploy\":{\"title\":\"Deploy after Release\",\"type\":\"string\",\"enum\":[\"yes\",\"no\"],\"default\":\"yes\"},\"octoExePath\":{\"title\":\"Octo.exe path\",\"type\":\"string\",\"default\":\"C:\\\\Tools\\\\Octo\\\\Octo.exe\"},\"environmentName\":{\"title\":\"Environment Name\",\"type\":\"string\",\"default\":\"DEV\"},\"releaseVersion\":{\"title\":\"Release version format\",\"type\":\"string\",\"default\":\"2.0.0.%BUILD_NUMBER%\"},\"packageVersion\":{\"title\":\"Package version format\",\"type\":\"string\",\"default\":\"2.0.0.%BUILD_NUMBER%\"},\"clazz\":{\"default\":\"com.mindtree.cape.component.domain.Octopus\",\"type\":\"string\",\"title\":\"Class\"}},\"required\":[\"octoExePath\",\"environmentName\",\"releaseVersion\",\"packageVersion\",\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "PSS",
+                    "softwareName": "Post SCM Script",
+                    "description": "Runs the Scripts through Jenkins when connected with Jenkins",
+                    "iconURL": "/icons/d64642b1b7d840209f5314097c34e280.png",
+                    "integrationSchemaForm": {
+                        "form": "[{\"key\":\"script\",\"type\":\"textarea\",\"placeholder\":\"Type a script\"},\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"title\":\"Script to run\",\"properties\":{\"script\":{\"title\":\"Script\",\"type\":\"string\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Runs script through Jenkins\"},\"clazz\":{\"title\":\"clazz\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.ScriptTool\"},\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Post SCM Script\"}},\"required\":[\"script\",\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "NGWS",
+                    "softwareName": "Nginx",
+                    "description": "Web server to build Web Applications",
+                    "iconURL": "/icons/4339264ff4d04ae3985c781d97aac6af.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"sourceFiles\",\"remoteDirectory\",{\"key\":\"proxyPass\",\"type\":\"radios\",\"title\":\"Select Static File or Proxy Pass for server config\",\"validationMessage\":\"You must select this\",\"titleMap\":[{\"value\":\"true\",\"name\":\"Proxy Pass\"},{\"value\":\"false\",\"name\":\"Static file\"}]},\"contextPath\",{\"key\":\"proxyURL\",\"type\":\"string\",\"condition\":\"model.proxyPass=='true'\"},{\"key\":\"baseDirectory\",\"type\":\"string\",\"condition\":\"model.proxyPass=='false'\"},{\"key\":\"rootFile\",\"type\":\"string\",\"condition\":\"model.proxyPass=='false'\"},\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Nginx\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Web server for Web applications\"},\"proxyPass\":{\"enum\":[\"true\",\"false\"],\"default\":\"true\"},\"sourceFiles\":{\"title\":\"Source Files\",\"type\":\"string\",\"default\":\"dist/**\"},\"remoteDirectory\":{\"title\":\"Remote Directory\",\"type\":\"string\",\"default\":\"jenkins-promote\"},\"clazz\":{\"title\":\"clazz\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.JenkinsSSHNginx\"},\"contextPath\":{\"title\":\"Context Path\",\"type\":\"string\",\"default\":\"\"},\"baseDirectory\":{\"title\":\"Base Directory\",\"type\":\"string\",\"default\":\"jenkins-promote/dist/\"},\"rootFile\":{\"title\":\"Root File\",\"type\":\"string\",\"default\":\"/index.html\"},\"proxyURL\":{\"title\":\"Proxy URL\",\"type\":\"string\",\"default\":\"\"}},\"required\":[\"sourceFiles\",\"remoteDirectory\",\"proxyPass\",\"contextPath\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SUI",
+                    "softwareName": "SoapUI",
+                    "description": "Service Test Automation",
+                    "iconURL": "/icons/429be932b77a4613bb76428dbc69180a.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"filePath\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"SoapUI\"},\"filePath\":{\"title\":\"SoapUI File Path\",\"type\":\"string\",\"default\":\"cape/my-project.xml\"},\"clazz\":{\"default\":\"com.mindtree.cape.component.domain.SoapUI\",\"type\":\"string\",\"title\":\"Class\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Test Automation\"}},\"required\":[\"filePath\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "AANT",
+                    "softwareName": "Ant",
+                    "description": "Build Project Using ant in jenkins",
+                    "iconURL": "/icons/64d6dc0b88004249a83de626c87d430d.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"targets\",\"buildFile\",\"properties\",\"javaOptions\",{\"key\":\"version\",\"titleMap\":[{\"value\":\"1.7.1\",\"name\":\"1.7\"},{\"value\":\"1.8.4\",\"name\":\"1.8\"},{\"value\":\"1.9.9\",\"name\":\"1.9\"},{\"value\":\"1.10.1\",\"name\":\"1.10\"}]},\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Ant\"},\"targets\":{\"title\":\"Targets\",\"type\":\"string\",\"default\":\"\"},\"buildFile\":{\"title\":\"Build File\",\"type\":\"string\",\"default\":\"\"},\"properties\":{\"title\":\"Properties\",\"type\":\"string\",\"default\":\"\"},\"javaOptions\":{\"title\":\"Java Options\",\"type\":\"string\",\"default\":\"\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.Ant\"},\"version\":{\"title\":\"Version\",\"type\":\"string\",\"format\":\"uiselect\",\"enum\":[\"1.7.1\",\"1.8.4\",\"1.9.9\",\"1.10.1\"],\"default\":\"1.7.1\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Build Automation\"}},\"required\":[\"componentName\",\"clazz\",\"version\",\"label\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "WPK",
+                    "softwareName": "webpack",
+                    "description": "Integration helps in building web applications",
+                    "iconURL": "/icons/016399707b504730a1d49335a9f205b1.png",
+                    "integrationSchemaForm": {
+                        "form": "[{\"key\":\"script\",\"title\":\"Script\",\"type\":\"textarea\"},\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"WebPack\"},\"script\":{\"default\":\"npm install\\nnpm run build:prod\"},\"clazz\":{\"default\":\"com.mindtree.cape.component.domain.Webpack\",\"type\":\"string\",\"title\":\"Class\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Build Automation\"}},\"required\":[\"script\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "JUNIT1",
+                    "softwareName": "JUint",
+                    "description": "Unit Testing",
+                    "iconURL": "/icons/93d3e5765d0a4dbda1111b2327aba359.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"JUnit\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Unit Testing\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "JFAR",
+                    "softwareName": "Artifactory",
+                    "description": "This integration helps to integrate Jenkins with Artifactory instance",
+                    "iconURL": "/icons/89c25f5bd37648f082a9fa53683d8b7b.png",
+                    "integrationSchemaForm": {
+                        "form": "[{\"key\":\"targetRepository\",\"type\":\"string\",\"condition\":\"model.artifactoryType=='generic'\"},{\"key\":\"publishedArtifacts\",\"type\":\"string\",\"condition\":\"model.artifactoryType=='generic'\"},{\"key\":\"releasesRepository\",\"type\":\"string\",\"condition\":\"model.artifactoryType=='maven'\"},{\"key\":\"snapshotsRepository\",\"type\":\"string\",\"condition\":\"model.artifactoryType=='maven'\"},\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Artifactory\"},\"clazz\":{\"default\":\"com.mindtree.cape.component.domain.Artifactory\",\"type\":\"string\",\"title\":\"Class\"},\"artifactoryType\":{\"type\":\"string\",\"default\":\"generic\"},\"publishedArtifacts\":{\"default\":\"**/*.war\",\"type\":\"string\",\"title\":\"Published Artifacts\"},\"targetRepository\":{\"default\":\"artifactory_sample\",\"type\":\"string\",\"title\":\"Target Repositories\"},\"releasesRepository\":{\"default\":\"artifactory_sample\",\"type\":\"string\",\"title\":\"Target Releases Repository\"},\"snapshotsRepository\":{\"default\":\"artifactory_sample\",\"type\":\"string\",\"title\":\"Target Snapshot Repository\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Artifact Management\"}},\"required\":[\"artifactoryType\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "APHS",
+                    "softwareName": "Apache Server",
+                    "description": "Integrates with Apache server to host the web application",
+                    "iconURL": "/icons/53e550c3bf1d427aba99f697ab9e4d7e.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"sourceFiles\",\"remoteDirectory\",\"documentRoot\",\"contextPath\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"title\":\"Comment\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Apache server\"},\"clazz\":{\"title\":\"Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.JenkinsSSHApache\"},\"documentRoot\":{\"title\":\"Document Root\",\"type\":\"string\",\"default\":\"/home/capeuser/jenkins-promote/dist/\"},\"sourceFiles\":{\"title\":\"Source Files\",\"type\":\"string\",\"default\":\"dist/**\"},\"remoteDirectory\":{\"title\":\"Remote Directory\",\"type\":\"string\",\"default\":\"jenkins-promote\"},\"contextPath\":{\"title\":\"Context Path\",\"type\":\"string\",\"default\":\"/myContextPath\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"App Deployment\"}},\"required\":[\"documentRoot\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "JBWF",
+                    "softwareName": "JBoss Wildfly",
+                    "description": "Integration deploys war files in Jboos wildfly",
+                    "iconURL": "/icons/54ec683494bb45d79a37bb1585feae2d.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"sourceFile\",\"contextPath\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"title\":\"Script to run\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"JBoss Wildfly\"},\"clazz\":{\"title\":\"clazz\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.Wildfly\"},\"sourceFile\":{\"title\":\"Source File(WAR/EAR)\",\"type\":\"string\",\"default\":\"target/SampleJavaProject-0.0.1-SNAPSHOT.war\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Deployment Automation\"}},\"required\":[\"clazz\",\"sourceFile\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "UFT",
+                    "softwareName": "HP UFT",
+                    "description": "Unified Functional Testing Automation",
+                    "iconURL": "/icons/85af5d5c765544a6b5034332c52614cc.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"HP-UFT\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Test Automation\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "GITL",
+                    "softwareName": "GitLab",
+                    "description": "Pull code from Version control",
+                    "iconURL": "/icons/1918212394cd42859fb33bfbc76a6cb9.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"branch\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"GitLab\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Pulls code from GitLab\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"git\"},\"url\":{\"title\":\"Repository URL\",\"type\":\"string\",\"readonly\":true},\"branch\":{\"title\":\"Branch\",\"type\":\"string\",\"default\":\"*/master\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.VersionControl\"}},\"required\":[\"source\",\"destination\",\"label\",\"branch\",\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "MBLD",
+                    "softwareName": "MSBuild",
+                    "description": "For Msbuild task in jenkins",
+                    "iconURL": "/icons/adbe0d3c2008446cbb6d934a5627df89.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"solutionName\",\"csprojPath\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"nugetPath\":{\"title\":\"NuGet.exe Path\",\"type\":\"string\",\"default\":\"C:\\\\Program Files\\\\Nuget\\\\nuget.exe\"},\"solutionName\":{\"title\":\"Project solution Name\",\"type\":\"string\",\"default\":\"capetest.sln\"},\"csprojPath\":{\"title\":\".csproj path\",\"type\":\"string\",\"default\":\"CapeTest\\\\CapeTest.csproj\"},\"clazz\":{\"default\":\"com.mindtree.cape.component.domain.MsBuild\",\"type\":\"string\",\"title\":\"Class\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Build Automation\"}},\"required\":[\"nugetPath\",\"solutionName\",\"csprojPath\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "WIN_POWERSHELL",
+                    "softwareName": "Windows Powershell",
+                    "description": "To be used to run powershell scripts as a Jenkins  task.",
+                    "iconURL": "/icons/f32c23afb7184dfdb1cc4b6b420682a4.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Windows Powershell\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Integration\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.WindowsPowershell\"}},\"required\":[\"source\",\"destination\",\"label\",\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "GULP",
+                    "softwareName": "Gulp",
+                    "description": "Build web application",
+                    "iconURL": "/icons/98ed321e327a438987fafcb996db211c.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"default\":\"Jenkins\",\"readonly\":true},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"default\":\"Gulp\",\"readonly\":true},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Build webapp\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "JMTR",
+                    "softwareName": "JMeter",
+                    "description": "Integration",
+                    "iconURL": "/icons/95206e6a1b214912aa0dc4cfe341c4cd.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"JMeter\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Automated Performance Testing\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "ab45c4c951f94cda85563bb07e680d62",
+                    "softwareName": "NuGet Pack",
+                    "description": "NuGet Integration to restore packages and generate .nupkg file.",
+                    "iconURL": "/icons/4bd434589f5e4ece83d487d07ad1965e.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"slnPath\",\"dotNetProjectNane\",\"version\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"NuGet Pack\"},\"nugetPath\":{\"title\":\"NuGet.exe Path\",\"type\":\"string\",\"default\":\"nuget\"},\"slnPath\":{\"title\":\".sln File Path\",\"type\":\"string\",\"default\":\"DemoApp.sln\"},\"dotNetProjectNane\":{\"title\":\".NET Project Name\",\"type\":\"string\",\"default\":\"DemoApp\"},\"version\":{\"title\":\"Version\",\"type\":\"string\",\"default\":\"2.0.0.%BUILD_NUMBER%\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"NuGet Restore and Pack\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.NuGetPack\"}},\"required\":[\"label\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SW025b34c566cd48b695d95278c6d40916",
+                    "softwareName": "Windows Batch Commands",
+                    "description": "Executes batch commands through Jenkins",
+                    "iconURL": "/icons/e51e8bf28f0b47c1b77c94a3f00c1179.png",
+                    "integrationSchemaForm": {
+                        "form": "[{\"key\":\"script\",\"type\":\"textarea\",\"placeholder\":\"Type a script\"},\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"title\":\"Script to run\",\"properties\":{\"script\":{\"title\":\"Script\",\"type\":\"string\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Runs batch commands through Jenkins\"},\"clazz\":{\"title\":\"clazz\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.WindowsBatch\"},\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Windows Batch Commands\"}},\"required\":[\"script\",\"clazz\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "JIRA",
+                    "softwareName": "JIRA",
+                    "description": "Integration between Jira and Jenkins",
+                    "iconURL": "/icons/76fb1202c6324ef5ab88fc57e39b7afe.png",
+                    "integrationSchemaForm": {
+                        "form": "[{\"key\":\"customFields\",\"type\":\"textarea\",\"placeholder\":\"Give JSON input for custom fields\"},\"assignee\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jira\"},\"assignee\":{\"title\":\"Assignee Username\",\"type\":\"string\",\"default\":\"\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Create Issue on JIRA\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.JiraTool\"}},\"required\":[\"label\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "AppHost",
+                    "softwareName": "Application Server Host",
+                    "description": "Publish over ssh",
+                    "iconURL": "/icons/51bb16363a6846a589e720bb89abdc7d.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"sourceFiles\",\"remoteDirectory\",\"execCommand\",{\"title\":\"Execute Command\",\"key\":\"execCommand\",\"type\":\"textarea\"},\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Application Host\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Run in Oracle JDK 8 Env\"},\"sourceFiles\":{\"title\":\"Source Files\",\"type\":\"string\",\"default\":\"target/*.jar\"},\"remoteDirectory\":{\"title\":\"Remote Directory\",\"type\":\"string\",\"default\":\"jenkins-promote\"},\"execCommand\":{\"title\":\"Execute Command\",\"type\":\"textarea\",\"default\":\"#!/bin/bash \\n kill -9 $(ps -eaf | grep spring-petclinic-1.5.1.jar | grep -v grep | awk '{print $2}') | true; \\n nohup java  -Dserver.port=8088 -jar /home/capeuser/jenkins-promote/target/spring-petclinic-1.5.1.jar & \\n sleep 1m;\"},\"clazz\":{\"title\":\"clazz\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.JenkinsSSHOracle\"}},\"required\":[\"sourceFiles\",\"remoteDirectory\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "MST",
+                    "softwareName": "MIST",
+                    "description": "Test Automation",
+                    "iconURL": "/icons/7c263377a3164b66b0bad736c4e8063b.png",
+                    "integrationSchemaForm": {
+                        "form": null,
+                        "schema": null
+                    },
+                    "properties": {
+
+                    }
+                }
+            ],
+            "isConnect": true,
+            "isProvision": false,
+            "iconURL": "/icons/21e3bd48c30d4b7e88e11864845ba3bb.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": "Installed",
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": [{
+                    "name": "Create Job",
+                    "code": "createPipeline"
+                },
+                {
+                    "name": "Update Job",
+                    "code": "updatePipeline"
+                },
+                {
+                    "name": "Build Job",
+                    "code": "buildJob"
+                },
+                {
+                    "name": "Delete Job",
+                    "code": "deleteJob"
+                },
+                {
+                    "name": "Tag a Build",
+                    "code": "tagBuild"
+                }
+            ],
+            "metricList": [
+
+            ]
+        },
+        "x": 519,
+        "y": 91,
+        "id": 2,
+        "softwares": null,
+        "processes": null,
+        "vmId": null,
+        "status": "Installed",
+        "categoryCode": "CAT4b8652076fd3466f87cc2d19491a428e",
+        "categoryName": "BUILD"
+    }],
+    "paths": [
+
+    ],
+    "infraComponents": [
+
+    ]
+}

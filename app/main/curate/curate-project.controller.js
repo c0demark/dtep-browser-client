@@ -51,7 +51,9 @@
 
         // api call methods
         $scope.fetchProjectComponentCategorizations = fetchProjectComponentCategorizations;
-        $scope.fetchCICDSoftwares = fetchCICDSoftwares;
+        $scope.fetchContinousIntegrationSoftwares = fetchContinousIntegrationSoftwares;
+
+        $scope.openSoftwareListModal = openSoftwareListModal;
 
         // init method - executes after view renders adn controller is loaded. Similar to $(document).ready(function() {})
         $scope.init = init;
@@ -103,22 +105,16 @@
                 .finally(function(notify) {});
         }
 
-        function fetchCICDSoftwares() {
-            SoftwaresService.fetchCICDSoftwares()
+        function fetchContinousIntegrationSoftwares() {
+            SoftwaresService.fetchContinousIntegrationSoftwares()
                 .then(function(response) {
-                    // console.log(response.data);
                     $scope.setCategorizations(response.data);
                 })
-                .catch(function(errorResponse) {
-                    // console.log(errorResponse);
-                })
-                .finally(function(notify) {
-                    // console.log(notify);
-                });
+                .catch(function(errorResponse) {})
+                .finally(function(notify) {});
         }
 
         function holdDraggedProjectComponent(component) {
-            // console.log(component);
             $scope.setDraggedProjectComponent(component);
         }
 
@@ -129,6 +125,34 @@
         function toggleShowSoftwareListFlag() {
             console.log("toggleShowSoftwareListFlag is called");
             $scope.setShowSoftwareListFlag(!($scope.getShowSoftwareListFlag()));
+        }
+
+        function openSoftwareListModal() {
+            var softwareListModal = $uibModal.open({
+                animation: true,
+                ariaLabelledBy: "dtep-curate-projectsoftware-list-modal-title",
+                ariaDescribedBy: "dtep-curate-projectsoftware-list-modal-body",
+                templateUrl: "/app/main/curate/software-list-dialog.view.html",
+                controller: "SoftwareListModalController",
+                backdrop: "static",
+                scope: $scope,
+                keyboard: true,
+                appendTo: angular.element($document[0].querySelector("body"))
+            });
+
+            softwareListModal
+                .result
+                .then(function(response) {
+                    $log.info(response);
+                    $log.info('Modal closed at: ' + new Date());
+                })
+                .catch(function(errorResponse) {
+                    $log.info(errorResponse);
+                    $log.info('Modal dismissed at: ' + new Date());
+                })
+                .finally(function(notify) {
+                    $log.info('finally at: ' + new Date());
+                });
         }
 
     }

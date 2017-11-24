@@ -1,7 +1,7 @@
 (function(angular) {
     "use strict";
     angular.module("dtepApp")
-        .controller("RunLaterModalController", [
+        .controller("SoftwareListModalController", [
             "$log",
             "$scope",
             "$rootScope",
@@ -10,10 +10,10 @@
             "$location",
             "$uibModalInstance",
             "$state",
-            RunLaterModalController
+            SoftwareListModalController
         ]);
 
-    function RunLaterModalController(
+    function SoftwareListModalController(
         $log,
         $scope,
         $rootScope,
@@ -23,20 +23,14 @@
         $uibModalInstance,
         $state
     ) {
-        $scope.isNavCollapsed = true;
-        $scope.toggleNavCollapse = toggleNavCollapse;
-        $scope.closeRunLaterModal = closeRunLaterModal;
-        $scope.dismissRunLaterModal = dismissRunLaterModal;
+        $scope.closeNotificationsModal = closeNotificationsModal;
+        $scope.dismissNotificationsModal = dismissNotificationsModal;
 
-        function toggleNavCollapse() {
-            $scope.isNavCollapsed = !$scope.isNavCollapsed;
-        }
-
-        function closeRunLaterModal() {
+        function closeNotificationsModal() {
             $uibModalInstance.close("closed modal");
         }
 
-        function dismissRunLaterModal() {
+        function dismissNotificationsModal() {
             $uibModalInstance.dismiss("dismissed modal");
         }
     }

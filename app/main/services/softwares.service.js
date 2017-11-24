@@ -19,14 +19,14 @@
         $httpParamSerializerJQLike
     ) {
         var services = {
-            fetchCICDSoftwares: fetchCICDSoftwares
+            fetchContinousIntegrationSoftwares: fetchContinousIntegrationSoftwares
         };
 
         return services;
 
-        function fetchCICDSoftwares() {
+        function fetchContinousIntegrationSoftwares() {
             return $http({
-                url: "/app/main/backendDataMock/cicd-softwares.json",
+                url: "/app/main/backendDataMock/softwares/continuos-integration-softwares.json",
                 method: "GET"
             });
         }

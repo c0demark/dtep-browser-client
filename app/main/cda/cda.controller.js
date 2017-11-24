@@ -1,7 +1,6 @@
 (function(angular) {
     "use strict";
     angular.module("dtepApp")
-        // angular.module("dtepApp")
         .controller("CdaController", [
             "$log",
             "$scope",
@@ -11,8 +10,6 @@
             "$location",
             "$uibModal",
             "$state",
-            "AuthService",
-            "NavigationService",
             CdaController
         ]);
 
@@ -24,9 +21,7 @@
         $document,
         $location,
         $uibModal,
-        $state,
-        AuthService,
-        NavigationService
+        $state
     ) {
         $scope.openRunLaterModal = openRunLaterModal;
 
@@ -37,14 +32,7 @@
                 ariaDescribedBy: "dtep-run-later-modal-body",
                 templateUrl: "/app/main/cda/run-later-dialog.view.html",
                 controller: "RunLaterModalController",
-                // controllerAs: '$ctrl2',
                 size: "lg",
-                // resolve: {
-                //     items: function() {
-                //         return $ctrl.items;
-                //     }
-                // }
-                // keyboard: false,
                 appendTo: angular.element($document[0].querySelector("body"))
             });
 
@@ -54,14 +42,13 @@
                     $log.info(response);
                     $log.info('Modal closed at: ' + new Date());
                 })
-                .catch(function(error) {
-                    $log.info(error);
+                .catch(function(errorResponse) {
+                    $log.info(errorResponse);
                     $log.info('Modal dismissed at: ' + new Date());
                 })
-                .finally(function() {
+                .finally(function(notify) {
                     $log.info('finally at: ' + new Date());
                 });
-            // console.log($scope);
         }
     }
 })(window.angular);

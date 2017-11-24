@@ -1,14 +1,14 @@
 [{
+    "createdBy": "M1026343@mindtree.com",
+    "createdOn": 1507020134692,
+    "lastUpadateBy": "M1026343@mindtree.com",
+    "lastUpdatedOn": 1507020134692,
+    "score": 0.0,
     "id": "59d34d66f45ac0d8860a7997",
     "orgCode": "ORG000004",
     "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
     "projectName": "MIST Lab",
     "description": "Workspace for MIST Team",
     "users": null,
-    "status": "Active",
-    "createdBy": "M1026343@mindtree.com",
-    "createdOn": 1507020134692,
-    "lastUpadateBy": "M1026343@mindtree.com",
-    "lastUpdatedOn": 1507020134692,
-    "score": 0.0
+    "status": "Active"
 }]

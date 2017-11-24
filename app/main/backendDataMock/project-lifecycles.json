@@ -2,36 +2,203 @@
     "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
     "projectName": "MIST Lab",
     "canvases": [{
-        "id": "59df0f3df45ac0e1d7f1b5e2",
-        "orgCode": "ORG000004",
-        "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
-        "projectName": "MIST Lab",
-        "canvasCode": "CNVS1b88670eaf244814953bcdfbc63e21b0",
-        "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_DEMOCANVAS1507790653",
-        "canvasName": "demoCanvas",
-        "createdBy": "M1030469@mindtree.com",
-        "createdOn": 1507790653814,
-        "lastUpadateBy": "M1030469@mindtree.com",
-        "lastUpdatedOn": 1509121243514,
-        "status": "Composing",
-        "version": 50,
-        "description": "to navigate the options available in canvasing",
-        "tags": [{
+            "createdBy": "M1030499@mindtree.com",
+            "createdOn": 1510811468442,
+            "lastUpadateBy": "M1030469@mindtree.com",
+            "lastUpdatedOn": 1511422338328,
+            "score": 1.1,
+            "id": "5a0d274cf45ac00fe0731e37",
+            "canvasName": "AutomationPOC",
+            "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_AUTOMATIONPOC1510811468",
+            "canvasCode": "CNVS962da3dabb3e4941841eef8a45293617",
+            "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+            "projectName": "MIST Lab",
+            "orgCode": "ORG000004",
+            "users": [{
+                    "username": "M1013482@mindtree.com",
+                    "email": "Megha.Prabhu@mindtree.com",
+                    "name": "Megha Prabhu",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1030469@mindtree.com",
+                    "email": "Vijay.Kumar5@mindtree.com",
+                    "name": "Vijay Kumar",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1032465@mindtree.com",
+                    "email": "Vineeth.Mutt@mindtree.com",
+                    "name": "Vineeth Mutt",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1030499@mindtree.com",
+                    "email": "Sujit.Anand@mindtree.com",
+                    "name": "Sujit Anand",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                }
+            ],
+            "hasAccess": true,
+            "status": "Composing",
+            "version": 33,
+            "idCounter": 15,
+            "description": "Testing Purpose",
+            "tags": [{
+                    "type": "softwareNode",
+                    "name": "Version Control",
+                    "status": "Installed"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Continuous Integration",
+                    "status": "Installed"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Build Tool",
+                    "status": "Installed"
+                }
+            ],
+            "stickyNote": null,
+            "displayDefaultView": false
+        },
+        {
+            "createdBy": "M1030469@mindtree.com",
+            "createdOn": 1507790653814,
+            "lastUpadateBy": "M1030469@mindtree.com",
+            "lastUpdatedOn": 1511414365499,
+            "score": 1.1,
+            "id": "59df0f3df45ac0e1d7f1b5e2",
+            "canvasName": "demoCanvas",
+            "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_DEMOCANVAS1507790653",
+            "canvasCode": "CNVS1b88670eaf244814953bcdfbc63e21b0",
+            "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+            "projectName": "MIST Lab",
+            "orgCode": "ORG000004",
+            "users": [{
+                    "username": "M1030469@mindtree.com",
+                    "email": "Vijay.Kumar5@mindtree.com",
+                    "name": "Vijay Kumar",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1013482@mindtree.com",
+                    "email": "Megha.Prabhu@mindtree.com",
+                    "name": "Megha Prabhu",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1030499@mindtree.com",
+                    "email": "Sujit.Anand@mindtree.com",
+                    "name": "Sujit Anand",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1032465@mindtree.com",
+                    "email": "Vineeth.Mutt@mindtree.com",
+                    "name": "Vineeth Mutt",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                }
+            ],
+            "hasAccess": true,
+            "status": "Composing",
+            "version": 334,
+            "idCounter": 3,
+            "description": "to navigate the options available in canvasing",
+            "tags": [{
                 "type": "softwareNode",
-                "name": "EAI",
+                "name": "Continuous Integration",
                 "status": "Installed"
-            },
-            {
-                "type": "softwareNode",
-                "name": "Code Quality",
-                "status": "Installed"
-            },
-            {
-                "type": "softwareNode",
-                "name": "Version Control",
-                "status": "Installed"
-            }
-        ]
-    }],
-    "count": 1
+            }],
+            "stickyNote": null,
+            "displayDefaultView": false
+        },
+        {
+            "createdBy": "M1030469@mindtree.com",
+            "createdOn": 1511169750985,
+            "lastUpadateBy": "M1030469@mindtree.com",
+            "lastUpdatedOn": 1511169750985,
+            "score": 1.1,
+            "id": "5a129ed6f45ac00fe0732e34",
+            "canvasName": "demoCanvas2",
+            "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_DEMOCANVAS21511169750",
+            "canvasCode": "CNVS184e36b2afa04ebb8b9f487dfa32ba59",
+            "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+            "projectName": "MIST Lab",
+            "orgCode": "ORG000004",
+            "users": [{
+                    "username": "M1030469@mindtree.com",
+                    "email": "Vijay.Kumar5@mindtree.com",
+                    "name": "Vijay Kumar",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1030499@mindtree.com",
+                    "email": "Sujit.Anand@mindtree.com",
+                    "name": "Sujit Anand",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1013482@mindtree.com",
+                    "email": "Megha.Prabhu@mindtree.com",
+                    "name": "Megha Prabhu",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1032465@mindtree.com",
+                    "email": "Vineeth.Mutt@mindtree.com",
+                    "name": "Vineeth Mutt",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                }
+            ],
+            "hasAccess": true,
+            "status": "New",
+            "version": 1,
+            "idCounter": null,
+            "description": "for demo",
+            "tags": [
+
+            ],
+            "stickyNote": null,
+            "displayDefaultView": false
+        }
+    ],
+    "count": 3
 }

@@ -17,17 +17,9 @@
         $httpParamSerializer,
         $httpParamSerializerJQLike
     ) {
-        var services = {
-            getProjectComponents: getProjectComponents
-        };
+        var services = {};
 
         return services;
 
-        function getProjectComponents() {
-            return $http({
-                url: "/app/main/backendDataMock/component-categories.json",
-                method: "GET"
-            });
-        }
     }
 })(window.angular, window._);

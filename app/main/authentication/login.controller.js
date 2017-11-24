@@ -1,7 +1,6 @@
 (function(angular) {
     "use strict";
     angular.module("dtepApp")
-        // angular.module("dtepApp")
         .controller("LoginPageController", [
             "$log",
             "$scope",
@@ -11,8 +10,6 @@
             "$location",
             "$uibModal",
             "$state",
-            "AuthService",
-            "NavigationService",
             LoginPageController
         ]);
 
@@ -24,17 +21,15 @@
         $document,
         $location,
         $uibModal,
-        $state,
-        AuthService,
-        NavigationService
+        $state
     ) {
         $scope.isLoginProcessing = false;
-        $scope.doToggleIsLoginProcessingFlag = doToggleIsLoginProcessingFlag;
+        $scope.toggleIsLoginProcessingFlag = toggleIsLoginProcessingFlag;
         $scope.doLogin = doLogin;
         $scope.openForgotPasswordModal = openForgotPasswordModal;
         $scope.openRegisterNewUserModal = openRegisterNewUserModal;
 
-        function doToggleIsLoginProcessingFlag() {
+        function toggleIsLoginProcessingFlag() {
             $scope.isLoginProcessing = !$scope.isLoginProcessing;
         }
 
@@ -45,19 +40,7 @@
             console.log($scope.loginForm.username);
             console.log($scope.loginForm);
             var loginForm = $scope.loginForm;
-            if (loginForm.$dirty && !loginForm.$pristine && !loginForm.$pending && loginForm.$valid && !loginForm.$invalid && loginForm.$submitted) {
-                AuthService.authenticate(userCredential)
-                    .then(function(response) {
-                        console.log(response);
-                        $scope.doToggleIsLoginProcessingFlag();
-                    }).catch(function(error) {
-                        console.log(error);
-                        $scope.doToggleIsLoginProcessingFlag();
-                    }).finally(function(reason) {
-                        console.log(reason);
-                        $scope.doToggleIsLoginProcessingFlag();
-                    });
-            }
+            if (loginForm.$dirty && !loginForm.$pristine && !loginForm.$pending && loginForm.$valid && !loginForm.$invalid && loginForm.$submitted) {}
         }
 
         function openForgotPasswordModal() {
@@ -68,14 +51,6 @@
                 ariaDescribedBy: "dtep-forgot-password-modal-body",
                 templateUrl: "/app/main/authentication/forgot-password-dialog.view.html",
                 controller: "ForgotPasswordModalController",
-                // controllerAs: '$ctrl2',
-                // size: size,
-                // resolve: {
-                //     items: function() {
-                //         return $ctrl.items;
-                //     }
-                // }
-                // keyboard: false,
                 appendTo: angular.element($document[0].querySelector("body"))
             });
 
@@ -85,14 +60,13 @@
                     $log.info(response);
                     $log.info('Modal closed at: ' + new Date());
                 })
-                .catch(function(error) {
-                    $log.info(error);
+                .catch(function(errorResponse) {
+                    $log.info(errorResponse);
                     $log.info('Modal dismissed at: ' + new Date());
                 })
-                .finally(function() {
+                .finally(function(notify) {
                     $log.info('finally at: ' + new Date());
                 });
-            console.log($scope);
         }
 
         function openRegisterNewUserModal() {
@@ -102,14 +76,7 @@
                 ariaDescribedBy: "dtep-register-new-user-modal-body",
                 templateUrl: "/app/main/authentication/register-new-user-dialog.view.html",
                 controller: "RegisterNewUserModalController",
-                // controllerAs: '$ctrl2',
                 size: "lg",
-                // resolve: {
-                //     items: function() {
-                //         return $ctrl.items;
-                //     }
-                // }
-                // keyboard: false,
                 appendTo: angular.element($document[0].querySelector("body"))
             });
 
@@ -119,14 +86,13 @@
                     $log.info(response);
                     $log.info('Modal closed at: ' + new Date());
                 })
-                .catch(function(error) {
-                    $log.info(error);
+                .catch(function(errorResponse) {
+                    $log.info(errorResponse);
                     $log.info('Modal dismissed at: ' + new Date());
                 })
-                .finally(function() {
+                .finally(function(notify) {
                     $log.info('finally at: ' + new Date());
                 });
-            console.log($scope);
         }
     }
 })(window.angular);
