@@ -1,0 +1,336 @@
+{
+    "orgCode": "ORG000004",
+    "componentCode": "AMT",
+    "componentName": null,
+    "softwares": [{
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1000668@mindtree.com",
+            "lastUpdatedOn": 1507888230623,
+            "score": 0.0,
+            "id": "5926a7322a65dc81446c58e6",
+            "softwareName": "Dynatrace",
+            "softwareCode": "DNTRC",
+            "description": "Digital performance management for business, operations and development.",
+            "clazz": null,
+            "connect": false,
+            "provision": false,
+            "hasMetric": false,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "AMT",
+            "componentName": "Application Monitoring",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": { "form": "null", "schema": "null" },
+            "provisionSchemaForm": { "form": "null", "schema": "null" },
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "ATAS9.0",
+                    "softwareName": "Tomcat 9.0",
+                    "description": "App Monitoring",
+                    "iconURL": "/icons/4cba8f78e9004b7e8206e566ecaa822a.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Dynatrace\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Tomcat\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Application Monitoring\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "APHS",
+                    "softwareName": "Apache Server",
+                    "description": "Application Monitoring",
+                    "iconURL": "/icons/53e550c3bf1d427aba99f697ab9e4d7e.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Dynatrace\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Apache Server\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Application Monitorig\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SEVSN",
+                    "softwareName": "ServiceNow",
+                    "description": "Ticket Creation",
+                    "iconURL": "/icons/c86a26323f0a4b75a8912bd9d42d98be.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Dynatrace\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Incident Creation\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                }
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/icons/bc47ad7a4cf74dcfb7dbe8975b03f729.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        },
+        {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1037707@mindtree.com",
+            "lastUpdatedOn": 1507792117392,
+            "score": 0.0,
+            "id": "591596b42a65dc81446c58de",
+            "softwareName": "Nagios",
+            "softwareCode": "NGIS",
+            "description": "Nagios offers complete IT monitoring and alerting software for servers, networks, and applications.",
+            "clazz": "com.mindtree.cape.engine.gateway.service.NagiosServiceImpl",
+            "connect": false,
+            "provision": false,
+            "hasMetric": true,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "AMT",
+            "componentName": "Application Monitoring",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"instanceName\" : {\n      \"title\" : \"Instance Name\",\n      \"pattern\" : \"^[a-zA-Z0-9_\\\\-]+$\",\n      \"type\" : \"string\",\n      \"default\" : null\n    },\n    \"url\" : {\n      \"title\" : \"URL:\",\n      \"type\" : \"string\",\n      \"default\" : \"http://cape-vm-two.southeastasia.cloudapp.azure.com/nagios/\"\n    },\n    \"username\" : {\n      \"title\" : \"username:\",\n      \"type\" : \"string\",\n      \"default\" : \"nagiosadmin\"\n    },\n    \"password\" : {\n      \"title\" : \"Password:\",\n      \"type\" : \"string\",\n      \"default\" : \"\"\n    }\n  },\n  \"required\" : [ \"instanceName\", \"url\", \"username\", \"password\" ]\n}"
+            },
+            "provisionSchemaForm": { "form": null, "schema": null },
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "JKNS2.7",
+                    "softwareName": "Jenkins 2.7",
+                    "description": "Jenkins provides hundreds of plugins to support building, deploying and automating any project.",
+                    "iconURL": "/icons/21e3bd48c30d4b7e88e11864845ba3bb.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Nagios\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Jenkins 2.7\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Monitor Jenkins\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": null
+                },
+                {
+                    "id": null,
+                    "softwareCode": "ATAS9.0",
+                    "softwareName": "Tomcat 9.0",
+                    "description": "Open source implementation of the Java Servlet, JSP, Expression Language and WebSocket technologies.",
+                    "iconURL": "/icons/4cba8f78e9004b7e8206e566ecaa822a.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Nagios\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Tomcat 9.0\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Monitor Tomcat\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": null
+                },
+                {
+                    "id": null,
+                    "softwareCode": "MYDS5.6",
+                    "softwareName": "MySql 5.6",
+                    "description": "MySQL is an open-source relational database management system (RDBMS).",
+                    "iconURL": "/icons/b8a873c899604f6a96b173908b1dcff2.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Nagios\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"MySql 5.6\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Monitor MySQL\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": null
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SONR6.0",
+                    "softwareName": "SonarQube 6.0",
+                    "description": "Open source quality management platform, dedicated to continuously",
+                    "iconURL": "/icons/c7b9a8d021cb439b87dbc049c87c9d0b.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Nagios\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"SonarQube 6.0\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Monitor SonarQube\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": null
+                },
+                {
+                    "id": null,
+                    "softwareCode": "NGWS",
+                    "softwareName": "Nginx",
+                    "description": "Accelerates content and application delivery, improves security, facilitates availability and scalability.",
+                    "iconURL": "/icons/4339264ff4d04ae3985c781d97aac6af.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Nagios\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Nginx\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Monitor Nginx\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": null
+                },
+                {
+                    "id": null,
+                    "softwareCode": "RUNDECK",
+                    "softwareName": "Rundeck",
+                    "description": "Job Scheduler and Runbook Automation.",
+                    "iconURL": "/icons/ea24c87a85804ebfac5c450469eca90b.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Nagios\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Rundeck\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Monitor Rundeck\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": null
+                }
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/icons/00f03798f032462e901ec14462b2b6b6.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        },
+        {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1037707@mindtree.com",
+            "lastUpdatedOn": 1507792117642,
+            "score": 0.0,
+            "id": "5912ff341e65da20e1b01011",
+            "softwareName": "Splunk",
+            "softwareCode": "SPLUNK",
+            "description": "Monitor, analyze and visualize log data",
+            "clazz": null,
+            "connect": false,
+            "provision": false,
+            "hasMetric": false,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "AMT",
+            "componentName": "Application Monitoring",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": null,
+            "provisionSchemaForm": null,
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "ATAS9.0",
+                    "softwareName": "Tomcat 9.0",
+                    "description": "Monitor server",
+                    "iconURL": "/icons/4cba8f78e9004b7e8206e566ecaa822a.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Splunk\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Tomcat 9.0\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Monitor Tomcat Server\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "APHS",
+                    "softwareName": "Apache Server",
+                    "description": "Log Analysis",
+                    "iconURL": "/icons/53e550c3bf1d427aba99f697ab9e4d7e.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Splunk\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Apache Server\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Log Analysis\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                }
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/icons/a0af4a8c703c4e0f8ea8769c9d3aad58.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        },
+        {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1000668@mindtree.com",
+            "lastUpdatedOn": 1511437555358,
+            "score": 0.0,
+            "id": "58873b7ca97fdef30c591d3d",
+            "softwareName": "Zabbix",
+            "softwareCode": "ZBX",
+            "description": "Zabbix is an open source monitoring solution for network monitoring and application monitoring",
+            "clazz": null,
+            "connect": false,
+            "provision": true,
+            "hasMetric": false,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "AMT",
+            "componentName": "Application Monitoring",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": {
+                "type": "Script",
+                "supportedPlatforms": "[ \"Ubuntu Server\" ]",
+                "installScript": "cape-zabbix-install.sh",
+                "uninstallScript": "cape-zabbix-uninstall.sh"
+            },
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL:\",\"type\":\"string\",\"default\":\"http://cape-vm-ten.southeastasia.cloudapp.azure.com:8081\"},\"username\":{\"title\":\"username:\",\"type\":\"string\",\"default\":\"admin\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"password\"]}"
+            },
+            "provisionSchemaForm": {
+                "form": "[\"*\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"hostPort\":{\"title\":\"Host Port\",\"type\":\"string\",\"default\":\"8080\"}},\"required\":[\"hostPort\"]}"
+            },
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "ATAS9.0",
+                    "softwareName": "Tomcat 9.0",
+                    "description": "Monitor server",
+                    "iconURL": "/icons/4cba8f78e9004b7e8206e566ecaa822a.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Zabbix\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Tomcat 9.0\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Monitor Tomcat Server\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "AppHost",
+                    "softwareName": "Application Host",
+                    "description": "Integration between Application Host and Zabbix for monitoring",
+                    "iconURL": "/icons/51bb16363a6846a589e720bb89abdc7d.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Monitoring\"}},\"required\":[\"label\"]}"
+                    },
+                    "properties": {}
+                }
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/icons/37817502c5c34c4c806f17ffabf752a3.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        }
+    ]
+}
