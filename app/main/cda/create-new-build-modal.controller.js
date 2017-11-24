@@ -1,7 +1,8 @@
 (function(angular) {
     "use strict";
-    angular.module("dtepApp")
-        .controller("ForgotPasswordModalController", [
+    angular
+        .module("dtepApp")
+        .controller("CreateNewBuildModalController", [
             "$log",
             "$scope",
             "$rootScope",
@@ -10,10 +11,10 @@
             "$location",
             "$uibModalInstance",
             "$state",
-            ForgotPasswordModalController
+            CreateNewBuildModalController
         ]);
 
-    function ForgotPasswordModalController(
+    function CreateNewBuildModalController(
         $log,
         $scope,
         $rootScope,
@@ -23,14 +24,14 @@
         $uibModalInstance,
         $state
     ) {
-        $scope.closeForgotPasswordModal = closeForgotPasswordModal;
-        $scope.dismissForgotPasswordModal = dismissForgotPasswordModal;
+        $scope.closeCreateNewBuildModal = closeCreateNewBuildModal;
+        $scope.dismissCreateNewBuildModal = dismissCreateNewBuildModal;
 
-        function closeForgotPasswordModal() {
+        function closeCreateNewBuildModal() {
             $uibModalInstance.close("closed modal");
         }
 
-        function dismissForgotPasswordModal() {
+        function dismissCreateNewBuildModal() {
             $uibModalInstance.dismiss("dismissed modal");
         }
     }

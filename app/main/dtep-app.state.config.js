@@ -37,7 +37,7 @@
                 url: "/",
                 views: {
                     "main-content@root": {
-                        templateUrl: "/app/main/authentication/login.view.html",
+                        templateUrl: "/app/main/authentication/login-page.view.html",
                         controller: "LoginPageController"
                     }
                 },
@@ -158,15 +158,17 @@
                     }
                 }
             })
-            .state("root.shell.authenticatedAccess.infrastructure.cloud.vmConfigSetup", {
-                url: "/configSetup",
-                views: {
-                    "infrastructure-content@root.shell.authenticatedAccess.infrastructure": {
-                        templateUrl: "/app/main/infrastructure/vm-config-setup.view.html",
-                        controller: "VmConfigSetupController"
+            .state(
+                "root.shell.authenticatedAccess.infrastructure.cloud.vmConfigSetup", {
+                    url: "/configSetup",
+                    views: {
+                        "infrastructure-content@root.shell.authenticatedAccess.infrastructure": {
+                            templateUrl: "/app/main/infrastructure/vm-config-setup.view.html",
+                            controller: "VmConfigSetupController"
+                        }
                     }
                 }
-            })
+            )
             .state("root.shell.authenticatedAccess.infrastructure.onPremise", {
                 url: "/onPremise",
                 data: {
@@ -184,8 +186,8 @@
                 url: "/cda",
                 views: {
                     "main-content@root": {
-                        templateUrl: "/app/main/cda/cda.view.html",
-                        controller: "CdaController"
+                        templateUrl: "/app/main/cda/cda-page.view.html",
+                        controller: "CdaPageController"
                     }
                 },
                 data: {

@@ -1,6 +1,7 @@
 (function(angular) {
     "use strict";
-    angular.module("dtepApp")
+    angular
+        .module("dtepApp")
         .controller("AuthenticatedHeaderController", [
             "$log",
             "$scope",
@@ -36,23 +37,22 @@
                 animation: true,
                 ariaLabelledBy: "dtep-notifications-modal-title",
                 ariaDescribedBy: "dtep-notifications-modal-body",
-                templateUrl: "/app/main/layout/header/notifications-dialog.view.html",
+                templateUrl: "/app/main/layout/header/notifications-modal.view.html",
                 controller: "NotificationsModalController",
                 appendTo: angular.element($document[0].querySelector("body"))
             });
 
-            notificationsModal
-                .result
+            notificationsModal.result
                 .then(function(response) {
                     $log.info(response);
-                    $log.info('Modal closed at: ' + new Date());
+                    $log.info("Modal closed at: " + new Date());
                 })
                 .catch(function(errorResponse) {
                     $log.info(errorResponse);
-                    $log.info('Modal dismissed at: ' + new Date());
+                    $log.info("Modal dismissed at: " + new Date());
                 })
                 .finally(function(notify) {
-                    $log.info('finally at: ' + new Date());
+                    $log.info("finally at: " + new Date());
                 });
         }
     }

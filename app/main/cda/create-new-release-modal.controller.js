@@ -1,7 +1,8 @@
 (function(angular) {
     "use strict";
-    angular.module("dtepApp")
-        .controller("RegisterNewUserModalController", [
+    angular
+        .module("dtepApp")
+        .controller("CreateNewReleaseModalController", [
             "$log",
             "$scope",
             "$rootScope",
@@ -10,10 +11,10 @@
             "$location",
             "$uibModalInstance",
             "$state",
-            RegisterNewUserModalController
+            CreateNewReleaseModalController
         ]);
 
-    function RegisterNewUserModalController(
+    function CreateNewReleaseModalController(
         $log,
         $scope,
         $rootScope,
@@ -23,14 +24,14 @@
         $uibModalInstance,
         $state
     ) {
-        $scope.closeRegisterNewUserModal = closeRegisterNewUserModal;
-        $scope.dismissRegisterNewUserModal = dismissRegisterNewUserModal;
+        $scope.closeCreateNewReleaseModal = closeCreateNewReleaseModal;
+        $scope.dismissCreateNewReleaseModal = dismissCreateNewReleaseModal;
 
-        function closeRegisterNewUserModal() {
+        function closeCreateNewReleaseModal() {
             $uibModalInstance.close("closed modal");
         }
 
-        function dismissRegisterNewUserModal() {
+        function dismissCreateNewReleaseModal() {
             $uibModalInstance.dismiss("dismissed modal");
         }
     }

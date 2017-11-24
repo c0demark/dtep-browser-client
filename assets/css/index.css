@@ -1,11 +1,11 @@
 body {
     height: 100%;
     background: #0068b4;
-    background-image: radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
-    background-image: -o-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
-    background-image: -ms-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
-    background-image: -moz-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
-    background-image: -webkit-radial-gradient(center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: radial-gradient( center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -o-radial-gradient( center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -ms-radial-gradient( center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -moz-radial-gradient( center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
+    background-image: -webkit-radial-gradient( center top, circle cover, #0090d2, rgba(34, 34, 34, 0.7));
     /* color: #88d0e8; */
     color: rgba(255, 255, 255, 1);
     background-repeat: no-repeat;
@@ -16,15 +16,15 @@ a:focus {
     outline: none;
 }
 
-.main-content-with-authenticated-header {
+.dtep-main-content-with-authenticated-header {
     min-height: calc(569px - 56px);
 }
 
-.main-content-without-authenticated-header {
+.dtep-main-content-without-authenticated-header {
     min-height: calc(569px);
 }
 
-.element-having-position-relative {
+.dtep-element-having-position-relative {
     position: relative;
 }
 
@@ -38,8 +38,8 @@ a:focus {
 } */
 
 .dtep-login-button {
-    background-color: #E37321;
-    border-color: #E37321;
+    background-color: #e37321;
+    border-color: #e37321;
     font-weight: bolder;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -57,7 +57,7 @@ a:focus {
 }
 
 .dtep-login-form-icon {
-    background-color: rgba(168, 207, 215, 0.80);
+    background-color: rgba(168, 207, 215, 0.8);
     border-color: rgba(15, 121, 171, 1);
     text-shadow: 2px 2px 2px rgba(15, 121, 171, 0.8);
 }
@@ -68,7 +68,7 @@ a:focus {
 
 .dtep-forgot-password-modal-anchor,
 .dtep-register-new-user-modal-anchor {
-    color: #2486C1;
+    color: #2486c1;
     text-decoration: none;
     /* color:#ffffff; */
     cursor: pointer;
@@ -141,13 +141,13 @@ a:focus {
 .dtep-page-header {
     background: rgba(34, 34, 34, 0.3);
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(top right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    background: -webkit-linear-gradient( top right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(top right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    background: -o-linear-gradient( top right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(top right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    background: -moz-linear-gradient( top right, rgba(34, 34, 34, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(top right, rgba(142, 13, 13, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
+    background: linear-gradient( top right, rgba(142, 13, 13, 0.3), rgba(0, 144, 210, 0.3), rgba(34, 34, 34, 0.3));
     /* Standard syntax */
     border-color: transparent;
     border-bottom: 1px solid rgba(34, 34, 34, 0.3);
@@ -161,7 +161,7 @@ a:focus {
 }
 
 .dtep-header-search-box-form-icon {
-    background-color: rgba(168, 207, 215, 0.80);
+    background-color: rgba(168, 207, 215, 0.8);
     border-color: rgba(15, 121, 171, 1);
     text-shadow: 2px 2px 2px rgba(15, 121, 171, 0.8);
 }
@@ -188,7 +188,7 @@ a:focus {
 
 .dtep-active-header-nav-item,
 .dtep-user-profile-dropdown-menu-item.open {
-    border-bottom: 4px solid #E37320;
+    border-bottom: 4px solid #e37320;
     /* min-height: calc(100% - 4px); */
 }
 
@@ -271,7 +271,7 @@ a:focus {
     overflow: hidden;
     width: 100%;
     height: 0;
-    transition: height .5s ease-in-out;
+    transition: height 0.5s ease-in-out;
 }
 
 .dtep-home-page-image-panel:hover .dtep-home-page-image-panel-overlay,
@@ -362,13 +362,13 @@ a:focus {
     /* width: 100%; */
     /* height: 2em; */
     /* width: 2em; */
-    height: 29.250px;
-    width: 29.250px;
+    height: 29.25px;
+    width: 29.25px;
 }
 
 .dtep-cda-page-top-section-line {
     height: 4px;
-    background-color: #7abbd0
+    background-color: #7abbd0;
 }
 
 .dtep-cda-page-main-content .dtep-cda-page-module-selection-dropdown {
@@ -419,8 +419,8 @@ a:focus {
 
 .dtep-cda-page-task-execution-buttons.btn.btn-info,
 .dtep-cda-page-task-execution-button.btn.btn-info:active {
-    background-color: #E37321;
-    border-color: #E37321;
+    background-color: #e37321;
+    border-color: #e37321;
     font-weight: bolder;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -583,7 +583,7 @@ a:focus {
 /** Start of cloud provision vm details view css **/
 
 .dtep-vm-details-pagination-section {
-    background-color: #09517F;
+    background-color: #09517f;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -603,7 +603,7 @@ a:focus {
 .dtep-vm-details-pagination-section .pagination>li>span {
     background-color: inherit;
     border: none;
-    _color: white
+    _color: white;
 }
 
 .dtep-vm-details-pagination-section .pagination>.disabled>a,
@@ -617,12 +617,12 @@ a:focus {
 }
 
 .dtep-vm-details-table>tbody>tr>td {
-    border-color: #61AFC2;
+    border-color: #61afc2;
     padding: 12px;
 }
 
 .dtep-vm-details-table>tbody>tr:last-child>td {
-    border-bottom: 1px solid #61AFC2;
+    border-bottom: 1px solid #61afc2;
 }
 
 .dtep-vm-details-select-vm-button,
@@ -636,8 +636,8 @@ a:focus {
 
 .dtep-vm-details-start-vm-button,
 .dtep-vm-details-start-vm-button:hover {
-    background-color: #4CAF50;
-    border-color: #4CAF50;
+    background-color: #4caf50;
+    border-color: #4caf50;
     font-weight: bolder;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -678,7 +678,7 @@ a:focus {
 
 .dtep-vm-config-setup-progressbar li.dtep-vm-config-setup-active-step::before,
 .dtep-vm-config-setup-progressbar li.dtep-vm-config-setup-active-step::after {
-    background: #E37321;
+    background: #e37321;
     color: inherit;
 }
 
@@ -696,7 +696,7 @@ a:focus {
 }
 
 .dtep-vm-config-setup-progressbar li::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 2px;
     background: white;
@@ -797,7 +797,7 @@ a:focus {
     }
     nav.dtep-manage-sidebar .navbar-nav .open .dropdown-menu>li>a:hover,
     nav.dtep-manage-sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
-        color: #CCC;
+        color: #ccc;
         background-color: transparent;
     }
 }
@@ -843,7 +843,7 @@ a:focus {
 }
 
 .dtep-curate-project-pipeline-template-painting {
-    _background-color: #39248A;
+    _background-color: #39248a;
     height: 500px;
     _padding-right: 5px;
     _overflow: hidden;

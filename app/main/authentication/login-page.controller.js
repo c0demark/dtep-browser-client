@@ -1,6 +1,7 @@
 (function(angular) {
     "use strict";
-    angular.module("dtepApp")
+    angular
+        .module("dtepApp")
         .controller("LoginPageController", [
             "$log",
             "$scope",
@@ -26,8 +27,8 @@
         $scope.isLoginProcessing = false;
         $scope.toggleIsLoginProcessingFlag = toggleIsLoginProcessingFlag;
         $scope.doLogin = doLogin;
-        $scope.openForgotPasswordModal = openForgotPasswordModal;
-        $scope.openRegisterNewUserModal = openRegisterNewUserModal;
+        $scope.openPasswordRecoveryModal = openPasswordRecoveryModal;
+        $scope.openNewUserRegistrationModal = openNewUserRegistrationModal;
 
         function toggleIsLoginProcessingFlag() {
             $scope.isLoginProcessing = !$scope.isLoginProcessing;
@@ -40,58 +41,62 @@
             console.log($scope.loginForm.username);
             console.log($scope.loginForm);
             var loginForm = $scope.loginForm;
-            if (loginForm.$dirty && !loginForm.$pristine && !loginForm.$pending && loginForm.$valid && !loginForm.$invalid && loginForm.$submitted) {}
+            if (
+                loginForm.$dirty &&
+                !loginForm.$pristine &&
+                !loginForm.$pending &&
+                loginForm.$valid &&
+                !loginForm.$invalid &&
+                loginForm.$submitted
+            ) {}
         }
 
-        function openForgotPasswordModal() {
-
-            var forgorPasswordModal = $uibModal.open({
+        function openPasswordRecoveryModal() {
+            var passwordRecoveryModal = $uibModal.open({
                 animation: true,
-                ariaLabelledBy: "dtep-forgot-password-modal-title",
-                ariaDescribedBy: "dtep-forgot-password-modal-body",
-                templateUrl: "/app/main/authentication/forgot-password-dialog.view.html",
-                controller: "ForgotPasswordModalController",
+                ariaLabelledBy: "dtep-password-recovery-modal-title",
+                ariaDescribedBy: "dtep-password-recovery-modal-body",
+                templateUrl: "/app/main/authentication/password-recovery-modal.view.html",
+                controller: "PasswordRecoveryModalController",
                 appendTo: angular.element($document[0].querySelector("body"))
             });
 
-            forgorPasswordModal
-                .result
+            passwordRecoveryModal.result
                 .then(function(response) {
                     $log.info(response);
-                    $log.info('Modal closed at: ' + new Date());
+                    $log.info("Modal closed at: " + new Date());
                 })
                 .catch(function(errorResponse) {
                     $log.info(errorResponse);
-                    $log.info('Modal dismissed at: ' + new Date());
+                    $log.info("Modal dismissed at: " + new Date());
                 })
                 .finally(function(notify) {
-                    $log.info('finally at: ' + new Date());
+                    $log.info("finally at: " + new Date());
                 });
         }
 
-        function openRegisterNewUserModal() {
-            var registerNewUserModal = $uibModal.open({
+        function openNewUserRegistrationModal() {
+            var newUserRegistrationModal = $uibModal.open({
                 animation: true,
-                ariaLabelledBy: "dtep-register-new-user-modal-title",
-                ariaDescribedBy: "dtep-register-new-user-modal-body",
-                templateUrl: "/app/main/authentication/register-new-user-dialog.view.html",
-                controller: "RegisterNewUserModalController",
+                ariaLabelledBy: "dtep-new-user-registration-modal-title",
+                ariaDescribedBy: "dtep-new-user-registration-modal-body",
+                templateUrl: "/app/main/authentication/new-user-registration-modal.view.html",
+                controller: "NewUserRegistrationModalController",
                 size: "lg",
                 appendTo: angular.element($document[0].querySelector("body"))
             });
 
-            registerNewUserModal
-                .result
+            newUserRegistrationModal.result
                 .then(function(response) {
                     $log.info(response);
-                    $log.info('Modal closed at: ' + new Date());
+                    $log.info("Modal closed at: " + new Date());
                 })
                 .catch(function(errorResponse) {
                     $log.info(errorResponse);
-                    $log.info('Modal dismissed at: ' + new Date());
+                    $log.info("Modal dismissed at: " + new Date());
                 })
                 .finally(function(notify) {
-                    $log.info('finally at: ' + new Date());
+                    $log.info("finally at: " + new Date());
                 });
         }
     }

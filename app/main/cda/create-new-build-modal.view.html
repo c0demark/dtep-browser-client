@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<div>
+    <header class="modal-header">
+        <button class="badge close" type="button" data-ng-click="closeCreateNewBuildModal()"><span class="sr-only">Close Dialog</span><i class="fa fa-close" aria-hidden="true"></i></button>
+        <h4 class="modal-title text-center" id="dtep-create-new-build-modal-title">Create New Build</h4>
+    </header>
+    <main class="modal-body" id="dtep-create-new-build-modal-body">
+        <form name="createNewBuildForm">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <fieldset class="form-group">
+                        <label for="buildName">Build Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                            <input class="form-control" type="text" id="buildName" name="buildName" placeholder="Enter Build Name *" data-ng-required="!userCredential.recoveryEmail" data-ng-model="userCredential.recoveryEmail" />
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <fieldset class="form-group">
+                        <label for="buildDescription">Build Description</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                            <textarea class="form-control" type="text" id="buildDescription" name="buildDescription" placeholder="Enter Build Description *" data-ng-required="!userCredential.recoveryEmail" data-ng-model="userCredential.recoveryEmail" />
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <fieldset class="form-group text-center">
+                        <button class="btn btn-success text-uppercase" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;Create</button>
+                        <button class="btn btn-warning text-uppercase" type="reset"><i class="fa fa-eraser" aria-hidden="true"></i>&nbsp;&nbsp;Clear</button>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+    </main>
+</div>

@@ -124,7 +124,7 @@
 
         function toggleShowSoftwareListFlag() {
             console.log("toggleShowSoftwareListFlag is called");
-            $scope.setShowSoftwareListFlag(!($scope.getShowSoftwareListFlag()));
+            $scope.setShowSoftwareListFlag(!$scope.getShowSoftwareListFlag());
         }
 
         function openSoftwareListModal() {
@@ -132,7 +132,7 @@
                 animation: true,
                 ariaLabelledBy: "dtep-curate-projectsoftware-list-modal-title",
                 ariaDescribedBy: "dtep-curate-projectsoftware-list-modal-body",
-                templateUrl: "/app/main/curate/software-list-dialog.view.html",
+                templateUrl: "/app/main/curate/software-list-modal.view.html",
                 controller: "SoftwareListModalController",
                 backdrop: "static",
                 scope: $scope,
@@ -140,20 +140,18 @@
                 appendTo: angular.element($document[0].querySelector("body"))
             });
 
-            softwareListModal
-                .result
+            softwareListModal.result
                 .then(function(response) {
                     $log.info(response);
-                    $log.info('Modal closed at: ' + new Date());
+                    $log.info("Modal closed at: " + new Date());
                 })
                 .catch(function(errorResponse) {
                     $log.info(errorResponse);
-                    $log.info('Modal dismissed at: ' + new Date());
+                    $log.info("Modal dismissed at: " + new Date());
                 })
                 .finally(function(notify) {
-                    $log.info('finally at: ' + new Date());
+                    $log.info("finally at: " + new Date());
                 });
         }
-
     }
 })(window.angular);
