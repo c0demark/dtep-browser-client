@@ -1,3 +1,30 @@
 {
-    "esversion": 6
+    "bitwise": false,
+    "curly": true,
+    "eqeqeq": true,
+    "esversion": 6,
+    "freeze": true,
+    "funcscope": false,
+    "futurehostile": true,
+    "globals": {
+        "console": false,
+        "module": true,
+        "exports": true,
+        "require": false
+    },
+    "latedef": "nofunc",
+    "nonew": true,
+    "notypeof": false,
+    "shadow": false,
+    "strict": "global",
+    "undef": true,
+    "unused": "strict",
+    "varstmt": true,
+    "asi": false,
+    "boss": false,
+    "eqnull": true,
+    "evil": false,
+    "expr": false,
+    "validthis": false,
+    "node": true
 }

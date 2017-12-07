@@ -1,17 +1,18 @@
 (function(angular) {
     "use strict";
-    angular.module('dtepApp')
+    angular
+        .module("dtepApp")
         // angular.module('dtepApp')
-        .factory('ProjectComponentsService', [
+        .factory("SoftwaresService", [
             "$log",
             "$http",
             "$resource",
             "$httpParamSerializer",
             "$httpParamSerializerJQLike",
-            ProjectComponentsService
+            SoftwaresService
         ]);
 
-    function ProjectComponentsService(
+    function SoftwaresService(
         $log,
         $http,
         $resource,
@@ -19,14 +20,14 @@
         $httpParamSerializerJQLike
     ) {
         var services = {
-            fetchProjectComponentCategorizations: fetchProjectComponentCategorizations
+            fetchContinousIntegrationSoftwares: fetchContinousIntegrationSoftwares
         };
 
         return services;
 
-        function fetchProjectComponentCategorizations() {
+        function fetchContinousIntegrationSoftwares() {
             return $http({
-                url: "/app/main/backendDataMock/categorizations.json",
+                url: "/app/backendDataMock/softwares/continuos-integration-softwares.json",
                 method: "GET"
             });
         }

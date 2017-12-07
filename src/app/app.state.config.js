@@ -2,7 +2,6 @@
     "use strict";
     angular
         .module("dtepApp")
-        // .module("dtepApp")
         .config([
             "$stateProvider",
             "$urlRouterProvider",
@@ -21,14 +20,14 @@
         $stateProvider
             .state("root", {
                 // url: "",
-                templateUrl: "/app/main/layout/shell/app-layout-root.shell.view.html",
+                templateUrl: "/app/layout/shell/app-layout-root.shell.view.html",
                 abstract: true
             })
             .state("root.shell", {
                 // url: "",
                 views: {
                     "common-footer-content@root": {
-                        templateUrl: "/app/main/layout/footer/common-footer-content.view.html"
+                        templateUrl: "/app/layout/footer/common-footer-content.view.html"
                     }
                 },
                 abstract: true
@@ -37,7 +36,7 @@
                 url: "/",
                 views: {
                     "main-content@root": {
-                        templateUrl: "/app/main/authentication/login-page.view.html",
+                        templateUrl: "/app/authentication/login-page.view.html",
                         controller: "LoginPageController"
                     }
                 },
@@ -51,7 +50,7 @@
                 url: "/authenticatedAccess",
                 views: {
                     "authenticated-header-content@root": {
-                        templateUrl: "/app/main/layout/header/authenticated-header.view.html",
+                        templateUrl: "/app/layout/header/authenticated-header.view.html",
                         controller: "AuthenticatedHeaderController"
                     }
                 },
@@ -61,7 +60,7 @@
                 url: "/home",
                 views: {
                     "main-content@root": {
-                        templateUrl: "/app/main/home/home-page.view.html",
+                        templateUrl: "/app/home/home-page.view.html",
                         controller: "HomePageController"
                     }
                 },
@@ -75,7 +74,7 @@
                 url: "/curate",
                 views: {
                     "main-content@root": {
-                        templateUrl: "/app/main/curate/curate-project.view.html",
+                        templateUrl: "/app/curate/curate-project.view.html",
                         controller: "CurateProjectController"
                     }
                 },
@@ -89,7 +88,7 @@
                 url: "/manage",
                 views: {
                     "main-content@root": {
-                        templateUrl: "/app/main/manage/manage-sidebar.view.html",
+                        templateUrl: "/app/manage/manage-sidebar.view.html",
                         controller: "ManageSidebarController"
                     }
                 },
@@ -108,7 +107,7 @@
                 url: "/configComponents",
                 views: {
                     "manage-main-content@root.shell.authenticatedAccess.manage": {
-                        templateUrl: "/app/main/manage/manage-config-components.view.html",
+                        templateUrl: "/app/manage/manage-config-components.view.html",
                         controller: "ManageConfigComponentsController"
                     }
                 },
@@ -122,7 +121,7 @@
                 url: "/infrastructure",
                 views: {
                     "main-content@root": {
-                        templateUrl: "/app/main/infrastructure/infrastructure-provisioning-tabs.view.html",
+                        templateUrl: "/app/infrastructure/infrastructure-provisioning-tabs.view.html",
                         controller: "InfrastructureProvisioningTabsController"
                     }
                 },
@@ -153,7 +152,7 @@
                 url: "/details",
                 views: {
                     "infrastructure-content@root.shell.authenticatedAccess.infrastructure": {
-                        templateUrl: "/app/main/infrastructure/vm-details.view.html",
+                        templateUrl: "/app/infrastructure/vm-details.view.html",
                         controller: "VmDetailsController"
                     }
                 }
@@ -163,7 +162,7 @@
                     url: "/configSetup",
                     views: {
                         "infrastructure-content@root.shell.authenticatedAccess.infrastructure": {
-                            templateUrl: "/app/main/infrastructure/vm-config-setup.view.html",
+                            templateUrl: "/app/infrastructure/vm-config-setup.view.html",
                             controller: "VmConfigSetupController"
                         }
                     }
@@ -186,7 +185,7 @@
                 url: "/cda",
                 views: {
                     "main-content@root": {
-                        templateUrl: "/app/main/cda/cda-page.view.html",
+                        templateUrl: "/app/cda/cda-page.view.html",
                         controller: "CdaPageController"
                     }
                 },
@@ -200,7 +199,7 @@
                 url: "/dashboards",
                 views: {
                     "main-content@root": {
-                        templateUrl: "/app/main/dashboards/dashboard-nav.view.html",
+                        templateUrl: "/app/dashboards/dashboard-nav.view.html",
                         controller: "DashboardNavController"
                     }
                 },
@@ -224,7 +223,7 @@
                 url: "/pmoDashboard",
                 views: {
                     "dashboard-content@root.shell.authenticatedAccess.dashboards": {
-                        templateUrl: "/app/main/dashboards/pmo-dashboard.view.html",
+                        templateUrl: "/app/dashboards/pmo-dashboard.view.html",
                         controller: "PmoDashboardController"
                     }
                 }
@@ -233,7 +232,7 @@
                 url: "/itDashboard",
                 views: {
                     "dashboard-content@root.shell.authenticatedAccess.dashboards": {
-                        templateUrl: "/app/main/dashboards/it-dashboard.view.html",
+                        templateUrl: "/app/dashboards/it-dashboard.view.html",
                         controller: "ItDashboardController"
                     }
                 }

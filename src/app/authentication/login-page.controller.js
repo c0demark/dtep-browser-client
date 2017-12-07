@@ -34,13 +34,13 @@
             $scope.isLoginProcessing = !$scope.isLoginProcessing;
         }
 
-        console.log(loginForm);
+        console.log(loginForm); //jshint ignore:line
 
         function doLogin(userCredential) {
-            console.log(loginForm);
             console.log($scope.loginForm.username);
             console.log($scope.loginForm);
             var loginForm = $scope.loginForm;
+            console.log(loginForm);
             if (
                 loginForm.$dirty &&
                 !loginForm.$pristine &&
@@ -56,7 +56,7 @@
                 animation: true,
                 ariaLabelledBy: "dtep-password-recovery-modal-title",
                 ariaDescribedBy: "dtep-password-recovery-modal-body",
-                templateUrl: "/app/main/authentication/password-recovery-modal.view.html",
+                templateUrl: "/app/authentication/password-recovery-modal.view.html",
                 controller: "PasswordRecoveryModalController",
                 appendTo: angular.element($document[0].querySelector("body"))
             });
@@ -80,7 +80,7 @@
                 animation: true,
                 ariaLabelledBy: "dtep-new-user-registration-modal-title",
                 ariaDescribedBy: "dtep-new-user-registration-modal-body",
-                templateUrl: "/app/main/authentication/new-user-registration-modal.view.html",
+                templateUrl: "/app/authentication/new-user-registration-modal.view.html",
                 controller: "NewUserRegistrationModalController",
                 size: "lg",
                 appendTo: angular.element($document[0].querySelector("body"))

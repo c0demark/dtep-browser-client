@@ -57,3 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
+# customized build proecss generated folders
+.tmp
+dist

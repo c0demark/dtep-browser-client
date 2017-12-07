@@ -322,7 +322,7 @@
             "softwareName": "Jenkins 2.7",
             "softwareCode": "JKNS2.7",
             "description": "Jenkins provides hundreds of plugins to support building, deploying and automating any project.",
-            "clazz": "com.mindtree.cape.engine.gateway.service.jenkins.JenkinsServiceImpl",
+            "clazz": "com.mindtree.cape.engine.gateway.service.jenkins.JenkinsS `erviceImpl",
             "connect": true,
             "provision": true,
             "hasMetric": true,

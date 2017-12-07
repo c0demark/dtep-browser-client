@@ -132,7 +132,7 @@
                 animation: true,
                 ariaLabelledBy: "dtep-curate-projectsoftware-list-modal-title",
                 ariaDescribedBy: "dtep-curate-projectsoftware-list-modal-body",
-                templateUrl: "/app/main/curate/software-list-modal.view.html",
+                templateUrl: "/app/curate/software-list-modal.view.html",
                 controller: "SoftwareListModalController",
                 backdrop: "static",
                 scope: $scope,

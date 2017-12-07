@@ -37,7 +37,7 @@
                 animation: true,
                 ariaLabelledBy: "dtep-notifications-modal-title",
                 ariaDescribedBy: "dtep-notifications-modal-body",
-                templateUrl: "/app/main/layout/header/notifications-modal.view.html",
+                templateUrl: "/app/layout/header/notifications-modal.view.html",
                 controller: "NotificationsModalController",
                 appendTo: angular.element($document[0].querySelector("body"))
             });
