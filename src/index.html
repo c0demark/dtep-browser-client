@@ -4,48 +4,93 @@
 <head>
     <base href="/" />
     <title data-ng-bind="pageInfo.title">DTEP</title>
+    <!-- info comments -->
+
+    <!-- written a directive working fine under normal circumstances for rendering dynamic page title. -->
+    <!-- Need to optimize the directive. For now using state custom data and run block of app to do the job. -->
+    <!-- <title data-dtep-page-title="">DTEP</title> -->
+
+    <!-- end info comments -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <link rel="shortcut icon" href="assets/images/mindtree.ico" />
+    <!-- info comments -->
+
+    <!-- <link rel="stylesheet" href="../bower_components/highcharts/css/highcharts.css" /> -->
+    <!-- <link rel="stylesheet" href="../bower_components/amcharts3/images/style.css" /> -->
+
+    <!-- end info comments -->
+    <!-- build:css(bower_components) amcharts/amcharts.bundle.css -->
+    <!-- Amcharts Specific CSS files -->
+    <!-- Loading Amcharts Specific css files -->
+    <!-- Loaded Amcharts Specific css files -->
+    <!-- endbuild -->
+    <!-- build:css(bower_components) styles/vendor.bundle.css -->
     <!-- Vendor Specific CSS files -->
     <!-- Loading Vendor Specific css files -->
     <!-- Loaded Vendor Specific css files -->
-
+    <!-- endbuild -->
+    <!-- build:css(src) styles/app.bundle.css -->
     <!-- Application Specific CSS files -->
     <!-- Loading Application Specific index css -->
     <!-- Loaded Application Specific index css -->
+    <!-- endbuild -->
 </head>
 
 <body>
     <div data-ui-view=""></div>
-
+    <!-- build:js(bower_components) amcharts/amcharts.bundle.js -->
+    <!-- Amcharts Specific JS files -->
+    <!-- Loading Amcharts Specific js files -->
+    <!-- Loaded Amcharts Specific js files -->
+    <!-- endbuild -->
+    <!-- build:js(bower_components) scripts/vendor.bundle.js -->
     <!-- Vendor Specific JS files -->
     <!-- Loading Vendor Specific js files -->
     <!-- Loaded Vendor Specific js files -->
+    <!-- endbuild -->
+    <!-- info comments -->
 
+    <!-- <script src="../bower_components/highcharts/js/highcharts.js"></script> -->
+    <!-- <script src="../bower_components/jquery/dist/jquery.js"></script> -->
+    <!-- <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
+
+    <!-- observed that angular-scenario.js has some connection with jQuery by looking at its source code. So commenting before further intropection. -->
+    <!-- <script src="../bower_components/angular-scenario/angular-scenario.js"></script> -->
+
+    <!-- Yet to try this module for bootstrap tabs with native angularjs  -->
+    <!-- <script src="../bower_components/angular-ui-router-tabs/src/ui-router-tabs.js"></script> -->
+
+    <!-- Loading modules for browser storage support using angular -->
+    <!-- modules store in asynchronous way using angular. So not suitable for synchronous storage operations. Still including -->
+    <!-- <script src="../bower_components/a0-angular-storage/dist/angular-storage.js"></script> -->
+    <!-- <script src="../bower_components/ngstorage/ngStorage.js"></script> -->
+
+    <!-- This module gave error at application module load time only for sticky state when tried to use with angular-ui tabs for dashboards state  -->
+    <!-- So commented this module inclusion and commented the module dependency in app.module.js file also and state configurations in app.state.config.js -->
+    <!-- <script src="../bower_components/ui-router-extras/release/ct-ui-router-extras.js"></script> -->
+    <!-- end info comments -->
+    <!-- build:js({.tmp/partials,src}) scripts/app.bundle.js -->
     <!-- Application Specific JS files -->
     <!-- Loading Application Specific Angular Modules -->
     <!-- Loaded Application Specific Angular Modules -->
-
     <!-- Loading Application Specific Angular Constants -->
     <!-- Loaded Application Specific Angular Constants -->
-
     <!-- Loading Application Specific Angular Services -->
     <!-- Loaded Application Specific Angular Services -->
-
     <!-- Loading Application Specific Angular Controllers -->
     <!-- Loaded Application Specific Angular Controllers -->
-
     <!-- Loading Application Specific Angular Directives -->
     <!-- Loaded Application Specific Angular Directives -->
-
     <!-- Loading Application Specific Angular Configs -->
     <!-- Loaded Application Specific Angular Configs -->
-
     <!-- Loading Application Specific Angular Run -->
     <!-- Loaded Application Specific Angular Run -->
+    <!-- Loading Application Specific Partial Views Template Cache -->
+    <!-- Loaded Application Specific Partial Views Template Cache -->
+    <!-- endbuild -->
 </body>
 
 </html>

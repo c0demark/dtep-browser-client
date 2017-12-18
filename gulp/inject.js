@@ -12,14 +12,44 @@ const $ = require("gulp-load-plugins")({
 const _ = require("lodash");
 
 gulp.task("inject", ["scripts"], () => {
+    let amcharts3css = gulp
+        .src(
+            $.mainBowerFiles(
+                _.extend({},
+                    conf.mainBowerFiles.options.amcharts3.css,
+                    conf.mainBowerFiles.options.common
+                )
+            ), {
+                read: false
+            }
+        )
+        .pipe($.filesize())
+        .pipe($.size());
+
+    let amcharts3js = gulp
+        .src(
+            $.mainBowerFiles(
+                _.extend({},
+                    conf.mainBowerFiles.options.amcharts3.js,
+                    conf.mainBowerFiles.options.common
+                )
+            ), {
+                read: false
+            }
+        )
+        .pipe($.filesize())
+        .pipe($.size());
+
     let vendorcss = gulp
         .src(
             $.mainBowerFiles(
                 _.extend({},
-                    conf.mainBowerFiles.options.css,
+                    conf.mainBowerFiles.options.allExceptAmcharts3.css,
                     conf.mainBowerFiles.options.common
                 )
-            )
+            ), {
+                read: false
+            }
         )
         .pipe($.filesize())
         .pipe($.size());
@@ -28,10 +58,12 @@ gulp.task("inject", ["scripts"], () => {
         .src(
             $.mainBowerFiles(
                 _.extend({},
-                    conf.mainBowerFiles.options.js,
+                    conf.mainBowerFiles.options.allExceptAmcharts3.js,
                     conf.mainBowerFiles.options.common
                 )
-            )
+            ), {
+                read: false
+            }
         )
         .pipe($.filesize())
         .pipe($.size());
@@ -94,12 +126,36 @@ gulp.task("inject", ["scripts"], () => {
 
     return (
         gulp
-        .src(path.join(conf.paths.src, conf.globs.app.html.index))
+        .src([path.join(conf.paths.src, conf.globs.app.html.index)])
+        .pipe(
+            $.replace(
+                conf.replace.options.html.index.infoComment.regex,
+                conf.replace.options.html.index.infoComment.replacement
+            )
+        )
+        .pipe(
+            $.inject(
+                amcharts3css,
+                _.extend({},
+                    conf.inject.options.vendor.amcharts3.css,
+                    conf.inject.options.vendor.common
+                )
+            )
+        )
         .pipe(
             $.inject(
                 vendorcss,
                 _.extend({},
-                    conf.inject.options.vendor.css,
+                    conf.inject.options.vendor.allExceptAmcharts3.css,
+                    conf.inject.options.vendor.common
+                )
+            )
+        )
+        .pipe(
+            $.inject(
+                amcharts3js,
+                _.extend({},
+                    conf.inject.options.vendor.amcharts3.js,
                     conf.inject.options.vendor.common
                 )
             )
@@ -108,7 +164,7 @@ gulp.task("inject", ["scripts"], () => {
             $.inject(
                 vendorjs,
                 _.extend({},
-                    conf.inject.options.vendor.js,
+                    conf.inject.options.vendor.allExceptAmcharts3.js,
                     conf.inject.options.vendor.common
                 )
             )

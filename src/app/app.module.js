@@ -13,6 +13,7 @@
         "ngSanitize",
         "ui.router",
         "ui.bootstrap",
+        // "ct.ui.router.extras",
         "angular-storage",
         "ngStorage"
     ]);

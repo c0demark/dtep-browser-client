@@ -27,7 +27,7 @@
 
         function fetchContinousIntegrationSoftwares() {
             return $http({
-                url: "/app/backendDataMock/softwares/continuos-integration-softwares.json",
+                url: "_backendDataMock/softwares/continuos-integration-softwares.json",
                 method: "GET"
             });
         }

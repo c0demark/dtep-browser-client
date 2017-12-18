@@ -27,7 +27,7 @@
 
         function fetchProjectComponentCategorizations() {
             return $http({
-                url: "/app/backendDataMock/categorizations.json",
+                url: "_backendDataMock/categorizations.json",
                 method: "GET"
             });
         }

@@ -12,7 +12,7 @@ const $ = require("gulp-load-plugins")({
 
 gulp.task("scripts", () => {
     return gulp
-        .src(path.join(conf.paths.src, conf.globs.app.js.all))
+        .src([path.join(conf.paths.src, conf.globs.app.js.all)])
         .pipe($.jshint())
         .pipe($.jshint.reporter("jshint-stylish"))
         .pipe($.filesize())

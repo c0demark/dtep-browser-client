@@ -55,3 +55,7 @@ gulp.task("serve", ["watch"], () => {
         path.join(conf.paths.src)
     ]);
 });
+
+gulp.task("serve:dist", ["build"], function() {
+    browserSyncInit([path.join(conf.paths.dist, conf.globs.dist.outputFolder)]);
+});

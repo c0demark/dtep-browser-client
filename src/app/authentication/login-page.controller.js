@@ -56,7 +56,7 @@
                 animation: true,
                 ariaLabelledBy: "dtep-password-recovery-modal-title",
                 ariaDescribedBy: "dtep-password-recovery-modal-body",
-                templateUrl: "/app/authentication/password-recovery-modal.view.html",
+                templateUrl: "app/authentication/password-recovery-modal.view.html",
                 controller: "PasswordRecoveryModalController",
                 appendTo: angular.element($document[0].querySelector("body"))
             });
@@ -80,7 +80,7 @@
                 animation: true,
                 ariaLabelledBy: "dtep-new-user-registration-modal-title",
                 ariaDescribedBy: "dtep-new-user-registration-modal-body",
-                templateUrl: "/app/authentication/new-user-registration-modal.view.html",
+                templateUrl: "app/authentication/new-user-registration-modal.view.html",
                 controller: "NewUserRegistrationModalController",
                 size: "lg",
                 appendTo: angular.element($document[0].querySelector("body"))

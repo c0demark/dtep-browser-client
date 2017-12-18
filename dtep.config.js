@@ -11,6 +11,17 @@ exports.paths = {
     e2e: "./e2e"
 };
 
+exports.angularTemplateCache = {
+    filename: "templateCacheHtml.js",
+    options: {
+        module: "dtepApp",
+        root: "app",
+        templateHeader: '(function(angular) {\n\t"use strict";\n\tangular.module("<%= module %>"<%= standalone %>).run(["$templateCache", runFn]);\n\n\tfunction runFn($templateCache) {\n',
+        templateBody: "\t\t$templateCache.put('<%= url %>','<%= contents %>');",
+        templateFooter: "\n\t}\n})(window.angular);"
+    }
+};
+
 exports.globs = {
     app: {
         html: {
@@ -30,10 +41,26 @@ exports.globs = {
             config: "/app/**/*.config.js",
             run: "/app/**/*.run.js",
             all: "/app/**/*.js"
-        }
+        },
+        images: [
+            path.join(exports.paths.src, "/assets/**"),
+            "!" + path.join(exports.paths.src, "/assets/css/**")
+        ]
     },
     tmp: {
-        serve: "/serve/"
+        serve: "/serve",
+        partials: "/partials",
+        templateCacheFile: path.join("/", exports.angularTemplateCache.filename)
+    },
+    dist: {
+        outputFolder: "/dtep-ui",
+        assets: "/assets",
+        fonts: "/fonts",
+        amcharts: "/amcharts",
+        backendDataMock: "/_backendDataMock/**/*.json"
+    },
+    jshint: {
+        configFile: "/.jshintrc"
     }
 };
 
@@ -43,25 +70,39 @@ exports.inject = {
             common: {
                 relative: true,
                 // addRootSlash: false,
-                selfClosingTag: true
+                selfClosingTag: true,
+                removeTags: true
             },
-            css: {
-                starttag: "<!-- Loading Vendor Specific css files -->",
-                endtag: "<!-- Loaded Vendor Specific css files -->"
+            amcharts3: {
+                css: {
+                    starttag: "<!-- Loading Amcharts Specific css files -->",
+                    endtag: "<!-- Loaded Amcharts Specific css files -->"
+                },
+                js: {
+                    starttag: "<!-- Loading Amcharts Specific js files -->",
+                    endtag: "<!-- Loaded Amcharts Specific js files -->"
+                }
             },
-            js: {
-                starttag: "<!-- Loading Vendor Specific js files -->",
-                endtag: "<!-- Loaded Vendor Specific js files -->"
+            allExceptAmcharts3: {
+                css: {
+                    starttag: "<!-- Loading Vendor Specific css files -->",
+                    endtag: "<!-- Loaded Vendor Specific css files -->"
+                },
+                js: {
+                    starttag: "<!-- Loading Vendor Specific js files -->",
+                    endtag: "<!-- Loaded Vendor Specific js files -->"
+                }
             }
         },
         app: {
             common: {
                 ignorePath: [
-                    path.join(exports.paths.src, "/"),
-                    path.join(exports.paths.tmp, exports.globs.tmp.serve)
+                    path.join(exports.paths.src)
+                    // path.join(exports.paths.tmp, exports.globs.tmp.serve)
                 ],
                 addRootSlash: false,
-                selfClosingTag: true
+                selfClosingTag: true,
+                removeTags: true
             },
             css: {
                 index: {
@@ -99,40 +140,17 @@ exports.inject = {
                     endtag: "<!-- Loaded Application Specific Angular Run -->"
                 }
             }
-        }
-    }
-};
-
-exports.wiredep = {
-    options: {
-        // need to rectify regex to exclude files other than amcharts3, angular, angular-ui, ui-bootstrap, lodash and d3 and plugins
-        // exclude: [/!^amcharts3\/.*/g, /!^angular\/.*/g, /!^lodash\/.*/g, /!^d3\/.*/g],
-        overrides: {
-            amcharts3: {
-                main: [
-                    "amcharts/plugins/export/export.css",
-                    "amcharts/amcharts.js",
-                    "amcharts/funnel.js",
-                    "amcharts/gantt.js",
-                    "amcharts/gauge.js",
-                    "amcharts/pie.js",
-                    "amcharts/radar.js",
-                    "amcharts/serial.js",
-                    "amcharts/xy.js",
-                    "amcharts/plugins/export/export.js",
-                    "amcharts/plugins/animate/animate.js",
-                    "amcharts/plugins/dataloader/dataloader.js",
-                    "amcharts/plugins/responsive/responsive.js",
-                    "amcharts/themes/black.js",
-                    "amcharts/themes/chalk.js",
-                    "amcharts/themes/dark.js",
-                    "amcharts/themes/light.js",
-                    "amcharts/themes/patterns.js"
-                ]
+        },
+        tmp: {
+            common: {
+                ignorePath: [path.join(exports.paths.tmp, exports.globs.tmp.partials)],
+                addRootSlash: false,
+                selfClosingTag: true,
+                removeTags: true
             },
-            bootstrap: {
-                main: ["dist/css/bootstrap.css"],
-                dependencies: null
+            partials: {
+                starttag: "<!-- Loading Application Specific Partial Views Template Cache -->",
+                endtag: "<!-- Loaded Application Specific Partial Views Template Cache -->"
             }
         }
     }
@@ -144,6 +162,8 @@ exports.mainBowerFiles = {
             overrides: {
                 amcharts3: {
                     main: [
+                        "amcharts/images/**",
+                        "amcharts/patterns/**",
                         "amcharts/plugins/export/export.css",
                         "amcharts/amcharts.js",
                         "amcharts/funnel.js",
@@ -153,15 +173,15 @@ exports.mainBowerFiles = {
                         "amcharts/radar.js",
                         "amcharts/serial.js",
                         "amcharts/xy.js",
-                        "amcharts/plugins/export/export.js",
-                        "amcharts/plugins/animate/animate.js",
-                        "amcharts/plugins/dataloader/dataloader.js",
-                        "amcharts/plugins/responsive/responsive.js",
                         "amcharts/themes/black.js",
                         "amcharts/themes/chalk.js",
                         "amcharts/themes/dark.js",
                         "amcharts/themes/light.js",
-                        "amcharts/themes/patterns.js"
+                        "amcharts/themes/patterns.js",
+                        "amcharts/plugins/export/export.js",
+                        "amcharts/plugins/animate/animate.js",
+                        "amcharts/plugins/dataloader/dataloader.js",
+                        "amcharts/plugins/responsive/responsive.js"
                     ]
                 },
                 angular: {
@@ -174,19 +194,92 @@ exports.mainBowerFiles = {
                     ignore: true
                 },
                 bootstrap: {
-                    main: ["dist/css/bootstrap.css"],
+                    main: ["dist/fonts/**", "dist/css/bootstrap.css"],
                     dependencies: null
                 },
                 "font-awesome": {
-                    main: ["css/font-awesome.css"]
+                    main: ["fonts/**", "css/font-awesome.css"]
                 }
             }
         },
-        css: {
-            filter: ["**/*.css"]
+        amcharts3: {
+            css: {
+                filter: ["**/amcharts/**/*.css"]
+            },
+            js: {
+                filter: ["**/amcharts/**/*.js"]
+            },
+            images: {
+                filter: [
+                    "**/amcharts/**/*.jpg",
+                    "**/amcharts/**/*.jpeg",
+                    "**/amcharts/**/*.png",
+                    "**/amcharts/**/*.gif",
+                    "**/amcharts/**/*.tiff",
+                    "**/amcharts/**/*.bmp",
+                    "**/amcharts/**/*.svg",
+                    "**/amcharts/**/*.ico",
+                    "**/amcharts/**/*.webp"
+                ]
+            },
+            srcBase: "bower_components/amcharts3/amcharts"
         },
-        js: {
-            filter: ["**/*.js"]
+        allExceptAmcharts3: {
+            css: {
+                filter: ["**/*.css", "!**/amcharts/**/*.css"]
+            },
+            js: {
+                filter: ["**/*.js", "!**/amcharts/**/*.js"]
+            },
+            images: {
+                filter: [
+                    "**/*.jpg",
+                    "**/*.jpeg",
+                    "**/*.png",
+                    "**/*.gif",
+                    "**/*.tiff",
+                    "**/*.bmp",
+                    "**/*.svg",
+                    "**/*.ico",
+                    "**/*.webp",
+                    "!**/amcharts/**/*.jpg",
+                    "!**/amcharts/**/*.jpeg",
+                    "!**/amcharts/**/*.png",
+                    "!**/amcharts/**/*.gif",
+                    "!**/amcharts/**/*.tiff",
+                    "!**/amcharts/**/*.bmp",
+                    "!**/amcharts/**/*.svg",
+                    "!**/amcharts/**/*.ico",
+                    "!**/amcharts/**/*.webp"
+                ]
+            },
+            fonts: {
+                filter: [
+                    "**/*.eot",
+                    "**/*.svg",
+                    "**/*.ttf",
+                    "**/*.woff",
+                    "**/*.woff2",
+                    "!**/amcharts/**/*.eot",
+                    "!**/amcharts/**/*.svg",
+                    "!**/amcharts/**/*.ttf",
+                    "!**/amcharts/**/*.woff",
+                    "!**/amcharts/**/*.woff2"
+                ]
+            }
+        }
+    }
+};
+
+exports.replace = {
+    options: {
+        html: {
+            index: {
+                infoComment: {
+                    regex: /(([\s|\t]*)<!--\s*info\s*comments(\S*)\s*-->)(\n|\r|.)*?(<!--\s*end\s*info\s*comments\s*-->)/gi,
+                    replacement: ""
+                }
+            }
         }
     }
 };
@@ -196,4 +289,49 @@ exports.errorHandler = function(title) {
         gutil.log(gutil.colors.red("[" + title + "]"), err.toString());
         this.emit("end");
     };
+};
+
+exports.wiredep = {
+    options: {
+        // need to rectify regex to exclude files other than amcharts3, angular, angular-ui, ui-bootstrap, lodash and d3 and plugins
+        // exclude: [/!^amcharts3\/.*/g, /!^angular\/.*/g, /!^lodash\/.*/g, /!^d3\/.*/g],
+        overrides: {
+            amcharts3: {
+                main: [
+                    // "amcharts/images/**/*.jpg",
+                    // "amcharts/images/**/*.png",
+                    // "amcharts/images/**/*.gif",
+                    // "amcharts/images/**/*.svg",
+                    // "amcharts/patterns/**/*.jpg",
+                    // "amcharts/patterns/**/*.png",
+                    // "amcharts/patterns/**/*.gif",
+                    // "amcharts/patterns/**/*.svg",
+                    "amcharts/images/**",
+                    "amcharts/patterns/**",
+                    "amcharts/plugins/export/export.css",
+                    "amcharts/amcharts.js",
+                    "amcharts/funnel.js",
+                    "amcharts/gantt.js",
+                    "amcharts/gauge.js",
+                    "amcharts/pie.js",
+                    "amcharts/radar.js",
+                    "amcharts/serial.js",
+                    "amcharts/xy.js",
+                    "amcharts/themes/black.js",
+                    "amcharts/themes/chalk.js",
+                    "amcharts/themes/dark.js",
+                    "amcharts/themes/light.js",
+                    "amcharts/themes/patterns.js",
+                    "amcharts/plugins/export/export.js",
+                    "amcharts/plugins/animate/animate.js",
+                    "amcharts/plugins/dataloader/dataloader.js",
+                    "amcharts/plugins/responsive/responsive.js"
+                ]
+            },
+            bootstrap: {
+                main: ["dist/css/bootstrap.css"],
+                dependencies: null
+            }
+        }
+    }
 };

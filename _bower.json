@@ -2,7 +2,7 @@
     "name": "dtep-browser-client",
     "version": "0.0.1",
     "description": "a sample Ui layer demonstrating HTML5, CSS3, SVG, AngularJS 1.x, Amcharts and d3js",
-    "license": "MIT",
+    "license": ["MIT"],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/c0demark/dtep-browser-client.git"

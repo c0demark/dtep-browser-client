@@ -6,8 +6,8 @@ const klawSync = require("klaw-sync");
 const path = require("path");
 const conf = require("./dtep.config");
 
-if (fsExtra.existsSync(path.join(conf.paths.gulp, "/"))) {
-    klawSync(path.join(conf.paths.gulp, "/"), {
+if (fsExtra.existsSync(path.join(conf.paths.gulp))) {
+    klawSync(path.join(conf.paths.gulp), {
         filter: file => {
             return path.extname(file.path) === ".js";
         }
@@ -16,7 +16,7 @@ if (fsExtra.existsSync(path.join(conf.paths.gulp, "/"))) {
     });
 
     gulp.task("default", ["clean"], () => {
-        // gulp.start("build");
+        gulp.start("build");
     });
 } else {
     console.error(
