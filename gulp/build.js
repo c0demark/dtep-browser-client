@@ -11,18 +11,19 @@ const $ = require("gulp-load-plugins")({
 const _ = require("lodash");
 
 gulp.task("copy:backend-data-mock", () => {
-    let mockDataJsonFilter = $.filter(["**/*.json"], {
-        restore: true
-    });
-    return (
-        gulp
+    let mockDataJsonFilter = $.filter(
+        [path.join(conf.paths.src, conf.globs.dist.backendDataMock)], {
+            restore: true
+        }
+    );
+    return gulp
         .src([path.join(conf.paths.src, conf.globs.dist.backendDataMock)], {
             base: path.join(conf.paths.src)
         })
         .pipe(mockDataJsonFilter)
-        // .pipe(mockDataJsonFilter.restore)
-        .pipe(gulp.dest(path.join(conf.paths.dist, conf.globs.dist.outputFolder)))
-    );
+        .pipe($.jsonMinify())
+        .pipe(mockDataJsonFilter.restore)
+        .pipe(gulp.dest(path.join(conf.paths.dist, conf.globs.dist.outputFolder)));
 });
 
 gulp.task("copy:tmp-jshintrc", () => {
@@ -38,14 +39,18 @@ gulp.task("copy:dist-jshintrc", () => {
 });
 
 gulp.task("partials", ["copy:tmp-jshintrc"], () => {
+    let partialViewHtmlFilter = $.filter(
+        [path.join(conf.paths.src, conf.globs.app.html.view)], {
+            restore: true,
+            dot: true
+        }
+    );
+
     return gulp
         .src([path.join(conf.paths.src, conf.globs.app.html.view)])
-        .pipe(
-            $.htmlmin({
-                removeComments: true,
-                collapseWhitespace: true
-            })
-        )
+        .pipe(partialViewHtmlFilter)
+        .pipe($.htmlmin(_.extend({}, conf.htmlmin.options.app.html.view)))
+        .pipe(partialViewHtmlFilter.restore)
         .pipe(
             $.angularTemplatecache(
                 conf.angularTemplateCache.filename,
@@ -55,7 +60,7 @@ gulp.task("partials", ["copy:tmp-jshintrc"], () => {
         .pipe(gulp.dest(path.join(conf.paths.tmp, conf.globs.tmp.partials)));
 });
 
-gulp.task("fonts:vendor", () => {
+gulp.task("copy:fonts-vendor", () => {
     return gulp
         .src(
             $.mainBowerFiles(
@@ -79,7 +84,57 @@ gulp.task("fonts:vendor", () => {
         );
 });
 
-gulp.task("images:amcharts3", () => {
+gulp.task("copy:amcharts3-css", () => {
+    return gulp
+        .src(
+            $.mainBowerFiles(
+                _.extend({},
+                    conf.mainBowerFiles.options.amcharts3.css,
+                    conf.mainBowerFiles.options.common
+                )
+            ), {
+                base: conf.mainBowerFiles.options.amcharts3.srcBase
+            }
+        )
+        .pipe($.filesize())
+        .pipe($.size())
+        .pipe(
+            gulp.dest(
+                path.join(
+                    conf.paths.dist,
+                    conf.globs.dist.outputFolder,
+                    conf.globs.dist.amcharts
+                )
+            )
+        );
+});
+
+gulp.task("copy:amcharts3-js", () => {
+    return gulp
+        .src(
+            $.mainBowerFiles(
+                _.extend({},
+                    conf.mainBowerFiles.options.amcharts3.js,
+                    conf.mainBowerFiles.options.common
+                )
+            ), {
+                base: conf.mainBowerFiles.options.amcharts3.srcBase
+            }
+        )
+        .pipe($.filesize())
+        .pipe($.size())
+        .pipe(
+            gulp.dest(
+                path.join(
+                    conf.paths.dist,
+                    conf.globs.dist.outputFolder,
+                    conf.globs.dist.amcharts
+                )
+            )
+        );
+});
+
+gulp.task("copy:amcharts3-images", () => {
     return gulp
         .src(
             $.mainBowerFiles(
@@ -104,7 +159,7 @@ gulp.task("images:amcharts3", () => {
         );
 });
 
-gulp.task("images:app", () => {
+gulp.task("copy:images-app", () => {
     return gulp
         .src(conf.globs.app.images)
         .pipe(
@@ -119,7 +174,14 @@ gulp.task("images:app", () => {
 });
 
 gulp.task(
-    "html", ["copy:dist-jshintrc", "images:amcharts3", "inject", "partials"],
+    "html", [
+        "copy:dist-jshintrc",
+        "copy:amcharts3-images",
+        "copy:amcharts3-css",
+        "copy:amcharts3-js",
+        "inject",
+        "partials"
+    ],
     () => {
         let templateCacheHtmljs = gulp.src(
             [
@@ -131,18 +193,34 @@ gulp.task(
             ], { read: false }
         );
 
-        let htmlFilter = $.filter(["**/*.html"], {
-            restore: true
-        });
+        let servedIndexHtmlFilter = $.filter(
+            [
+                path.join(
+                    conf.paths.tmp,
+                    conf.globs.tmp.serve,
+                    conf.globs.tmp.html.index
+                )
+            ], {
+                restore: true,
+                dot: true
+            }
+        );
 
         return gulp
             .src([
                 path.join(
                     conf.paths.tmp,
                     conf.globs.tmp.serve,
-                    conf.globs.app.html.index
+                    conf.globs.tmp.html.index
                 )
             ])
+            .pipe(
+                $.replace(
+                    conf.replace.options.tmp.html.index.amcharts3BowerComponents.string,
+                    conf.replace.options.tmp.html.index.amcharts3BowerComponents
+                    .replacement
+                )
+            )
             .pipe(
                 $.inject(
                     templateCacheHtmljs,
@@ -153,14 +231,15 @@ gulp.task(
                 )
             )
             .pipe($.useref())
-            .pipe(htmlFilter)
             .pipe(
-                $.htmlmin({
-                    removeComments: true,
-                    collapseWhitespace: true
-                })
+                $.replace(
+                    conf.replace.options.dist.html.index.linkTags.regex,
+                    conf.replace.options.dist.html.index.linkTags.replacement
+                )
             )
-            .pipe(htmlFilter.restore)
+            .pipe(servedIndexHtmlFilter)
+            .pipe($.htmlmin(_.extend({}, conf.htmlmin.options.dist.html.index)))
+            .pipe(servedIndexHtmlFilter.restore)
             .pipe(
                 gulp.dest(path.join(conf.paths.dist, conf.globs.dist.outputFolder))
             );
@@ -168,8 +247,9 @@ gulp.task(
 );
 
 gulp.task("build", [
+    "clean",
     "html",
-    "fonts:vendor",
-    "images:app",
+    "copy:fonts-vendor",
+    "copy:images-app",
     "copy:backend-data-mock"
 ]);

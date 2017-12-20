@@ -15,9 +15,7 @@ if (fsExtra.existsSync(path.join(conf.paths.gulp))) {
         require(file.path);
     });
 
-    gulp.task("default", ["clean"], () => {
-        gulp.start("build");
-    });
+    gulp.task("default", ["build"]);
 } else {
     console.error(
         "not able to find gulp config folder in project root directory"

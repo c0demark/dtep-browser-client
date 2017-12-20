@@ -16,9 +16,4 @@ gulp.task("clean:dist", () => {
     return $.del.sync([path.join(conf.paths.dist, "/")]);
 });
 
-// gulp.task("clean", () => {
-//     gulp.start("clean:build");
-//     gulp.start("clean:dist");
-// });
-
 gulp.task("clean", ["clean:tmp", "clean:dist"]);

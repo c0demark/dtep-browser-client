@@ -48,6 +48,9 @@ exports.globs = {
         ]
     },
     tmp: {
+        html: {
+            index: "/index.html"
+        },
         serve: "/serve",
         partials: "/partials",
         templateCacheFile: path.join("/", exports.angularTemplateCache.filename)
@@ -164,6 +167,7 @@ exports.mainBowerFiles = {
                     main: [
                         "amcharts/images/**",
                         "amcharts/patterns/**",
+                        "amcharts/plugins/export/shapes/**",
                         "amcharts/plugins/export/export.css",
                         "amcharts/amcharts.js",
                         "amcharts/funnel.js",
@@ -178,6 +182,14 @@ exports.mainBowerFiles = {
                         "amcharts/themes/dark.js",
                         "amcharts/themes/light.js",
                         "amcharts/themes/patterns.js",
+                        "amcharts/plugins/export/libs/blob.js/blob.js",
+                        "amcharts/plugins/export/libs/classList.js/classList.min.js",
+                        "amcharts/plugins/export/libs/fabric.js/fabric.min.js",
+                        "amcharts/plugins/export/libs/FileSaver.js/FileSaver.min.js",
+                        "amcharts/plugins/export/libs/jszip/jszip.min.js",
+                        "amcharts/plugins/export/libs/pdfmake/pdfmake.min.js",
+                        "amcharts/plugins/export/libs/pdfmake/vfs_fonts.js",
+                        "amcharts/plugins/export/libs/xlsx/xlsx.min.js",
                         "amcharts/plugins/export/export.js",
                         "amcharts/plugins/animate/animate.js",
                         "amcharts/plugins/dataloader/dataloader.js",
@@ -273,11 +285,54 @@ exports.mainBowerFiles = {
 
 exports.replace = {
     options: {
-        html: {
-            index: {
-                infoComment: {
-                    regex: /(([\s|\t]*)<!--\s*info\s*comments(\S*)\s*-->)(\n|\r|.)*?(<!--\s*end\s*info\s*comments\s*-->)/gi,
-                    replacement: ""
+        app: {
+            html: {
+                index: {
+                    infoComments: {
+                        regex: /(([\s|\t]*)<!--\s*info\s*comments(\S*)\s*-->)(\n|\r|.)*?(<!--\s*end\s*info\s*comments\s*-->)/gi,
+                        replacement: ""
+                    }
+                }
+            }
+        },
+        tmp: {
+            html: {
+                index: {
+                    amcharts3BowerComponents: {
+                        string: "../bower_components/amcharts3/",
+                        replacement: ""
+                    }
+                }
+            }
+        },
+        dist: {
+            html: {
+                index: {
+                    linkTags: {
+                        regex: /(<link [^>]*[^\/])(?!\/)>/gi,
+                        replacement: "$1 />"
+                    }
+                }
+            }
+        }
+    }
+};
+
+exports.htmlmin = {
+    options: {
+        app: {
+            html: {
+                view: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                }
+            }
+        },
+        dist: {
+            html: {
+                index: {
+                    removeComments: true,
+                    collapseWhitespace: true
                 }
             }
         }

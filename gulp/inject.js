@@ -129,8 +129,8 @@ gulp.task("inject", ["scripts"], () => {
         .src([path.join(conf.paths.src, conf.globs.app.html.index)])
         .pipe(
             $.replace(
-                conf.replace.options.html.index.infoComment.regex,
-                conf.replace.options.html.index.infoComment.replacement
+                conf.replace.options.app.html.index.infoComments.regex,
+                conf.replace.options.app.html.index.infoComments.replacement
             )
         )
         .pipe(
