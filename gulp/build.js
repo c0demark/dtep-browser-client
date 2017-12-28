@@ -160,8 +160,12 @@ gulp.task("copy:amcharts3-images", () => {
 });
 
 gulp.task("copy:images-app", () => {
+    let fileFilter = $.filter(file => {
+        return file.stat.isFile();
+    });
     return gulp
         .src(conf.globs.app.images)
+        .pipe(fileFilter)
         .pipe(
             gulp.dest(
                 path.join(

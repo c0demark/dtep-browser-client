@@ -35,6 +35,7 @@
         "concat-stream": "^1.6.0",
         "coveralls": "^3.0.0",
         "del": "^3.0.0",
+        "dotenv": "^4.0.0",
         "event-stream": "^3.3.4",
         "fs-extra": "^4.0.2",
         "gulp": "^3.9.1",
@@ -151,6 +152,7 @@
         "stream-series": "^0.1.1",
         "uglify-save-license": "^0.4.1",
         "useref": "^1.4.0",
+        "vinyl-ftp": "^0.6.0",
         "watchify": "^3.9.0",
         "winsw": "0.0.1",
         "wiredep": "^4.0.0"
