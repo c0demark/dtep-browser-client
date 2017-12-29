@@ -24,10 +24,11 @@ gulp.task("deploy", ["build"], () => {
         log: gutil.log
     });
 
-    return gulp.src([path.join(conf.paths.dist, conf.globs.dist.outputFolder, "/**")], {
-            base: ".",
+    return gulp
+        .src([path.join(conf.paths.dist, conf.globs.dist.outputFolder, "/**")], {
+            base: path.join(conf.paths.dist, conf.globs.dist.outputFolder),
             buffer: false
         })
-        .pipe(connection.newer("dtep-ui-root"))
-        .pipe(connection.dest("dtep-ui-root"));
+        .pipe(connection.newer("dtep-ui-run"))
+        .pipe(connection.dest("dtep-ui-run"));
 });
