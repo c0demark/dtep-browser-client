@@ -1,157 +1,155 @@
 (function(angular) {
-    "use strict";
-    angular
-        .module("dtepApp")
-        .controller("CurateProjectController", [
-            "$log",
-            "$scope",
-            "$rootScope",
-            "$window",
-            "$document",
-            "$location",
-            "$uibModal",
-            "$state",
-            "ProjectComponentsService",
-            "SoftwaresService",
-            CurateProjectController
-        ]);
+	"use strict";
+	angular
+		.module("dtepApp")
+		.controller("CurateProjectController", [
+			"$log",
+			"$scope",
+			"$rootScope",
+			"$window",
+			"$document",
+			"$location",
+			"$uibModal",
+			"$state",
+			"LifecycleComponentsService",
+			"SoftwaresService",
+			CurateProjectController
+		]);
 
-    function CurateProjectController(
-        $log,
-        $scope,
-        $rootScope,
-        $window,
-        $document,
-        $location,
-        $uibModal,
-        $state,
-        ProjectComponentsService,
-        SoftwaresService
-    ) {
-        // declaring and initializing scope properties
-        $scope.categorizations = [];
-        $scope.categoryAccordionGroup = {};
-        $scope.draggedProjectComponent = null;
-        $scope.showSoftwareListFlag = false;
+	function CurateProjectController(
+		$log,
+		$scope,
+		$rootScope,
+		$window,
+		$document,
+		$location,
+		$uibModal,
+		$state,
+		LifecycleComponentsService,
+		SoftwaresService
+	) {
+		// declaring and initializing scope properties
+		$scope.lifecycleComponetCategorizations = [];
+		$scope.accordionGroupCategories = {};
+		$scope.draggedLifecycleComponent = null;
+		$scope.allSoftwaresByComponentCode = {};
 
-        // scope properties getters and setters
-        $scope.getCategorizations = getCategorizations;
-        $scope.setCategorizations = setCategorizations;
-        $scope.getCategoryAccordionGroup = getCategoryAccordionGroup;
-        $scope.setCategoryAccordionGroup = setCategoryAccordionGroup;
-        $scope.getDraggedProjectComponent = getDraggedProjectComponent;
-        $scope.setDraggedProjectComponent = setDraggedProjectComponent;
-        $scope.getShowSoftwareListFlag = getShowSoftwareListFlag;
-        $scope.setShowSoftwareListFlag = setShowSoftwareListFlag;
+		// scope properties getters and setters
+		$scope.getLifecycleComponetCategorizations = getLifecycleComponetCategorizations;
+		$scope.setLifecycleComponetCategorizations = setLifecycleComponetCategorizations;
+		$scope.getAccordionGroupCategories = getAccordionGroupCategories;
+		$scope.setAccordionGroupCategories = setAccordionGroupCategories;
+		$scope.getDraggedLifecycleComponent = getDraggedLifecycleComponent;
+		$scope.setDraggedLifecycleComponent = setDraggedLifecycleComponent;
+		$scope.getAllSoftwaresByComponentCode = getAllSoftwaresByComponentCode;
+		$scope.setAllSoftwaresByComponentCode = setAllSoftwaresByComponentCode;
 
-        // scope properties helper methods
-        $scope.holdDraggedProjectComponent = holdDraggedProjectComponent;
-        $scope.unholdDraggedProjectComponent = unholdDraggedProjectComponent;
-        $scope.toggleShowSoftwareListFlag = toggleShowSoftwareListFlag;
+		// scope properties helper methods
+		$scope.holdDraggedLifecycleComponent = holdDraggedLifecycleComponent;
+		$scope.unholdDraggedLifecycleComponent = unholdDraggedLifecycleComponent;
 
-        // api call methods
-        $scope.fetchProjectComponentCategorizations = fetchProjectComponentCategorizations;
-        $scope.fetchContinousIntegrationSoftwares = fetchContinousIntegrationSoftwares;
+		// api call methods
+		$scope.fetchLifecycleComponentCategorizations = fetchLifecycleComponentCategorizations;
+		$scope.fetchAllSoftwaresByComponentCode = fetchAllSoftwaresByComponentCode;
 
-        $scope.openSoftwareListModal = openSoftwareListModal;
+		$scope.openSoftwareListModal = openSoftwareListModal;
 
-        // init method - executes after view renders adn controller is loaded. Similar to $(document).ready(function() {})
-        $scope.init = init;
+		// init method - executes after view renders and controller is loaded. Similar to jQuery $(document).ready(function() {})
+		$scope.init = init;
 
-        $scope.init();
+		$scope.init();
 
-        function getCategorizations() {
-            return $scope.categorizations;
-        }
+		function getLifecycleComponetCategorizations() {
+			return $scope.lifecycleComponetCategorizations;
+		}
 
-        function setCategorizations(categorizations) {
-            $scope.categorizations = categorizations;
-        }
+		function setLifecycleComponetCategorizations(
+			lifecycleComponetCategorizations
+		) {
+			$scope.lifecycleComponetCategorizations = lifecycleComponetCategorizations;
+		}
 
-        function getCategoryAccordionGroup() {
-            return $scope.categoryAccordionGroup;
-        }
+		function getAccordionGroupCategories() {
+			return $scope.accordionGroupCategories;
+		}
 
-        function setCategoryAccordionGroup(categoryAccordionGroup) {
-            $scope.categoryAccordionGroup = categoryAccordionGroup;
-        }
+		function setAccordionGroupCategories(accordionGroupCategories) {
+			$scope.accordionGroupCategories = accordionGroupCategories;
+		}
 
-        function getDraggedProjectComponent() {
-            return $scope.draggedProjectComponent;
-        }
+		function getDraggedLifecycleComponent() {
+			return $scope.draggedLifecycleComponent;
+		}
 
-        function setDraggedProjectComponent(draggedProjectComponent) {
-            $scope.draggedProjectComponent = draggedProjectComponent;
-        }
+		function setDraggedLifecycleComponent(draggedLifecycleComponent) {
+			$scope.draggedLifecycleComponent = draggedLifecycleComponent;
+		}
 
-        function getShowSoftwareListFlag() {
-            return $scope.showSoftwareListFlag;
-        }
+		function getAllSoftwaresByComponentCode() {
+			return $scope.allSoftwaresByComponentCode;
+		}
 
-        function setShowSoftwareListFlag(showSoftwareListFlag) {
-            $scope.showSoftwareListFlag = showSoftwareListFlag;
-        }
+		function setAllSoftwaresByComponentCode(allSoftwaresByComponentCode) {
+			$scope.allSoftwaresByComponentCode = allSoftwaresByComponentCode;
+		}
 
-        function init() {
-            $scope.fetchProjectComponentCategorizations();
-        }
+		function init() {
+			$scope.fetchLifecycleComponentCategorizations();
+		}
 
-        function fetchProjectComponentCategorizations() {
-            ProjectComponentsService.fetchProjectComponentCategorizations()
-                .then(function(response) {
-                    $scope.setCategorizations(response.data);
-                })
-                .catch(function(errorResponse) {})
-                .finally(function(notify) {});
-        }
+		function fetchLifecycleComponentCategorizations() {
+			LifecycleComponentsService.fetchLifecycleComponentCategorizations()
+				.then(function(response) {
+					$scope.setLifecycleComponetCategorizations(response.data);
+				})
+				.catch(function(errorResponse) {})
+				.finally(function(notify) {});
+		}
 
-        function fetchContinousIntegrationSoftwares() {
-            SoftwaresService.fetchContinousIntegrationSoftwares()
-                .then(function(response) {
-                    $scope.setCategorizations(response.data);
-                })
-                .catch(function(errorResponse) {})
-                .finally(function(notify) {});
-        }
+		function fetchAllSoftwaresByComponentCode(componentCode) {
+			SoftwaresService.fetchAllSoftwaresByComponentCode(componentCode)
+				.then(function(response) {
+					$scope.setAllSoftwaresByComponentCode(response.data);
+				})
+				.catch(function(errorResponse) {})
+				.finally(function(notify) {});
+		}
 
-        function holdDraggedProjectComponent(component) {
-            $scope.setDraggedProjectComponent(component);
-        }
+		function holdDraggedLifecycleComponent(component) {
+			$scope.setDraggedLifecycleComponent(component);
+		}
 
-        function unholdDraggedProjectComponent() {
-            $scope.setDraggedProjectComponent(null);
-        }
+		function unholdDraggedLifecycleComponent() {
+			$scope.setDraggedLifecycleComponent(null);
+		}
 
-        function toggleShowSoftwareListFlag() {
-            console.log("toggleShowSoftwareListFlag is called");
-            $scope.setShowSoftwareListFlag(!$scope.getShowSoftwareListFlag());
-        }
+		function openSoftwareListModal() {
+			var softwareListModal = $uibModal.open({
+				animation: true,
+				ariaLabelledBy: "dtep-curate-project-software-list-modal-title",
+				ariaDescribedBy: "dtep-curate-project-software-list-modal-body",
+				templateUrl: "app/curate/software-list-modal.view.html",
+				controller: "SoftwareListModalController",
+				backdrop: "static",
+				scope: $scope,
+				keyboard: true,
+				appendTo: angular.element($document[0].querySelector("body"))
+			});
 
-        function openSoftwareListModal() {
-            var softwareListModal = $uibModal.open({
-                animation: true,
-                ariaLabelledBy: "dtep-curate-projectsoftware-list-modal-title",
-                ariaDescribedBy: "dtep-curate-projectsoftware-list-modal-body",
-                templateUrl: "app/curate/software-list-modal.view.html",
-                controller: "SoftwareListModalController",
-                backdrop: "static",
-                scope: $scope,
-                keyboard: true,
-                appendTo: angular.element($document[0].querySelector("body"))
-            });
-
-            softwareListModal.result
-                .then(function(response) {
-                    $log.info(response);
-                    $log.info("Modal closed at: " + new Date());
-                })
-                .catch(function(errorResponse) {
-                    $log.info(errorResponse);
-                    $log.info("Modal dismissed at: " + new Date());
-                })
-                .finally(function(notify) {
-                    $log.info("finally at: " + new Date());
-                });
-        }
-    }
+			// softwareListModal.result
+			//     .then(function(response) {
+			//         console.log($scope);
+			//         $log.info(response);
+			//         $log.info("Modal closed at: " + new Date());
+			//     })
+			//     .catch(function(errorResponse) {
+			//         $log.info(errorResponse);
+			//         $log.info("Modal dismissed at: " + new Date());
+			//     })
+			//     .finally(function(notify) {
+			//         $log.info("finally at: " + new Date());
+			//     });
+			return softwareListModal;
+		}
+	}
 })(window.angular);

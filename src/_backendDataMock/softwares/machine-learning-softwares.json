@@ -16,6 +16,7 @@
         "connect": true,
         "provision": false,
         "hasMetric": false,
+        "isAccessible": null,
         "hasAction": false,
         "hasClients": null,
         "clientSoftwareName": null,
@@ -31,18 +32,27 @@
             "form": "[\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
             "schema": "{\"type\":\"object\",\"properties\":{\"url\":{\"title\":\"Web URL:\",\"type\":\"string\",\"default\":\"https://mlcoe-mlhub.azurewebsites.net/\"},\"username\":{\"title\":\"username:\",\"type\":\"string\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\"}},\"required\":[\"url\"]}"
         },
-        "provisionSchemaForm": { "form": "null", "schema": "null" },
-        "integrations": [],
+        "provisionSchemaForm": {
+            "form": "null",
+            "schema": "null"
+        },
+        "integrations": [
+
+        ],
         "isConnect": null,
         "isProvision": null,
-        "iconURL": "/icons/8b9138beb78b4622b2c91d75bc230754.png",
+        "iconURL": "/assets/icons/softwares/8b9138beb78b4622b2c91d75bc230754.png",
         "applicationURL": null,
         "baseURL": null,
         "finalURL": null,
         "status": null,
         "isExecuting": null,
+        "executionStatus": null,
+        "executionResult": null,
         "requestId": null,
         "actionList": null,
-        "metricList": null
+        "metricList": null,
+        "widgets": null,
+        "visualize": false
     }]
 }

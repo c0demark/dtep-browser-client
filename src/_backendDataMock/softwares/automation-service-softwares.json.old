@@ -1,0 +1,301 @@
+{
+    "orgCode": "ORG000004",
+    "componentCode": "JSC",
+    "componentName": null,
+    "softwares": [{
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1035940@mindtree.com",
+            "lastUpdatedOn": 1509001487566,
+            "score": 0.0,
+            "id": "58ad363c13b4a6fec47f26db",
+            "softwareName": "Issue Analyser",
+            "softwareCode": "IAN",
+            "description": "Job Scheduler for Issue Analysis",
+            "clazz": "com.mindtree.cape.engine.gateway.service.custom.IssueAnalyserServiceImpl",
+            "connect": false,
+            "provision": false,
+            "hasMetric": false,
+            "hasAction": true,
+            "hasClients": false,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "JSC",
+            "componentName": "Automation Service",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": null,
+            "provisionSchemaForm": null,
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "SEVSN",
+                    "softwareName": "ServiceNow",
+                    "description": "Analyse new tickets coming in ServiceNow and auto assign tickets to appropriate queue.",
+                    "iconURL": "/assets/icons/softwares/c86a26323f0a4b75a8912bd9d42d98be.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"interval\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Issue Analyser\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Service Now\"},\"interval\":{\"title\":\"Interval (min)\",\"type\":\"string\",\"default\":\"1\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto analyse tickets\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.automation.application.domain.ServiceNow\"}},\"required\":[\"source\",\"destination\",\"interval\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "JIRA",
+                    "softwareName": "JIRA",
+                    "description": "Jira provides bug tracking, issue tracking, and project management functions.",
+                    "iconURL": "/assets/icons/softwares/76fb1202c6324ef5ab88fc57e39b7afe.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Issue Analyser\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"JIRA\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Creates issues\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.automation.application.domain.Jira\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "BITB",
+                    "softwareName": "Bitbucket",
+                    "description": "Creates Branch",
+                    "iconURL": "/assets/icons/softwares/27fcd22ef457480585848d03f7e101c5.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Issue Analyser\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Bitbucket\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Creates branch\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.automation.application.domain.Bitbucket\"}},\"required\":[\"source\",\"destination\",\"label\",\"clazz\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "AUTANY",
+                    "softwareName": "AutomationAnywhere",
+                    "description": "Trigger Actions",
+                    "iconURL": "/assets/icons/softwares/405e1471488b4c52abd725924d0dfa19.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Issue Analyser\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"RPA\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Trigger Actions\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SBVN",
+                    "softwareName": "Subversion",
+                    "description": "Integration with subversion",
+                    "iconURL": "/assets/icons/softwares/edb3154f4a6f420c916d394a228cdb85.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Issue Analyzer\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"MS TFS\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"To MS TFS\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "GITH",
+                    "softwareName": "GitHub",
+                    "description": "Integration with Github",
+                    "iconURL": "/assets/icons/softwares/513cd93dc71b4794a2f4231568672816.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Issue Analyzer\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"GitHub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Integration\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "MLHUB",
+                    "softwareName": "ML Hub",
+                    "description": "Use ML Hub to analyse ticket description and classify ticket.",
+                    "iconURL": "/assets/icons/softwares/8b9138beb78b4622b2c91d75bc230754.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Issue Analyser\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"ML Hub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Classify Tickets\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.automation.application.domain.MlHub\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                }
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/1f77b2b7330e407891bfdea43ad367a1.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        },
+        {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1035940@mindtree.com",
+            "lastUpdatedOn": 1511526205357,
+            "score": 0.0,
+            "id": "58eb0f1899d357f2ed5eac5c",
+            "softwareName": "Rundeck",
+            "softwareCode": "RUNDECK",
+            "description": "Job Scheduler and Runbook Automation.",
+            "clazz": "com.mindtree.cape.engine.gateway.service.RundeckServiceImpl",
+            "connect": true,
+            "provision": true,
+            "hasMetric": true,
+            "hasAction": true,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "JSC",
+            "componentName": "Automation Service",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": {
+                "type": "Script",
+                "supportedPlatforms": "[ \"Ubuntu Server\" ]",
+                "installScript": "cape-rundeck-install.sh",
+                "uninstallScript": "cape-rundeck-uninstall.sh"
+            },
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",{\"key\":\"url\",\"isConnect\":true},{\"key\":\"apiToken\",\"type\":\"password\",\"isConnect\":true},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL:\",\"type\":\"string\",\"default\":\"http://cape-registry.southeastasia.cloudapp.azure.com:8081\"},\"username\":{\"title\":\"Username:\",\"type\":\"string\",\"default\":\"admin\"},\"apiToken\":{\"title\":\"API Token:\",\"type\":\"string\",\"default\":\"7bA7fSU6X1kjEiuS6XQccjDhGnc1Bb7H\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"apiToken\"]}"
+            },
+            "provisionSchemaForm": {
+                "form": "[\"*\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"hostPort\":{\"title\":\"Host Port\",\"type\":\"string\",\"default\":\"4440\"}},\"required\":[\"hostPort\"]}"
+            },
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "GITH",
+                    "softwareName": "GitHub",
+                    "description": "Automatically pulls code from Git.",
+                    "iconURL": "/assets/icons/softwares/513cd93dc71b4794a2f4231568672816.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"componentName\",\"label\",\"branch\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Rundeck\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"GitHub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Automatically create branch\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"git\"},\"url\":{\"title\":\"Repository URL\",\"type\":\"string\",\"readonly\":true},\"branch\":{\"title\":\"Branch\",\"type\":\"string\",\"default\":\"*/master\"},\"username\":{\"title\":\"User Name\",\"type\":\"string\",\"default\":\"M1026343@mindtree.com\"},\"password\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"479509000899cb4ed80de5547ce327c3fc9ad5b7\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.automation.application.domain.VersionControl\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\",\"branch\",\"username\",\"password\",\"clazz\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "REMDYF",
+                    "softwareName": "Remedyforce",
+                    "description": "Analyse new tickets coming in Remedyforce and auto assign tickets to appropriate queue.",
+                    "iconURL": "/assets/icons/softwares/9c53bf7969a34bdba19c1c0b3809bdc3.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"componentName\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Rundeck\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Remedyforce\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto analyse tickets\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"remedyforce\"},\"url\":{\"title\":\"Sandbox URL\",\"type\":\"string\",\"readonly\":true},\"username\":{\"title\":\"User Name\",\"type\":\"string\"},\"password\":{\"title\":\"Password\",\"type\":\"string\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "JIRA",
+                    "softwareName": "JIRA",
+                    "description": "Jira provides bug tracking, issue tracking, and project management functions.",
+                    "iconURL": "/assets/icons/softwares/76fb1202c6324ef5ab88fc57e39b7afe.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"componentName\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Rundeck\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"JIRA\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto analyse issues\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"jira\"},\"url\":{\"title\":\"URL\",\"type\":\"string\",\"readonly\":true},\"username\":{\"title\":\"User Name\",\"type\":\"string\"},\"password\":{\"title\":\"Password\",\"type\":\"string\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "APDY",
+                    "softwareName": "AppDynamics",
+                    "description": "AppDynamics focuses on application performance management and IT Operations Analytics.",
+                    "iconURL": "/assets/icons/softwares/7614eeab175b4f54a85788b52913e906.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",\"componentName\",\"url\",\"username\",{\"key\":\"password\",\"type\":\"string\"},\"clazz\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Rundeck\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"AppDynamics\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto analyse issues\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"appdynamics\"},\"url\":{\"title\":\"URL\",\"type\":\"string\",\"readonly\":true},\"username\":{\"title\":\"User Name\",\"type\":\"string\"},\"password\":{\"title\":\"Password\",\"type\":\"string\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\"]}"
+                    },
+                    "properties": null
+                },
+                {
+                    "id": null,
+                    "softwareCode": "MLHUB",
+                    "softwareName": "ML Hub",
+                    "description": "Use ML Hub to analyse ticket description and classify ticket.",
+                    "iconURL": "/assets/icons/softwares/Mindtree.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"componentName\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Rundeck\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"ML Hub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Classify tickets\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"mlhub\"},\"url\":{\"title\":\"Web URL\",\"type\":\"string\",\"readonly\":true},\"username\":{\"title\":\"User Name\",\"type\":\"string\"},\"password\":{\"title\":\"Password\",\"type\":\"string\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "ATAS9.0",
+                    "softwareName": "Tomcat 9.0",
+                    "description": "Rundeck automatically deploys code in Tomcat.",
+                    "iconURL": "/assets/icons/softwares/4cba8f78e9004b7e8206e566ecaa822a.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"componentName\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Rundeck\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Tomcat 9.0\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Promote Build\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"tomcat\"},\"url\":{\"title\":\" URL\",\"type\":\"string\",\"readonly\":true},\"username\":{\"title\":\"User Name\",\"type\":\"string\"},\"password\":{\"title\":\"Password\",\"type\":\"string\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SEVSN",
+                    "softwareName": "ServiceNow",
+                    "description": "Auto Analyze",
+                    "iconURL": "/assets/icons/softwares/c86a26323f0a4b75a8912bd9d42d98be.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"interval\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Rundeck\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Service Now\"},\"interval\":{\"title\":\"Interval (min)\",\"type\":\"string\",\"default\":\"1\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto analyse tickets\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.automation.application.domain.ServiceNow\"}},\"required\":[\"source\",\"destination\",\"interval\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "AUTANY",
+                    "softwareName": "AutomationAnywhere",
+                    "description": "Auto resolve",
+                    "iconURL": "/assets/icons/softwares/405e1471488b4c52abd725924d0dfa19.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Rundeck\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"RPA\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Trigger Actions\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "BITB",
+                    "softwareName": "Bitbucket",
+                    "description": "Create Branch",
+                    "iconURL": "/assets/icons/softwares/27fcd22ef457480585848d03f7e101c5.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Rundeck\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Bitbucket\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Creates branch\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.automation.application.domain.Bitbucket\"}},\"required\":[\"source\",\"destination\",\"label\",\"clazz\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "AppHost",
+                    "softwareName": "Application Host",
+                    "description": "Integration between Application Host and Rundeck",
+                    "iconURL": "/assets/icons/softwares/51bb16363a6846a589e720bb89abdc7d.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Promote Build\"}},\"required\":[\"label\"]}"
+                    },
+                    "properties": {}
+                }
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/ea24c87a85804ebfac5c450469eca90b.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        }
+    ]
+}

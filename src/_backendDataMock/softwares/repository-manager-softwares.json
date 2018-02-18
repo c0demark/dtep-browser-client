@@ -16,6 +16,7 @@
             "connect": true,
             "provision": true,
             "hasMetric": true,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -53,21 +54,25 @@
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/89c25f5bd37648f082a9fa53683d8b7b.png",
+            "iconURL": "/assets/icons/softwares/89c25f5bd37648f082a9fa53683d8b7b.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         },
         {
             "createdBy": null,
             "createdOn": null,
             "lastUpadateBy": "m1035984@mindtree.com",
-            "lastUpdatedOn": 1511513600220,
+            "lastUpdatedOn": 1511766795968,
             "score": 0.0,
             "id": "58e32321324a4b031f8128e1",
             "softwareName": "ProGet",
@@ -77,6 +82,7 @@
             "connect": true,
             "provision": false,
             "hasMetric": true,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -90,21 +96,28 @@
             "vmProperties": null,
             "connectionSchemaForm": {
                 "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"accountPassword\",\"type\":\"password\"},{\"key\":\"apiKey\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
-                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL:\",\"type\":\"string\",\"default\":\"http://cape-win.southeastasia.cloudapp.azure.com:81\"},\"username\":{\"title\":\"Username:\",\"type\":\"string\",\"default\":\"Admin\"},\"accountPassword\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"\"},\"apiKey\":{\"title\":\"API Token:\",\"type\":\"string\",\"default\":\"\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.ProGet\"}},\"required\":[\"instanceName\",\"username\",\"url\",\"apiKey\"]}"
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL:\",\"type\":\"string\",\"default\":\"http://cape-win.southeastasia.cloudapp.azure.com:81\"},\"username\":{\"title\":\"Username:\",\"type\":\"string\",\"default\":\"Admin\"},\"accountPassword\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"uu83KPjsB$J8x-GQ\"},\"apiKey\":{\"title\":\"API Token:\",\"type\":\"string\",\"default\":\"FZR2TVZt7bc6URVDAFpS2Q==\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.ProGet\"}},\"required\":[\"instanceName\",\"username\",\"url\",\"apiKey\"]}"
             },
-            "provisionSchemaForm": { "form": "null", "schema": "null" },
+            "provisionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/f1e1cd6487364f6cbd12620e818671a7.png",
+            "iconURL": "/assets/icons/softwares/f1e1cd6487364f6cbd12620e818671a7.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         }
     ]
 }

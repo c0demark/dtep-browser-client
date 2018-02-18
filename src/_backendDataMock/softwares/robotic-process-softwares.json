@@ -16,6 +16,7 @@
         "connect": false,
         "provision": false,
         "hasMetric": true,
+        "isAccessible": null,
         "hasAction": false,
         "hasClients": null,
         "clientSoftwareName": null,
@@ -34,60 +35,72 @@
                 "softwareCode": "REMDYF",
                 "softwareName": "Remedyforce",
                 "description": "Analyse new tickets coming in Remedyforce and auto assign tickets to appropriate queue.",
-                "iconURL": "/icons/9c53bf7969a34bdba19c1c0b3809bdc3.png",
+                "iconURL": "/assets/icons/softwares/9c53bf7969a34bdba19c1c0b3809bdc3.png",
                 "integrationSchemaForm": {
                     "form": "[\"componentName\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                     "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Automation Anywhere\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Remedyforce\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto resolve tickets\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"remedyforce\"},\"url\":{\"title\":\"Sandbox URL\",\"type\":\"string\",\"readonly\":true},\"username\":{\"title\":\"User Name\",\"type\":\"string\"},\"password\":{\"title\":\"Password\",\"type\":\"string\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\"]}"
                 },
-                "properties": {}
+                "properties": {
+
+                }
             },
             {
                 "id": null,
                 "softwareCode": "JIRA",
                 "softwareName": "JIRA",
                 "description": "Jira provides bug tracking, issue tracking, and project management functions.",
-                "iconURL": "/icons/76fb1202c6324ef5ab88fc57e39b7afe.png",
+                "iconURL": "/assets/icons/softwares/76fb1202c6324ef5ab88fc57e39b7afe.png",
                 "integrationSchemaForm": {
                     "form": "[\"componentName\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                     "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Automation Anywhere\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"JIRA\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto analyse issues\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"jira\"},\"url\":{\"title\":\"URL\",\"type\":\"string\",\"readonly\":true},\"username\":{\"title\":\"User Name\",\"type\":\"string\"},\"password\":{\"title\":\"Password\",\"type\":\"string\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\"]}"
                 },
-                "properties": {}
+                "properties": {
+
+                }
             },
             {
                 "id": null,
                 "softwareCode": "SEVSN",
                 "softwareName": "ServiceNow",
                 "description": "Resolve issue",
-                "iconURL": "/icons/c86a26323f0a4b75a8912bd9d42d98be.png",
+                "iconURL": "/assets/icons/softwares/c86a26323f0a4b75a8912bd9d42d98be.png",
                 "integrationSchemaForm": {
                     "form": "[\"componentName\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                     "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Automation Anywhere\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto resolve tickets\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"remedyforce\"},\"url\":{\"title\":\"Sandbox URL\",\"type\":\"string\",\"readonly\":true},\"username\":{\"title\":\"User Name\",\"type\":\"string\"},\"password\":{\"title\":\"Password\",\"type\":\"string\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\"]}"
                 },
-                "properties": {}
+                "properties": {
+
+                }
             },
             {
                 "id": null,
                 "softwareCode": "MLHUB",
                 "softwareName": "ML Hub",
                 "description": "Use ML Hub to analyse ticket description and classify ticket.",
-                "iconURL": "/icons/8b9138beb78b4622b2c91d75bc230754.png",
+                "iconURL": "/assets/icons/softwares/8b9138beb78b4622b2c91d75bc230754.png",
                 "integrationSchemaForm": {
                     "form": "[\"componentName\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                     "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Automation Anywhere\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"ML Hub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Classify tickets\"},\"componentName\":{\"title\":\"Component Name\",\"type\":\"string\",\"readonly\":true,\"default\":\"mlhub\"},\"url\":{\"title\":\"Web URL\",\"type\":\"string\",\"readonly\":true},\"username\":{\"title\":\"User Name\",\"type\":\"string\"},\"password\":{\"title\":\"Password\",\"type\":\"string\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\"}},\"required\":[\"source\",\"destination\",\"label\",\"componentName\"]}"
                 },
-                "properties": {}
+                "properties": {
+
+                }
             }
         ],
         "isConnect": null,
         "isProvision": null,
-        "iconURL": "/icons/405e1471488b4c52abd725924d0dfa19.png",
+        "iconURL": "/assets/icons/softwares/405e1471488b4c52abd725924d0dfa19.png",
         "applicationURL": null,
         "baseURL": null,
         "finalURL": null,
         "status": null,
         "isExecuting": null,
+        "executionStatus": null,
+        "executionResult": null,
         "requestId": null,
         "actionList": null,
-        "metricList": null
+        "metricList": null,
+        "widgets": null,
+        "visualize": false
     }]
 }

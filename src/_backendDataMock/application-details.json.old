@@ -1,0 +1,59 @@
+{
+    "applicationProperties": {
+        "regex": {
+            "name": {
+                "pattern": "^[a-zA-Z0-9\\s\\-\\.]{3,100}$",
+                "message": "Name should contain min 3 to max 100 character </br> Name should only contain - and . as special character"
+            },
+            "tags": {
+                "pattern": "^[a-zA-Z0-9\\s\\-\\/]{3,}$",
+                "message": ""
+            },
+            "description": {
+                "pattern": "^[a-zA-Z0-9\\_\\s\\-\\.\\,\\?]{1,500}$",
+                "message": "Description should contain min 1 to max 500 characters </br> Description should not contain any special characters other than: _,-.?"
+            },
+            "password": {
+                "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d@$!%*?&._]{3,}$",
+                "message": "Password should contain atleast 3 charcter, one Lowercase, one Uppercase and one Number.Special characters allowed are: !@#$%^:,"
+            },
+            "email": {
+                "pattern": "^[a-zA-Z]+[a-zA-Z0-9._]+@[a-zA-Z]+\\.(([a-zA-Z]{2,})|([a-zA-Z]+\\.[a-zA-Z]{5,100}))$",
+                "message": "Invalid E-mail Id format. </br> E-mail should contain max 100 characters."
+            },
+            "id": {
+                "pattern": "^[a-zA-Z0-9\\_\\@\\.\\-]{3,100}$",
+                "message": "Code should contain min 3 to max 100 characters </br>Special character allowed are: _@.-"
+            },
+            "onlyNumbers": {
+                "pattern": "^\\d+$",
+                "message": "only numbers are allowed"
+            },
+            "onlyChar": {
+                "pattern": "^[a-zA-Z\\s]*$",
+                "message": "only alphabets are allowed"
+            },
+            "date": {
+                "pattern": "^[a-zA-Z0-9\\:\\-\\s\\.]+$",
+                "message": ""
+            },
+            "softwareCategory": {
+                "pattern": "^[a-zA-Z0-9\\s\\&]{3,}$",
+                "message": "Category should contain min 3 to max 35 character </br> Name should only contain & as special character"
+            },
+            "url": {
+                "pattern": "^((http[s]?|ftp):\\/)?\\/?([^:\\/\\s]+)((\\/\\w+)*\\/)([\\w\\-\\.]+[^#?\\s]+)(.*)?(#[\\w\\-]+)?$",
+                "message": ""
+            },
+            "boolean": {
+                "pattern": "^(?i)(true|false)$",
+                "message": ""
+            }
+        },
+        "appVersion": "v1.4.0"
+    },
+    "token": null,
+    "tanentList": [
+        "mindtree.com"
+    ]
+}

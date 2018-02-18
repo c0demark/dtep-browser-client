@@ -16,6 +16,7 @@
             "connect": false,
             "provision": true,
             "hasMetric": false,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -40,15 +41,19 @@
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/8d92b6a8ea8848fba76a526c957f71d6.png",
+            "iconURL": "/assets/icons/softwares/8d92b6a8ea8848fba76a526c957f71d6.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         },
         {
             "createdBy": null,
@@ -64,6 +69,7 @@
             "connect": false,
             "provision": true,
             "hasMetric": false,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -88,15 +94,19 @@
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/ce08df452c01444e98e7f57a2701b116.png",
+            "iconURL": "/assets/icons/softwares/ce08df452c01444e98e7f57a2701b116.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         },
         {
             "createdBy": null,
@@ -112,6 +122,7 @@
             "connect": false,
             "provision": true,
             "hasMetric": false,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": true,
             "clientSoftwareName": "Agent",
@@ -134,15 +145,19 @@
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/ce08df452c01444e98e7f57a2701b116.png",
+            "iconURL": "/assets/icons/softwares/ce08df452c01444e98e7f57a2701b116.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         },
         {
             "createdBy": null,
@@ -158,6 +173,7 @@
             "connect": false,
             "provision": true,
             "hasMetric": false,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -182,15 +198,114 @@
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/ce08df452c01444e98e7f57a2701b116.png",
+            "iconURL": "/assets/icons/softwares/ce08df452c01444e98e7f57a2701b116.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
+        },
+        {
+            "createdBy": "M1035936@mindtree.com",
+            "createdOn": 1516256525040,
+            "lastUpadateBy": "M1035936@mindtree.com",
+            "lastUpdatedOn": 1516745776960,
+            "score": 0.0,
+            "id": "5a603d0d3ac2cd112798a7b8",
+            "softwareName": "Terraform",
+            "softwareCode": "SW1a50bce1fcf143678b8d76eb011dc5d3",
+            "description": "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.",
+            "clazz": "com.mindtree.cape.engine.gateway.service.TerraformServiceImpl",
+            "connect": true,
+            "provision": false,
+            "hasMetric": false,
+            "isAccessible": null,
+            "hasAction": true,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "CMT",
+            "componentName": null,
+            "type": null,
+            "vmId": null,
+            "properties": {
+
+            },
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null}},\"required\":[\"instanceName\"]}"
+            },
+            "provisionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "SWfa40027723df4521931b727be669ee2d",
+                    "softwareName": "Google Cloud Platform",
+                    "description": "Deploy to GCP",
+                    "iconURL": "/assets/icons/softwares/fa40027723df4521931b727be669ee2d.png",
+                    "integrationSchemaForm": {
+                        "form": "[{\"key\":\"authorization\",\"type\":\"textarea\",\"placeholder\":\"Enter service account key\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Terraform\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"GCP\"},\"authorization\":{\"title\":\"Credentials:\",\"type\":\"string\",\"default\":\"\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Deploy to GCP\"},\"clazz\":{\"title\":\"Implementation Class\",\"type\":\"string\",\"default\":\"com.mindtree.cape.component.domain.TerraformGCP\"}},\"required\":[\"source\",\"destination\",\"label\",\"authorization\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SW5d1d0e99cab64ae88a2533fe92bbafcc",
+                    "softwareName": "Instance",
+                    "description": "Create Instance",
+                    "iconURL": "/assets/icons/softwares/5d1d0e99cab64ae88a2533fe92bbafcc.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"name\",\"type\",\"image\",{\"key\":\"script\",\"type\":\"textarea\",\"placeholder\":\"Enter startup script\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Terraform\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Instance\"},\"name\":{\"title\":\"Name\",\"type\":\"string\",\"default\":\"\"},\"type\":{\"title\":\"Type\",\"type\":\"string\",\"default\":\"f1-micro\"},\"image\":{\"title\":\"Image\",\"type\":\"string\",\"default\":\"projects/debian-cloud/global/images/family/debian-8\"},\"script\":{\"title\":\"Startup Script\",\"type\":\"string\",\"default\":\"\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Create Instance\"}},\"required\":[\"source\",\"destination\",\"label\",\"authorization\"]}"
+                    },
+                    "properties": {
+
+                    }
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SWafd8165c80fd4bcba1f53a4d51bec003",
+                    "softwareName": "Load Balancer",
+                    "description": "Create Load Balancer",
+                    "iconURL": "/assets/icons/softwares/afd8165c80fd4bcba1f53a4d51bec003.png",
+                    "integrationSchemaForm": {
+                        "form": "[{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"Terraform\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Load Balancer\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Create Load Balancer\"}},\"required\":[]}"
+                    },
+                    "properties": {
+
+                    }
+                }
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/1a50bce1fcf143678b8d76eb011dc5d3.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         }
     ]
 }

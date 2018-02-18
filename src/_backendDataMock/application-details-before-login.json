@@ -1,0 +1,75 @@
+{
+    "applicationProperties": {
+        "regex": {
+            "name": {
+                "pattern": "^[a-zA-Z0-9\\s\\-\\.]{3,100}$",
+                "message": "Name should contain min 3 to max 100 character </br> Name should only contain - and . as special character"
+            },
+            "color": {
+                "pattern": "^[a-zA-Z0-9\\#]{3,100}$",
+                "message": "Color should contain min 3 to max 100 character </br> Name should only contain alphabets and numbers"
+            },
+            "tags": {
+                "pattern": "^[a-zA-Z0-9\\s\\-\\/]{3,}$",
+                "message": "Invalid tag name"
+            },
+            "description": {
+                "pattern": "^[a-zA-Z0-9\\_\\s\\-\\.\\,\\?]{1,500}$",
+                "message": "Description should contain min 1 to max 500 characters </br> Description should not contain any special characters other than: _,-.?"
+            },
+            "password": {
+                "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d@$!#%*?&._]{3,}$",
+                "message": "Password should contain atleast 3 charcter, one Lowercase, one Uppercase and one Number.Special characters allowed are: !@#$%^:,"
+            },
+            "email": {
+                "pattern": "^[a-zA-Z]+[a-zA-Z0-9._]+@[a-zA-Z]+\\.(([a-zA-Z]{2,})|([a-zA-Z]+\\.[a-zA-Z]{5,100}))$",
+                "message": "Invalid E-mail Id format. </br> E-mail should contain max 100 characters."
+            },
+            "id": {
+                "pattern": "^[a-zA-Z0-9\\_\\@\\.\\-]{3,100}$",
+                "message": "Code should contain min 3 to max 100 characters </br>Special character allowed are: _@.-"
+            },
+            "onlyNumbers": {
+                "pattern": "^\\d+$",
+                "message": "Only numbers are allowed"
+            },
+            "onlyChar": {
+                "pattern": "^[a-zA-Z\\s]*$",
+                "message": "Only alphabets are allowed"
+            },
+            "date": {
+                "pattern": "^[a-zA-Z0-9\\:\\-\\s\\.]+$",
+                "message": "Invalid date format"
+            },
+            "softwareCategory": {
+                "pattern": "^[a-zA-Z0-9\\s\\&_]{3,}$",
+                "message": "Category should contain min 3 to max 35 character </br> Name should only contain & as special character"
+            },
+            "url": {
+                "pattern": "((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[\\w]*))?)$",
+                "message": "Invalid URL"
+            },
+            "iconUrl": {
+                "pattern": "(((^(?:\\/))(?:[-;:&=\\+\\$,\\w]+)?[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[\\w]*))?)$",
+                "message": "Invalid image file"
+            },
+            "boolean": {
+                "pattern": "^(?i)(true|false)$",
+                "message": "Invalid boolean"
+            }
+        },
+        "metricDateRange": {
+            "default": "1w",
+            "1h": 3600000,
+            "1d": 86400000,
+            "1w": 604800000,
+            "1m": 2592000000,
+            "1y": 31536000000
+        },
+        "appVersion": "v1.4.9"
+    },
+    "token": null,
+    "tanentList": [
+        "mindtree.com"
+    ]
+}

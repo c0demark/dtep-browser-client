@@ -1,0 +1,231 @@
+{
+    "orgCode": "ORG000004",
+    "componentCode": "TKS",
+    "componentName": null,
+    "softwares": [{
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1037707@mindtree.com",
+            "lastUpdatedOn": 1507792117497,
+            "score": 0.0,
+            "id": "5859047573942af3bd4c4774",
+            "softwareName": "Remedyforce",
+            "softwareCode": "REMDYF",
+            "description": "Remedyforce enables IT to provide faster IT service management & help desk support at a lower cost.",
+            "clazz": null,
+            "connect": false,
+            "provision": false,
+            "hasMetric": false,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "TKS",
+            "componentName": "IT Service Management",
+            "type": null,
+            "vmId": null,
+            "properties": { "url": "", "username": "", "password": "" },
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"url\" : {\n      \"title\" : \"Sandbox URL:\",\n      \"type\" : \"string\",\n      \"default\" : \"https://test.salesforce.com/\"\n    },\n    \"username\" : {\n      \"title\" : \"username:\",\n      \"type\" : \"string\"\n    },\n    \"password\" : {\n      \"title\" : \"Password:\",\n      \"type\" : \"string\"\n    }\n  },\n  \"required\" : [ \"url\" ]\n}"
+            },
+            "provisionSchemaForm": null,
+            "integrations": null,
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/9c53bf7969a34bdba19c1c0b3809bdc3.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        },
+        {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1000668@mindtree.com",
+            "lastUpdatedOn": 1509002231411,
+            "score": 0.0,
+            "id": "59e0323f4e39ea32cca658a1",
+            "softwareName": "ServiceNow Incident Analyser",
+            "softwareCode": "SEVSNIA",
+            "description": "Analyses the ServiceNow Incidents.",
+            "clazz": "com.mindtree.cape.engine.gateway.service.servicenow.ServiceNowIncidentAnalyserImpl",
+            "connect": true,
+            "provision": false,
+            "hasMetric": true,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "TKS",
+            "componentName": "IT Service Management",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"url\" : {\n      \"instanceName\" : {\n        \"title\" : \"Instance Name\",\n        \"pattern\" : \"^[a-zA-Z0-9_\\\\-]+$\",\n        \"type\" : \"string\",\n        \"default\" : null\n      },\n      \"title\" : \"URL:\",\n      \"type\" : \"string\",\n      \"default\" : \"https://dev44783.service-now.com\"\n    },\n    \"username\" : {\n      \"title\" : \"username:\",\n      \"type\" : \"string\",\n      \"default\" : \"admin\"\n    },\n    \"password\" : {\n      \"title\" : \"Password:\",\n      \"type\" : \"string\",\n      \"default\" : \"\"\n    }\n  },\n  \"required\" : [ \"instanceName\", \"url\", \"username\", \"password\" ]\n}"
+            },
+            "provisionSchemaForm": { "form": null, "schema": null },
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "GITH",
+                    "softwareName": "GitHub",
+                    "description": "ServiceNow automatically creates branch in Git.",
+                    "iconURL": "/assets/icons/softwares/513cd93dc71b4794a2f4231568672816.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"GitHub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Creates Branch\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "JIRA",
+                    "softwareName": "JIRA",
+                    "description": "JIRA provides bug tracking, issue tracking, and project management functions.",
+                    "iconURL": "/assets/icons/softwares/76fb1202c6324ef5ab88fc57e39b7afe.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"JIRA\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Creates Issue\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "MLHUB",
+                    "softwareName": "ML Hub",
+                    "description": "Integration with MLHub",
+                    "iconURL": "/assets/icons/softwares/8b9138beb78b4622b2c91d75bc230754.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"ML Hub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto Analysis of Tickets\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                }
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/c86a26323f0a4b75a8912bd9d42d98be.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        },
+        {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1037547@mindtree.com",
+            "lastUpdatedOn": 1511526244808,
+            "score": 0.0,
+            "id": "58785a014e1ce3338c7491a5",
+            "softwareName": "ServiceNow",
+            "softwareCode": "SEVSN",
+            "description": "Provides service management for the enterprise including IT, human resources, facilities and field service.",
+            "clazz": "com.mindtree.cape.engine.gateway.service.servicenow.ServiceNowServiceImpl",
+            "connect": true,
+            "provision": false,
+            "hasMetric": true,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "TKS",
+            "componentName": "IT Service Management",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"title\":\"URL:\",\"type\":\"string\",\"default\":\"https://dev44783.service-now.com\"},\"username\":{\"title\":\"username:\",\"type\":\"string\",\"default\":\"admin\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"2xkE6vcgEczg\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"password\"]}"
+            },
+            "provisionSchemaForm": { "form": "null", "schema": "null" },
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "GITH",
+                    "softwareName": "GitHub",
+                    "description": "ServiceNow automatically creates branch in Git.",
+                    "iconURL": "/assets/icons/softwares/513cd93dc71b4794a2f4231568672816.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"GitHub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Creates Branch\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "JIRA",
+                    "softwareName": "JIRA",
+                    "description": "JIRA provides bug tracking, issue tracking, and project management functions.",
+                    "iconURL": "/assets/icons/softwares/76fb1202c6324ef5ab88fc57e39b7afe.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"JIRA\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Creates Issue\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "MLHUB",
+                    "softwareName": "ML Hub",
+                    "description": "Integration with MLHub",
+                    "iconURL": "/assets/icons/softwares/8b9138beb78b4622b2c91d75bc230754.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"ML Hub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto Analysis of Tickets\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "AUTANY",
+                    "softwareName": "Automation Anywhere",
+                    "description": "Integration between Automation Anywhere and ServiceNow",
+                    "iconURL": "/assets/icons/softwares/405e1471488b4c52abd725924d0dfa19.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Automation Anywhere\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto resolve issues\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "IAN",
+                    "softwareName": "Issue Analyser",
+                    "description": "Auto analyze tickets",
+                    "iconURL": "/assets/icons/softwares/1f77b2b7330e407891bfdea43ad367a1.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Issue Analyzer\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Auto analyze tickets\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                }
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/c86a26323f0a4b75a8912bd9d42d98be.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        }
+    ]
+}

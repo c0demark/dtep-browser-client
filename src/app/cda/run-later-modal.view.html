@@ -1,67 +1,78 @@
 <!DOCTYPE html>
 <div>
-    <header class="modal-header">
-        <button class="badge close" type="button" data-ng-click="closeRunLaterModal()"><span class="sr-only">Close&nbsp;Dialog</span><i class="fa fa-close" aria-hidden="true"></i></button>
-        <h4 class="modal-title text-center" id="dtep-run-later-modal-title">Schedule&nbsp;Build</h4>
-    </header>
-    <main class="modal-body" id="dtep-run-later-modal-body" style="max-height: 420px; overflow-y: auto;">
-        <form name="runLaterForm">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12 col-xs-12">
-                    <label class="pull-left"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp;&nbsp;Enter&nbsp;the&nbsp;data&nbsp;in&nbsp;CRON&nbsp;format</label>
-                </div>
-                <div class="col-lg-1 col-lg-offset-2 col-md-1 col-md-offset-2 col-sm-4 col-xs-6 form-group">
-                    <input class="form-control" type="text" id="dtep-run-later-cron-second" maxlength="2" placeholder="00" />
-                    <label class="text-center" for="dtep-run-later-cron-second">SEC</label>
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-4 col-xs-6 form-group">
-                    <input class="form-control" type="text" id="dtep-run-later-cron-minute" maxlength="2" placeholder="00" />
-                    <label class="text-center" for="dtep-run-later-cron-minute">MIN</label>
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-4 col-xs-6 form-group">
-                    <input class="form-control" type="text" id="dtep-run-later-cron-hour" maxlength="2" placeholder="00" />
-                    <label class="text-center" for="dtep-run-later-cron-hour">HOUR</label>
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-4 col-xs-6 form-group">
-                    <input class="form-control" type="text" id="dtep-run-later-cron-day-of-month" maxlength="2" placeholder="00" />
-                    <label class="text-center" for="dtep-run-later-cron-day-of-month">DOM</label>
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-4 col-xs-6 form-group ">
-                    <input class="form-control" type="text" id="dtep-run-later-cron-month" maxlength="2" placeholder="00" />
-                    <label class="text-center" for="dtep-run-later-cron-month">MONTH</label>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 form-group">
-                    <input class="form-control" type="text" id="dtep-run-later-cron-day-of-week" maxlength="9" placeholder="MON-FRI" />
-                    <label class="text-center" for="dtep-run-later-cron-day-of-week">DOW</label>
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12 form-group text-center">
-                    <div data-tooltip-placement="right" data-uib-tooltip="click for CRON format info">
-                        <button class="btn btn-info" data-ng-click="toggleNavCollapse()"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 collapse" data-uib-collapse="isNavCollapsed">
-                    <div class="well well-lg">
-                        <h3 class="text-center" style="margin:0px"><label class="label label-primary">CRON&nbsp;Format</label></h3>
-                        <blockquote>
-                            <p class="text-left" style="font-size:14px">
-                                This&nbsp;field&nbsp;follows&nbsp;the&nbsp;syntax&nbsp;of&nbsp;cron&nbsp;(with&nbsp;minor&nbsp;differences).
-                                <br/>Specifically,&nbsp;each&nbsp;line&nbsp;consists&nbsp;of&nbsp;6&nbsp;fields&nbsp;separated&nbsp;by&nbsp;TAB&nbsp;or&nbsp;whitespace:
-                                <br/>SECOND&nbsp;MINUTE&nbsp;HOUR&nbsp;DOM&nbsp;MONTH&nbsp;DOW
-                                <br/>SECOND&nbsp;Second&nbsp;within&nbsp;the&nbsp;minute&nbsp;(0&nbsp;-&nbsp;59)
-                                <br/>MINUTE&nbsp;Minutes&nbsp;within&nbsp;the&nbsp;hour&nbsp;(0&nbsp;-&nbsp;59)
-                                <br/>HOUR&nbsp;The&nbsp;hour&nbsp;of&nbsp;the&nbsp;day&nbsp;(0&nbsp;-&nbsp;23)
-                                <br/>DOM&nbsp;The&nbsp;day&nbsp;of&nbsp;the&nbsp;month&nbsp;(1&nbsp;-&nbsp;31)
-                                <br/>MONTH&nbsp;The&nbsp;month&nbsp;(1&nbsp;-&nbsp;12)
-                                <br/>DOW&nbsp;The&nbsp;day&nbsp;of&nbsp;the&nbsp;week&nbsp;(0&nbsp;-&nbsp;7)&nbsp;where&nbsp;0&nbsp;and&nbsp;7&nbsp;are&nbsp;Sunday.<br/>
-                            </p>
-                        </blockquote>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group text-center">
-                    <button class="btn btn-success text-uppercase" type="submit"><i class="fa fa-thumb-tack" aria-hidden="true"></i>&nbsp;&nbsp;Schedule</button>
-                    <button class="btn btn-warning text-uppercase" type="reset"><i class="fa fa-eraser" aria-hidden="true"></i>&nbsp;&nbsp;Clear</button>
-                </div>
-            </div>
-        </form>
-    </main>
+	<header class="modal-header">
+		<button class="badge close" type="button" data-ng-click="closeModal()">
+			<span class="sr-only">Close&nbsp;Dialog</span>
+			<i class="fa fa-close" aria-hidden="true"></i>
+		</button>
+		<h4 class="modal-title text-center" id="dtep-run-later-modal-title">Schedule&nbsp;Build</h4>
+	</header>
+	<main class="modal-body" id="dtep-run-later-modal-body" style="max-height: 420px; overflow-y: auto;">
+		<form name="runLaterForm">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12 col-xs-12">
+					<label class="pull-left">
+						<i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp;&nbsp;Enter&nbsp;the&nbsp;data&nbsp;in&nbsp;CRON&nbsp;format</label>
+				</div>
+				<div class="col-lg-1 col-lg-offset-2 col-md-1 col-md-offset-2 col-sm-4 col-xs-6 form-group">
+					<input class="form-control" type="text" id="dtep-run-later-cron-second" maxlength="2" placeholder="00" />
+					<label class="text-center" for="dtep-run-later-cron-second">SEC</label>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-6 form-group">
+					<input class="form-control" type="text" id="dtep-run-later-cron-minute" maxlength="2" placeholder="00" />
+					<label class="text-center" for="dtep-run-later-cron-minute">MIN</label>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-6 form-group">
+					<input class="form-control" type="text" id="dtep-run-later-cron-hour" maxlength="2" placeholder="00" />
+					<label class="text-center" for="dtep-run-later-cron-hour">HOUR</label>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-6 form-group">
+					<input class="form-control" type="text" id="dtep-run-later-cron-day-of-month" maxlength="2" placeholder="00" />
+					<label class="text-center" for="dtep-run-later-cron-day-of-month">DOM</label>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-4 col-xs-6 form-group ">
+					<input class="form-control" type="text" id="dtep-run-later-cron-month" maxlength="2" placeholder="00" />
+					<label class="text-center" for="dtep-run-later-cron-month">MONTH</label>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 form-group">
+					<input class="form-control" type="text" id="dtep-run-later-cron-day-of-week" maxlength="9" placeholder="MON-FRI" />
+					<label class="text-center" for="dtep-run-later-cron-day-of-week">DOW</label>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-12 col-xs-12 form-group text-center">
+					<div data-tooltip-placement="right" data-uib-tooltip="click for CRON format info">
+						<button class="btn btn-info" data-ng-click="toggleNavCollapse()">
+							<i class="fa fa-question-circle" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 collapse" data-uib-collapse="isNavCollapsed">
+					<div class="well well-lg">
+						<h3 class="text-center" style="margin:0px">
+							<label class="label label-primary">CRON&nbsp;Format</label>
+						</h3>
+						<blockquote>
+							<p class="text-left" style="font-size:14px">
+								This&nbsp;field&nbsp;follows&nbsp;the&nbsp;syntax&nbsp;of&nbsp;cron&nbsp;(with&nbsp;minor&nbsp;differences).
+								<br/>Specifically,&nbsp;each&nbsp;line&nbsp;consists&nbsp;of&nbsp;6&nbsp;fields&nbsp;separated&nbsp;by&nbsp;TAB&nbsp;or&nbsp;whitespace:
+								<br/>SECOND&nbsp;MINUTE&nbsp;HOUR&nbsp;DOM&nbsp;MONTH&nbsp;DOW
+								<br/>SECOND&nbsp;Second&nbsp;within&nbsp;the&nbsp;minute&nbsp;(0&nbsp;-&nbsp;59)
+								<br/>MINUTE&nbsp;Minutes&nbsp;within&nbsp;the&nbsp;hour&nbsp;(0&nbsp;-&nbsp;59)
+								<br/>HOUR&nbsp;The&nbsp;hour&nbsp;of&nbsp;the&nbsp;day&nbsp;(0&nbsp;-&nbsp;23)
+								<br/>DOM&nbsp;The&nbsp;day&nbsp;of&nbsp;the&nbsp;month&nbsp;(1&nbsp;-&nbsp;31)
+								<br/>MONTH&nbsp;The&nbsp;month&nbsp;(1&nbsp;-&nbsp;12)
+								<br/>DOW&nbsp;The&nbsp;day&nbsp;of&nbsp;the&nbsp;week&nbsp;(0&nbsp;-&nbsp;7)&nbsp;where&nbsp;0&nbsp;and&nbsp;7&nbsp;are&nbsp;Sunday.
+								<br/>
+							</p>
+						</blockquote>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group text-center">
+					<button class="btn btn-success text-uppercase" type="submit">
+						<i class="fa fa-thumb-tack" aria-hidden="true"></i>&nbsp;&nbsp;Schedule</button>
+					<button class="btn btn-warning text-uppercase" type="reset">
+						<i class="fa fa-eraser" aria-hidden="true"></i>&nbsp;&nbsp;Clear</button>
+				</div>
+			</div>
+		</form>
+	</main>
 </div>

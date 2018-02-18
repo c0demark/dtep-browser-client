@@ -1,209 +1,157 @@
 (function(angular, AmCharts) {
-    "use strict";
-    angular.module("dtepApp")
-        .controller("PmoDashboardController", [
-            "$log",
-            "$scope",
-            "$rootScope",
-            "$window",
-            "$document",
-            "$location",
-            "$uibModal",
-            "$state",
-            PmoDashboardController
-        ]);
+	"use strict";
+	angular
+		.module("dtepApp")
+		.controller("PmoDashboardController", [
+			"$log",
+			"$scope",
+			"$rootScope",
+			"$window",
+			"$document",
+			"$location",
+			"$uibModal",
+			"$state",
+			"PmoDashboardService",
+			PmoDashboardController
+		]);
 
-    function PmoDashboardController(
-        $log,
-        $scope,
-        $rootScope,
-        $window,
-        $document,
-        $location,
-        $uibModal,
-        $state
-    ) {
-        // $scope.name = { firstName: "PmoDashboardController" };
-        console.log("PmoDashboardController", $scope);
-        $scope.projects = [];
-        $scope.selectedProject = null;
-        $scope.chartConfig = null;
-        $scope.fetchProjects = fetchProjects;
-        $scope.setTestPlanTraceabilityChartConfig = setTestPlanTraceabilityChartConfig;
-        $scope.setTotalDefectsChartConfig = setTotalDefectsChartConfig;
-        $scope.init = init;
+	function PmoDashboardController(
+		$log,
+		$scope,
+		$rootScope,
+		$window,
+		$document,
+		$location,
+		$uibModal,
+		$state,
+		PmoDashboardService
+	) {
+		// declaring and initializing scope properties
+		$scope.allProjectsList = [];
+		$scope.selectedProject = {};
+		$scope.allReleasesListByProjectId = [];
+		$scope.selectedRelease = {};
+		$scope.releaseDetailsDataByReleaseId = {};
 
-        $scope.init();
+		// scope properties getters and setters
+		$scope.getAllProjectsList = getAllProjectsList;
+		$scope.setAllProjectsList = setAllProjectsList;
+		$scope.getSelectedProject = getSelectedProject;
+		$scope.setSelectedProject = setSelectedProject;
+		$scope.getAllReleasesListByProjectId = getAllReleasesListByProjectId;
+		$scope.setAllReleasesListByProjectId = setAllReleasesListByProjectId;
+		$scope.getSelectedRelease = getSelectedRelease;
+		$scope.setSelectedRelease = setSelectedRelease;
+		$scope.getReleaseDetailsDataByReleaseId = getReleaseDetailsDataByReleaseId;
+		$scope.setReleaseDetailsDataByReleaseId = setReleaseDetailsDataByReleaseId;
 
-        function init() {
-            $scope.fetchProjects();
-            $scope.setTestPlanTraceabilityChartConfig();
-        }
+		// scope properties helper methods
+		$scope.getDefectsData = getDefectsData;
 
-        function fetchProjects() {
-            $scope.projects = [
-                { projectId: 1, projectName: "MindtreeTest" },
-                { projectId: 2, projectName: "MindtreeTest2" },
-            ];
+		// api call methods
+		$scope.fetchAllProjectsList = fetchAllProjectsList;
+		$scope.fetchAllReleasesListByProjectId = fetchAllReleasesListByProjectId;
+		$scope.fetchReleaseDetailsDataByReleaseId = fetchReleaseDetailsDataByReleaseId;
 
-            if ($scope.projects.length > 0) {
-                $scope.selectedProject = $scope.projects[0];
-            }
-        }
+		// init method - executes after view renders and controller is loaded. Similar to jQuery $(document).ready(function() {})
+		$scope.init = init;
 
-        function setTestPlanTraceabilityChartConfig() {
-            // console.log("traceability graph");
-            $scope.chartConfig = {
-                "theme": "light",
-                "type": "serial",
-                // "dataProvider": DataVisualizationService.sampleData,
-                "dataProvider": [{
-                    "country": "USA",
-                    "year2004": 3.5,
-                    "year2005": 4.2
-                }, {
-                    "country": "UK",
-                    "year2004": 1.7,
-                    "year2005": 3.1
-                }, {
-                    "country": "Canada",
-                    "year2004": 2.8,
-                    "year2005": 2.9
-                }, {
-                    "country": "Japan",
-                    "year2004": 2.6,
-                    "year2005": 2.3
-                }, {
-                    "country": "France",
-                    "year2004": 1.4,
-                    "year2005": 2.1
-                }, {
-                    "country": "Brazil",
-                    "year2004": 2.6,
-                    "year2005": 4.9
-                }, {
-                    "country": "Russia",
-                    "year2004": 6.4,
-                    "year2005": 7.2
-                }, {
-                    "country": "India",
-                    "year2004": 8,
-                    "year2005": 7.1
-                }, {
-                    "country": "China",
-                    "year2004": 9.9,
-                    "year2005": 10.1
-                }],
-                "valueAxes": [{
-                    "stackType": "3d",
-                    "unit": "%",
-                    "position": "left",
-                    "title": "GDP growth rate",
-                }],
-                "startDuration": 1,
-                "graphs": [{
-                    "balloonText": "GDP grow in [[category]] (2004): <b>[[value]]</b>",
-                    "fillAlphas": 0.9,
-                    "lineAlpha": 0.2,
-                    "title": "2004",
-                    "type": "column",
-                    "valueField": "year2004"
-                }, {
-                    "balloonText": "GDP grow in [[category]] (2005): <b>[[value]]</b>",
-                    "fillAlphas": 0.9,
-                    "lineAlpha": 0.2,
-                    "title": "2005",
-                    "type": "column",
-                    "valueField": "year2005"
-                }],
-                "plotAreaFillAlphas": 0.1,
-                "depth3D": 60,
-                "angle": 30,
-                "categoryField": "country",
-                "categoryAxis": {
-                    "gridPosition": "start"
-                },
-                "export": {
-                    "enabled": true
-                }
-            };
-        }
+		$scope.init();
 
-        function setTotalDefectsChartConfig() {
-            // console.log("total defects graphs");
-            $scope.chartConfig = {
-                "type": "serial",
-                "theme": "light",
-                "dataProvider": [{
-                    "country": "USA",
-                    "visits": 2025
-                }, {
-                    "country": "China",
-                    "visits": 1882
-                }, {
-                    "country": "Japan",
-                    "visits": 1809
-                }, {
-                    "country": "Germany",
-                    "visits": 1322
-                }, {
-                    "country": "UK",
-                    "visits": 1122
-                }, {
-                    "country": "France",
-                    "visits": 1114
-                }, {
-                    "country": "India",
-                    "visits": 984
-                }, {
-                    "country": "Spain",
-                    "visits": 711
-                }, {
-                    "country": "Netherlands",
-                    "visits": 665
-                }, {
-                    "country": "Russia",
-                    "visits": 580
-                }, {
-                    "country": "South Korea",
-                    "visits": 443
-                }, {
-                    "country": "Canada",
-                    "visits": 441
-                }, {
-                    "country": "Brazil",
-                    "visits": 395
-                }],
-                "valueAxes": [{
-                    "gridColor": "#FFFFFF",
-                    "gridAlpha": 0.2,
-                    "dashLength": 0
-                }],
-                "gridAboveGraphs": true,
-                "startDuration": 1,
-                "graphs": [{
-                    "balloonText": "[[category]]: <b>[[value]]</b>",
-                    "fillAlphas": 0.8,
-                    "lineAlpha": 0.2,
-                    "type": "column",
-                    "valueField": "visits"
-                }],
-                "chartCursor": {
-                    "categoryBalloonEnabled": false,
-                    "cursorAlpha": 0,
-                    "zoomable": false
-                },
-                "categoryField": "country",
-                "categoryAxis": {
-                    "gridPosition": "start",
-                    "gridAlpha": 0,
-                    "tickPosition": "start",
-                    "tickLength": 20
-                },
-                "export": {
-                    "enabled": true
-                }
-            };
-        }
-    }
+		function getAllProjectsList() {
+			return $scope.allProjectsList;
+		}
+
+		function setAllProjectsList(allProjectsList) {
+			$scope.allProjectsList = allProjectsList;
+		}
+
+		function getSelectedProject() {
+			return $scope.selectedProject;
+		}
+
+		function setSelectedProject(selectedProject) {
+			$scope.selectedProject = selectedProject;
+		}
+
+		function getAllReleasesListByProjectId() {
+			return $scope.allReleasesListByProjectId;
+		}
+
+		function setAllReleasesListByProjectId(allReleasesListByProjectId) {
+			$scope.allReleasesListByProjectId = allReleasesListByProjectId;
+		}
+
+		function getSelectedRelease() {
+			return $scope.selectedRelease;
+		}
+
+		function setSelectedRelease(selectedRelease) {
+			$scope.selectedRelease = selectedRelease;
+		}
+
+		function getReleaseDetailsDataByReleaseId() {
+			return $scope.releaseDetailsDataByReleaseId;
+		}
+
+		function setReleaseDetailsDataByReleaseId(releaseDetailsDataByReleaseId) {
+			$scope.releaseDetailsDataByReleaseId = releaseDetailsDataByReleaseId;
+		}
+
+		function init() {
+			$scope.fetchAllProjectsList();
+		}
+
+		function fetchAllProjectsList() {
+			PmoDashboardService.fetchAllProjectsList()
+				.then(function(response) {
+					$scope.setAllProjectsList(response.data);
+					$scope.setSelectedProject(response.data[0]);
+					$scope.fetchAllReleasesListByProjectId($scope.getSelectedProject());
+				})
+				.catch(function(errorResponse) {
+					$window.alert("error in getting project list");
+					console.log(errorResponse);
+				})
+				.finally(function() {
+					$log.info("finally of fetchAllProjectsList url call");
+				});
+		}
+
+		function fetchAllReleasesListByProjectId(selectedProject) {
+			PmoDashboardService.fetchAllReleasesListByProjectId(
+				selectedProject.projectId
+			)
+				.then(function(response) {
+					$scope.setAllReleasesListByProjectId(response.data);
+				})
+				.catch(function(errorResponse) {
+					$window.alert("error in getting releases");
+				})
+				.finally(function() {
+					$log.info("finally of fetchAllReleasesListByProjectId url call");
+				});
+		}
+
+		function fetchReleaseDetailsDataByReleaseId(selectedRelease) {
+			PmoDashboardService.fetchReleaseDetailsDataByReleaseId(
+				selectedRelease.releaseId
+			)
+				.then(function(response) {
+					$scope.setReleaseDetailsDataByReleaseId(response.data);
+				})
+				.catch(function(errorResponse) {
+					$window.alert("error in getting release Data");
+				})
+				.finally(function() {
+					$log.info("finally of getReleaseData url call");
+				});
+		}
+
+		function getDefectsData(release) {
+			$rootScope.release = release;
+			$scope.parentData = release;
+			$scope.$broadcast("getGraphData", $scope.parentData);
+		}
+	}
 })(window.angular, window.AmCharts);

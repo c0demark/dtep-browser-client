@@ -16,6 +16,7 @@
             "connect": true,
             "provision": false,
             "hasMetric": true,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -31,19 +32,26 @@
                 "form": "[\"instanceName\",\"url\",{\"key\":\"apiToken\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                 "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL:\",\"type\":\"string\",\"default\":\"https://rink.hockeyapp.net\"},\"apiToken\":{\"title\":\"APT Token:\",\"type\":\"string\",\"default\":\"ca486758c2c34c9297cc4d4d3f1062f2\"}},\"required\":[\"instanceName\",\"url\",\"apiToken\"]}"
             },
-            "provisionSchemaForm": { "form": "null", "schema": "null" },
+            "provisionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/c817d48cfd89421d91a528224080114e.png",
+            "iconURL": "/assets/icons/softwares/c817d48cfd89421d91a528224080114e.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         },
         {
             "createdBy": "M1035940@mindtree.com",
@@ -59,6 +67,7 @@
             "connect": true,
             "provision": false,
             "hasMetric": true,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -74,19 +83,79 @@
                 "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"apiToken\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                 "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL:\",\"type\":\"string\",\"default\":\"https://testcloud.xamarin.com\"},\"username\":{\"title\":\"Username:\",\"type\":\"string\",\"default\":\"sajit.bhargavan@mindtree.com\"},\"apiToken\":{\"title\":\"APT Token:\",\"type\":\"string\",\"default\":\"bcfb242f983fb8f685fe514084d23915\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"apiToken\"]}"
             },
-            "provisionSchemaForm": { "form": "null", "schema": "null" },
+            "provisionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/7678fa0e139344459ff95f15d47c40f2.png",
+            "iconURL": "/assets/icons/softwares/7678fa0e139344459ff95f15d47c40f2.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
+        },
+        {
+            "createdBy": "M1035940@mindtree.com",
+            "createdOn": 1512025430249,
+            "lastUpadateBy": "M1035940@mindtree.com",
+            "lastUpdatedOn": 1512638327103,
+            "score": 0.0,
+            "id": "5a1fad563ac2cd710304ac02",
+            "softwareName": "Perfecto",
+            "softwareCode": "SWce2fe59f9e344c91812eb943998312ec",
+            "description": "Perfecto is a cloud-based platform for web, mobile and IoT software testing.",
+            "clazz": "com.mindtree.cape.engine.gateway.service.testautomation.PerfectoServiceImpl",
+            "connect": true,
+            "provision": false,
+            "hasMetric": true,
+            "isAccessible": null,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "MAT",
+            "componentName": null,
+            "type": null,
+            "vmId": null,
+            "properties": {
+
+            },
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",\"url\",\"swProjectName\",{\"key\":\"securityToken\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL:\",\"type\":\"string\",\"default\":\"https://lfg.perfectomobile.com\"},\"swProjectName\":{\"title\":\"Project Name:\",\"type\":\"string\",\"default\":\"Web Demo Suite\"},\"securityToken\":{\"title\":\"Security Token:\",\"type\":\"string\",\"default\":\"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiZDcwZTU4NS1kODcxLTQ2OWItODhjMi02ZTA3ZDBjZTQ0MTYiLCJleHAiOjAsIm5iZiI6MCwiaWF0IjoxNTA5NDMzMTIzLCJpc3MiOiJodHRwczovL2F1dGgucGVyZmVjdG9tb2JpbGUuY29tL2F1dGgvcmVhbG1zL2xmZy1wZXJmZWN0b21vYmlsZS1jb20iLCJhdWQiOiJvZmZsaW5lLXRva2VuLWdlbmVyYXRvciIsInN1YiI6ImEwN2ZjODdlLTQxNDMtNDRjNS1iYzIyLTU0OWNmOGEzZWNlYyIsInR5cCI6Ik9mZmxpbmUiLCJhenAiOiJvZmZsaW5lLXRva2VuLWdlbmVyYXRvciIsIm5vbmNlIjoiOTNmOGQwYjQtYjI0NS00ZTlkLThmODYtZjAzZjZlNTk3NzExIiwic2Vzc2lvbl9zdGF0ZSI6ImZiODYxYmVmLTZmODMtNDQzNS04MWViLWU0NTQ2MjU5YjUyOCIsImNsaWVudF9zZXNzaW9uIjoiYjJlN2NhZGEtMWQ4My00MmY2LTg4Y2QtNGM3YjQ0OWFiNTcwIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX19.TWdyEz-ACqUxnYY2Vuith83P5K7pp9Bsui4o4rxBrmd2rpqOgxZKiLX1nIhB9wpHj9-6nmroMR-0S_jXe2IFhY_joLLv36tDfLfg9DuDUimedAtEWs0m_n5TW9dzAimW1eoE3CZQPvv_CjYAUf4VfF7-yuFzh6rMw0qH3Zq-AVM1S6ZzH4tYpGFmIaZEIu3r7ikGfZkB9FnUahwX0ni4TT6nwtge0iJgmajBs_tbwN9e6RdxzD1cjpAkluqq_dsudRXm8UORR3W8P5mMwOj_LlsYd12NFoPgqCWPCzkjAk2EORuHbdxH-mRc1tM_DYFYQZj5047gxNSRoPnuvKh5FQ\"}},\"required\":[\"instanceName\",\"url\",\"swProjectName\",\"securityToken\"]}"
+            },
+            "provisionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
+            "integrations": null,
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/ce2fe59f9e344c91812eb943998312ec.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         }
     ]
 }

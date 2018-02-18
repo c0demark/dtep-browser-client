@@ -1,0 +1,707 @@
+[{
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1030385@mindtree.com",
+        "lastUpdatedOn": 1513503770157,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c200",
+        "orgCode": "ORG000001",
+        "componentCode": "WBS",
+        "componentName": "Web Server",
+        "componentType": "LOGICAL",
+        "categories": [
+            "SERVER"
+        ],
+        "softwares": [
+            "Apache Server",
+            "Nginx",
+            "Chef Nginx",
+            "test",
+            "test1"
+        ],
+        "iconURL": "/icons/web-server.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507880142222,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c202",
+        "orgCode": "ORG000001",
+        "componentCode": "DBS",
+        "componentName": "Database Server",
+        "componentType": "LOGICAL",
+        "categories": [
+            "SERVER"
+        ],
+        "softwares": [
+            "MySql 5.6",
+            "MySQL - UMDS",
+            "MongoDB",
+            "Chef MongoDB",
+            "Informatica Server"
+        ],
+        "iconURL": "/icons/database-server.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1035936@mindtree.com",
+        "lastUpdatedOn": 1516256525041,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c203",
+        "orgCode": "ORG000001",
+        "componentCode": "CMT",
+        "componentName": "Configuration Management",
+        "componentType": "LOGICAL",
+        "categories": [
+            "CONFIG"
+        ],
+        "softwares": [
+            "Chef - UMA",
+            "Puppet Infra",
+            "Puppet Server",
+            "Puppet Agent",
+            "Terraform"
+        ],
+        "iconURL": "/icons/config-management.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1035936@mindtree.com",
+        "lastUpdatedOn": 1516745210549,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c204",
+        "orgCode": "ORG000001",
+        "componentCode": "IUT",
+        "componentName": "Infrastructure Utility",
+        "componentType": "LOGICAL",
+        "categories": [
+            "CONFIG"
+        ],
+        "softwares": [
+            "SSH Key",
+            "MWatch",
+            "Metric Beats",
+            "Google Cloud Platform",
+            "Instance",
+            "Load Balancer"
+        ],
+        "iconURL": "/icons/infra-utility.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507888230622,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c205",
+        "orgCode": "ORG000001",
+        "componentCode": "AMT",
+        "componentName": "Application Monitoring",
+        "componentType": "LOGICAL",
+        "categories": [
+            "RUN"
+        ],
+        "softwares": [
+            "Zabbix",
+            "Splunk",
+            "Nagios",
+            "Dynatrace"
+        ],
+        "iconURL": "/icons/application-monitoring.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "kasi",
+        "lastUpdatedOn": 1506579265509,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c206",
+        "orgCode": "ORG000001",
+        "componentCode": "APM",
+        "componentName": "Performance Monitoring",
+        "componentType": "LOGICAL",
+        "categories": [
+
+        ],
+        "softwares": [
+            "AppDynamics",
+            "MS System Center Operations Manager",
+            "PWatch",
+            "PRTG"
+        ],
+        "iconURL": "/icons/app-performance.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1035870@mindtree.com",
+        "lastUpdatedOn": 1509103723443,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c208",
+        "orgCode": "ORG000001",
+        "componentCode": "VSC",
+        "componentName": "Version Control",
+        "componentType": "LOGICAL",
+        "categories": [
+            "BUILD"
+        ],
+        "softwares": [
+            "Subversion",
+            "Bitbucket",
+            "GitHub",
+            "GitLab",
+            "VS Code Repository"
+        ],
+        "iconURL": "/icons/version-control.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1036017@mindtree.com",
+        "lastUpdatedOn": 1516360914452,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c209",
+        "orgCode": "ORG000001",
+        "componentCode": "CIG",
+        "componentName": "Continuous Integration",
+        "componentType": "LOGICAL",
+        "categories": [
+            "BUILD"
+        ],
+        "softwares": [
+            "TFS 2015",
+            "TFS 2012",
+            "Jenkins",
+            "Chef Jenkins",
+            "Jenkins Connect",
+            "VSTS",
+            "Concourse",
+            "Jenkins 2.7"
+        ],
+        "iconURL": "/icons/continuous-integration.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507880162306,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c20a",
+        "orgCode": "ORG000001",
+        "componentCode": "BDT",
+        "componentName": "Build Tool",
+        "componentType": "LOGICAL",
+        "categories": [
+            "BUILD"
+        ],
+        "softwares": [
+            "Maven Jenkins",
+            "MSBuild",
+            "VSBuild",
+            "Push Artifact",
+            "Ant",
+            "Chef Ant",
+            "Gulp",
+            "Post SCM Script",
+            "Webpack",
+            "Windows Powershell",
+            "VS Test",
+            "Xamarin Build",
+            "NuGet Pack",
+            "Sign Apk",
+            "Windows Batch Commands"
+        ],
+        "iconURL": "/icons/build-tool.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507880205810,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c20b",
+        "orgCode": "ORG000001",
+        "componentCode": "CQL",
+        "componentName": "Code Quality",
+        "componentType": "LOGICAL",
+        "categories": [
+            "BUILD"
+        ],
+        "softwares": [
+            "SonarQube 6.0"
+        ],
+        "iconURL": "/icons/code-quality.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507880184069,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c20c",
+        "orgCode": "ORG000001",
+        "componentCode": "ARR",
+        "componentName": "Repository Manager",
+        "componentType": "LOGICAL",
+        "categories": [
+            "BUILD"
+        ],
+        "softwares": [
+            "ProGet",
+            "Artifactory"
+        ],
+        "iconURL": "/icons/artifact-repository.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1035940@mindtree.com",
+        "lastUpdatedOn": 1508921728347,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c20d",
+        "orgCode": "ORG000001",
+        "componentCode": "ARA",
+        "componentName": "Release Manager",
+        "componentType": "LOGICAL",
+        "categories": [
+            "DEPLOY"
+        ],
+        "softwares": [
+            "Octopus Deploy",
+            "Puppet",
+            "Octopus Tentacle",
+            "Octopus Environment",
+            "Chef",
+            "XL Release",
+            "XL Deploy"
+        ],
+        "iconURL": "/icons/release-manager.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507880227272,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c20e",
+        "orgCode": "ORG000001",
+        "componentCode": "NMG",
+        "componentName": "Notification Manager",
+        "componentType": "LOGICAL",
+        "categories": [
+            "BUILD"
+        ],
+        "softwares": [
+            "Email Notification"
+        ],
+        "iconURL": "/icons/notification-manger.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "kasi",
+        "lastUpdatedOn": 1506579159404,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c20f",
+        "orgCode": "ORG000001",
+        "componentCode": "UIT",
+        "componentName": "UI Testing",
+        "componentType": "LOGICAL",
+        "categories": [
+
+        ],
+        "softwares": [
+            "UILite"
+        ],
+        "iconURL": "/icons/ui-testing.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507880333431,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c210",
+        "orgCode": "ORG000001",
+        "componentCode": "WST",
+        "componentName": "Service Testing",
+        "componentType": "LOGICAL",
+        "categories": [
+            "TEST"
+        ],
+        "softwares": [
+            "SoapUI"
+        ],
+        "iconURL": "/icons/web-service-testing.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "kasi",
+        "lastUpdatedOn": 1508921118899,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c211",
+        "orgCode": "ORG000001",
+        "componentCode": "WAT",
+        "componentName": "Application Testing",
+        "componentType": "LOGICAL",
+        "categories": [
+            "TEST"
+        ],
+        "softwares": [
+            "MIST",
+            "JUint",
+            "HP UFT",
+            "Robot Framework",
+            "Selenium Hybrid Framework"
+        ],
+        "iconURL": "/icons/web-app-testing.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1035940@mindtree.com",
+        "lastUpdatedOn": 1512025430250,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c212",
+        "orgCode": "ORG000001",
+        "componentCode": "MAT",
+        "componentName": "Mobile App Testing",
+        "componentType": "LOGICAL",
+        "categories": [
+            "TEST"
+        ],
+        "softwares": [
+            "Xamarin test cloud",
+            "HockeyApp",
+            "Perfecto"
+        ],
+        "iconURL": "/icons/mobile-app-testing.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507880315584,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c214",
+        "orgCode": "ORG000001",
+        "componentCode": "PTT",
+        "componentName": "Performance Test",
+        "componentType": "LOGICAL",
+        "categories": [
+            "TEST"
+        ],
+        "softwares": [
+
+        ],
+        "iconURL": "/icons/performance-test.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "m1030385@mindtree.com",
+        "lastUpdatedOn": 1511756486407,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c215",
+        "orgCode": "ORG000001",
+        "componentCode": "JSC",
+        "componentName": "Automation Service",
+        "componentType": "LOGICAL",
+        "categories": [
+            "RUN"
+        ],
+        "softwares": [
+            "Issue Analyser",
+            "Rundeck",
+            "HP SAW"
+        ],
+        "iconURL": "/icons/orchestrator.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507884663567,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c216",
+        "orgCode": "ORG000001",
+        "componentCode": "MLN",
+        "componentName": "Machine Learning",
+        "componentType": "LOGICAL",
+        "categories": [
+            "RUN"
+        ],
+        "softwares": [
+            "ML Hub"
+        ],
+        "iconURL": "/icons/machine-learning.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507884639228,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c217",
+        "orgCode": "ORG000001",
+        "componentCode": "RPA",
+        "componentName": "Robotic Process Automation",
+        "componentType": "LOGICAL",
+        "categories": [
+            "RUN"
+        ],
+        "softwares": [
+            "Automation Anywhere"
+        ],
+        "iconURL": "/icons/robotic-process.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507884598019,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c218",
+        "orgCode": "ORG000001",
+        "componentCode": "TKS",
+        "componentName": "IT Service Management",
+        "componentType": "LOGICAL",
+        "categories": [
+            "PLAN"
+        ],
+        "softwares": [
+            "Remedyforce",
+            "ServiceNow",
+            "ServiceNow Incident Analyser",
+            "Duck Creek Server"
+        ],
+        "iconURL": "/icons/service-management.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507884697420,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c21b",
+        "orgCode": "ORG000001",
+        "componentCode": "ANP",
+        "componentName": "Data Analytics",
+        "componentType": "LOGICAL",
+        "categories": [
+            "RUN"
+        ],
+        "softwares": [
+            "Elastic Stack"
+        ],
+        "iconURL": "/icons/performance-test.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": null,
+        "lastUpdatedOn": null,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c21c",
+        "orgCode": "ORG000001",
+        "componentCode": "OPM",
+        "componentName": "VM Connect",
+        "componentType": "PHYSICAL",
+        "categories": [
+            "Virtual Machines"
+        ],
+        "softwares": [
+            "Ubuntu Server",
+            "RHEL Server",
+            "Windows Server"
+        ],
+        "iconURL": "/icons/VM.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": null,
+        "lastUpdatedOn": null,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c21d",
+        "orgCode": "ORG000001",
+        "componentCode": "MSA",
+        "componentName": "Azure",
+        "componentType": "PHYSICAL",
+        "categories": [
+            "Virtual Machines"
+        ],
+        "softwares": [
+            "Ubuntu Server",
+            "RHEL Server",
+            "Windows Server"
+        ],
+        "iconURL": "/icons/AZURE.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1508921598538,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c21e",
+        "orgCode": "ORG000001",
+        "componentCode": "AWS",
+        "componentName": "AWS",
+        "componentType": "PHYSICAL",
+        "categories": [
+            "Virtual Machines"
+        ],
+        "softwares": [
+            "Ubuntu Server",
+            "RHEL Server",
+            "Windows Server"
+        ],
+        "iconURL": "/icons/AWS.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507884541656,
+        "score": 0.0,
+        "id": "5914378e2a65dc81446c58da",
+        "orgCode": "ORG000001",
+        "componentCode": "SST",
+        "componentName": "Security Testing",
+        "componentType": "LOGICAL",
+        "categories": [
+            "TEST"
+        ],
+        "softwares": [
+            "ZAP Jenkins Pipeline",
+            "OWASP ZAP",
+            "WhiteSource Bolt"
+        ],
+        "iconURL": "/icons/security-scan.svg"
+    },
+    {
+        "createdBy": "dev",
+        "createdOn": 1499328100332,
+        "lastUpadateBy": "M1035936@mindtree.com",
+        "lastUpdatedOn": 1513515926373,
+        "score": 0.0,
+        "id": "595dee643ac2cd4ad27aa801",
+        "orgCode": "ORG000001",
+        "componentCode": "ORC",
+        "componentName": "Container Management",
+        "componentType": "LOGICAL",
+        "categories": [
+            "CONFIG"
+        ],
+        "softwares": [
+            "Docker Swarm",
+            "Docker Registry"
+        ],
+        "iconURL": "/icons/container-orchestrator.svg"
+    },
+    {
+        "createdBy": "M1026343@mindtree.com",
+        "createdOn": 1506604251530,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507884488256,
+        "score": 0.0,
+        "id": "59ccf4db3ac2cd932d60e016",
+        "orgCode": "ORG000001",
+        "componentCode": "CMPcf26d25b852d400aa2efc7456b71c3d6",
+        "componentName": "Runtime",
+        "componentType": "LOGICAL",
+        "categories": [
+            "SERVER"
+        ],
+        "softwares": [
+            "Oracle JDK 8"
+        ],
+        "iconURL": "/icons/config-management.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507879816867,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c201",
+        "orgCode": "ORG000001",
+        "componentCode": "APS",
+        "componentName": "Application Server",
+        "componentType": "LOGICAL",
+        "categories": [
+            "SERVER"
+        ],
+        "softwares": [
+            "Tomcat 9.0",
+            "Microsoft IIS",
+            "JBoss Wildfly",
+            "WAS",
+            "Tomcat 8.5",
+            "Application Host"
+        ],
+        "iconURL": "/icons/application-server.svg"
+    },
+    {
+        "createdBy": null,
+        "createdOn": null,
+        "lastUpadateBy": "M1035940@mindtree.com",
+        "lastUpdatedOn": 1509689511780,
+        "score": 0.0,
+        "id": "58e61cbf6f6931b2f499c219",
+        "orgCode": "ORG000001",
+        "componentCode": "ALM",
+        "componentName": "Requirements Management",
+        "componentType": "LOGICAL",
+        "categories": [
+            "PLAN"
+        ],
+        "softwares": [
+            "JIRA",
+            "VersionOne"
+        ],
+        "iconURL": "/icons/application-lifecycle.svg"
+    },
+    {
+        "createdBy": "M1036017@mindtree.com",
+        "createdOn": 1516686077189,
+        "lastUpadateBy": "M1036017@mindtree.com",
+        "lastUpdatedOn": 1516686077189,
+        "score": 0.0,
+        "id": "5a66cafd3ac2cd03fbb95c09",
+        "orgCode": "ORG000001",
+        "componentCode": "CMP425b604ff80c41c4ab5f377af35295fd",
+        "componentName": "test",
+        "componentType": "LOGICAL",
+        "categories": [
+            "UI Testing"
+        ],
+        "softwares": null,
+        "iconURL": "/icons/425b604ff80c41c4ab5f377af35295fd.jpg"
+    },
+    {
+        "createdBy": "engineering@cape.com",
+        "createdOn": 1514874111677,
+        "lastUpadateBy": "M1035870@mindtree.com",
+        "lastUpdatedOn": 1516257591797,
+        "score": 0.0,
+        "id": "5a4b24ff3ac2cd04e5530522",
+        "orgCode": "ORG000001",
+        "componentCode": "CMPed3413e311d84bb69d7f3998eb9c92a5",
+        "componentName": "Data Visualizor",
+        "componentType": "LOGICAL",
+        "categories": [
+            "PLAN"
+        ],
+        "softwares": [
+            "Visualize Excel"
+        ],
+        "iconURL": "/icons/ed3413e311d84bb69d7f3998eb9c92a5.jpg"
+    }
+]

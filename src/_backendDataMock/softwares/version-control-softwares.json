@@ -5,8 +5,61 @@
     "softwares": [{
             "createdBy": null,
             "createdOn": null,
-            "lastUpadateBy": "M1037707@mindtree.com",
-            "lastUpdatedOn": 1510739492879,
+            "lastUpadateBy": "M1000668@mindtree.com",
+            "lastUpdatedOn": 1511758861208,
+            "score": 0.0,
+            "id": "5859047573942af3bd4c4767",
+            "softwareName": "Subversion",
+            "softwareCode": "SBVN",
+            "description": "Software versioning and revision control system distributed as open source under the Apache License.",
+            "clazz": "com.mindtree.cape.engine.gateway.service.SvnServiceImpl",
+            "connect": true,
+            "provision": false,
+            "hasMetric": true,
+            "isAccessible": null,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "VSC",
+            "componentName": "Version Control",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"Repository URL:\",\"type\":\"string\",\"default\":\"https://svn.riouxsvn.com/nfum-demo\"},\"username\":{\"title\":\"Username:\",\"type\":\"string\",\"default\":\"boban42\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"welcome123\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"password\"]}"
+            },
+            "provisionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
+            "integrations": [
+
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/edb3154f4a6f420c916d394a228cdb85.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
+        },
+        {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1036017@mindtree.com",
+            "lastUpdatedOn": 1513765330702,
             "score": 0.0,
             "id": "5859047573942af3bd4c4779",
             "softwareName": "Bitbucket",
@@ -16,6 +69,7 @@
             "connect": true,
             "provision": false,
             "hasMetric": true,
+            "isAccessible": null,
             "hasAction": true,
             "hasClients": false,
             "clientSoftwareName": null,
@@ -31,25 +85,32 @@
                 "form": "[\"instanceName\",{\"key\":\"bbType\",\"type\":\"radios\",\"titleMap\":[{\"value\":\"server\",\"name\":\"Bitbucket Server\"},{\"value\":\"cloud\",\"name\":\"Bitbucket Cloud\"}]},\"url\",\"username\",\"projectKey\",\"repository\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                 "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"Repository URL:\",\"type\":\"string\",\"default\":\"https://zaidw21@bitbucket.org/zaidw21/test-repo\"},\"bbType\":{\"title\":\"Select tool type\",\"type\":\"string\",\"enum\":[\"server\",\"cloud\"],\"default\":\"cloud\"},\"username\":{\"title\":\"Username:\",\"type\":\"string\",\"default\":\"zaidw21@gmail.com\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"me@mindtree\"},\"projectKey\":{\"title\":\"Project Key:\",\"type\":\"string\",\"default\":\"zaidw21\"},\"repository\":{\"title\":\"Repository:\",\"type\":\"string\",\"default\":\"test-repo\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"bbType\",\"projectKey\",\"repository\",\"password\"]}"
             },
-            "provisionSchemaForm": { "form": "null", "schema": "null" },
+            "provisionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/27fcd22ef457480585848d03f7e101c5.png",
+            "iconURL": "/assets/icons/softwares/27fcd22ef457480585848d03f7e101c5.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         },
         {
             "createdBy": null,
             "createdOn": null,
-            "lastUpadateBy": "M1037707@mindtree.com",
-            "lastUpdatedOn": 1510739411258,
+            "lastUpadateBy": "M1036017@mindtree.com",
+            "lastUpdatedOn": 1513765213521,
             "score": 0.0,
             "id": "585cc6fbf1360eab578b4116",
             "softwareName": "GitHub",
@@ -59,6 +120,7 @@
             "connect": true,
             "provision": false,
             "hasMetric": true,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -72,21 +134,152 @@
             "vmProperties": null,
             "connectionSchemaForm": {
                 "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
-                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"Repository URL\",\"type\":\"string\",\"default\":\"https://github.com/cape-man/JavaSampleProject.git\"},\"username\":{\"title\":\"Username\",\"type\":\"string\",\"default\":\"cape-man\"},\"password\":{\"title\":\"Access Token\",\"type\":\"string\",\"default\":\"5a2233f08564206d6a72eaa21b7ee648041e11c2\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"password\",\"apiToken\"]}"
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"Repository URL\",\"type\":\"string\",\"default\":\"https://github.com/cape-man/JavaSampleProject.git\"},\"username\":{\"title\":\"Username\",\"type\":\"string\",\"default\":\"cape-man\"},\"password\":{\"title\":\"Access Token\",\"type\":\"string\",\"default\":\"70c4c03afb8eb2c9e8526a9f4aeb99e8644e39c6\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"password\",\"apiToken\"]}"
             },
-            "provisionSchemaForm": { "form": "null", "schema": "null" },
-            "integrations": [],
+            "provisionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
+            "integrations": [
+
+            ],
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/513cd93dc71b4794a2f4231568672816.png",
+            "iconURL": "/assets/icons/softwares/513cd93dc71b4794a2f4231568672816.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": {
+                "metrics": [{
+                        "metricCode": "SYSTEM_LOAD_GRAPH",
+                        "label": "System Load",
+                        "filter": null,
+                        "axis": {
+                            "x": {
+                                "label": "Days",
+                                "type": "timeseries",
+                                "tick": {
+                                    "format": "%b %d",
+                                    "count": 5
+                                }
+                            },
+                            "y": {
+                                "label": "Load"
+                            }
+                        },
+                        "type": "line",
+                        "types": null,
+                        "colors": {
+                            "System Load": "#66BBBB"
+                        },
+                        "leftHeading": null,
+                        "headers": null,
+                        "bindTo": null,
+                        "sizeX": "4",
+                        "sizeY": "2",
+                        "row": null,
+                        "column": null,
+                        "refreshTimeInMillisec": 60000,
+                        "filterPayload": {
+                            "canvasCode": "CNVS3fd13e1cdf114918b9a8a14cd0825ca3",
+                            "type": "provision",
+                            "machineDNS": "cape-test.southeastasia.cloudapp.azure.com",
+                            "filter": {
+                                "period": "ONE_WEEK"
+                            }
+                        }
+                    },
+                    {
+                        "metricCode": "DISK_USAGE_GRAPH",
+                        "label": "Disk Usage Trend",
+                        "filter": null,
+                        "axis": {
+                            "x": {
+                                "label": "Days",
+                                "type": "timeseries",
+                                "tick": {
+                                    "format": "%b %d",
+                                    "count": 5
+                                }
+                            },
+                            "y": {
+                                "label": "GB"
+                            }
+                        },
+                        "type": "line",
+                        "types": null,
+                        "colors": {
+                            "Disk Usage": "#66BBBB"
+                        },
+                        "leftHeading": null,
+                        "headers": null,
+                        "bindTo": null,
+                        "sizeX": "4",
+                        "sizeY": "2",
+                        "row": null,
+                        "column": null,
+                        "refreshTimeInMillisec": 60000,
+                        "filterPayload": {
+                            "canvasCode": "CNVS3fd13e1cdf114918b9a8a14cd0825ca3",
+                            "type": "provision",
+                            "machineDNS": "cape-test.southeastasia.cloudapp.azure.com",
+                            "filter": {
+                                "period": "ONE_WEEK"
+                            }
+                        }
+                    },
+                    {
+                        "metricCode": "PROCESS_COUNT_GRAPH",
+                        "label": "Process Count",
+                        "axis": {
+                            "x": {
+                                "label": "Days",
+                                "type": "timeseries",
+                                "tick": {
+                                    "format": "%b %d",
+                                    "count": 5
+                                }
+                            },
+                            "y": {
+                                "label": "Count"
+                            }
+                        },
+                        "type": "line",
+                        "types": null,
+                        "colors": {
+                            "Process Count": "#66BBBB"
+                        },
+                        "leftHeading": null,
+                        "headers": null,
+                        "bindTo": null,
+                        "sizeX": "4",
+                        "sizeY": "2",
+                        "row": null,
+                        "column": null,
+                        "refreshTimeInMillisec": 60000,
+                        "filterPayload": {
+                            "canvasCode": "CNVS3fd13e1cdf114918b9a8a14cd0825ca3",
+                            "type": "provision",
+                            "machineDNS": "cape-test.southeastasia.cloudapp.azure.com",
+                            "filter": {
+                                "period": "ONE_WEEK"
+                            }
+                        }
+                    }
+                ],
+                "globalFilter": {
+                    "period": "ONE_WEEK",
+                    "clazz": "com.mindtree.cape.analytics.gatway.service.MachineMetricServiceImpl"
+                }
+            },
+            "visualize": false
         },
         {
             "createdBy": null,
@@ -102,6 +295,7 @@
             "connect": true,
             "provision": false,
             "hasMetric": true,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -117,62 +311,28 @@
                 "form": "[\"instanceName\",\"url\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                 "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"Repository URL\",\"type\":\"string\",\"default\":\"https://M1037707@git-cto.mindtree.com/cape/cape-platform.git\"},\"password\":{\"title\":\"Access Token:\",\"type\":\"string\",\"default\":\"Ps_z9U721rYdxSd98mHr\"}},\"required\":[\"instanceName\",\"url\",\"password\"]}"
             },
-            "provisionSchemaForm": { "form": "null", "schema": "null" },
-            "integrations": [],
-            "isConnect": null,
-            "isProvision": null,
-            "iconURL": "/icons/1918212394cd42859fb33bfbc76a6cb9.png",
-            "applicationURL": null,
-            "baseURL": null,
-            "finalURL": null,
-            "status": null,
-            "isExecuting": null,
-            "requestId": null,
-            "actionList": null,
-            "metricList": null
-        },
-        {
-            "createdBy": null,
-            "createdOn": null,
-            "lastUpadateBy": "m1035984@mindtree.com",
-            "lastUpdatedOn": 1511524403240,
-            "score": 0.0,
-            "id": "5859047573942af3bd4c4767",
-            "softwareName": "Subversion",
-            "softwareCode": "SBVN",
-            "description": "Software versioning and revision control system distributed as open source under the Apache License.",
-            "clazz": "com.mindtree.cape.engine.gateway.service.SvnServiceImpl",
-            "connect": true,
-            "provision": false,
-            "hasMetric": true,
-            "hasAction": false,
-            "hasClients": null,
-            "clientSoftwareName": null,
-            "orgCode": "ORG000001",
-            "componentCode": "VSC",
-            "componentName": "Version Control",
-            "type": null,
-            "vmId": null,
-            "properties": null,
-            "installationProperties": null,
-            "vmProperties": null,
-            "connectionSchemaForm": {
-                "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
-                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"Repository URL:\",\"type\":\"string\",\"default\":\"https://svn.riouxsvn.com/nfum-demo\"},\"username\":{\"title\":\"Username:\",\"type\":\"string\",\"default\":\"boban42\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"password\"]}"
+            "provisionSchemaForm": {
+                "form": "null",
+                "schema": "null"
             },
-            "provisionSchemaForm": { "form": "null", "schema": "null" },
-            "integrations": [],
+            "integrations": [
+
+            ],
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/edb3154f4a6f420c916d394a228cdb85.png",
+            "iconURL": "/assets/icons/softwares/1918212394cd42859fb33bfbc76a6cb9.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         },
         {
             "createdBy": "M1035870@mindtree.com",
@@ -188,6 +348,7 @@
             "connect": false,
             "provision": false,
             "hasMetric": false,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -196,7 +357,9 @@
             "componentName": null,
             "type": null,
             "vmId": null,
-            "properties": {},
+            "properties": {
+
+            },
             "installationProperties": null,
             "vmProperties": null,
             "connectionSchemaForm": null,
@@ -204,15 +367,19 @@
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/154eac107c014fe2a7fccdd5ac20f53e.png",
+            "iconURL": "/assets/icons/softwares/154eac107c014fe2a7fccdd5ac20f53e.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         }
     ]
 }

@@ -1,0 +1,158 @@
+{
+    "orgCode": "ORG000004",
+    "componentCode": "ALM",
+    "componentName": null,
+    "softwares": [{
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "m1035984@mindtree.com",
+            "lastUpdatedOn": 1511523379004,
+            "score": 0.0,
+            "id": "5859047573942af3bd4c4775",
+            "softwareName": "JIRA",
+            "softwareCode": "JIRA",
+            "description": "JIRA provides bug tracking, issue tracking, and project management functions.",
+            "clazz": "com.mindtree.cape.engine.gateway.service.JiraServiceImpl",
+            "connect": true,
+            "provision": false,
+            "hasMetric": true,
+            "hasAction": false,
+            "hasClients": false,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "ALM",
+            "componentName": "Requirements Management",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},\"project\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL:\",\"type\":\"string\",\"default\":\"https://capedevtracking.atlassian.net\"},\"username\":{\"title\":\"Username:\",\"type\":\"string\",\"default\":\"indiracapecs@gmail.com\"},\"project\":{\"title\":\"Project Name:\",\"type\":\"string\",\"default\":\"CAPE\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"me@mindtree\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"project\",\"password\"]}"
+            },
+            "provisionSchemaForm": { "form": "null", "schema": "null" },
+            "integrations": [{
+                    "id": null,
+                    "softwareCode": "GITH",
+                    "softwareName": "GitHub",
+                    "description": "JIRA automatically creates branch in Git.",
+                    "iconURL": "/assets/icons/softwares/513cd93dc71b4794a2f4231568672816.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"JIRA\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"GitHub\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Creates Branch\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": null
+                },
+                {
+                    "id": null,
+                    "softwareCode": "SEVSN",
+                    "softwareName": "ServiceNow",
+                    "description": "Provides service management for the enterprise including IT, human resources, facilities and field service.",
+                    "iconURL": "/assets/icons/softwares/c86a26323f0a4b75a8912bd9d42d98be.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"JIRA\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"ServiceNow\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Creates Incident\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": null
+                },
+                {
+                    "id": null,
+                    "softwareCode": "BITB",
+                    "softwareName": "Bitbucket",
+                    "description": "JIRA automatically creates branch in Bitbucket.",
+                    "iconURL": "/assets/icons/softwares/27fcd22ef457480585848d03f7e101c5.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"JIRA\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"Bitbucket\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Creates Branch\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "STF",
+                    "softwareName": "Selenium",
+                    "description": "Test automation",
+                    "iconURL": "/assets/icons/softwares/ce6cd974d7d64d19b7493114f8757020.png",
+                    "integrationSchemaForm": { "form": null, "schema": null },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "APDY",
+                    "softwareName": "AppDynamics",
+                    "description": "Performance Monitoring and Management",
+                    "iconURL": "/assets/icons/softwares/7614eeab175b4f54a85788b52913e906.png",
+                    "integrationSchemaForm": { "form": null, "schema": null },
+                    "properties": {}
+                },
+                {
+                    "id": null,
+                    "softwareCode": "UFT",
+                    "softwareName": "HP UFT",
+                    "description": "Integration",
+                    "iconURL": "/assets/icons/softwares/85af5d5c765544a6b5034332c52614cc.png",
+                    "integrationSchemaForm": {
+                        "form": "[\"source\",\"destination\",\"label\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                        "schema": "{\"type\":\"object\",\"properties\":{\"source\":{\"title\":\"Source\",\"type\":\"string\",\"readonly\":true,\"default\":\"JIRA\"},\"destination\":{\"title\":\"Destination\",\"type\":\"string\",\"readonly\":true,\"default\":\"HP UFT\"},\"label\":{\"title\":\"Label\",\"type\":\"string\",\"default\":\"Integration\"}},\"required\":[\"source\",\"destination\",\"label\"]}"
+                    },
+                    "properties": {}
+                }
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/76fb1202c6324ef5ab88fc57e39b7afe.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        },
+        {
+            "createdBy": "M1035940@mindtree.com",
+            "createdOn": 1509689511779,
+            "lastUpadateBy": "M1035940@mindtree.com",
+            "lastUpdatedOn": 1509706572872,
+            "score": 0.0,
+            "id": "59fc08a73ac2cdf6f5fcf8ee",
+            "softwareName": "VersionOne",
+            "softwareCode": "SW964f696407b3446881beae175820d06d",
+            "description": "VersionOne is a formidable Agile management solution that is both comprehensive and versatile and developed for teams and projects of various scope and size.",
+            "clazz": "com.mindtree.cape.engine.gateway.service.VersionOneServiceImpl",
+            "connect": true,
+            "provision": false,
+            "hasMetric": true,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "ALM",
+            "componentName": null,
+            "type": null,
+            "vmId": null,
+            "properties": {},
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",\"url\",\"username\",{\"key\":\"password\",\"type\":\"password\"},{\"key\":\"apiToken\",\"type\":\"password\"},\"scopeName\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL:\",\"type\":\"string\",\"default\":\"https://www53.v1host.com/Mindtree/\"},\"username\":{\"title\":\"Username:\",\"type\":\"string\",\"default\":\"Indira.Cs\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"Mind@123\"},\"apiToken\":{\"title\":\"API Token:\",\"type\":\"string\",\"default\":\"1.xigM7kRtXDYndWRhQIFeNC1HVww=\"},\"scopeName\":{\"title\":\"Project Name:\",\"type\":\"string\",\"default\":\"Sample: Release 1.0\"}},\"required\":[\"instanceName\",\"url\",\"username\",\"password\",\"apiToken\",\"scopeName\"]}"
+            },
+            "provisionSchemaForm": { "form": "null", "schema": "null" },
+            "integrations": null,
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/964f696407b3446881beae175820d06d.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null
+        }
+    ]
+}

@@ -24,14 +24,14 @@
         $uibModalInstance,
         $state
     ) {
-        $scope.closeNewUserRegistrationModal = closeNewUserRegistrationModal;
-        $scope.dismissNewUserRegistrationModal = dismissNewUserRegistrationModal;
+        $scope.closeModal = closeModal;
+        $scope.dismissModal = dismissModal;
 
-        function closeNewUserRegistrationModal() {
+        function closeModal() {
             $uibModalInstance.close("closed modal");
         }
 
-        function dismissNewUserRegistrationModal() {
+        function dismissModal() {
             $uibModalInstance.dismiss("dismissed modal");
         }
     }

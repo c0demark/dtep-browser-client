@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<div>
+	<header class="modal-header">
+		<button class="badge close" type="button" data-ng-click="dismissModal()">
+			<span class="sr-only">Close&nbsp;Dialog</span>
+			<i class="fa fa-close" aria-hidden="true"></i>
+		</button>
+		<h4 class="modal-title text-center" id="dtep-curate-project-software-connect-form-modal-title" data-ng-bind="$parent.selectedSoftware.softwareName"></h4>
+	</header>
+	<main class="modal-body" id="dtep-curate-project-software-provision-form-modal-body">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+				<div data-ng-click="dismissModal()">
+					<i class="fa fa-arrow-left" aria-hidden="true"></i>
+					<span>Go&nbsp;Back</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<form class="form-group" name="connectForm" novalidate="novalidate">
+					<table class="table table-striped">
+						<tbody>
+							<tr>
+								<td>
+									<input type="submit" class="btn btn-success" value="Submit" data-ng-click="sendConnectRequest(user)">
+									<input type="reset" class="btn btn-danger" value="Reset" data-ng-click="reset(connectForm)">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</main>
+</div>

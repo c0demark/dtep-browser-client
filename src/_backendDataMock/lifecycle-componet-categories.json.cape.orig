@@ -1,0 +1,161 @@
+[{
+        "createdBy": "root@cape.com",
+        "createdOn": 1509703502642,
+        "lastUpadateBy": null,
+        "lastUpdatedOn": null,
+        "score": 0.0,
+        "categoryCode": "CAT2304e9c141f44d81b233ae7c0b4bd45b",
+        "categoryName": "testing123",
+        "color": "#ffd454"
+    },
+    {
+        "createdBy": "root@cape.com",
+        "createdOn": 1509703442407,
+        "lastUpadateBy": null,
+        "lastUpdatedOn": null,
+        "score": 0.0,
+        "categoryCode": "CAT402c455292934759aa230e59b16249f3",
+        "categoryName": "testing",
+        "color": "#ffd454"
+    },
+    {
+        "createdBy": "M1000668@mindtree.com",
+        "createdOn": 1507879932903,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1509099396058,
+        "score": 0.0,
+        "categoryCode": "CAT4b8652076fd3466f87cc2d19491a428e",
+        "categoryName": "BUILD",
+        "color": "#ffd454"
+    },
+    {
+        "createdBy": "M1000668@mindtree.com",
+        "createdOn": 1507880287374,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1510313439101,
+        "score": 0.0,
+        "categoryCode": "CAT5a04582a0ca6476abb31ba3efaf49bb2",
+        "categoryName": "TEST",
+        "color": "#ff6473"
+    },
+    {
+        "createdBy": "M1000668@mindtree.com",
+        "createdOn": 1507884576088,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1509100075940,
+        "score": 0.0,
+        "categoryCode": "CAT0b5f915d9dff4db8a888214a2dbc20d2",
+        "categoryName": "PLAN",
+        "color": "#5facd3"
+    },
+    {
+        "createdBy": "M1037547@mindtree.com",
+        "createdOn": 1507097610405,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1509100079866,
+        "score": 0.0,
+        "categoryCode": "CAT9df488d5865b47a6bf29c8fe74e1a79e",
+        "categoryName": "Virtual Machines",
+        "color": "#459b6f"
+    },
+    {
+        "createdBy": "M1000668@mindtree.com",
+        "createdOn": 1507879173778,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507888016191,
+        "score": 0.0,
+        "categoryCode": "CAT9e5e14c02b664a5c962c0c4fa279e4ed",
+        "categoryName": "RUN",
+        "color": "#e88c4d"
+    },
+    {
+        "createdBy": "M1000668@mindtree.com",
+        "createdOn": 1507879816743,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1510313467806,
+        "score": 0.0,
+        "categoryCode": "CATb222d268e24d408f81f950ced6a0d298",
+        "categoryName": "SERVER",
+        "color": "#f9b2b2"
+    },
+    {
+        "createdBy": "M1000668@mindtree.com",
+        "createdOn": 1507879988901,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1509100066521,
+        "score": 0.0,
+        "categoryCode": "CAT94fea3ab13994ac1a52e54e2545d5081",
+        "categoryName": "CONFIG",
+        "color": "#ede84c"
+    },
+    {
+        "createdBy": "M1000668@mindtree.com",
+        "createdOn": 1507880252636,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1507888024281,
+        "score": 0.0,
+        "categoryCode": "CATca9af9b16a8647788c2d5fd91d61d82a",
+        "categoryName": "DEPLOY",
+        "color": "#7cd36a"
+    },
+    {
+        "createdBy": "root@cape.com",
+        "createdOn": 1516096842954,
+        "lastUpadateBy": null,
+        "lastUpdatedOn": null,
+        "score": 0.0,
+        "categoryCode": "CATf88586bba56b4a0cbeae9590b63b53f3",
+        "categoryName": "Automation Category",
+        "color": "#ffd454"
+    },
+    {
+        "createdBy": "root@cape.com",
+        "createdOn": 1516190572507,
+        "lastUpadateBy": null,
+        "lastUpdatedOn": null,
+        "score": 0.0,
+        "categoryCode": "CAT7e4f8fcabdb34940a4090479a597a2e2",
+        "categoryName": "Automation Category Updated",
+        "color": "#ffd454"
+    },
+    {
+        "createdBy": "root@cape.com",
+        "createdOn": 1516086880594,
+        "lastUpadateBy": null,
+        "lastUpdatedOn": null,
+        "score": 0.0,
+        "categoryCode": "CAT0493af47ac884a15a4fbf85ec8ebdab1",
+        "categoryName": "sss",
+        "color": "#ffd454"
+    },
+    {
+        "createdBy": "root@cape.com",
+        "createdOn": 1516276912750,
+        "lastUpadateBy": null,
+        "lastUpdatedOn": null,
+        "score": 0.0,
+        "categoryCode": "CATe1309e11de20409b847f9a3d9ede98b5",
+        "categoryName": "Aaa",
+        "color": "#ffd454"
+    },
+    {
+        "createdBy": "root@cape.com",
+        "createdOn": 1516277013897,
+        "lastUpadateBy": null,
+        "lastUpdatedOn": null,
+        "score": 0.0,
+        "categoryCode": "CATe308124113924c8ea22173fa0a32573c",
+        "categoryName": "aaa",
+        "color": "#ffd454"
+    },
+    {
+        "createdBy": "M1036017@mindtree.com",
+        "createdOn": 1516686077185,
+        "lastUpadateBy": null,
+        "lastUpdatedOn": null,
+        "score": 0.0,
+        "categoryCode": "CATbee8910bbe7945039adb5c00de3f4c39",
+        "categoryName": "UI Testing",
+        "color": "#ffd454"
+    }
+]

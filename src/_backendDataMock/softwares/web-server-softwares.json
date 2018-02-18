@@ -6,7 +6,7 @@
             "createdBy": null,
             "createdOn": null,
             "lastUpadateBy": "M1000668@mindtree.com",
-            "lastUpdatedOn": 1511437253173,
+            "lastUpdatedOn": 1511759507124,
             "score": 0.0,
             "id": "5859047573942af3bd4c4769",
             "softwareName": "Apache Server",
@@ -16,6 +16,7 @@
             "connect": true,
             "provision": true,
             "hasMetric": false,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -31,27 +32,99 @@
                 "installScript": "cape-apache2-install.sh",
                 "uninstallScript": "cape-apache2-uninstall.sh"
             },
-            "vmProperties": { "dns": "", "username": "", "password": "" },
+            "vmProperties": {
+                "dns": "",
+                "username": "",
+                "password": ""
+            },
             "connectionSchemaForm": {
                 "form": "[\"instanceName\",{\"key\":\"vmDns\",\"isConnect\":true},{\"key\":\"hostPort\",\"isConnect\":true},{\"key\":\"vmUsername\",\"isConnect\":true},{\"key\":\"vmPassword\",\"type\":\"password\",\"isConnect\":true},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
-                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"vmDns\":{\"title\":\"DNS\",\"type\":\"string\",\"default\":\"cape-vm-ten.southeastasia.cloudapp.azure.com\"},\"vmUsername\":{\"title\":\"Username\",\"type\":\"string\",\"default\":\"capeuser\"},\"vmPassword\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"\"},\"hostPort\":{\"title\":\"Port\",\"type\":\"string\",\"default\":\"80\"}},\"required\":[\"instanceName\",\"vmDns\",\"vmUsername\",\"vmPassword\",\"hostPort\"]}"
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"vmDns\":{\"title\":\"DNS\",\"type\":\"string\",\"default\":\"cape-app.southeastasia.cloudapp.azure.com\"},\"vmUsername\":{\"title\":\"Username\",\"type\":\"string\",\"default\":\"capeuser\"},\"vmPassword\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"\"},\"hostPort\":{\"title\":\"Port\",\"type\":\"string\",\"default\":\"8000\"}},\"required\":[\"instanceName\",\"vmDns\",\"vmUsername\",\"hostPort\"]}"
             },
             "provisionSchemaForm": {
                 "form": "[\"*\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                 "schema": "{\"type\":\"object\",\"properties\":{\"hostPort\":{\"title\":\"Host Port\",\"type\":\"string\",\"default\":\"80\"}},\"required\":[\"hostPort\"]}"
             },
-            "integrations": [],
+            "integrations": [
+
+            ],
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/53e550c3bf1d427aba99f697ab9e4d7e.png",
+            "iconURL": "/assets/icons/softwares/53e550c3bf1d427aba99f697ab9e4d7e.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
+        },
+        {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1000668@mindtree.com",
+            "lastUpdatedOn": 1511760921695,
+            "score": 0.0,
+            "id": "5859047573942af3bd4c476a",
+            "softwareName": "Nginx",
+            "softwareCode": "NGWS",
+            "description": "Accelerates content and application delivery, improves security, facilitates availability.",
+            "clazz": null,
+            "connect": true,
+            "provision": true,
+            "hasMetric": false,
+            "isAccessible": null,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "WBS",
+            "componentName": "Web Server",
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": {
+                "type": "Script",
+                "supportedPlatforms": "[ \"Ubuntu Server\" , \"RHEL Server\"]",
+                "installScript": "cape-nginx-install.sh",
+                "uninstallScript": "cape-nginx-uninstall.sh"
+            },
+            "vmProperties": {
+                "dns": "",
+                "username": "",
+                "password": ""
+            },
+            "connectionSchemaForm": {
+                "form": "[\"instanceName\",{\"key\":\"vmDns\",\"isConnect\":true},{\"key\":\"hostPort\",\"isConnect\":true},{\"key\":\"vmUsername\",\"isConnect\":true},{\"key\":\"vmPassword\",\"type\":\"password\",\"isConnect\":true},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"vmDns\":{\"title\":\"DNS\",\"type\":\"string\",\"default\":\"cape-app.southeastasia.cloudapp.azure.com\"},\"vmUsername\":{\"title\":\"Username\",\"type\":\"string\",\"default\":\"capeuser\"},\"vmPassword\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"\"},\"hostPort\":{\"title\":\"Port\",\"type\":\"string\",\"default\":\"80\"}},\"required\":[\"instanceName\",\"vmDns\",\"vmUsername\",\"hostPort\"]}"
+            },
+            "provisionSchemaForm": {
+                "form": "[\"*\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"hostPort\":{\"title\":\"Host Port\",\"type\":\"string\",\"default\":\"80\"}},\"required\":[\"hostPort\"]}"
+            },
+            "integrations": [
+
+            ],
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/4339264ff4d04ae3985c781d97aac6af.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         },
         {
             "createdBy": null,
@@ -67,6 +140,7 @@
             "connect": true,
             "provision": true,
             "hasMetric": false,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -86,7 +160,11 @@
                 "dependentCookbooks": "[ \"yum-epel\"]",
                 "basePath": "/"
             },
-            "vmProperties": { "dns": "", "username": "", "password": "" },
+            "vmProperties": {
+                "dns": "",
+                "username": "",
+                "password": ""
+            },
             "connectionSchemaForm": {
                 "form": "[\"dns\",\"userName\",{\"key\":\"password\",\"type\":\"password\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                 "schema": "{\"type\":\"object\",\"properties\":{\"dns\":{\"title\":\"DNS\",\"type\":\"string\",\"default\":\"cape-vm-ten.southeastasia.cloudapp.azure.com\"},\"userName\":{\"title\":\"Username\",\"type\":\"string\",\"default\":\"capeuser\"},\"password\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"\"}},\"required\":[\"dns\",\"userName\",\"password\"]}"
@@ -95,69 +173,118 @@
                 "form": "[\"*\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                 "schema": "{\"type\":\"object\",\"properties\":{\"hostPort\":{\"title\":\"Host Port\",\"type\":\"string\",\"default\":\"80\"}},\"required\":[\"hostPort\"]}"
             },
-            "integrations": [],
+            "integrations": [
+
+            ],
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/4339264ff4d04ae3985c781d97aac6af.png",
+            "iconURL": "/assets/icons/softwares/4339264ff4d04ae3985c781d97aac6af.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         },
         {
-            "createdBy": null,
-            "createdOn": null,
-            "lastUpadateBy": "M1000668@mindtree.com",
-            "lastUpdatedOn": 1511437310995,
+            "createdBy": "M1030385@mindtree.com",
+            "createdOn": 1513503524571,
+            "lastUpadateBy": "M1030385@mindtree.com",
+            "lastUpdatedOn": 1513503524571,
             "score": 0.0,
-            "id": "5859047573942af3bd4c476a",
-            "softwareName": "Nginx",
-            "softwareCode": "NGWS",
-            "description": "Accelerates content and application delivery, improves security, facilitates availability.",
-            "clazz": "com.mindtree.cape.engine.gateway.service.MetricBeatsServiceImpl",
-            "connect": true,
-            "provision": true,
+            "id": "5a363b243ac2cd04ccb24e65",
+            "softwareName": "test",
+            "softwareCode": "SW6c0a1633bdd34b70b00979edad10d7a5",
+            "description": "ddddd",
+            "clazz": null,
+            "connect": false,
+            "provision": false,
             "hasMetric": false,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
             "orgCode": "ORG000001",
             "componentCode": "WBS",
-            "componentName": "Web Server",
+            "componentName": null,
             "type": null,
             "vmId": null,
-            "properties": null,
-            "installationProperties": {
-                "type": "Script",
-                "supportedPlatforms": "[ \"Ubuntu Server\" , \"RHEL Server\"]",
-                "installScript": "cape-nginx-install.sh",
-                "uninstallScript": "cape-nginx-uninstall.sh"
+            "properties": {
+
             },
-            "vmProperties": { "dns": "", "username": "", "password": "" },
-            "connectionSchemaForm": {
-                "form": "[\"instanceName\",{\"key\":\"vmDns\",\"isConnect\":true},{\"key\":\"hostPort\",\"isConnect\":true},{\"key\":\"vmUsername\",\"isConnect\":true},{\"key\":\"vmPassword\",\"type\":\"password\",\"isConnect\":true},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
-                "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"vmDns\":{\"title\":\"DNS\",\"type\":\"string\",\"default\":\"cape-vm-ten.southeastasia.cloudapp.azure.com\"},\"vmUsername\":{\"title\":\"Username\",\"type\":\"string\",\"default\":\"capeuser\"},\"vmPassword\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"\"},\"hostPort\":{\"title\":\"Port\",\"type\":\"string\",\"default\":\"80\"}},\"required\":[\"instanceName\",\"vmDns\",\"vmUsername\",\"vmPassword\",\"hostPort\"]}"
-            },
-            "provisionSchemaForm": {
-                "form": "[\"*\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
-                "schema": "{\"type\":\"object\",\"properties\":{\"hostPort\":{\"title\":\"Host Port\",\"type\":\"string\",\"default\":\"80\"}},\"required\":[\"hostPort\"]}"
-            },
-            "integrations": [],
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": null,
+            "provisionSchemaForm": null,
+            "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/4339264ff4d04ae3985c781d97aac6af.png",
+            "iconURL": "/assets/icons/softwares/6c0a1633bdd34b70b00979edad10d7a5.PNG",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
+        },
+        {
+            "createdBy": "M1030385@mindtree.com",
+            "createdOn": 1513503770156,
+            "lastUpadateBy": "M1030385@mindtree.com",
+            "lastUpdatedOn": 1513503770157,
+            "score": 0.0,
+            "id": "5a363c1a3ac2cd04ccb24e67",
+            "softwareName": "test1",
+            "softwareCode": "SW6371036bae6247a3832b83de9154988d",
+            "description": "test123",
+            "clazz": null,
+            "connect": false,
+            "provision": false,
+            "hasMetric": false,
+            "isAccessible": null,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "WBS",
+            "componentName": null,
+            "type": null,
+            "vmId": null,
+            "properties": {
+
+            },
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": null,
+            "provisionSchemaForm": null,
+            "integrations": null,
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/6371036bae6247a3832b83de9154988d.PNG",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
         }
     ]
 }

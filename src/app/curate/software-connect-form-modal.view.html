@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<div>
+	<header class="modal-header">
+		<button class="badge close" type="button" data-ng-click="dismissModal()">
+			<span class="sr-only">Close&nbsp;Dialog</span>
+			<i class="fa fa-close" aria-hidden="true"></i>
+		</button>
+		<h4 class="modal-title text-center" id="dtep-curate-project-software-connect-form-modal-title" data-ng-bind="$parent.selectedSoftware.softwareName"></h4>
+	</header>
+	<main class="modal-body" id="dtep-curate-project-software-connect-form-modal-body">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+				<div data-ng-click="dismissModal()">
+					<i class="fa fa-arrow-left" aria-hidden="true"></i>
+					<span>Go&nbsp;Back</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<form class="form-group" name="connectForm" novalidate="novalidate" data-ng-submit="sendConnectRequest(user)">
+					<table class="table table-striped">
+						<tbody>
+							<tr>
+								<td>
+									<input type="text" name="instanceName" data-ng-pattern="/^[a-zA-Z\s]*$/" class="form-control form-control-lg" placeholder="Instance Name *"
+									 data-ng-model="user.instanceName" ng-model-options="{updateOn:'blur'}" required="">
+									<div data-ng-show="connectForm.$submitted || connectForm.instanceName.$touched">
+										<div class="dtep-form-validation-error-container" data-ng-show="connectForm.instanceName.$error.required">Please enter the instance name</div>
+										<div class="dtep-form-validation-error-container" data-ng-show="connectForm.instanceName.$error.pattern">Please enter the valid instance name</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="url" name="url" class="form-control form-control-lg" placeholder="Url" data-ng-model="user.url" ng-model-options="{updateOn:'blur'}"
+									 required="">
+									<div data-ng-show="connectForm.$submitted || connectForm.url.$touched">
+										<div class="dtep-form-validation-error-container" data-ng-show="connectForm.url.$error.required">Please enter the url</div>
+										<div class="dtep-form-validation-error-container" data-ng-show="connectForm.url.$error.url">Please enter the correct url</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="email" name="email" class="form-control form-control-lg" placeholder="Email" data-ng-model="user.email" ng-model-options="{updateOn:'blur'}"
+									 required="">
+									<div data-ng-show="connectForm.$submitted || connectForm.email.$touched">
+										<div class="dtep-form-validation-error-container" data-ng-show="connectForm.email.$error.required">Please enter your email</div>
+										<div class="dtep-form-validation-error-container" data-ng-show="connectForm.email.$error.email">Please enter correct email</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type=" text " name="uname" class="form-control form-control-lg " placeholder="Username " data-ng-model="user.userName "
+									 ng-model-options="{updateOn: 'blur'}" required="">
+									<div data-ng-show="connectForm.$submitted || connectForm.uname.$touched">
+										<div class="dtep-form-validation-error-container" data-ng-show="connectForm.uname.$error.required">Please enter user name</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="password" name="password" class="form-control form-control-lg" placeholder="Pasword" data-ng-model="user.password"
+									 ng-model-options="{updateOn:'blur'}" required="">
+									<div data-ng-show="connectForm.$submitted || connectForm.password.$touched">
+										<div class="dtep-form-validation-error-container" data-ng-show="connectForm.password.$error.required">Please enter the password</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="submit" class="btn btn-success" value="Submit">
+									<input type="reset" class="btn btn-danger" value="Reset" data-ng-click="reset(connectForm)">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</main>
+</div>

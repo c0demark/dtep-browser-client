@@ -24,14 +24,14 @@
         $state
     ) {
 
-        $scope.closeNotificationsModal = closeNotificationsModal;
-        $scope.dismissNotificationsModal = dismissNotificationsModal;
+        $scope.closeModal = closeModal;
+        $scope.dismissModal = dismissModal;
 
-        function closeNotificationsModal() {
+        function closeModal() {
             $uibModalInstance.close("closed modal");
         }
 
-        function dismissNotificationsModal() {
+        function dismissModal() {
             $uibModalInstance.dismiss("dismissed modal");
         }
     }

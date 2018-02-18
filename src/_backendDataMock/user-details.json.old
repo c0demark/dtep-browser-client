@@ -1,0 +1,21 @@
+{
+    "orgCode": "ORG000004",
+    "orgName": "Mindtree Limited",
+    "username": "M1030469@mindtree.com",
+    "email": "Vijay.Kumar5@mindtree.com",
+    "name": "Vijay Kumar",
+    "status": "Active",
+    "acls": [
+        "2010",
+        "2040",
+        "2080",
+        "1020",
+        "1010",
+        "2050",
+        "2043",
+        "2044"
+    ],
+    "projectList": null,
+    "profilePic": null,
+    "score": null
+}

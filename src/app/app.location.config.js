@@ -1,20 +1,9 @@
 (function(angular) {
-    "use strict";
-    angular
-        .module("dtepApp")
-        // .module("dtepApp")
-        .config([
-            "$locationProvider",
-            "TEMPLATE_URL_PATH_AUTHENTICATION_MODULE",
-            configFn
-        ]);
+	"use strict";
+	angular.module("dtepApp").config(["$locationProvider", configFn]);
 
-    function configFn(
-        $locationProvider,
-        TEMPLATE_URL_PATH_AUTHENTICATION_MODULE
-    ) {
-        // console.log($locationProvider);
-        $locationProvider.hashPrefix("");
-        // $locationProvider.html5Mode(true);
-    }
+	function configFn($locationProvider) {
+		$locationProvider.hashPrefix("");
+		// $locationProvider.html5Mode(true);
+	}
 })(window.angular);

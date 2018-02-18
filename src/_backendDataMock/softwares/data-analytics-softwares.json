@@ -16,6 +16,7 @@
         "connect": true,
         "provision": true,
         "hasMetric": true,
+        "isAccessible": null,
         "hasAction": false,
         "hasClients": false,
         "clientSoftwareName": null,
@@ -50,17 +51,23 @@
             "form": "[\"*\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
             "schema": "{\n  \"type\" : \"object\",\n  \"properties\" : {\n    \"hostPort\" : {\n      \"title\" : \"Host Port\",\n      \"type\" : \"string\",\n      \"default\" : \"8081\"\n    }\n  },\n  \"required\" : [ \"hostPort\" ]\n}"
         },
-        "integrations": [],
+        "integrations": [
+
+        ],
         "isConnect": null,
         "isProvision": null,
-        "iconURL": "/icons/ed9107529bb54314847dc19604ee437a.png",
+        "iconURL": "/assets/icons/softwares/ed9107529bb54314847dc19604ee437a.png",
         "applicationURL": null,
         "baseURL": null,
         "finalURL": null,
         "status": null,
         "isExecuting": null,
+        "executionStatus": null,
+        "executionResult": null,
         "requestId": null,
         "actionList": null,
-        "metricList": null
+        "metricList": null,
+        "widgets": null,
+        "visualize": false
     }]
 }

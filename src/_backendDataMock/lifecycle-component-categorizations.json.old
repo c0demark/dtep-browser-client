@@ -1,0 +1,725 @@
+[{
+        "category": "Build & Release Automation",
+        "components": [{
+                "id": "58e61cbf6f6931b2f499c200",
+                "orgCode": "ORG000001",
+                "componentCode": "WBS",
+                "componentName": "Web Server",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Build & Release Automation"
+                ],
+                "softwares": [
+                    "Apache Server",
+                    "Nginx",
+                    "Chef Nginx",
+                    "sdkdsdsksdh",
+                    "Apache",
+                    "sdfs",
+                    "Apache Server2"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/web-server.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1036017@mindtree.com",
+                "lastUpdatedOn": 1501761237977
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c208",
+                "orgCode": "ORG000001",
+                "componentCode": "VSC",
+                "componentName": "Version Control",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Build & Release Automation"
+                ],
+                "softwares": [
+                    "Subversion",
+                    "Bitbucket",
+                    "GitHub",
+                    "GitLab",
+                    "TFSVC"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/version-control.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1040465@mindtree.com",
+                "lastUpdatedOn": 1509010620321
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c209",
+                "orgCode": "ORG000001",
+                "componentCode": "CIG",
+                "componentName": "CI-CD",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Build & Release Automation"
+                ],
+                "softwares": [
+                    "TFS",
+                    "Jenkins 2.7",
+                    "Bamboo",
+                    "Jenkins",
+                    "Chef Jenkins",
+                    "Jenkins Connect",
+                    "VSTS"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/continuous-integration.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1037547@mindtree.com",
+                "lastUpdatedOn": 1502272471675
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c20a",
+                "orgCode": "ORG000001",
+                "componentCode": "BDT",
+                "componentName": "Build Tool",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Build & Release Automation"
+                ],
+                "softwares": [
+                    "Maven Jenkins Pipeline",
+                    "MSBuild",
+                    "VSBuild",
+                    "Push Artifact",
+                    "Ant",
+                    "Chef Ant",
+                    "Gulp",
+                    "Post SCM Script",
+                    "Webpack",
+                    "Windows Powershell",
+                    "VS Test",
+                    "Xamarin Build",
+                    "NuGet Pack",
+                    "Sign Apk",
+                    "Windows Batch Commands"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/build-tool.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "m1030385@mindtree.com",
+                "lastUpdatedOn": 1507024321093
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c20b",
+                "orgCode": "ORG000001",
+                "componentCode": "CQL",
+                "componentName": "Code Quality",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Build & Release Automation"
+                ],
+                "softwares": [
+                    "SonarQube 6.0",
+                    "Fisheye",
+                    "JUnit"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/code-quality.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "root@cape.com",
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c20c",
+                "orgCode": "ORG000001",
+                "componentCode": "ARR",
+                "componentName": "Artifact Repository",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Build & Release Automation"
+                ],
+                "softwares": [
+                    "ProGet",
+                    "Artifactory",
+                    "Nexus"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/artifact-repository.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c20e",
+                "orgCode": "ORG000001",
+                "componentCode": "NMG",
+                "componentName": "Notification Manager",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Build & Release Automation"
+                ],
+                "softwares": [
+                    "Jenkins Email Sender",
+                    "Email Notification"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/notification-manger.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1026343@mindtree.com",
+                "lastUpdatedOn": 1506332424312
+            },
+            {
+                "id": "595dee643ac2cd4ad27aa801",
+                "orgCode": "ORG000001",
+                "componentCode": "ORC",
+                "componentName": "Container Orchestrator",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Build & Release Automation"
+                ],
+                "softwares": [
+                    "Openshift",
+                    "Kubernetes",
+                    "Docker Swarm"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/14993280803871499166453487Container-Orchestrator.svg",
+                "createdBy": "dev",
+                "createdOn": 1499328100332,
+                "lastUpadateBy": "M1035936@mindtree.com",
+                "lastUpdatedOn": 1501224634581
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c20d",
+                "orgCode": "ORG000001",
+                "componentCode": "ARA",
+                "componentName": "Release Manager",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Build & Release Automation"
+                ],
+                "softwares": [
+                    "Octopus Deploy",
+                    "Nolio",
+                    "Automic",
+                    "Puppet",
+                    "Octopus Tentacle",
+                    "Octopus Environment",
+                    "MS Webdeploy",
+                    "Chef",
+                    "XL Release",
+                    "XL Deploy"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/release-manager.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1041259@mindtree.com",
+                "lastUpdatedOn": 1503056302884
+            }
+        ]
+    },
+    {
+        "category": "Infrastructure Components",
+        "components": [{
+                "id": "58e61cbf6f6931b2f499c202",
+                "orgCode": "ORG000001",
+                "componentCode": "DBS",
+                "componentName": "Database Server",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Infrastructure Components"
+                ],
+                "softwares": [
+                    "MySql 5.6",
+                    "MySQL - UMDS",
+                    "SQL Server",
+                    "Mongo DB",
+                    "Chef MongoDB",
+                    "Oracle Db",
+                    "IBM DB2",
+                    "Greenplum",
+                    "Couchbase",
+                    "Postgress",
+                    "Informatica Serv",
+                    "MongoDB"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/database-server.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "dev",
+                "lastUpdatedOn": 1499324600023
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c203",
+                "orgCode": "ORG000001",
+                "componentCode": "CMT",
+                "componentName": "Config Management",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Infrastructure Components"
+                ],
+                "softwares": [
+                    "Chef - UMA",
+                    "Zookeeper",
+                    "Puppet Infra",
+                    "Puppet Server",
+                    "Puppet Agent"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/config-management.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "dev",
+                "lastUpdatedOn": 1499257204268
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c204",
+                "orgCode": "ORG000001",
+                "componentCode": "IUT",
+                "componentName": "Infra Utility",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Infrastructure Components"
+                ],
+                "softwares": [
+                    "SSH Key"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/infra-utility.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c206",
+                "orgCode": "ORG000001",
+                "componentCode": "APM",
+                "componentName": "Performance Monitoring",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Infrastructure Components"
+                ],
+                "softwares": [
+                    "AppDynamics",
+                    "MS System Center Operations Manager",
+                    "PWatch",
+                    "PRTG"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/app-performance.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "dev",
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c207",
+                "orgCode": "ORG000001",
+                "componentCode": "DTT",
+                "componentName": "Data Tools",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Infrastructure Components"
+                ],
+                "softwares": [
+                    "Rapid Data Generator",
+                    "Rapid Data Comparator"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/data-tool.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "595defe23ac2cd4ad27aa82f",
+                "orgCode": "ORG000001",
+                "componentCode": "CNTR",
+                "componentName": "Containers",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Infrastructure Components"
+                ],
+                "softwares": [
+                    "Docker"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/14993284453651499166453487Container-Orchestrator.svg",
+                "createdBy": "dev",
+                "createdOn": 1499328482106,
+                "lastUpadateBy": "M1037707@mindtree.com",
+                "lastUpdatedOn": 1501737907229
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c201",
+                "orgCode": "ORG000001",
+                "componentCode": "APS",
+                "componentName": "Application Server",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Infrastructure Components"
+                ],
+                "softwares": [
+                    "Tomcat 9.0",
+                    "Microsoft IIS",
+                    "Oracle JDK 8",
+                    "JBoss Wildfly",
+                    "SIT Tibco",
+                    "Prod Tibco",
+                    "WAS",
+                    "SIT Informatica",
+                    "PROD INFORMATICA",
+                    "UAT Informatica",
+                    "UAT Tibco",
+                    "Tomcat 8.5",
+                    "IBM Websphere"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/application-server.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1041259@mindtree.com",
+                "lastUpdatedOn": 1505888144187
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c205",
+                "orgCode": "ORG000001",
+                "componentCode": "AMT",
+                "componentName": "Application Monitoring",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Infrastructure Components"
+                ],
+                "softwares": [
+                    "SQL Monitoring",
+                    "Zabbix",
+                    "Splunk",
+                    "Tibco Hawk",
+                    "Promethius",
+                    "awserdtgyu",
+                    "SolarWinds",
+                    "Mwatch"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/application-monitoring.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1040465@mindtree.com",
+                "lastUpdatedOn": 1506336448115
+            }
+        ]
+    },
+    {
+        "category": "Test Automation",
+        "components": [{
+                "id": "58e61cbf6f6931b2f499c20f",
+                "orgCode": "ORG000001",
+                "componentCode": "UIT",
+                "componentName": "UI Testing",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Test Automation"
+                ],
+                "softwares": [
+                    "UILite"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/ui-testing.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c210",
+                "orgCode": "ORG000001",
+                "componentCode": "WST",
+                "componentName": "Service Testing",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Test Automation"
+                ],
+                "softwares": [
+                    "WSTAF",
+                    "Duck Creek TAC",
+                    "SoapUI",
+                    "Parasoft"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/web-service-testing.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c211",
+                "orgCode": "ORG000001",
+                "componentCode": "WAT",
+                "componentName": "Application Testing",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Test Automation"
+                ],
+                "softwares": [
+                    "WebSAF",
+                    "MIST",
+                    "JUint",
+                    "HP UFT",
+                    "Robot Framework",
+                    "Selenium Hybrid Framework",
+                    "Karma"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/web-app-testing.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1041259@mindtree.com",
+                "lastUpdatedOn": 1505887116996
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c212",
+                "orgCode": "ORG000001",
+                "componentCode": "MAT",
+                "componentName": "Mobile App Testing",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Test Automation"
+                ],
+                "softwares": [
+                    "Android Emulator",
+                    "Appium",
+                    "Xamarin test cloud",
+                    "UI Automator"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/mobile-app-testing.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1026343@mindtree.com",
+                "lastUpdatedOn": 1504755946019
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c214",
+                "orgCode": "ORG000001",
+                "componentCode": "PTT",
+                "componentName": "Performance Test",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Test Automation"
+                ],
+                "softwares": [
+                    "Load Runner Framework",
+                    "Neoload"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/performance-test.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "5914378e2a65dc81446c58da",
+                "orgCode": "ORG000001",
+                "componentCode": "SST",
+                "componentName": "Security Scanning",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Test Automation"
+                ],
+                "softwares": [
+                    "ZAP Jenkins Pipeline",
+                    "SQL Security Tester",
+                    "OWASP ZAP",
+                    "WhiteSource Bolt"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/security-scan.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1035940@mindtree.com",
+                "lastUpdatedOn": 1501744206545
+            },
+            {
+                "id": "5970992d3ac2cd54268fde44",
+                "orgCode": "ORG000001",
+                "componentCode": "COMPdd4792026dcc4cd193bcc97542a786fc",
+                "componentName": "Test Report Analyzer",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Test Automation"
+                ],
+                "softwares": [
+                    "Test Report Analyzer"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/1500630379668vector_424_21-256.svg",
+                "createdBy": "M1037707@mindtree.com",
+                "createdOn": 1500551469280,
+                "lastUpadateBy": "M1037707@mindtree.com",
+                "lastUpdatedOn": 1500630382754
+            }
+        ]
+    },
+    {
+        "category": "Application Management",
+        "components": [{
+                "id": "58e61cbf6f6931b2f499c215",
+                "orgCode": "ORG000001",
+                "componentCode": "JSC",
+                "componentName": "Orchestrator",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Application Management"
+                ],
+                "softwares": [
+                    "Issue Analyser",
+                    "Rundeck"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/orchestrator.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c216",
+                "orgCode": "ORG000001",
+                "componentCode": "MLN",
+                "componentName": "Machine Learning",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Application Management"
+                ],
+                "softwares": [
+                    "ML Hub"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/machine-learning.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c217",
+                "orgCode": "ORG000001",
+                "componentCode": "RPA",
+                "componentName": "RPA",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Application Management"
+                ],
+                "softwares": [
+                    "Automation Anywhere"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/robotic-process.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c218",
+                "orgCode": "ORG000001",
+                "componentCode": "TKS",
+                "componentName": "Service Management",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Application Management"
+                ],
+                "softwares": [
+                    "Remedyforce",
+                    "ServiceNow",
+                    "Duck Creek Server",
+                    "HP service Anywhere"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/service-management.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1040465@mindtree.com",
+                "lastUpdatedOn": 1506343566536
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c219",
+                "orgCode": "ORG000001",
+                "componentCode": "ALM",
+                "componentName": "ALM",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Application Management"
+                ],
+                "softwares": [
+                    "JIRA",
+                    "HP Quality Center",
+                    "Rally",
+                    "Version One"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/application-lifecycle.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": "M1041259@mindtree.com",
+                "lastUpdatedOn": 1502970372287
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c21a",
+                "orgCode": "ORG000001",
+                "componentCode": "COL",
+                "componentName": "Collaboration Tool",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Application Management"
+                ],
+                "softwares": [
+                    "Confluence"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/collaboration.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "58e61cbf6f6931b2f499c21b",
+                "orgCode": "ORG000001",
+                "componentCode": "ANP",
+                "componentName": "Analytics Platform",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Application Management"
+                ],
+                "softwares": [
+                    "Elastic Stack",
+                    "Grafana"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/performance-test.svg",
+                "createdBy": null,
+                "createdOn": null,
+                "lastUpadateBy": null,
+                "lastUpdatedOn": null
+            },
+            {
+                "id": "5965fba83ac2cdc5f33a0760",
+                "orgCode": "ORG000001",
+                "componentCode": "DEVENV",
+                "componentName": "Development Environment",
+                "componentType": "LOGICAL",
+                "categories": [
+                    "Application Management"
+                ],
+                "softwares": [
+                    "HockeyApp"
+                ],
+                "iconURL": "/assets/icons/lifecycle-components-old/release-manager.svg",
+                "createdBy": "M1035940@mindtree.com",
+                "createdOn": 1499855784971,
+                "lastUpadateBy": "M1035940@mindtree.com",
+                "lastUpdatedOn": 1499856642802
+            }
+        ]
+    },
+    {
+        "category": "EAI",
+        "components": [{
+            "id": "592eca141e65da6a2d589267",
+            "orgCode": "ORG000001",
+            "componentCode": "EAI",
+            "componentName": "EAI",
+            "componentType": "LOGICAL",
+            "categories": [
+                "EAI"
+            ],
+            "softwares": [
+                "Biztalk",
+                "Biztalk Server",
+                "def",
+                "sdsssssssssssssddddddddddddddddddssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+            ],
+            "iconURL": "/assets/icons/lifecycle-components-old/1496238610430EAI.svg",
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "root@cape.com",
+            "lastUpdatedOn": 1500266959464
+        }]
+    }
+]

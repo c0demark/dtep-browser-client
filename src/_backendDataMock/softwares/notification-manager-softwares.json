@@ -16,6 +16,7 @@
         "connect": false,
         "provision": false,
         "hasMetric": false,
+        "isAccessible": null,
         "hasAction": false,
         "hasClients": false,
         "clientSoftwareName": null,
@@ -29,17 +30,23 @@
         "vmProperties": null,
         "connectionSchemaForm": null,
         "provisionSchemaForm": null,
-        "integrations": [],
+        "integrations": [
+
+        ],
         "isConnect": null,
         "isProvision": null,
-        "iconURL": "/icons/948f4ec9f28d47fc87888c3c33b627ac.png",
+        "iconURL": "/assets/icons/softwares/948f4ec9f28d47fc87888c3c33b627ac.png",
         "applicationURL": null,
         "baseURL": null,
         "finalURL": null,
         "status": null,
         "isExecuting": null,
+        "executionStatus": null,
+        "executionResult": null,
         "requestId": null,
         "actionList": null,
-        "metricList": null
+        "metricList": null,
+        "widgets": null,
+        "visualize": false
     }]
 }

@@ -5,8 +5,8 @@
     "softwares": [{
         "createdBy": null,
         "createdOn": null,
-        "lastUpadateBy": "M1035940@mindtree.com",
-        "lastUpdatedOn": 1511525128251,
+        "lastUpadateBy": "M1000668@mindtree.com",
+        "lastUpdatedOn": 1511756052549,
         "score": 0.0,
         "id": "5859047573942af3bd4c4768",
         "softwareName": "SonarQube 6.0",
@@ -16,6 +16,7 @@
         "connect": true,
         "provision": true,
         "hasMetric": true,
+        "isAccessible": null,
         "hasAction": false,
         "hasClients": null,
         "clientSoftwareName": null,
@@ -40,23 +41,29 @@
         "vmProperties": null,
         "connectionSchemaForm": {
             "form": "[\"instanceName\",{\"key\":\"url\",\"isConnect\":true},{\"key\":\"username\",\"isConnect\":true},{\"key\":\"apiToken\",\"type\":\"password\",\"isConnect\":true},{\"key\":\"password\",\"type\":\"password\",\"isConnect\":true},{\"key\":\"swProjectName\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
-            "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL\",\"type\":\"string\",\"default\":\"http://cape-registry.southeastasia.cloudapp.azure.com:9001\"},\"username\":{\"title\":\"Username\",\"type\":\"string\",\"default\":\"admin\"},\"password\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"7q9DURgeZLT5N75m\"},\"swProjectName\":{\"title\":\"Project Key\",\"type\":\"string\",\"default\":\"\"},\"apiToken\":{\"title\":\"API Token\",\"type\":\"string\"}},\"required\":[\"instanceName\",\"url\",\"swProjectName\"]}"
+            "schema": "{\"type\":\"object\",\"properties\":{\"instanceName\":{\"title\":\"Instance Name\",\"pattern\":\"^[a-zA-Z0-9_\\\\-]+$\",\"type\":\"string\",\"default\":null},\"url\":{\"title\":\"URL\",\"type\":\"string\",\"default\":\"http://cape-registry.southeastasia.cloudapp.azure.com:9001\"},\"username\":{\"title\":\"Username\",\"type\":\"string\",\"default\":\"admin\"},\"password\":{\"title\":\"Password\",\"type\":\"string\",\"default\":\"7q9DURgeZLT5N75m\"},\"swProjectName\":{\"title\":\"Project Key\",\"type\":\"string\",\"default\":\"JavaWebApp\"},\"apiToken\":{\"title\":\"API Token\",\"type\":\"string\",\"default\":\"fe80bc99e541fa4ee41eb8c553b21c474bdf5730\"}},\"required\":[\"instanceName\",\"url\",\"swProjectName\"]}"
         },
         "provisionSchemaForm": {
             "form": "[\"*\",{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
             "schema": "{\"type\":\"object\",\"properties\":{\"hostPort\":{\"title\":\"Host Port\",\"type\":\"string\",\"default\":\"9001\"}},\"required\":[\"hostPort\"]}"
         },
-        "integrations": [],
+        "integrations": [
+
+        ],
         "isConnect": null,
         "isProvision": null,
-        "iconURL": "/icons/c7b9a8d021cb439b87dbc049c87c9d0b.png",
+        "iconURL": "/assets/icons/softwares/c7b9a8d021cb439b87dbc049c87c9d0b.png",
         "applicationURL": null,
         "baseURL": null,
         "finalURL": null,
         "status": null,
         "isExecuting": null,
+        "executionStatus": null,
+        "executionResult": null,
         "requestId": null,
         "actionList": null,
-        "metricList": null
+        "metricList": null,
+        "widgets": null,
+        "visualize": false
     }]
 }

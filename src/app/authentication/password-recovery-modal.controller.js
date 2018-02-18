@@ -24,14 +24,14 @@
         $uibModalInstance,
         $state
     ) {
-        $scope.closePasswordRecoveryModal = closePasswordRecoveryModal;
-        $scope.dismissPasswordRecoveryModal = dismissPasswordRecoveryModal;
+        $scope.closeModal = closeModal;
+        $scope.dismissModal = dismissModal;
 
-        function closePasswordRecoveryModal() {
+        function closeModal() {
             $uibModalInstance.close("closed modal");
         }
 
-        function dismissPasswordRecoveryModal() {
+        function dismissModal() {
             $uibModalInstance.dismiss("dismissed modal");
         }
     }

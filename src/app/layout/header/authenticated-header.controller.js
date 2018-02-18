@@ -24,13 +24,7 @@
         $uibModal,
         $state
     ) {
-        $scope.isNavCollapsed = true;
-        $scope.toggleNavCollapse = toggleNavCollapse;
         $scope.openNotificationsModal = openNotificationsModal;
-
-        function toggleNavCollapse() {
-            $scope.isNavCollapsed = !$scope.isNavCollapsed;
-        }
 
         function openNotificationsModal() {
             var notificationsModal = $uibModal.open({

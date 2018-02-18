@@ -24,14 +24,14 @@
         $uibModalInstance,
         $state
     ) {
-        $scope.closeCreateNewReleaseModal = closeCreateNewReleaseModal;
-        $scope.dismissCreateNewReleaseModal = dismissCreateNewReleaseModal;
+        $scope.closeModal = closeModal;
+        $scope.dismissModal = dismissModal;
 
-        function closeCreateNewReleaseModal() {
+        function closeModal() {
             $uibModalInstance.close("closed modal");
         }
 
-        function dismissCreateNewReleaseModal() {
+        function dismissModal() {
             $uibModalInstance.dismiss("dismissed modal");
         }
     }

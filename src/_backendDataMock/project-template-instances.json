@@ -1,0 +1,344 @@
+{
+    "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+    "projectName": "MIST Lab",
+    "canvases": [{
+            "createdBy": "M1030499@mindtree.com",
+            "createdOn": 1510811468442,
+            "lastUpadateBy": "M1030499@mindtree.com",
+            "lastUpdatedOn": 1517821945075,
+            "score": 1.1,
+            "id": "5a0d274cf45ac00fe0731e37",
+            "canvasName": "AutomationPOC",
+            "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_AUTOMATIONPOC1510811468",
+            "canvasCode": "CNVS962da3dabb3e4941841eef8a45293617",
+            "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+            "projectName": "MIST Lab",
+            "orgCode": "ORG000004",
+            "users": [{
+                    "username": "M1030469@mindtree.com",
+                    "email": "Vijay.Kumar5@mindtree.com",
+                    "name": "Vijay Kumar",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1032465@mindtree.com",
+                    "email": "Vineeth.Mutt@mindtree.com",
+                    "name": "Vineeth Mutt",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1030499@mindtree.com",
+                    "email": "Sujit.Anand@mindtree.com",
+                    "name": "Sujit Anand",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1030571@mindtree.com",
+                    "email": "ajay.gupta@mindtree.com",
+                    "name": "Ajay Kumar Gupta",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                }
+            ],
+            "hasAccess": true,
+            "status": "Composing",
+            "version": 146,
+            "idCounter": 84,
+            "description": "Testing Purpose",
+            "tags": [{
+                    "type": "softwareNode",
+                    "name": "Version Control",
+                    "status": "Installed"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Continuous Integration",
+                    "status": "Installed"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Notification Manager",
+                    "status": "Installed"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Build Tool",
+                    "status": "Installed"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Code Quality",
+                    "status": "Installed"
+                }
+            ],
+            "stickyNote": null,
+            "displayDefaultView": false
+        },
+        {
+            "createdBy": "M1030469@mindtree.com",
+            "createdOn": 1507790653814,
+            "lastUpadateBy": "M1030469@mindtree.com",
+            "lastUpdatedOn": 1516868487468,
+            "score": 1.1,
+            "id": "59df0f3df45ac0e1d7f1b5e2",
+            "canvasName": "demoCanvas",
+            "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_DEMOCANVAS1507790653",
+            "canvasCode": "CNVS1b88670eaf244814953bcdfbc63e21b0",
+            "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+            "projectName": "MIST Lab",
+            "orgCode": "ORG000004",
+            "users": [{
+                    "username": "M1030469@mindtree.com",
+                    "email": "Vijay.Kumar5@mindtree.com",
+                    "name": "Vijay Kumar",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1030499@mindtree.com",
+                    "email": "Sujit.Anand@mindtree.com",
+                    "name": "Sujit Anand",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1032465@mindtree.com",
+                    "email": "Vineeth.Mutt@mindtree.com",
+                    "name": "Vineeth Mutt",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1030571@mindtree.com",
+                    "email": "ajay.gupta@mindtree.com",
+                    "name": "Ajay Kumar Gupta",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                }
+            ],
+            "hasAccess": true,
+            "status": "Composing",
+            "version": 372,
+            "idCounter": 22,
+            "description": "to navigate the options available in canvasing",
+            "tags": [{
+                    "type": "softwareNode",
+                    "name": "Continuous Integration",
+                    "status": "Installed"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Database Server",
+                    "status": "New"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Build Tool",
+                    "status": "Installed"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Build Tool",
+                    "status": "Installed"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Continuous Integration",
+                    "status": "Draft"
+                }
+            ],
+            "stickyNote": null,
+            "displayDefaultView": false
+        },
+        {
+            "createdBy": "M1030469@mindtree.com",
+            "createdOn": 1511169750985,
+            "lastUpadateBy": "M1030469@mindtree.com",
+            "lastUpdatedOn": 1511169750985,
+            "score": 1.1,
+            "id": "5a129ed6f45ac00fe0732e34",
+            "canvasName": "demoCanvas2",
+            "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_DEMOCANVAS21511169750",
+            "canvasCode": "CNVS184e36b2afa04ebb8b9f487dfa32ba59",
+            "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+            "projectName": "MIST Lab",
+            "orgCode": "ORG000004",
+            "users": [{
+                    "username": "M1030469@mindtree.com",
+                    "email": "Vijay.Kumar5@mindtree.com",
+                    "name": "Vijay Kumar",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1030499@mindtree.com",
+                    "email": "Sujit.Anand@mindtree.com",
+                    "name": "Sujit Anand",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1032465@mindtree.com",
+                    "email": "Vineeth.Mutt@mindtree.com",
+                    "name": "Vineeth Mutt",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                },
+                {
+                    "username": "M1030571@mindtree.com",
+                    "email": "ajay.gupta@mindtree.com",
+                    "name": "Ajay Kumar Gupta",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                }
+            ],
+            "hasAccess": true,
+            "status": "New",
+            "version": 1,
+            "idCounter": null,
+            "description": "for demo",
+            "tags": [
+
+            ],
+            "stickyNote": null,
+            "displayDefaultView": false
+        },
+        {
+            "createdBy": "M1030499@mindtree.com",
+            "createdOn": 1512373462144,
+            "lastUpadateBy": "M1030499@mindtree.com",
+            "lastUpdatedOn": 1517117202627,
+            "score": 1.1,
+            "id": "5a24fcd6f45ac0128353e3a4",
+            "canvasName": "TestingCanvas",
+            "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_TESTINGCANVAS1512373462",
+            "canvasCode": "CNVSe201e461049f45a9b95d4864e22a6b6a",
+            "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+            "projectName": "MIST Lab",
+            "orgCode": "ORG000004",
+            "users": [{
+                    "username": "M1030499@mindtree.com",
+                    "email": "Sujit.Anand@mindtree.com",
+                    "name": "Sujit Anand",
+                    "status": "Active",
+                    "components": null
+                },
+                {
+                    "username": "M1030571@mindtree.com",
+                    "email": "ajay.gupta@mindtree.com",
+                    "name": "Ajay Kumar Gupta",
+                    "status": "Active",
+                    "components": [
+
+                    ]
+                }
+            ],
+            "hasAccess": false,
+            "status": "Composing",
+            "version": 11,
+            "idCounter": 2,
+            "description": "ABCD",
+            "tags": [{
+                    "type": "softwareNode",
+                    "name": "CI-CD",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Code Quality",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Container Orchestrator",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Version Control",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "AWS-Cloud",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Application Testing",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "ALM",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Application Testing",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Application Monitoring",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Application Monitoring",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Infra Utility",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Infra Utility",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Config Management",
+                    "status": "Draft"
+                },
+                {
+                    "type": "softwareNode",
+                    "name": "Build Tool",
+                    "status": "Installed"
+                }
+            ],
+            "stickyNote": null,
+            "displayDefaultView": false
+        }
+    ],
+    "count": 4
+}

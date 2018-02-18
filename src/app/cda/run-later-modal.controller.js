@@ -25,18 +25,18 @@
     ) {
         $scope.isNavCollapsed = true;
         $scope.toggleNavCollapse = toggleNavCollapse;
-        $scope.closeRunLaterModal = closeRunLaterModal;
-        $scope.dismissRunLaterModal = dismissRunLaterModal;
+        $scope.closeModal = closeModal;
+        $scope.dismissModal = dismissModal;
 
         function toggleNavCollapse() {
             $scope.isNavCollapsed = !$scope.isNavCollapsed;
         }
 
-        function closeRunLaterModal() {
+        function closeModal() {
             $uibModalInstance.close("closed modal");
         }
 
-        function dismissRunLaterModal() {
+        function dismissModal() {
             $uibModalInstance.dismiss("dismissed modal");
         }
     }

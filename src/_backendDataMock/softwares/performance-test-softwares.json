@@ -16,6 +16,7 @@
         "connect": false,
         "provision": false,
         "hasMetric": false,
+        "isAccessible": null,
         "hasAction": false,
         "hasClients": null,
         "clientSoftwareName": null,
@@ -32,14 +33,18 @@
         "integrations": null,
         "isConnect": null,
         "isProvision": null,
-        "iconURL": "/icons/95206e6a1b214912aa0dc4cfe341c4cd.png",
+        "iconURL": "/assets/icons/softwares/95206e6a1b214912aa0dc4cfe341c4cd.png",
         "applicationURL": null,
         "baseURL": null,
         "finalURL": null,
         "status": null,
         "isExecuting": null,
+        "executionStatus": null,
+        "executionResult": null,
         "requestId": null,
         "actionList": null,
-        "metricList": null
+        "metricList": null,
+        "widgets": null,
+        "visualize": false
     }]
 }

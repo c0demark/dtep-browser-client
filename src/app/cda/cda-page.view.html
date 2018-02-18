@@ -1,287 +1,356 @@
 <!DOCTYPE html>
 <div class="container-fluid dtep-main-content-with-authenticated-header">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <!-- <br/> -->
-            <div class="form-group"></div>
-        </div>
-    </div>
-    <section class="row">
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-        <section class="col-lg-10 col-md-10 col-sm-10 col-xs-10 dtep-cda-page-main-content">
-            <header class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center dtep-cda-page-title">
-                    Continuous&nbsp;Delivery&nbsp;Platform
-                </div>
-            </header>
-            <section class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <div class="row">
-                                <div class="col-lg-12 visible-lg-block col-md-12 visible-md-block col-sm-0 col-xs-0">
-                                    <h5>Project<sup>*</sup></h5>
-                                </div>
-                                <div class="col-lg-0 col-md-0 col-sm-12 visible-sm-block col-xs-12 visible-xs-block text-center">
-                                    <h5>Project<sup>*</sup></h5>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                                    <select class="form-control dtep-cda-page-dropdown" id="project">
-                                        <option value="">--Select&nbsp;Project--</option>
-                                        <option>MindtreeTest</option>
-                                        <option>MindtreeTest</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-0 col-xs-0"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <div class="row">
-                                <div class="col-lg-12 visible-lg-block col-md-12 visible-md-block col-sm-0 col-xs-0">
-                                    <h5>Release<sup>*</sup></h5>
-                                </div>
-                                <div class="col-lg-0 col-md-0 col-sm-12 visible-sm-block col-xs-12 visible-xs-block text-center">
-                                    <h5>Release<sup>*</sup></h5>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-8 col-md-8 col-sm-10 col-xs-8">
-                                    <select class="form-control dtep-cda-page-dropdown" id="release">
-                                        <option value="">--select&nbsp;Release--</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-sm-1 col-xs-2">
-                                    <button class="btn btn-info" data-uib-tooltip="Create New Release" data-ng-click="openCreateNewReleaseModal()">
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-sm-1 col-xs-2">
-                                    <!-- <img class="img-responsive center-block dtep-cda-page-project-releases-loader-gif" src="/assets/images/pageloader.gif" ng-hide="!true" /> -->
-                                    <div>
-                                        <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
-                                        <span class="sr-only">Loading...</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <div class="row">
-                                <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
-                                <div class="col-lg-10 visible-lg-block col-md-10 visible-md-block col-sm-0 col-xs-0">
-                                    <h5>Build<sup>*</sup></h5>
-                                </div>
-                                <div class="col-lg-0 col-md-0 col-sm-12 visible-sm-block col-xs-12 visible-xs-block text-center">
-                                    <h5>Build<sup>*</sup></h5>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
-                                <div class="col-lg-8 col-md-8 col-sm-10 col-xs-8">
-                                    <select class="form-control dtep-cda-page-dropdown" id="build">
-                                        <option value="">--Select&nbsp;Build--</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                                    <button class="btn btn-info" data-uib-tooltip="Create New Build" data-ng-click="openCreateNewBuildModal()">
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <!-- <br/> -->
-                            <div class="form-group"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dtep-cda-page-top-section-line"></div>
-                    </div>
-                </div>
-            </section>
-            <main class="dtep-cda-page-project-components">
-                <div class="form-group"></div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="" id="" />
-                                    <a href="http://mindtree-dtep.southeastasia.cloudapp.azure.com:8090/jenkins/" onclick="window.open(this.href,'Build And Deploy', width=1000, height=750); return false;" target="_blank">Build&nbsp;And&nbsp;Deploy</a>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="btn-group dropdown dtep-cda-page-module-selection-dropdown" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
-                            <button class="btn btn-block btn-default dropdown-toggle" id="buildAndDeploy" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle"><span>Select&nbsp;Module</span>&nbsp;&nbsp;<span class="caret"></span></button>
-                            <ul class="dropdown-menu dtep-cda-page-module-selection-dropdown-menu" aria-labelledby="buildAndDeploy" data-uib-dropdown-menu="data-uib-dropdown-menu">
-                                <li><a>DTEP2</a></li>
-                                <li><a>DTEP2</a></li>
-                                <li><a>DTEP2</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <button class="btn btn-block btn-default dtep-cda-page-reports-download-button" ng-click="downloadReport(mindtreeIp.applicationName)" id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
-                            <i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download
-                        </button>
-                    </div>
-                </div>
-                <div class="form-group"></div>
-                <div class="row dtep-cda-page-tasks-separator"></div>
-            </main>
-            <main class="dtep-cda-page-project-components">
-                <div class="form-group"></div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="" id="" />
-                                    <a href="http://mindtree-dtep.southeastasia.cloudapp.azure.com:8080/MIST/" onclick="window.open(this.href, 'Service Testing', width=1000, height=750); return false;" target="_blank">Service&nbsp;Testing</a>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="btn-group dropdown dtep-cda-page-module-selection-dropdown" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
-                            <button class="btn btn-block btn-default dropdown-toggle" id="serviceTesting" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle"><span>Select&nbsp;Module</span>&nbsp;&nbsp;<span class="caret"></span></button>
-                            <ul class="dropdown-menu dtep-cda-page-module-selection-dropdown-menu" aria-labelledby="buildAndDeploy" data-uib-dropdown-menu="data-uib-dropdown-menu">
-                                <li><a>DTEP2</a></li>
-                                <li><a>DTEP2</a></li>
-                                <li><a>DTEP2</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <button class="btn btn-block btn-default dtep-cda-page-reports-download-button" ng-click="downloadReport(mindtreeIp.applicationName)" id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
-                            <i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download
-                        </button>
-                    </div>
-                </div>
-                <div class="form-group"></div>
-                <div class="row dtep-cda-page-tasks-separator"></div>
-            </main>
-            <main class="dtep-cda-page-project-components">
-                <div class="form-group"></div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="" id="">
-                                    <a href="http://mindtree-dtep.southeastasia.cloudapp.azure.com:8080/MIST/" onclick="window.open(this.href, 'Funtional Testing', width=1000, height=750); return false;" target="_blank">Funtional&nbsp;Testing</a>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="btn-group dropdown dtep-cda-page-module-selection-dropdown" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
-                            <button class="btn btn-block btn-default dropdown-toggle" id="functionalTesting" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle"><span>Select&nbsp;Module</span>&nbsp;&nbsp;<span class="caret"></span></button>
-                            <ul class="dropdown-menu dtep-cda-page-module-selection-dropdown-menu" aria-labelledby="buildAndDeploy" data-uib-dropdown-menu="data-uib-dropdown-menu">
-                                <li><a>DTEP2</a></li>
-                                <li><a>DTEP2</a></li>
-                                <li><a>DTEP2</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <button class="btn btn-block btn-default dtep-cda-page-reports-download-button" ng-click="downloadReport(mindtreeIp.applicationName)" id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
-                            <i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download
-                        </button>
-                    </div>
-                </div>
-                <div class="form-group"></div>
-                <div class="row dtep-cda-page-tasks-separator"></div>
-            </main>
-            <main class="dtep-cda-page-project-components">
-                <div class="form-group"></div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="" id="">
-                                    <a href="http://mindtree-dtep.southeastasia.cloudapp.azure.com:8080/UILite/" onclick="window.open(this.href, 'UI Testing', width=1000, height=750); return false;" target="_blank">UI&nbsp;Testing</a>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="btn-group dropdown dtep-cda-page-module-selection-dropdown" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
-                            <button class="btn btn-block btn-default dropdown-toggle" id="uiTesting" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle"><span>Select&nbsp;Module</span>&nbsp;&nbsp;<span class="caret"></span></button>
-                            <ul class="dropdown-menu dtep-cda-page-module-selection-dropdown-menu" aria-labelledby="buildAndDeploy" data-uib-dropdown-menu="data-uib-dropdown-menu">
-                                <li><a>DTEP2</a></li>
-                                <li><a>DTEP2</a></li>
-                                <li><a>DTEP2</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <button class="btn btn-block btn-default dtep-cda-page-reports-download-button" ng-click="downloadReport(mindtreeIp.applicationName)" id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
-                            <i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download
-                        </button>
-                    </div>
-                </div>
-                <div class="form-group"></div>
-                <div class="row dtep-cda-page-tasks-separator"></div>
-            </main>
-            <main class="dtep-cda-page-project-components">
-                <div class="form-group"></div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="" id="">
-                                    <a href="http://mindtree-dtep.southeastasia.cloudapp.azure.com:8080/MIST/" onclick="window.open(this.href, 'Integrated Testing', width=1000, height=750); return false;" target="_blank">Integrated&nbsp;Testing</a>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="btn-group dropdown dtep-cda-page-module-selection-dropdown" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
-                            <button class="btn btn-block btn-default dropdown-toggle" id="integratedTesting" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle"><span>Select&nbsp;Module</span>&nbsp;&nbsp;<span class="caret"></span></button>
-                            <ul class="dropdown-menu dtep-cda-page-module-selection-dropdown-menu" aria-labelledby="buildAndDeploy" data-uib-dropdown-menu="data-uib-dropdown-menu">
-                                <li><a>DTEP2</a></li>
-                                <li><a>DTEP2</a></li>
-                                <li><a>DTEP2</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <button class="btn btn-block btn-default dtep-cda-page-reports-download-button" ng-click="downloadReport(mindtreeIp.applicationName)" id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
-                            <i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download
-                        </button>
-                    </div>
-                </div>
-                <div class="form-group"></div>
-                <div class="row dtep-cda-page-tasks-separator"></div>
-            </main>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <!-- <br/> -->
-                    <div class="form-group"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <!-- <br/> -->
-                    <div class="form-group"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="dtep-cda-page-tasks-end-separator"></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <!-- <br/> -->
-                    <div class="form-group"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="form-group text-center">
-                        <button class="btn btn-info text-uppercase dtep-cda-page-task-execution-buttons"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;&nbsp;Run&nbsp;Now</button>
-                        <button class="btn btn-info text-uppercase dtep-cda-page-task-execution-buttons" data-ng-click="openRunLaterModal()"><i class="fa fa-hourglass-start" aria-hidden="true"></i>&nbsp;&nbsp;Run Later</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-    </section>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<!-- <br/> -->
+			<div class="form-group"></div>
+		</div>
+	</div>
+	<section class="row">
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+		<section class="col-lg-10 col-md-10 col-sm-10 col-xs-10 dtep-cda-page-main-content">
+			<header class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center dtep-cda-page-title">
+					Continuous&nbsp;Delivery&nbsp;Platform
+				</div>
+			</header>
+			<section class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="row">
+								<div class="col-lg-12 visible-lg-block col-md-12 visible-md-block col-sm-0 col-xs-0">
+									<h5>Project
+										<sup>*</sup>
+									</h5>
+								</div>
+								<div class="col-lg-0 col-md-0 col-sm-12 visible-sm-block col-xs-12 visible-xs-block text-center">
+									<h5>Project
+										<sup>*</sup>
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+									<select class="form-control dtep-cda-page-dropdown" id="project">
+										<option value="">--Select&nbsp;Project--</option>
+										<option>MindtreeTest</option>
+										<option>MindtreeTest</option>
+									</select>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-0 col-xs-0"></div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="row">
+								<div class="col-lg-12 visible-lg-block col-md-12 visible-md-block col-sm-0 col-xs-0">
+									<h5>Release
+										<sup>*</sup>
+									</h5>
+								</div>
+								<div class="col-lg-0 col-md-0 col-sm-12 visible-sm-block col-xs-12 visible-xs-block text-center">
+									<h5>Release
+										<sup>*</sup>
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-8 col-md-8 col-sm-10 col-xs-8">
+									<select class="form-control dtep-cda-page-dropdown" id="release">
+										<option value="">--select&nbsp;Release--</option>
+									</select>
+								</div>
+								<div class="col-lg-2 col-md-2 col-sm-1 col-xs-2">
+									<button class="btn btn-info" data-uib-tooltip="Create New Release" data-ng-click="openCreateNewReleaseModal()">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</button>
+								</div>
+								<div class="col-lg-2 col-md-2 col-sm-1 col-xs-2">
+									<!-- <img class="img-responsive center-block dtep-cda-page-project-releases-loader-gif" src="/assets/images/pageloader.gif" ng-hide="!true" /> -->
+									<div>
+										<i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+										<span class="sr-only">Loading...</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="row">
+								<div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+								<div class="col-lg-10 visible-lg-block col-md-10 visible-md-block col-sm-0 col-xs-0">
+									<h5>Build
+										<sup>*</sup>
+									</h5>
+								</div>
+								<div class="col-lg-0 col-md-0 col-sm-12 visible-sm-block col-xs-12 visible-xs-block text-center">
+									<h5>Build
+										<sup>*</sup>
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+								<div class="col-lg-8 col-md-8 col-sm-10 col-xs-8">
+									<select class="form-control dtep-cda-page-dropdown" id="build">
+										<option value="">--Select&nbsp;Build--</option>
+									</select>
+								</div>
+								<div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+									<button class="btn btn-info" data-uib-tooltip="Create New Build" data-ng-click="openCreateNewBuildModal()">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<!-- <br/> -->
+							<div class="form-group"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dtep-cda-page-top-section-line"></div>
+					</div>
+				</div>
+			</section>
+			<main class="dtep-cda-page-project-components">
+				<div class="form-group"></div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="" id="" />
+								<a href="http://mindtree-dtep.southeastasia.cloudapp.azure.com:8090/jenkins/" onclick="window.open(this.href,'Build And Deploy', width=1000, height=750); return false;"
+								 target="_blank">Build&nbsp;And&nbsp;Deploy</a>
+							</label>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="btn-group dropdown dtep-cda-page-module-selection-dropdown" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
+							<button class="btn btn-block btn-default dropdown-toggle" id="buildAndDeploy" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle">
+								<span>Select&nbsp;Module</span>&nbsp;&nbsp;
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dtep-cda-page-module-selection-dropdown-menu" aria-labelledby="buildAndDeploy" data-uib-dropdown-menu="data-uib-dropdown-menu">
+								<li>
+									<a>DTEP2</a>
+								</li>
+								<li>
+									<a>DTEP2</a>
+								</li>
+								<li>
+									<a>DTEP2</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<button class="btn btn-block btn-default dtep-cda-page-reports-download-button" ng-click="downloadReport(mindtreeIp.applicationName)"
+						 id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
+							<i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download
+						</button>
+					</div>
+				</div>
+				<div class="form-group"></div>
+				<div class="row dtep-cda-page-tasks-separator"></div>
+			</main>
+			<main class="dtep-cda-page-project-components">
+				<div class="form-group"></div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="" id="" />
+								<a href="http://mindtree-dtep.southeastasia.cloudapp.azure.com:8080/MIST/" onclick="window.open(this.href, 'Service Testing', width=1000, height=750); return false;"
+								 target="_blank">Service&nbsp;Testing</a>
+							</label>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="btn-group dropdown dtep-cda-page-module-selection-dropdown" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
+							<button class="btn btn-block btn-default dropdown-toggle" id="serviceTesting" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle">
+								<span>Select&nbsp;Module</span>&nbsp;&nbsp;
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dtep-cda-page-module-selection-dropdown-menu" aria-labelledby="buildAndDeploy" data-uib-dropdown-menu="data-uib-dropdown-menu">
+								<li>
+									<a>DTEP2</a>
+								</li>
+								<li>
+									<a>DTEP2</a>
+								</li>
+								<li>
+									<a>DTEP2</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<button class="btn btn-block btn-default dtep-cda-page-reports-download-button" ng-click="downloadReport(mindtreeIp.applicationName)"
+						 id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
+							<i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download
+						</button>
+					</div>
+				</div>
+				<div class="form-group"></div>
+				<div class="row dtep-cda-page-tasks-separator"></div>
+			</main>
+			<main class="dtep-cda-page-project-components">
+				<div class="form-group"></div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="" id="" />
+								<a href="http://mindtree-dtep.southeastasia.cloudapp.azure.com:8080/MIST/" onclick="window.open(this.href, 'Funtional Testing', width=1000, height=750); return false;"
+								 target="_blank">Funtional&nbsp;Testing</a>
+							</label>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="btn-group dropdown dtep-cda-page-module-selection-dropdown" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
+							<button class="btn btn-block btn-default dropdown-toggle" id="functionalTesting" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle">
+								<span>Select&nbsp;Module</span>&nbsp;&nbsp;
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dtep-cda-page-module-selection-dropdown-menu" aria-labelledby="buildAndDeploy" data-uib-dropdown-menu="data-uib-dropdown-menu">
+								<li>
+									<a>DTEP2</a>
+								</li>
+								<li>
+									<a>DTEP2</a>
+								</li>
+								<li>
+									<a>DTEP2</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<button class="btn btn-block btn-default dtep-cda-page-reports-download-button" ng-click="downloadReport(mindtreeIp.applicationName)"
+						 id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
+							<i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download
+						</button>
+					</div>
+				</div>
+				<div class="form-group"></div>
+				<div class="row dtep-cda-page-tasks-separator"></div>
+			</main>
+			<main class="dtep-cda-page-project-components">
+				<div class="form-group"></div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="" id="" />
+								<a href="http://mindtree-dtep.southeastasia.cloudapp.azure.com:8080/UILite/" onclick="window.open(this.href, 'UI Testing', width=1000, height=750); return false;"
+								 target="_blank">UI&nbsp;Testing</a>
+							</label>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="btn-group dropdown dtep-cda-page-module-selection-dropdown" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
+							<button class="btn btn-block btn-default dropdown-toggle" id="uiTesting" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle">
+								<span>Select&nbsp;Module</span>&nbsp;&nbsp;
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dtep-cda-page-module-selection-dropdown-menu" aria-labelledby="buildAndDeploy" data-uib-dropdown-menu="data-uib-dropdown-menu">
+								<li>
+									<a>DTEP2</a>
+								</li>
+								<li>
+									<a>DTEP2</a>
+								</li>
+								<li>
+									<a>DTEP2</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<button class="btn btn-block btn-default dtep-cda-page-reports-download-button" ng-click="downloadReport(mindtreeIp.applicationName)"
+						 id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
+							<i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download
+						</button>
+					</div>
+				</div>
+				<div class="form-group"></div>
+				<div class="row dtep-cda-page-tasks-separator"></div>
+			</main>
+			<main class="dtep-cda-page-project-components">
+				<div class="form-group"></div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="" id="" />
+								<a href="http://mindtree-dtep.southeastasia.cloudapp.azure.com:8080/MIST/" onclick="window.open(this.href, 'Integrated Testing', width=1000, height=750); return false;"
+								 target="_blank">Integrated&nbsp;Testing</a>
+							</label>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="btn-group dropdown dtep-cda-page-module-selection-dropdown" data-uib-dropdown="data-uib-dropdown" data-auto-close="outsideClick">
+							<button class="btn btn-block btn-default dropdown-toggle" id="integratedTesting" aria-haspopup="true" data-uib-dropdown-toggle="data-uib-dropdown-toggle">
+								<span>Select&nbsp;Module</span>&nbsp;&nbsp;
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dtep-cda-page-module-selection-dropdown-menu" aria-labelledby="buildAndDeploy" data-uib-dropdown-menu="data-uib-dropdown-menu">
+								<li>
+									<a>DTEP2</a>
+								</li>
+								<li>
+									<a>DTEP2</a>
+								</li>
+								<li>
+									<a>DTEP2</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<button class="btn btn-block btn-default dtep-cda-page-reports-download-button" ng-click="downloadReport(mindtreeIp.applicationName)"
+						 id="{{mindtreeIp.applicationName}}_download" ng-hide="download">
+							<i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download
+						</button>
+					</div>
+				</div>
+				<div class="form-group"></div>
+				<div class="row dtep-cda-page-tasks-separator"></div>
+			</main>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<!-- <br/> -->
+					<div class="form-group"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<!-- <br/> -->
+					<div class="form-group"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="dtep-cda-page-tasks-end-separator"></div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<!-- <br/> -->
+					<div class="form-group"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="form-group text-center">
+						<button class="btn btn-info text-uppercase dtep-cda-page-task-execution-buttons">
+							<i class="fa fa-cog" aria-hidden="true"></i>&nbsp;&nbsp;Run&nbsp;Now</button>
+						<button class="btn btn-info text-uppercase dtep-cda-page-task-execution-buttons" data-ng-click="openRunLaterModal()">
+							<i class="fa fa-hourglass-start" aria-hidden="true"></i>&nbsp;&nbsp;Run Later</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+	</section>
 </div>

@@ -1,0 +1,67 @@
+{
+    "createdBy": "M1030469@mindtree.com",
+    "createdOn": 1511169750985,
+    "lastUpadateBy": "M1030469@mindtree.com",
+    "lastUpdatedOn": 1511169750985,
+    "score": null,
+    "id": "5a129ed6f45ac00fe0732e34",
+    "canvasName": "demoCanvas2",
+    "canvasShortName": "PRJ45abb8e2e6a74edd810b670ecc7d64fc_DEMOCANVAS21511169750",
+    "canvasCode": "CNVS184e36b2afa04ebb8b9f487dfa32ba59",
+    "projectCode": "PRJ45abb8e2e6a74edd810b670ecc7d64fc",
+    "projectName": "MIST Lab",
+    "orgCode": "ORG000004",
+    "users": [{
+            "username": "M1030469@mindtree.com",
+            "email": "Vijay.Kumar5@mindtree.com",
+            "name": "Vijay Kumar",
+            "status": "Active",
+            "components": [
+
+            ]
+        },
+        {
+            "username": "M1030499@mindtree.com",
+            "email": "Sujit.Anand@mindtree.com",
+            "name": "Sujit Anand",
+            "status": "Active",
+            "components": [
+
+            ]
+        },
+        {
+            "username": "M1013482@mindtree.com",
+            "email": "Megha.Prabhu@mindtree.com",
+            "name": "Megha Prabhu",
+            "status": "Active",
+            "components": [
+
+            ]
+        },
+        {
+            "username": "M1032465@mindtree.com",
+            "email": "Vineeth.Mutt@mindtree.com",
+            "name": "Vineeth Mutt",
+            "status": "Active",
+            "components": [
+
+            ]
+        }
+    ],
+    "hasAccess": false,
+    "status": "New",
+    "version": 1,
+    "idCounter": null,
+    "description": "for demo",
+    "tags": [
+
+    ],
+    "stickyNote": null,
+    "displayDefaultView": false,
+    "requestId": null,
+    "auditInfoAction": null,
+    "screenResolution": null,
+    "nodes": null,
+    "paths": null,
+    "infraComponents": null
+}

@@ -16,6 +16,7 @@
         "connect": false,
         "provision": true,
         "hasMetric": false,
+        "isAccessible": null,
         "hasAction": false,
         "hasClients": null,
         "clientSoftwareName": null,
@@ -32,7 +33,11 @@
             "nuGetPackage": "jdk8.8.0.131",
             "softwareName": "jdk8"
         },
-        "vmProperties": { "dns": "", "username": "", "password": "" },
+        "vmProperties": {
+            "dns": "",
+            "username": "",
+            "password": ""
+        },
         "connectionSchemaForm": {
             "form": "[{\"key\":\"instanceName\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"OK\"}]",
             "schema": "{\n  \"type\" : \"object\",\n  \"title\" : \"Comment\",\n  \"properties\" : {\n    \"instanceName\" : {\n      \"title\" : \"Instance Name\",\n      \"type\" : \"string\"\n    }\n  },\n  \"required\" : [ \"instanceName\" ]\n}"
@@ -41,14 +46,18 @@
         "integrations": null,
         "isConnect": null,
         "isProvision": null,
-        "iconURL": "/icons/54a46d5ee5ea437092b019c5f9750e08.png",
+        "iconURL": "/assets/icons/softwares/54a46d5ee5ea437092b019c5f9750e08.png",
         "applicationURL": null,
         "baseURL": null,
         "finalURL": null,
         "status": null,
         "isExecuting": null,
+        "executionStatus": null,
+        "executionResult": null,
         "requestId": null,
         "actionList": null,
-        "metricList": null
+        "metricList": null,
+        "widgets": null,
+        "visualize": false
     }]
 }

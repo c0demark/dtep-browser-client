@@ -6,92 +6,6 @@
             "createdBy": null,
             "createdOn": null,
             "lastUpadateBy": "M1000668@mindtree.com",
-            "lastUpdatedOn": 1511436374436,
-            "score": 0.0,
-            "id": "5859047573942af3bd4c4786",
-            "softwareName": "RHEL Server",
-            "softwareCode": "OPRS",
-            "description": "RHEL is a Linux distribution developed by Red Hat and targeted toward the commercial market.",
-            "clazz": null,
-            "connect": false,
-            "provision": false,
-            "hasMetric": false,
-            "hasAction": false,
-            "hasClients": null,
-            "clientSoftwareName": null,
-            "orgCode": "ORG000001",
-            "componentCode": "OPM",
-            "componentName": null,
-            "type": null,
-            "vmId": null,
-            "properties": null,
-            "installationProperties": null,
-            "vmProperties": null,
-            "connectionSchemaForm": { "form": "null", "schema": "null" },
-            "provisionSchemaForm": {
-                "form": "[\"componentName\",\"dns\",\"username\",{\"key\":\"connectionType\",\"type\":\"radios\",\"title\":\"Select password or ssh key to connect\",\"validationMessage\":\"You must select this\",\"titleMap\":[{\"value\":\"password\",\"name\":\"Password\"},{\"value\":\"sshkey\",\"name\":\"SSH Key\"}]},{\"key\":\"password\",\"type\":\"password\",\"condition\":\"model.connectionType=='password'\"},{\"key\":\"sshKey\",\"type\":\"textarea\",\"condition\":\"model.connectionType=='sshkey'\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
-                "schema": "{\"type\":\"object\",\"properties\":{\"componentName\":{\"title\":\"Server Name:\",\"type\":\"string\"},\"dns\":{\"title\":\"DNS/IP:\",\"type\":\"string\",\"default\":\"is-dev-centos73-1.southeastasia.cloudapp.azure.com\"},\"username\":{\"title\":\"User Name:\",\"type\":\"string\",\"default\":\"capeuser\"},\"connectionType\":{\"enum\":[\"password\",\"sshkey\"],\"default\":\"password\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"\"},\"sshKey\":{\"title\":\"SSH Key:\",\"type\":\"string\",\"x-schema-form\":{\"type\":\"textarea\",\"placeholder\":\"Paste your private SSH Key\"}}},\"required\":[\"password\",\"componentName\",\"dns\",\"username\",\"password\",\"connectionType\"]}"
-            },
-            "integrations": null,
-            "isConnect": null,
-            "isProvision": null,
-            "iconURL": "/icons/6d5636855dc54658a4f48cf87127f29b.png",
-            "applicationURL": null,
-            "baseURL": null,
-            "finalURL": null,
-            "status": null,
-            "isExecuting": null,
-            "requestId": null,
-            "actionList": null,
-            "metricList": null
-        },
-        {
-            "createdBy": null,
-            "createdOn": null,
-            "lastUpadateBy": "m1035984@mindtree.com",
-            "lastUpdatedOn": 1511516800249,
-            "score": 0.0,
-            "id": "5859047573942af3bd4c4785",
-            "softwareName": "Ubuntu Server",
-            "softwareCode": "OPUS",
-            "description": "Ubuntu Server brings economic and technical scalability to your datacentre, public or private.",
-            "clazz": null,
-            "connect": false,
-            "provision": false,
-            "hasMetric": false,
-            "hasAction": false,
-            "hasClients": null,
-            "clientSoftwareName": null,
-            "orgCode": "ORG000001",
-            "componentCode": "OPM",
-            "componentName": null,
-            "type": null,
-            "vmId": null,
-            "properties": null,
-            "installationProperties": null,
-            "vmProperties": null,
-            "connectionSchemaForm": { "form": "null", "schema": "null" },
-            "provisionSchemaForm": {
-                "form": "[\"componentName\",\"dns\",\"username\",{\"key\":\"connectionType\",\"type\":\"radios\",\"title\":\"Select password or ssh key to connect\",\"validationMessage\":\"You must select this\",\"titleMap\":[{\"value\":\"password\",\"name\":\"Password\"},{\"value\":\"sshkey\",\"name\":\"SSH Key\"}]},{\"key\":\"password\",\"type\":\"password\",\"condition\":\"model.connectionType=='password'\"},{\"key\":\"sshKey\",\"type\":\"textarea\",\"condition\":\"model.connectionType=='sshkey'\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
-                "schema": "{\"type\":\"object\",\"properties\":{\"componentName\":{\"title\":\"Server Name:\",\"type\":\"string\"},\"dns\":{\"title\":\"DNS/IP:\",\"type\":\"string\",\"default\":\"cape-test.southeastasia.cloudapp.azure.com\"},\"username\":{\"title\":\"User Name:\",\"type\":\"string\",\"default\":\"capeuser\"},\"connectionType\":{\"enum\":[\"password\",\"sshkey\"],\"default\":\"password\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"\"},\"sshKey\":{\"title\":\"SSH Key:\",\"type\":\"string\",\"x-schema-form\":{\"type\":\"textarea\",\"placeholder\":\"Paste your private SSH Key\"}}},\"required\":[\"password\",\"componentName\",\"dns\",\"username\",\"password\",\"connectionType\"]}"
-            },
-            "integrations": null,
-            "isConnect": null,
-            "isProvision": null,
-            "iconURL": "/icons/dab73872402f465eb4a6a5a8bf46619b.png",
-            "applicationURL": null,
-            "baseURL": null,
-            "finalURL": null,
-            "status": null,
-            "isExecuting": null,
-            "requestId": null,
-            "actionList": null,
-            "metricList": null
-        },
-        {
-            "createdBy": null,
-            "createdOn": null,
-            "lastUpadateBy": "M1000668@mindtree.com",
             "lastUpdatedOn": 1511436457188,
             "score": 0.0,
             "id": "5859047573942af3bd4c4784",
@@ -102,6 +16,7 @@
             "connect": false,
             "provision": false,
             "hasMetric": false,
+            "isAccessible": null,
             "hasAction": false,
             "hasClients": null,
             "clientSoftwareName": null,
@@ -113,7 +28,10 @@
             "properties": null,
             "installationProperties": null,
             "vmProperties": null,
-            "connectionSchemaForm": { "form": "null", "schema": "null" },
+            "connectionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
             "provisionSchemaForm": {
                 "form": "[\"componentName\",\"dns\",\"username\",{\"key\":\"connectionType\",\"type\":\"radios\",\"title\":\"Select password or ssh key to connect\",\"validationMessage\":\"You must select this\",\"titleMap\":[{\"value\":\"password\",\"name\":\"Password\"},{\"value\":\"sshkey\",\"name\":\"SSH Key\"}]},{\"key\":\"password\",\"type\":\"password\",\"condition\":\"model.connectionType=='password'\"},{\"key\":\"sshKey\",\"type\":\"textarea\",\"condition\":\"model.connectionType=='sshkey'\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
                 "schema": "{\"type\":\"object\",\"properties\":{\"componentName\":{\"title\":\"Server Name:\",\"type\":\"string\"},\"dns\":{\"title\":\"DNS/IP:\",\"type\":\"string\",\"default\":\"cape-win.southeastasia.cloudapp.azure.com\"},\"username\":{\"title\":\"User Name:\",\"type\":\"string\",\"default\":\"capeuser\"},\"connectionType\":{\"enum\":[\"password\",\"sshkey\"],\"default\":\"password\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"\"},\"sshKey\":{\"title\":\"SSH Key:\",\"type\":\"string\",\"x-schema-form\":{\"type\":\"textarea\",\"placeholder\":\"Paste your private SSH Key\"}}},\"required\":[\"password\",\"componentName\",\"dns\",\"username\",\"password\",\"connectionType\"]}"
@@ -121,15 +39,406 @@
             "integrations": null,
             "isConnect": null,
             "isProvision": null,
-            "iconURL": "/icons/6f5d776fe64644fcb01eb89b0d077676.png",
+            "iconURL": "/assets/icons/softwares/6f5d776fe64644fcb01eb89b0d077676.png",
             "applicationURL": null,
             "baseURL": null,
             "finalURL": null,
             "status": null,
             "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
             "requestId": null,
             "actionList": null,
-            "metricList": null
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
+        },
+        {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "M1000668@mindtree.com",
+            "lastUpdatedOn": 1511436374436,
+            "score": 0.0,
+            "id": "5859047573942af3bd4c4786",
+            "softwareName": "RHEL Server",
+            "softwareCode": "OPRS",
+            "description": "RHEL is a Linux distribution developed by Red Hat and targeted toward the commercial market.",
+            "clazz": null,
+            "connect": false,
+            "provision": false,
+            "hasMetric": false,
+            "isAccessible": null,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "OPM",
+            "componentName": null,
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
+            "provisionSchemaForm": {
+                "form": "[\"componentName\",\"dns\",\"username\",{\"key\":\"connectionType\",\"type\":\"radios\",\"title\":\"Select password or ssh key to connect\",\"validationMessage\":\"You must select this\",\"titleMap\":[{\"value\":\"password\",\"name\":\"Password\"},{\"value\":\"sshkey\",\"name\":\"SSH Key\"}]},{\"key\":\"password\",\"type\":\"password\",\"condition\":\"model.connectionType=='password'\"},{\"key\":\"sshKey\",\"type\":\"textarea\",\"condition\":\"model.connectionType=='sshkey'\"},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\"}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"componentName\":{\"title\":\"Server Name:\",\"type\":\"string\"},\"dns\":{\"title\":\"DNS/IP:\",\"type\":\"string\",\"default\":\"is-dev-centos73-1.southeastasia.cloudapp.azure.com\"},\"username\":{\"title\":\"User Name:\",\"type\":\"string\",\"default\":\"capeuser\"},\"connectionType\":{\"enum\":[\"password\",\"sshkey\"],\"default\":\"password\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"\"},\"sshKey\":{\"title\":\"SSH Key:\",\"type\":\"string\",\"x-schema-form\":{\"type\":\"textarea\",\"placeholder\":\"Paste your private SSH Key\"}}},\"required\":[\"password\",\"componentName\",\"dns\",\"username\",\"password\",\"connectionType\"]}"
+            },
+            "integrations": null,
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/6d5636855dc54658a4f48cf87127f29b.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null,
+            "widgets": null,
+            "visualize": false
+        },
+        {
+            "createdBy": null,
+            "createdOn": null,
+            "lastUpadateBy": "pankaj",
+            "lastUpdatedOn": 1515579722543,
+            "score": 0.0,
+            "id": "5859047573942af3bd4c4785",
+            "softwareName": "Ubuntu Server",
+            "softwareCode": "OPUS",
+            "description": "Ubuntu Server brings economic and technical scalability to your datacentre, public or private.",
+            "clazz": "com.mindtree.cape.analytics.gatway.service.MachineMetricServiceImpl",
+            "connect": false,
+            "provision": false,
+            "hasMetric": false,
+            "isAccessible": null,
+            "hasAction": false,
+            "hasClients": null,
+            "clientSoftwareName": null,
+            "orgCode": "ORG000001",
+            "componentCode": "OPM",
+            "componentName": null,
+            "type": null,
+            "vmId": null,
+            "properties": null,
+            "installationProperties": null,
+            "vmProperties": null,
+            "connectionSchemaForm": {
+                "form": "null",
+                "schema": "null"
+            },
+            "provisionSchemaForm": {
+                "form": "[\"componentName\",\"dns\",{\"key\":\"username\",\"type\":\"string\",\"isEditable\":true},{\"key\":\"connectionType\",\"type\":\"radios\",\"title\":\"Select password or ssh key to connect\",\"validationMessage\":\"You must select this\",\"titleMap\":[{\"value\":\"password\",\"name\":\"Password\"},{\"value\":\"sshkey\",\"name\":\"SSH Key\"}]},{\"key\":\"password\",\"type\":\"password\",\"condition\":\"model.connectionType=='password'\",\"isEditable\":true},{\"key\":\"sshKey\",\"type\":\"textarea\",\"condition\":\"model.connectionType=='sshkey'\"},{\"key\":\"vmMonitoring\",\"type\":\"radiobuttons\",\"isEditable\":true,\"style\":{\"selected\":\"btn-info\",\"unselected\":\"btn-default\"},\"titleMap\":[{\"value\":\"yes\",\"name\":\"Yes\"},{\"value\":\"no\",\"name\":\"No\"}]},{\"type\":\"submit\",\"style\":\"btn-info\",\"title\":\"Apply\",\"isEditable\":true}]",
+                "schema": "{\"type\":\"object\",\"properties\":{\"vmMonitoring\":{\"title\":\"Monitor Virtual Machine\",\"type\":\"string\",\"enum\":[\"yes\",\"no\"],\"default\":\"yes\"},\"componentName\":{\"title\":\"Server Name:\",\"type\":\"string\"},\"dns\":{\"title\":\"DNS/IP:\",\"type\":\"string\",\"default\":\"cape-test.southeastasia.cloudapp.azure.com\"},\"username\":{\"title\":\"User Name:\",\"type\":\"string\",\"default\":\"capeuser\"},\"connectionType\":{\"enum\":[\"password\",\"sshkey\"],\"default\":\"password\"},\"password\":{\"title\":\"Password:\",\"type\":\"string\",\"default\":\"\"},\"sshKey\":{\"title\":\"SSH Key:\",\"type\":\"string\",\"x-schema-form\":{\"type\":\"textarea\",\"placeholder\":\"Paste your private SSH Key\"}}},\"required\":[\"password\",\"componentName\",\"dns\",\"username\",\"password\",\"connectionType\"]}"
+            },
+            "integrations": null,
+            "isConnect": null,
+            "isProvision": null,
+            "iconURL": "/assets/icons/softwares/dab73872402f465eb4a6a5a8bf46619b.png",
+            "applicationURL": null,
+            "baseURL": null,
+            "finalURL": null,
+            "status": null,
+            "isExecuting": null,
+            "executionStatus": null,
+            "executionResult": null,
+            "requestId": null,
+            "actionList": null,
+            "metricList": null,
+            "widgets": {
+                "globalFilter": {
+                    "period": "ONE_WEEK"
+                },
+                "metrics": [{
+                        "metricCode": "CPU_USAGE_STATUS",
+                        "label": "CPU Usage",
+                        "type": "statusbar",
+                        "colors": {
+                            "%": "#66BBBB"
+                        },
+                        "sizeX": "4",
+                        "sizeY": "1",
+                        "refreshTimeInMillisec": 10000
+                    },
+                    {
+                        "metricCode": "MEMORY_USAGE_STATUS",
+                        "label": "Memory Usage",
+                        "type": "statusbar",
+                        "colors": {
+                            "GB": "#66BBBB"
+                        },
+                        "sizeX": "4",
+                        "sizeY": "1",
+                        "refreshTimeInMillisec": 10000
+                    },
+                    {
+                        "metricCode": "DISK_USAGE_STATUS",
+                        "label": "Disk Usage",
+                        "type": "statusbar",
+                        "colors": {
+                            "GB": "#66BBBB"
+                        },
+                        "sizeX": "4",
+                        "sizeY": "1",
+                        "refreshTimeInMillisec": 60000
+                    },
+                    {
+                        "metricCode": "CPU_USAGE_GRAPH",
+                        "label": "CPU Usage Trend",
+                        "axis": {
+                            "x": {
+                                "label": "Minutes",
+                                "type": "timeseries",
+                                "tick": {
+                                    "format": "%H:%M %p",
+                                    "count": 5
+                                }
+                            },
+                            "y": {
+                                "label": "Percentage"
+                            }
+                        },
+                        "type": "area",
+                        "supportedTypes": [
+                            "area",
+                            "stack",
+                            "group",
+                            "line"
+                        ],
+                        "colors": {
+                            "User CPU": "#66BBBB",
+                            "Kernel CPU": "#99BB55"
+                        },
+                        "sizeX": "4",
+                        "sizeY": "2",
+                        "refreshTimeInMillisec": 60000
+                    },
+                    {
+                        "metricCode": "MEMORY_USAGE_GRAPH",
+                        "label": "Memory Usage Trend",
+                        "axis": {
+                            "x": {
+                                "label": "Minutes",
+                                "type": "timeseries",
+                                "tick": {
+                                    "format": "%H:%M %p",
+                                    "count": 5
+                                }
+                            },
+                            "y": {
+                                "label": "Percentage"
+                            }
+                        },
+                        "type": "area",
+                        "supportedTypes": [
+                            "area",
+                            "stack",
+                            "group",
+                            "line"
+                        ],
+                        "colors": {
+                            "Memory Usage": "#66BBBB"
+                        },
+                        "sizeX": "4",
+                        "sizeY": "2",
+                        "refreshTimeInMillisec": 60000
+                    },
+                    {
+                        "metricCode": "DISK_USAGE_GRAPH",
+                        "label": "Disk Usage Trend",
+                        "axis": {
+                            "x": {
+                                "label": "Hours",
+                                "type": "timeseries",
+                                "tick": {
+                                    "format": "%b %d, %I:%M %p",
+                                    "count": 5
+                                }
+                            },
+                            "y": {
+                                "label": "GB"
+                            }
+                        },
+                        "type": "line",
+                        "supportedTypes": [
+                            "area",
+                            "stack",
+                            "group",
+                            "line"
+                        ],
+                        "colors": {
+                            "Disk Usage": "#66BBBB"
+                        },
+                        "sizeX": "4",
+                        "sizeY": "2",
+                        "refreshTimeInMillisec": 60000
+                    },
+                    {
+                        "metricCode": "SYSTEM_LOAD_GRAPH",
+                        "label": "System Load",
+                        "axis": {
+                            "x": {
+                                "label": "Hours",
+                                "type": "timeseries",
+                                "tick": {
+                                    "format": "%b %d, %I:%M %p",
+                                    "count": 5
+                                }
+                            },
+                            "y": {
+                                "label": "Load"
+                            }
+                        },
+                        "type": "line",
+                        "supportedTypes": [
+                            "area",
+                            "stack",
+                            "group",
+                            "line"
+                        ],
+                        "colors": {
+                            "System Load": "#66BBBB"
+                        },
+                        "sizeX": "4",
+                        "sizeY": "2",
+                        "refreshTimeInMillisec": 60000
+                    },
+                    {
+                        "metricCode": "PROCESS_COUNT_GRAPH",
+                        "label": "Process Count",
+                        "axis": {
+                            "x": {
+                                "label": "Hours",
+                                "type": "timeseries",
+                                "tick": {
+                                    "format": "%b %d, %I:%M %p",
+                                    "count": 5
+                                }
+                            },
+                            "y": {
+                                "label": "Count"
+                            }
+                        },
+                        "type": "stack",
+                        "supportedTypes": [
+                            "area",
+                            "stack",
+                            "group",
+                            "line"
+                        ],
+                        "colors": {
+                            "Process Count": "#66BBBB"
+                        },
+                        "sizeX": "4",
+                        "sizeY": "2",
+                        "refreshTimeInMillisec": 60000
+                    },
+                    {
+                        "metricCode": "NETWORK_TRAFFIC_GRAPH",
+                        "label": "Network Traffic",
+                        "axis": {
+                            "x": {
+                                "label": "Hours",
+                                "type": "timeseries",
+                                "tick": {
+                                    "format": "%b %d, %I:%M %p",
+                                    "count": 5
+                                }
+                            },
+                            "y": {
+                                "label": "KB/s"
+                            }
+                        },
+                        "type": "group",
+                        "supportedTypes": [
+                            "area",
+                            "stack",
+                            "group",
+                            "line"
+                        ],
+                        "colors": {
+                            "In Traffic": "#66BBBB",
+                            "Out Traffic": "#99BB55"
+                        },
+                        "sizeX": "4",
+                        "sizeY": "2",
+                        "refreshTimeInMillisec": 60000
+                    },
+                    {
+                        "metricCode": "DISK_MOUNTS_TABLE",
+                        "label": "Disk Space by Mount Points",
+                        "type": "table",
+                        "leftHeading": false,
+                        "headers": [{
+                                "dataType": "String",
+                                "graph": false,
+                                "name": "Mount Point"
+                            },
+                            {
+                                "dataType": "String",
+                                "graph": false,
+                                "name": "Available",
+                                "unit": "size"
+                            },
+                            {
+                                "dataType": "Number",
+                                "graph": true,
+                                "name": "Used",
+                                "unit": "size"
+                            },
+                            {
+                                "dataType": "String",
+                                "graph": false,
+                                "name": "Total",
+                                "unit": "size"
+                            }
+                        ],
+                        "sizeX": "4",
+                        "sizeY": "3",
+                        "refreshTimeInMillisec": 60000
+                    },
+                    {
+                        "metricCode": "PROCESS_INSIGHTS_TABLE",
+                        "label": "Process Insights",
+                        "type": "table",
+                        "leftHeading": false,
+                        "headers": [{
+                                "dataType": "String",
+                                "graph": false,
+                                "name": "Name"
+                            },
+                            {
+                                "dataType": "String",
+                                "graph": false,
+                                "name": "PID"
+                            },
+                            {
+                                "dataType": "String",
+                                "graph": false,
+                                "name": "Memory",
+                                "unit": "size"
+                            },
+                            {
+                                "dataType": "String",
+                                "graph": false,
+                                "name": "CPU",
+                                "unit": "%"
+                            }
+                        ],
+                        "sizeX": "4",
+                        "sizeY": "3",
+                        "refreshTimeInMillisec": 60000
+                    }
+                ]
+            },
+            "visualize": false
         }
     ]
 }
