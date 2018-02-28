@@ -2,18 +2,18 @@
 
 const gulp = require("gulp");
 const path = require("path");
-const conf = require("../dtep.config");
+const conf = require("../dtep-gulp.config");
 
 const $ = require("gulp-load-plugins")({
-    pattern: ["del"]
+	pattern: ["del"]
 });
 
 gulp.task("clean:tmp", () => {
-    return $.del.sync([path.join(conf.paths.tmp, "/")]);
+	return $.del.sync([path.join(conf.paths.tmp, "/")]);
 });
 
 gulp.task("clean:dist", () => {
-    return $.del.sync([path.join(conf.paths.dist, "/")]);
+	return $.del.sync([path.join(conf.paths.dist, "/")]);
 });
 
 gulp.task("clean", ["clean:tmp", "clean:dist"]);
